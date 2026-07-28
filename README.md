@@ -6,10 +6,7 @@
 
 **USAF Veteran · Traditional JavaScript Engineer · AI Whisperer · Creator · Mental Health Advocate**
 
-[![Profile views](https://komarev.com/ghpvc/?username=RIAEvangelist&style=for-the-badge&color=ff69b4)](https://github.com/RIAEvangelist)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/turtlesallthewaydown/)
-[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/brandonnozakimiller)
-[![Facebook](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://www.facebook.com/RIAEvangelist)
+[![Profile views](https://komarev.com/ghpvc/?username=RIAEvangelist&style=for-the-badge&color=ff69b4)](https://github.com/RIAEvangelist) [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/turtlesallthewaydown/) [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/brandonnozakimiller) [![Facebook](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://www.facebook.com/RIAEvangelist)
 
 *Building useful technology and stronger communities—with clarity, compassion, and a little less noise.*
 
