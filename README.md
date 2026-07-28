@@ -1,5 +1,3 @@
-<div align="center">
-
 # Brandon Nozaki Miller
 
 ### RIAEvangelist
@@ -8,19 +6,17 @@
 
 **[LinkedIn](https://www.linkedin.com/in/turtlesallthewaydown/) · [YouTube](https://www.youtube.com/brandonnozakimiller) · [Facebook](https://www.facebook.com/RIAEvangelist) · [Open-source work](https://github.com/RIAEvangelist?tab=repositories)**
 
-*Building useful technology and stronger communities—with clarity, compassion, and a little less noise.*
-
-</div>
+*Building useful technology and stronger communities, with clarity, compassion, and a little less noise.*
 
 ## Current focus
 
 ### Veterans & mental health
 
-As a USAF veteran and mental health advocate, I am working to make support more human, accessible, and stigma-free. The focus is on practical tools, community, and honest conversations that respect lived experience—especially for veterans navigating transition, isolation, and mental-health challenges.
+As a USAF veteran and mental health advocate, I am working to make support more human, accessible, and stigma-free. The focus is on practical tools, community, and honest conversations that respect lived experience, especially for veterans navigating transition, isolation, and mental-health challenges.
 
 ### Entrepreneurship & Zen
 
-I explore entrepreneurship as a practice: create useful things, learn in public, serve people well, and build systems that can last. Zen shapes how I approach that work—attention over noise, simplicity over ceremony, and steady progress without attachment to hype.
+I explore entrepreneurship as a practice: create useful things, learn in public, serve people well, and build systems that can last. Zen shapes how I approach that work: attention over noise, simplicity over ceremony, and steady progress without attachment to hype.
 
 ### Technology & open source
 
@@ -34,8 +30,6 @@ I build with traditional JavaScript, Node.js, AI-assisted workflows, and open-so
 
 ## JavaScript vs Python
 
-<a href="https://artists.landr.com/055855493170">
-  <img src="https://raw.githubusercontent.com/RIAEvangelist/RIAEvangelist/main/EP-Cover-transformed.jpg" alt="JavaScript vs Python cover art" width="320">
-</a>
+[![JavaScript vs Python cover art](EP-Cover-transformed.jpg)](https://artists.landr.com/055855493170)
 
 My **JavaScript vs Python** song is available on your favorite music streaming platforms. [Listen here.](https://artists.landr.com/055855493170)
