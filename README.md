@@ -10,6 +10,14 @@
 
 *Building useful technology and stronger communities, with clarity, compassion, and a little less noise.*
 
+## Earned milestones
+
+[![Quickdraw](https://img.shields.io/badge/Quickdraw-Earned-F5C542?style=for-the-badge&logo=github&logoColor=white)](https://github.com/RIAEvangelist?achievement=quickdraw&tab=achievements) [![Arctic Code Vault Contributor](https://img.shields.io/badge/Arctic%20Code%20Vault-Contributor-00B4D8?style=for-the-badge&logo=github&logoColor=white)](https://github.com/RIAEvangelist?achievement=arctic-code-vault-contributor&tab=achievements) [![Starstruck x3](https://img.shields.io/badge/Starstruck-x3-FF69B4?style=for-the-badge&logo=github&logoColor=white)](https://github.com/RIAEvangelist?achievement=starstruck&tab=achievements) [![Pull Shark x2](https://img.shields.io/badge/Pull%20Shark-x2-7C3AED?style=for-the-badge&logo=github&logoColor=white)](https://github.com/RIAEvangelist?achievement=pull-shark&tab=achievements)
+
+### GitHub trophy case
+
+[![Earned GitHub trophies](https://trophy.ryglcloud.net/?username=RIAEvangelist&theme=onedark&column=5&margin-w=15&margin-h=15&rank=SECRET,SSS,SS,S,AAA,AA,A,B,C)](https://github.com/ryo-ma/github-profile-trophy)
+
 ## Current focus
 
 ### Veterans & mental health
