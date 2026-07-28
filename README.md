@@ -32,7 +32,7 @@ I build with traditional JavaScript, Node.js, AI-assisted workflows, and open-so
 
 ## Live GitHub dashboard
 
-[![Profile details](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=RIAEvangelist&theme=radical&animation=load)](https://github.com/RIAEvangelist)
+[![Profile details](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=RIAEvangelist&theme=radical)](https://github.com/RIAEvangelist)
 
 [![GitHub stats](https://github-profile-summary-cards.vercel.app/api/cards/stats?username=RIAEvangelist&theme=radical&animation=load)](https://github.com/RIAEvangelist?tab=repositories)
 
