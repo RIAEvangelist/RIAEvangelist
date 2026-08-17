@@ -59,13 +59,15 @@ I build with traditional JavaScript, Node.js, AI-assisted workflows, and open-so
 
 [![Profile details](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=RIAEvangelist&theme=radical)](https://github.com/RIAEvangelist)
 
-[![GitHub stats](https://github-profile-summary-cards.vercel.app/api/cards/stats?username=RIAEvangelist&theme=radical&animation=load)](https://github.com/RIAEvangelist?tab=repositories)
+<p align="center">
+  <a href="https://github.com/RIAEvangelist?tab=repositories"><img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=RIAEvangelist&theme=radical&animation=load" width="49%" alt="GitHub stats"></a>
+  <a href="https://github.com/RIAEvangelist?tab=repositories"><img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=RIAEvangelist&theme=radical&animation=load" width="49%" alt="Repositories by language"></a>
+</p>
 
-[![Repositories by language](https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=RIAEvangelist&theme=radical&animation=load)](https://github.com/RIAEvangelist?tab=repositories)
-
-[![Most committed languages](https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=RIAEvangelist&theme=radical&animation=load)](https://github.com/RIAEvangelist?tab=repositories)
-
-[![Productive time](https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=RIAEvangelist&theme=radical&utcOffset=-7&animation=load)](https://github.com/RIAEvangelist)
+<p align="center">
+  <a href="https://github.com/RIAEvangelist?tab=repositories"><img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=RIAEvangelist&theme=radical&animation=load" width="49%" alt="Most committed languages"></a>
+  <a href="https://github.com/RIAEvangelist"><img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=RIAEvangelist&theme=radical&utcOffset=-7&animation=load" width="49%" alt="Productive time"></a>
+</p>
 
 ## Follow the work
 
