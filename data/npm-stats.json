@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-17T16:01:33.940Z",
+  "generatedAt": "2026-08-17T17:45:58.762Z",
   "source": {
     "registry": "https://registry.npmjs.org/-/v1/search?text=maintainer%3Ariaevangelist&size=250",
     "downloads": "https://api.npmjs.org/downloads/point/{period}/{packages}",
@@ -282,7 +282,7 @@
     },
     {
       "name": "node-http-server",
-      "version": "9.0.1",
+      "version": "9.0.2",
       "description": "A lightweight, secure, zero-runtime-dependency HTTP and HTTPS static server for Node.js.",
       "keywords": [
         "http",
