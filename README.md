@@ -10,6 +10,23 @@
 
 *Building useful technology and stronger communities, with clarity, compassion, and a little less noise.*
 
+## Open-source reach
+
+<p align="center">
+  <a href="https://riaevangelist.github.io/RIAEvangelist/">
+    <img src="assets/npm-downloads.svg" width="100%" alt="RIAEvangelist NPM download telemetry showing weekly, monthly, and yearly totals plus the top five modules for each period">
+  </a>
+</p>
+
+<!-- profile-telemetry-counts:start -->
+<p align="center">
+  <strong>42 maintained NPM modules · 120 public repositories · one navigable history</strong><br>
+  <a href="https://riaevangelist.github.io/RIAEvangelist/"><strong>Explore the live package pulse and complete code atlas →</strong></a>
+</p>
+<!-- profile-telemetry-counts:end -->
+
+The dashboard totals every public package currently maintained by [`riaevangelist`](https://www.npmjs.com/~riaevangelist), shows weekly, monthly, and yearly downloads per module, and explains every public repository. Counts use the official NPM rolling download windows and refresh automatically each day. They represent package downloads—not unique people or verified installations.
+
 ## Earned milestones
 
 [![Quickdraw](https://img.shields.io/badge/Quickdraw-Earned-F5C542?style=for-the-badge&logo=github&logoColor=white)](https://github.com/RIAEvangelist?achievement=quickdraw&tab=achievements) [![Arctic Code Vault Contributor](https://img.shields.io/badge/Arctic%20Code%20Vault-Contributor-00B4D8?style=for-the-badge&logo=github&logoColor=white)](https://github.com/RIAEvangelist?achievement=arctic-code-vault-contributor&tab=achievements) [![Starstruck x3](https://img.shields.io/badge/Starstruck-x3-FF69B4?style=for-the-badge&logo=github&logoColor=white)](https://github.com/RIAEvangelist?achievement=starstruck&tab=achievements) [![Pull Shark x2](https://img.shields.io/badge/Pull%20Shark-x2-7C3AED?style=for-the-badge&logo=github&logoColor=white)](https://github.com/RIAEvangelist?achievement=pull-shark&tab=achievements)

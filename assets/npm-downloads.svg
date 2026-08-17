@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="650" viewBox="0 0 980 650" role="img" aria-labelledby="title description">
+  <title id="title">RIAEvangelist NPM download telemetry</title>
+  <desc id="description">4,597,446 weekly, 23,019,236 monthly, and 259,776,319 yearly downloads across 42 maintained modules, followed by the top five modules.</desc>
+  <defs>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#151226"/>
+      <stop offset="1" stop-color="#090813"/>
+    </linearGradient>
+    <linearGradient id="signal" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#ff4fa7"/>
+      <stop offset="0.5" stop-color="#8c6cff"/>
+      <stop offset="1" stop-color="#39e6e6"/>
+    </linearGradient>
+  </defs>
+  <style>
+    text { font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; fill: #f8f5ff; }
+    .eyebrow { font-size: 13px; font-weight: 800; letter-spacing: 2.2px; fill: #39e6e6; }
+    .heading { font-size: 34px; font-weight: 800; letter-spacing: -1.4px; }
+    .metric-label { font-size: 12px; font-weight: 800; letter-spacing: 1.4px; fill: #aaa4bf; }
+    .metric { font-size: 31px; font-weight: 800; letter-spacing: -1.2px; }
+    .rank { font: 700 12px ui-monospace, SFMono-Regular, Consolas, monospace; fill: #76718b; }
+    .package { font-size: 16px; font-weight: 750; }
+    .value { font: 650 14px ui-monospace, SFMono-Regular, Consolas, monospace; text-anchor: end; fill: #d9d4e8; }
+    .column { font: 750 11px ui-monospace, SFMono-Regular, Consolas, monospace; text-anchor: end; letter-spacing: 1px; fill: #8c849f; }
+    .foot { font-size: 12px; fill: #8c849f; }
+  </style>
+  <rect x="1" y="1" width="978" height="648" rx="26" fill="url(#card)" stroke="#2e2947"/>
+  <rect x="1" y="1" width="978" height="5" rx="3" fill="url(#signal)"/>
+  <circle cx="914" cy="70" r="42" fill="#8c6cff" opacity=".12"/>
+  <circle cx="914" cy="70" r="21" fill="#39e6e6" opacity=".14"/>
+  <text x="48" y="55" class="eyebrow">NPM DOWNLOAD SIGNAL · LIVE PROFILE</text>
+  <text x="48" y="100" class="heading">Open source, in motion.</text>
+  <g transform="translate(48 145)">
+    <rect width="280" height="138" rx="18" fill="#0c0b17" stroke="#352c4c"/>
+    <text x="22" y="36" class="metric-label">WEEKLY</text>
+    <text x="22" y="82" class="metric">4.6M</text>
+    <text x="22" y="111" class="foot">4,597,446 downloads</text>
+  </g>
+  <g transform="translate(350 145)">
+    <rect width="280" height="138" rx="18" fill="#0c0b17" stroke="#352c4c"/>
+    <text x="22" y="36" class="metric-label">MONTHLY</text>
+    <text x="22" y="82" class="metric">23M</text>
+    <text x="22" y="111" class="foot">23,019,236 downloads</text>
+  </g>
+  <g transform="translate(652 145)">
+    <rect width="280" height="138" rx="18" fill="#0c0b17" stroke="#352c4c"/>
+    <text x="22" y="36" class="metric-label">YEARLY</text>
+    <text x="22" y="82" class="metric">259.8M</text>
+    <text x="22" y="111" class="foot">259,776,319 downloads</text>
+  </g>
+  <text x="48" y="335" class="eyebrow">TOP MODULES</text>
+  <text x="525" y="335" class="column">WEEK</text>
+  <text x="710" y="335" class="column">MONTH</text>
+  <text x="918" y="335" class="column">YEAR</text>
+  <path d="M48 352H932" stroke="#2e2947"/>
+  <text x="56" y="390" class="rank">01</text>
+      <text x="104" y="390" class="package">js-message</text>
+      <text x="525" y="390" class="value">1,114,009</text>
+      <text x="710" y="390" class="value">5,336,429</text>
+      <text x="918" y="390" class="value">61,708,174</text>
+      <text x="56" y="433" class="rank">02</text>
+      <text x="104" y="433" class="package">event-pubsub</text>
+      <text x="525" y="433" class="value">1,084,999</text>
+      <text x="710" y="433" class="value">5,122,952</text>
+      <text x="918" y="433" class="value">58,192,865</text>
+      <text x="56" y="476" class="rank">03</text>
+      <text x="104" y="476" class="package">easy-stack</text>
+      <text x="525" y="476" class="value">858,940</text>
+      <text x="710" y="476" class="value">4,961,386</text>
+      <text x="918" y="476" class="value">58,021,369</text>
+      <text x="56" y="519" class="rank">04</text>
+      <text x="104" y="519" class="package">js-queue</text>
+      <text x="525" y="519" class="value">715,583</text>
+      <text x="710" y="519" class="value">3,540,301</text>
+      <text x="918" y="519" class="value">37,901,847</text>
+      <text x="56" y="562" class="rank">05</text>
+      <text x="104" y="562" class="package">node-ipc</text>
+      <text x="525" y="562" class="value">718,382</text>
+      <text x="710" y="562" class="value">3,540,083</text>
+      <text x="918" y="562" class="value">37,765,169</text>
+  <path d="M48 615H932" stroke="#2e2947"/>
+  <text x="48" y="637" class="foot">42 packages maintained by riaevangelist · rolling NPM API windows · refreshed Aug 17, 2026 UTC</text>
+</svg>

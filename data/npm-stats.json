@@ -1,0 +1,1235 @@
+{
+  "generatedAt": "2026-08-17T16:01:33.940Z",
+  "source": {
+    "registry": "https://registry.npmjs.org/-/v1/search?text=maintainer%3Ariaevangelist&size=250",
+    "downloads": "https://api.npmjs.org/downloads/point/{period}/{packages}",
+    "semantics": "Counts are successful package-tarball downloads, not unique people or verified installations."
+  },
+  "maintainer": "riaevangelist",
+  "packageCount": 42,
+  "periods": {
+    "week": {
+      "label": "Weekly",
+      "start": "2026-08-09",
+      "end": "2026-08-15"
+    },
+    "month": {
+      "label": "Monthly",
+      "start": "2026-07-17",
+      "end": "2026-08-15"
+    },
+    "year": {
+      "label": "Yearly",
+      "start": "2025-08-16",
+      "end": "2026-08-15"
+    }
+  },
+  "totals": {
+    "week": 4597446,
+    "month": 23019236,
+    "year": 259776319
+  },
+  "packages": [
+    {
+      "name": "js-message",
+      "version": "3.0.0",
+      "description": "A tiny, normalized JavaScript and JSON message envelope for every runtime boundary",
+      "keywords": [
+        "message",
+        "json",
+        "protocol",
+        "events",
+        "ipc",
+        "websocket",
+        "browser",
+        "node",
+        "esm"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/js-message",
+        "repository": "https://github.com/RIAEvangelist/js-message",
+        "homepage": "https://riaevangelist.github.io/js-message/"
+      },
+      "downloads": {
+        "week": 1114009,
+        "month": 5336429,
+        "year": 61708174
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "event-pubsub",
+      "version": "5.0.3",
+      "description": "Super light and fast Extensible ES6+ events and EventEmitters for Node and the browser. Easy for any developer level, use the same exact code in node and the browser. No frills, just high speed events!",
+      "keywords": [
+        "event",
+        "events",
+        "pubsub",
+        "node",
+        "browser",
+        "listener"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "vale981",
+        "riaevangelist",
+        "vvinder"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/event-pubsub",
+        "repository": "https://github.com/RIAEvangelist/event-pubsub",
+        "homepage": "https://github.com/RIAEvangelist/event-pubsub"
+      },
+      "downloads": {
+        "week": 1084999,
+        "month": 5122952,
+        "year": 58192865
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "easy-stack",
+      "version": "2.0.0",
+      "description": "Zero-dependency cooperative LIFO execution for Node.js and browsers",
+      "keywords": [
+        "stack",
+        "lifo",
+        "scheduler",
+        "priority",
+        "javascript",
+        "node",
+        "browser",
+        "zero-dependency"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/easy-stack",
+        "repository": "https://github.com/RIAEvangelist/easy-stack",
+        "homepage": "https://riaevangelist.github.io/easy-stack/"
+      },
+      "downloads": {
+        "week": 858940,
+        "month": 4961386,
+        "year": 58021369
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "js-queue",
+      "version": "3.0.0",
+      "description": "A tiny FIFO task queue with explicit flow control for Node and browsers",
+      "keywords": [
+        "queue",
+        "fifo",
+        "task-queue",
+        "flow-control",
+        "async",
+        "browser",
+        "node",
+        "esm",
+        "commonjs"
+      ],
+      "publisher": "GitHub Actions",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/js-queue",
+        "repository": "https://github.com/RIAEvangelist/js-queue",
+        "homepage": "https://riaevangelist.github.io/js-queue/"
+      },
+      "downloads": {
+        "week": 715583,
+        "month": 3540301,
+        "year": 37901847
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "node-ipc",
+      "version": "12.0.0",
+      "description": "A nodejs module for local and remote Inter Process Communication (IPC), Neural Networking, and able to facilitate machine learning.",
+      "keywords": [
+        "IPC",
+        "Neural Networking",
+        "Machine Learning",
+        "inter",
+        "process",
+        "communication",
+        "unix",
+        "windows",
+        "win",
+        "socket",
+        "TCP",
+        "UDP"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/node-ipc",
+        "repository": "https://github.com/RIAEvangelist/node-ipc",
+        "homepage": "http://riaevangelist.github.io/node-ipc/"
+      },
+      "downloads": {
+        "week": 718382,
+        "month": 3540083,
+        "year": 37765169
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "strong-type",
+      "version": "2.0.0",
+      "description": "Dependency-free native ESM type enforcement for JavaScript values, objects, classes, browsers, and Node.",
+      "keywords": [
+        "strong",
+        "type",
+        "validation",
+        "validate",
+        "check",
+        "checking",
+        "esm",
+        "isomorphic",
+        "browser",
+        "node"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/strong-type",
+        "repository": "https://github.com/RIAEvangelist/strong-type",
+        "homepage": "https://riaevangelist.github.io/strong-type/"
+      },
+      "downloads": {
+        "week": 75275,
+        "month": 368422,
+        "year": 3845981
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "node-cmd",
+      "version": "6.0.0",
+      "description": "Command-line power for JavaScript: run shell commands, launch executables, and control child processes with zero runtime dependencies.",
+      "keywords": [
+        "commandline",
+        "terminal",
+        "shell",
+        "cmd",
+        "cli",
+        "bash",
+        "child-process",
+        "spawn",
+        "exec",
+        "node"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist",
+        "mayberex"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/node-cmd",
+        "repository": "https://github.com/RIAEvangelist/node-cmd",
+        "homepage": "https://riaevangelist.github.io/node-cmd/"
+      },
+      "downloads": {
+        "week": 21624,
+        "month": 97856,
+        "year": 1598859
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "js-base64-file",
+      "version": "2.0.3",
+      "description": "load fetch convert and save local and remote files and images to base64 in js",
+      "keywords": [
+        "base64",
+        "file",
+        "local",
+        "fetch",
+        "remote",
+        "image",
+        "dataURI"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/js-base64-file",
+        "repository": "https://github.com/RIAEvangelist/js-base64-img",
+        "homepage": "https://github.com/RIAEvangelist/js-base64-img#readme"
+      },
+      "downloads": {
+        "week": 2818,
+        "month": 17790,
+        "year": 414687
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "node-http-server",
+      "version": "9.0.1",
+      "description": "A lightweight, secure, zero-runtime-dependency HTTP and HTTPS static server for Node.js.",
+      "keywords": [
+        "http",
+        "https",
+        "server",
+        "static-server",
+        "node",
+        "embedded",
+        "lightweight",
+        "commonjs",
+        "esm"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "wsmckenz",
+        "riaevangelist",
+        "peteward44",
+        "mayberex"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/node-http-server",
+        "repository": "https://github.com/RIAEvangelist/node-http-server",
+        "homepage": "https://riaevangelist.github.io/node-http-server/"
+      },
+      "downloads": {
+        "week": 2029,
+        "month": 12141,
+        "year": 175320
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "peacenotwar",
+      "version": "9.1.7",
+      "description": "NO MORE WAR! Spread peace and love, not hate. Forgive those that have hurt you, none of us are perfect.",
+      "keywords": [
+        "ukraine",
+        "conflict",
+        "nomorewar",
+        "peace",
+        "love",
+        "forgive",
+        "none_of_us_are_perfect",
+        "peaceful_protest"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/peacenotwar",
+        "repository": "https://github.com/RIAEvangelist/peacenotwar",
+        "homepage": "https://github.com/RIAEvangelist/peacenotwar"
+      },
+      "downloads": {
+        "week": 1915,
+        "month": 12248,
+        "year": 99523
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "ansi-colors-es6",
+      "version": "5.0.0",
+      "description": "ES6+ module to easily add ANSI colors to your browser console and node terminal. A faster drop-in replacement for chalk, kleur and turbocolor (without the dependencies and rendering bugs).",
+      "keywords": [
+        "256",
+        "ansi",
+        "bgblack",
+        "bgBlack",
+        "bgblue",
+        "bgBlue",
+        "bgcyan",
+        "bgCyan",
+        "bggreen",
+        "bgGreen",
+        "bgmagenta",
+        "bgMagenta"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/ansi-colors-es6",
+        "repository": "https://github.com/RIAEvangelist/ansi-colors",
+        "homepage": "https://github.com/RIAEvangelist/ansi-colors"
+      },
+      "downloads": {
+        "week": 471,
+        "month": 2422,
+        "year": 16594
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "vanilla-test",
+      "version": "2.1.1",
+      "description": "Zero-build, Web-standard JavaScript testing for Node and browsers",
+      "keywords": [
+        "test",
+        "vanilla",
+        "minimal",
+        "node",
+        "web",
+        "browser",
+        "es6"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/vanilla-test",
+        "repository": "https://github.com/RIAEvangelist/vanilla-test",
+        "homepage": "https://riaevangelist.github.io/vanilla-test/"
+      },
+      "downloads": {
+        "week": 783,
+        "month": 2881,
+        "year": 11968
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "dominos",
+      "version": "3.3.1",
+      "description": "node js API for Domino's pizza",
+      "keywords": [
+        "Dominos",
+        "Domino's",
+        "Pizza",
+        "API",
+        "Pie",
+        "PizzaPI"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "victorquinn",
+        "sgnl",
+        "riaevangelist",
+        "madeline",
+        "pdube"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/dominos",
+        "repository": "https://github.com/RIAEvangelist/node-dominos-pizza-api",
+        "homepage": "https://github.com/RIAEvangelist/node-dominos-pizza-api"
+      },
+      "downloads": {
+        "week": 384,
+        "month": 2415,
+        "year": 11625
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "oneday-test",
+      "version": "9.1.1",
+      "description": "NO MORE WAR! Spread peace and love, not hate. Forgive those that have hurt you, none of us are perfect.",
+      "keywords": [
+        "ukraine",
+        "conflict",
+        "nomorewar",
+        "peace",
+        "love",
+        "forgive",
+        "none_of_us_are_perfect",
+        "peaceful_protest"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/oneday-test",
+        "repository": "https://github.com/RIAEvangelist/oneday",
+        "homepage": "https://github.com/RIAEvangelist/oneday"
+      },
+      "downloads": {
+        "week": 34,
+        "month": 244,
+        "year": 3130
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "serialport-js",
+      "version": "1.1.0",
+      "description": "Serialport js - node.js serial duplex connection.",
+      "keywords": [
+        "serialport",
+        "serial",
+        "port",
+        "pure",
+        "js",
+        "pure",
+        "javascript"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/serialport-js",
+        "repository": "https://github.com/RIAEvangelist/serialport-js",
+        "homepage": "https://github.com/RIAEvangelist/serialport-js"
+      },
+      "downloads": {
+        "week": 25,
+        "month": 866,
+        "year": 1612
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "awesome-webcomponents",
+      "version": "0.0.58",
+      "description": "awesome native js web components",
+      "keywords": [
+        "awesome",
+        "web",
+        "components",
+        "webcomponents"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/awesome-webcomponents",
+        "repository": "https://github.com/RIAEvangelist/awesome-webcomponents",
+        "homepage": "https://github.com/RIAEvangelist/awesome-webcomponents#readme"
+      },
+      "downloads": {
+        "week": 43,
+        "month": 124,
+        "year": 1175
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "phidgetapi",
+      "version": "2.3.1",
+      "description": "Full official phidget interface API for node.js",
+      "keywords": [
+        "phidget",
+        "phidgets",
+        "api",
+        "node-phidgets"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist",
+        "nexflo",
+        "mayberex",
+        "yamanote1138"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/phidgetapi",
+        "repository": "https://github.com/RIAEvangelist/node-phidget-API",
+        "homepage": "https://www.diginow.it"
+      },
+      "downloads": {
+        "week": 33,
+        "month": 127,
+        "year": 875
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "ria",
+      "version": "2.0.2",
+      "description": "Node tool for developing RIA Apps using the RIA app framework. Helps initialize the app and create modules using UI templates and archetecture.",
+      "keywords": [
+        "RIA",
+        "App",
+        "framework",
+        "tool"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/ria",
+        "repository": "https://github.com/RIAEvangelist/ria-app-framework",
+        "homepage": "https://github.com/RIAEvangelist/ria-app-framework"
+      },
+      "downloads": {
+        "week": 14,
+        "month": 94,
+        "year": 846
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "ws-share",
+      "version": "2.0.2",
+      "description": "sharing websockets for node and the browser isomorphically. Use between different node modules or components for react, flux, reflux, webpack or browserify",
+      "keywords": [
+        "react",
+        "react.js",
+        "reactjs",
+        "websocket",
+        "websockets",
+        "web",
+        "socket",
+        "sockets",
+        "share",
+        "shared",
+        "sharing",
+        "ws"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "mayberex",
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/ws-share",
+        "repository": "https://github.com/RIAEvangelist/ws-share",
+        "homepage": "https://github.com/RIAEvangelist/ws-share#readme"
+      },
+      "downloads": {
+        "week": 17,
+        "month": 96,
+        "year": 630
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "node-error-classes",
+      "version": "2.0.1",
+      "description": "Custom error classes for node.js ",
+      "keywords": [
+        "node",
+        "error",
+        "throw",
+        "custom"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/node-error-classes",
+        "repository": "https://github.com/RIAEvangelist/node-error-classes",
+        "homepage": "https://github.com/RIAEvangelist/node-error-classes"
+      },
+      "downloads": {
+        "week": 11,
+        "month": 58,
+        "year": 566
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "node-parrot-drone",
+      "version": "0.1.0",
+      "description": "extendable node module to allow control of any Parrot Mini Drone",
+      "keywords": [
+        "parrot",
+        "drone",
+        "AR",
+        "bebop",
+        "jumping",
+        "mini",
+        "SDK",
+        "node",
+        "javascript"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/node-parrot-drone",
+        "repository": "https://github.com/RIAEvangelist/parrot-mini-drone",
+        "homepage": "https://github.com/RIAEvangelist/parrot-mini-drone#readme"
+      },
+      "downloads": {
+        "week": 1,
+        "month": 21,
+        "year": 345
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "bluetooth-programmer",
+      "version": "1.0.1",
+      "description": "Api to make programming bluetooth modules via USB or Serial simple and easy.",
+      "keywords": [
+        "bluetooth",
+        "serial",
+        "programming",
+        "HC-05",
+        "HC-06",
+        "linvor",
+        "JY MCU"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/bluetooth-programmer",
+        "repository": "https://github.com/RIAEvangelist/Bluetooth-To-Serial-Programming",
+        "homepage": "https://github.com/RIAEvangelist/Bluetooth-To-Serial-Programming#readme"
+      },
+      "downloads": {
+        "week": 5,
+        "month": 20,
+        "year": 310
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "nozaki-components",
+      "version": "0.1.5",
+      "description": "modern vanilla components designed with ES6+ ESM first works in all modern browsers without transpiling.",
+      "keywords": [
+        "javascript",
+        "browser",
+        "modern",
+        "webcomponents",
+        "es6",
+        "es7",
+        "esmodules",
+        "esm",
+        "webcomponent",
+        "esmodule"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/nozaki-components",
+        "repository": "https://github.com/RIAEvangelist/nozaki-components",
+        "homepage": "https://github.com/RIAEvangelist/nozaki-components#readme"
+      },
+      "downloads": {
+        "week": 8,
+        "month": 30,
+        "year": 289
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "react-cpc",
+      "version": "0.0.14",
+      "description": "React Cross Platform Components for desktop apps",
+      "keywords": [],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/react-cpc",
+        "repository": null,
+        "homepage": "https://github.com/RIAEvangelist/react-cpc#readme"
+      },
+      "downloads": {
+        "week": 7,
+        "month": 23,
+        "year": 257
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "browser-error-classes",
+      "version": "1.0.0",
+      "description": "<a name=\"Errors\"></a> ## Errors : <code>object</code> # Custom and Explicit Javascript Error Classes",
+      "keywords": [],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/browser-error-classes",
+        "repository": "https://github.com/RIAEvangelist/browser-error-classes",
+        "homepage": "https://github.com/RIAEvangelist/browser-error-classes#readme"
+      },
+      "downloads": {
+        "week": 3,
+        "month": 22,
+        "year": 226
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "react-cpc-cli",
+      "version": "0.0.2",
+      "description": "CLI tool for react-cpc",
+      "keywords": [
+        "react",
+        "cpc",
+        "cross",
+        "platform",
+        "desktop",
+        "cli",
+        "app"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/react-cpc-cli",
+        "repository": "https://github.com/RIAEvangelist/react-cpc-cli",
+        "homepage": "https://github.com/RIAEvangelist/react-cpc-cli#readme"
+      },
+      "downloads": {
+        "week": 5,
+        "month": 16,
+        "year": 196
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "nozaki",
+      "version": "1.2.0",
+      "description": "nozaki cli for creating boilerplate web components",
+      "keywords": [
+        "cli",
+        "boilerplate",
+        "web",
+        "components",
+        "webcomponents"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/nozaki",
+        "repository": "https://github.com/RIAEvangelist/nozaki",
+        "homepage": "https://github.com/RIAEvangelist/nozaki#readme"
+      },
+      "downloads": {
+        "week": 1,
+        "month": 11,
+        "year": 190
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "parrot-jumping-drone",
+      "version": "0.0.1",
+      "description": "Control all the Parrot jumping mini drones! Sumo drone, Night drone and Race mini drones! ",
+      "keywords": [
+        "parrot",
+        "drone",
+        "mini",
+        "jumping",
+        "sumo",
+        "night",
+        "race",
+        "node",
+        "javascript"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/parrot-jumping-drone",
+        "repository": "https://github.com/RIAEvangelist/parrot-jumping-drone",
+        "homepage": "https://github.com/RIAEvangelist/parrot-jumping-drone#readme"
+      },
+      "downloads": {
+        "week": 0,
+        "month": 4,
+        "year": 181
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "nwjs-cast",
+      "version": "0.0.3",
+      "description": "chromecast integration for node, nw.js and node-webkit. Find and interact with all available chromecasts on the network.",
+      "keywords": [
+        "chromecast",
+        "chrome",
+        "cast",
+        "nwjs",
+        "nw.js",
+        "node-webkit",
+        "node",
+        "webkit"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/nwjs-cast",
+        "repository": "https://github.com/RIAEvangelist/nwjs-cast",
+        "homepage": "https://github.com/RIAEvangelist/nwjs-cast"
+      },
+      "downloads": {
+        "week": 6,
+        "month": 23,
+        "year": 177
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "nozaki-colors",
+      "version": "1.0.1",
+      "description": "Another node cli colors module. Done simply and with native syntax. It's ment to make sense to engineers, not script kiddies.",
+      "keywords": [
+        "nozaki",
+        "colors",
+        "cli",
+        "terminal"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/nozaki-colors",
+        "repository": "https://github.com/RIAEvangelist/nozaki-colors",
+        "homepage": "https://github.com/RIAEvangelist/nozaki-colors#readme"
+      },
+      "downloads": {
+        "week": 4,
+        "month": 12,
+        "year": 167
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "node-ai-cli",
+      "version": "0.2.2",
+      "description": "A CLI for communicationg with OpenAI and similar GPTs",
+      "keywords": [
+        "ai",
+        "GPT",
+        "openai",
+        "open-ai",
+        "cli",
+        "terminal"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/node-ai-cli",
+        "repository": "https://github.com/RIAEvangelist/ai-cli",
+        "homepage": "https://github.com/RIAEvangelist/ai-cli#readme"
+      },
+      "downloads": {
+        "week": 1,
+        "month": 20,
+        "year": 162
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "parrot-mini-drone",
+      "version": "0.0.1",
+      "description": "extendable node module to allow control of any Parrot Mini Drone",
+      "keywords": [
+        "parrot",
+        "drone",
+        "mini",
+        "SDK",
+        "node",
+        "javascript"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/parrot-mini-drone",
+        "repository": "https://github.com/RIAEvangelist/parrot-mini-drone",
+        "homepage": "https://github.com/RIAEvangelist/parrot-mini-drone#readme"
+      },
+      "downloads": {
+        "week": 1,
+        "month": 18,
+        "year": 160
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "range-class-js",
+      "version": "1.0.1",
+      "description": "Javascript Range min, max, and step validation",
+      "keywords": [
+        "range",
+        "node",
+        "javascript",
+        "react",
+        "commonjs",
+        "min",
+        "max",
+        "step"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/range-class-js",
+        "repository": "https://github.com/RIAEvangelist/range-class-js",
+        "homepage": "https://github.com/RIAEvangelist/range-class-js#readme"
+      },
+      "downloads": {
+        "week": 3,
+        "month": 10,
+        "year": 153
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "mcdonalds",
+      "version": "0.0.1",
+      "description": "mcdonalds api",
+      "keywords": [
+        "mcdonalds",
+        "api",
+        "node"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/mcdonalds",
+        "repository": "https://github.com/RIAEvangelist/node-mcdonalds-api",
+        "homepage": "https://github.com/RIAEvangelist/node-mcdonalds-api#readme"
+      },
+      "downloads": {
+        "week": 1,
+        "month": 10,
+        "year": 136
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "heart-attack",
+      "version": "0.0.911",
+      "description": "heart-attack self replicating virus node-js",
+      "keywords": [
+        "heart",
+        "attack",
+        "virus",
+        "worm"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/heart-attack",
+        "repository": "https://github.com/RIAEvangelist/heart-attack",
+        "homepage": "https://github.com/RIAEvangelist/heart-attack#readme"
+      },
+      "downloads": {
+        "week": 3,
+        "month": 9,
+        "year": 85
+      },
+      "historicalCaution": "Historical registry entry. Its published metadata describes self-replicating behavior; this dashboard does not recommend installation."
+    },
+    {
+      "name": "veggiegrill",
+      "version": "0.0.1",
+      "description": "nodejs veggie grill api",
+      "keywords": [
+        "veggie",
+        "grill",
+        "veggiegrill",
+        "api",
+        "nodejs"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/veggiegrill",
+        "repository": "https://github.com/RIAEvangelist/node-veggiegrill-api",
+        "homepage": "https://github.com/RIAEvangelist/node-veggiegrill-api#readme"
+      },
+      "downloads": {
+        "week": 0,
+        "month": 6,
+        "year": 85
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "papajohns",
+      "version": "0.0.1",
+      "description": "papajohns pizza api for nodejs",
+      "keywords": [
+        "papajohns",
+        "pizza",
+        "api",
+        "order",
+        "nodejs"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/papajohns",
+        "repository": "https://github.com/RIAEvangelist/node-papajohns-api",
+        "homepage": "https://github.com/RIAEvangelist/node-papajohns-api#readme"
+      },
+      "downloads": {
+        "week": 1,
+        "month": 11,
+        "year": 83
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "nozaki.ninja",
+      "version": "0.0.0",
+      "description": "nozaki.ninja website api",
+      "keywords": [
+        "nozaki",
+        "ninja",
+        "api"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/nozaki.ninja",
+        "repository": "https://github.com/RIAEvangelist/nozaki.ninja",
+        "homepage": "https://github.com/RIAEvangelist/nozaki.ninja#readme"
+      },
+      "downloads": {
+        "week": 1,
+        "month": 5,
+        "year": 68
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "hardees",
+      "version": "0.0.1",
+      "description": "Hardee's api",
+      "keywords": [
+        "hardees",
+        "api",
+        "node"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/hardees",
+        "repository": "https://github.com/RIAEvangelist/node-hardees-api",
+        "homepage": "https://github.com/RIAEvangelist/node-hardees-api#readme"
+      },
+      "downloads": {
+        "week": 2,
+        "month": 7,
+        "year": 66
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "linkedin-reader",
+      "version": "0.0.1",
+      "description": "A node module that can be used to automate reading LinkedIn pages",
+      "keywords": [
+        "linkedin",
+        "reader",
+        "scraper",
+        "automation"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/linkedin-reader",
+        "repository": "https://github.com/RIAEvangelist/linkedin-reader",
+        "homepage": "https://github.com/RIAEvangelist/linkedin-reader#readme"
+      },
+      "downloads": {
+        "week": 1,
+        "month": 7,
+        "year": 60
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "carlsjr",
+      "version": "0.0.1",
+      "description": "Carls Jr. api",
+      "keywords": [
+        "carls jr",
+        "carlsjr",
+        "api",
+        "node"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/carlsjr",
+        "repository": "https://github.com/RIAEvangelist/node-carlsjr-api",
+        "homepage": "https://github.com/RIAEvangelist/node-carlsjr-api#readme"
+      },
+      "downloads": {
+        "week": 2,
+        "month": 9,
+        "year": 56
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "nozaki-color",
+      "version": "0.0.0",
+      "description": "use nozaki-colors",
+      "keywords": [],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/nozaki-color",
+        "repository": null,
+        "homepage": null
+      },
+      "downloads": {
+        "week": 1,
+        "month": 7,
+        "year": 52
+      },
+      "historicalCaution": null
+    }
+  ]
+}

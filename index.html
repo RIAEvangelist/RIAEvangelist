@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#070711">
+    <meta name="description" content="Live NPM download telemetry and the complete public repository atlas for RIAEvangelist.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="RIAEvangelist // Open-source signal">
+    <meta property="og:description" content="Live NPM download telemetry and a navigable atlas of every public RIAEvangelist repository.">
+    <meta property="og:url" content="https://riaevangelist.github.io/RIAEvangelist/">
+    <meta property="og:image" content="https://riaevangelist.github.io/RIAEvangelist/assets/og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="RIAEvangelist // Open-source signal">
+    <meta name="twitter:description" content="Traditional JavaScript. Ridiculous reach. Explore the live package pulse and complete code atlas.">
+    <meta name="twitter:image" content="https://riaevangelist.github.io/RIAEvangelist/assets/og.png">
+    <link rel="canonical" href="https://riaevangelist.github.io/RIAEvangelist/">
+    <title>RIAEvangelist // Open-source signal</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to the signal</a>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="RIAEvangelist home">
+        <span class="brand-mark" aria-hidden="true">R//A</span>
+        <span>RIAEvangelist</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#packages">Modules</a>
+        <a href="#repositories">Repositories</a>
+        <a class="github-link" href="https://github.com/RIAEvangelist">GitHub ↗</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="live-dot" aria-hidden="true"></span> Open-source telemetry · live archive</p>
+          <h1 id="hero-title">Traditional JavaScript.<br><span>Ridiculous reach.</span></h1>
+          <p class="hero-intro">A live view of the modules people install and the ideas, experiments, tools, and systems behind every public repository.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#packages">Explore the package pulse</a>
+            <a class="button button-quiet" href="#repositories">Enter the code atlas</a>
+          </div>
+        </div>
+
+        <div class="signal-visual" aria-hidden="true">
+          <div class="orbit orbit-one"><i></i><i></i><i></i></div>
+          <div class="orbit orbit-two"><i></i><i></i></div>
+          <div class="signal-core"><b id="signal-total">259.8M</b><span>yearly downloads</span></div>
+          <p class="signal-label label-one"><span id="module-count">42</span> modules</p>
+          <p class="signal-label label-two"><span id="repo-count">120</span> repos</p>
+          <p class="signal-label label-three">pure JS energy</p>
+        </div>
+      </section>
+
+      <section class="metrics" aria-label="Overall NPM downloads">
+        <div class="metric metric-pink">
+          <p>Last week</p>
+          <strong id="total-week" data-count="4597446">4,597,446</strong>
+          <span>downloads across every maintained module</span>
+        </div>
+        <div class="metric metric-violet">
+          <p>Last month</p>
+          <strong id="total-month" data-count="23019236">23,019,236</strong>
+          <span>rolling NPM download total</span>
+        </div>
+        <div class="metric metric-cyan">
+          <p>Last year</p>
+          <strong id="total-year" data-count="259776319">259,776,319</strong>
+          <span>one year of open-source utility</span>
+        </div>
+      </section>
+
+      <p class="freshness" id="freshness"><span></span> Loading the latest verified NPM snapshot…</p>
+
+      <section class="package-preview section-shell" id="packages" aria-labelledby="package-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">NPM constellation</p>
+            <h2 id="package-title">The modules moving the most code</h2>
+          </div>
+          <div class="section-side">
+            <p>Official rolling NPM download windows, summed across packages maintained by <code>riaevangelist</code>.</p>
+            <div class="period-switcher" role="group" aria-label="Rank packages by download period">
+              <button type="button" data-period="week" aria-pressed="false">Week</button>
+              <button type="button" data-period="month" aria-pressed="false">Month</button>
+              <button type="button" data-period="year" aria-pressed="true">Year</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="leaderboard" id="leaderboard" role="group" aria-live="polite" aria-label="Top modules by yearly downloads">
+          <a href="https://www.npmjs.com/package/js-message" style="--bar: 100%"><b>01</b><span><strong>js-message</strong><small>61,708,174 yearly</small></span><i></i></a>
+          <a href="https://www.npmjs.com/package/event-pubsub" style="--bar: 94%"><b>02</b><span><strong>event-pubsub</strong><small>58,192,865 yearly</small></span><i></i></a>
+          <a href="https://www.npmjs.com/package/easy-stack" style="--bar: 94%"><b>03</b><span><strong>easy-stack</strong><small>58,021,369 yearly</small></span><i></i></a>
+          <a href="https://www.npmjs.com/package/js-queue" style="--bar: 61%"><b>04</b><span><strong>js-queue</strong><small>37,901,847 yearly</small></span><i></i></a>
+          <a href="https://www.npmjs.com/package/node-ipc" style="--bar: 61%"><b>05</b><span><strong>node-ipc</strong><small>37,765,169 yearly</small></span><i></i></a>
+        </div>
+
+        <div class="catalog-heading">
+          <div>
+            <p class="eyebrow">Complete module index</p>
+            <h3>Every maintained package.</h3>
+          </div>
+          <label class="search-field">
+            <span>Search modules</span>
+            <input id="package-search" type="search" placeholder="Try node, browser, queue…" autocomplete="off">
+          </label>
+        </div>
+        <p class="result-count" id="package-result-count">Loading 42 modules…</p>
+        <div class="package-grid" id="package-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="section-shell repo-section" id="repositories" aria-labelledby="repo-title">
+        <div class="section-heading repo-heading">
+          <div>
+            <p class="eyebrow">Code atlas</p>
+            <h2 id="repo-title">Every public repository, one navigable history.</h2>
+          </div>
+          <p>Original tools, experiments, hardware work, community projects, and personal forks—explained and searchable in one place.</p>
+        </div>
+
+        <div class="repo-stats" role="group" aria-label="GitHub repository summary">
+          <p><strong id="repo-total">120</strong><span>public repos</span></p>
+          <p><strong id="repo-original">82</strong><span>original works</span></p>
+          <p><strong id="repo-forks">38</strong><span>forks</span></p>
+          <p><strong id="repo-stars">1,541</strong><span>stars earned</span></p>
+        </div>
+
+        <div class="repo-toolbar">
+          <label class="search-field repo-search">
+            <span>Search the code atlas</span>
+            <input id="repo-search" type="search" placeholder="Search names, explanations, topics…" autocomplete="off">
+          </label>
+          <label class="select-field">
+            <span>Language</span>
+            <select id="repo-language"><option value="all">All languages</option></select>
+          </label>
+          <label class="select-field">
+            <span>Sort</span>
+            <select id="repo-sort">
+              <option value="updated">Recently updated</option>
+              <option value="stars">Most starred</option>
+              <option value="name">Name A–Z</option>
+            </select>
+          </label>
+        </div>
+        <div class="filter-pills" role="group" aria-label="Filter repository type">
+          <button type="button" data-repo-kind="all" aria-pressed="true">Everything</button>
+          <button type="button" data-repo-kind="original" aria-pressed="false">Original work</button>
+          <button type="button" data-repo-kind="fork" aria-pressed="false">Forks</button>
+          <button type="button" data-repo-kind="archived" aria-pressed="false">Archived</button>
+        </div>
+        <p class="result-count" id="repo-result-count">Loading the complete repository atlas…</p>
+        <div class="repo-grid" id="repo-grid" aria-live="polite"></div>
+        <button class="load-more" id="load-more" type="button" hidden>Reveal more repositories</button>
+      </section>
+
+      <section class="method-section" aria-labelledby="method-title">
+        <div class="method-copy">
+          <p class="eyebrow">Honest telemetry</p>
+          <h2 id="method-title">Big numbers.<br>Precise labels.</h2>
+        </div>
+        <div class="method-notes">
+          <article>
+            <b>01</b>
+            <h3>Downloads, not people</h3>
+            <p>NPM counts successful package-tarball downloads. CI systems, mirrors, security scanners, and repeat downloads can all contribute.</p>
+          </article>
+          <article>
+            <b>02</b>
+            <h3>Rolling windows</h3>
+            <p>Weekly, monthly, and yearly mean the latest 7, 30, and 365 available days—not calendar periods.</p>
+          </article>
+          <article>
+            <b>03</b>
+            <h3>Maintained catalog</h3>
+            <p>The overall total sums every public package where <code>riaevangelist</code> is listed as a maintainer, including co-maintained work.</p>
+          </article>
+        </div>
+        <p class="source-links">Data: <a href="https://github.com/npm/registry/blob/main/docs/download-counts.md">official NPM download API</a> · <a href="https://docs.github.com/en/rest/repos/repos#list-repositories-for-a-user">GitHub repositories API</a></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Built with Web standards and an unreasonable affection for JavaScript.</p>
+      <p><a href="https://www.npmjs.com/~riaevangelist">NPM ↗</a> <a href="https://github.com/RIAEvangelist">GitHub ↗</a> <a href="https://www.youtube.com/brandonnozakimiller">YouTube ↗</a></p>
+    </footer>
+  </body>
+</html>
