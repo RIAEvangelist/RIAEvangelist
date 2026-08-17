@@ -195,7 +195,7 @@
       "lede": "Music, electric racing, charging hardware, AI experiments, open-source work, and product demos each have their own archive.",
       "facts": [
         { "value": "AI Wizard", "label": "Music label" },
-        { "value": "NewZeroland", "label": "Electric motorcycles + life" },
+        { "value": "Influencer days", "label": "Electric motorcycles + life" },
         { "value": "DigiNow", "label": "Charging + racing archive" }
       ],
       "sections": [
@@ -211,12 +211,12 @@
         },
         {
           "kicker": "Racing and life",
-          "title": "NewZeroland / Brandon Nozaki Miller",
+          "title": "Electric Motorcycle Influencer days",
           "body": [
             "The channel began around electric motorcycles and grew to include charging, inventing, racing, travel, and the practical life around early electric mobility."
           ],
           "links": [
-            { "label": "Watch NewZeroland", "url": "https://www.youtube.com/@BrandonNozakiMiller", "note": "Electric motorcycles and more" }
+            { "label": "Watch the electric motorcycle archive", "url": "https://www.youtube.com/@BrandonNozakiMiller", "note": "Racing, charging, inventions, and travel" }
           ]
         },
         {

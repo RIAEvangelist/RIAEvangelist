@@ -399,8 +399,12 @@ test("story chapters are five focused, generated, shareable pages", async () => 
   const lineageLinks = japanZen.sections.find(({ title }) => title.includes("returned to the United States")).links;
   assert.ok(lineageLinks.some(({ url }) => url === "https://nitenichiryu.jp/2017/03/niten-ichi-ryu/"));
   const channels = story.pages.find(({ slug }) => slug === "channels");
-  const newZeroland = channels.sections.find(({ title }) => title.includes("NewZeroland"));
-  assert.ok(newZeroland.links.some(({ url }) => url === "https://www.youtube.com/@BrandonNozakiMiller"));
+  const electricMotorcycleArchive = channels.sections.find(({ title }) => title === "Electric Motorcycle Influencer days");
+  assert.equal(electricMotorcycleArchive.links.length, 1);
+  assert.ok(electricMotorcycleArchive.links.some(({ label, url }) => (
+    label === "Watch the electric motorcycle archive"
+      && url === "https://www.youtube.com/@BrandonNozakiMiller"
+  )));
 
   for (const page of story.pages) {
     assert.match(page.slug, /^[a-z0-9]+(?:-[a-z0-9]+)*$/);
