@@ -91,8 +91,8 @@
 }
 
 .release-cover-link { display: block; overflow: hidden; aspect-ratio: 1; background: var(--panel); }
-.release-cover { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 240ms ease; }
-.release-card:hover .release-cover { transform: scale(1.025); }
+.release-cover { display: block; width: 100%; height: 100%; object-fit: contain; background: #080812; transition: filter 240ms ease; }
+.release-card:hover .release-cover { filter: brightness(1.04); }
 .release-card-copy { padding: 1.25rem; }
 .release-card h3 { margin: 0; font-size: 1.35rem; letter-spacing: -0.035em; }
 .release-card h3 a { text-decoration: none; }
@@ -105,7 +105,7 @@
 .collection-card h3 { margin: 0; font-size: 1.8rem; letter-spacing: -0.045em; }
 .collection-card > p:not(.eyebrow) { color: var(--muted); line-height: 1.7; }
 .collection-covers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.4rem; margin-bottom: 1.5rem; }
-.collection-covers img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 0.65rem; }
+.collection-covers img { width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 0.65rem; background: #080812; }
 
 .breadcrumbs { margin: 0 0 1.5rem; color: var(--quiet); font: 700 0.68rem/1.5 ui-monospace, monospace; }
 .breadcrumbs a { color: var(--cyan); text-decoration: none; }
@@ -125,7 +125,7 @@
   padding-block: 5rem;
 }
 
-.release-workspace-art img { display: block; width: 100%; border-radius: var(--radius); box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.38); }
+.release-workspace-art img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; border-radius: var(--radius); background: #080812; box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.38); }
 .release-title { max-width: 14ch; margin: 0; font-size: clamp(3rem, 6vw, 6rem); line-height: 0.95; letter-spacing: -0.065em; }
 .release-byline { margin: 1rem 0 0; color: var(--cyan); font-size: 1rem; font-weight: 760; line-height: 1.6; }
 
@@ -174,6 +174,8 @@
 
 .story-gateway:hover, .story-gateway:focus-visible { border-color: rgba(255, 79, 167, 0.52); transform: translateY(-0.15rem); }
 .story-gateway .eyebrow { margin: 0; }
+.music-gateway-covers { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.4rem; }
+.music-gateway-covers img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; border-radius: 0.55rem; background: #080812; box-shadow: 0 0.75rem 1.5rem rgba(3, 2, 12, 0.3); }
 .story-gateway strong { max-width: 18ch; font-size: 1.65rem; line-height: 1.12; letter-spacing: -0.04em; }
 .story-gateway small { color: var(--muted); font-size: 0.92rem; line-height: 1.65; }
 .story-gateway b { align-self: end; color: var(--cyan); font-size: 0.82rem; }

@@ -247,6 +247,12 @@
         <div class="story-gateway-grid home-gateway-grid">
           <a class="story-gateway" href="music/">
             <span class="eyebrow">Music catalog</span>
+            <span class="music-gateway-covers" aria-hidden="true">
+              <img src="assets/music/covers/three-wishes-for-my-attorney-bernie.jpg" alt="" width="96" height="96" loading="lazy">
+              <img src="assets/music/covers/dont-tread-on-me.jpg" alt="" width="96" height="96" loading="lazy">
+              <img src="assets/music/covers/standing-in-the-crossfire.jpg" alt="" width="96" height="96" loading="lazy">
+              <img src="assets/music/covers/finding-purpose.jpg" alt="" width="96" height="96" loading="lazy">
+            </span>
             <strong>Every release, with every listening link.</strong>
             <small>Browse featured work, themed collections, and individual release workspaces.</small>
             <b>Enter the catalog →</b>
@@ -284,7 +290,7 @@
         </div>
       </section>
 
-      <section class="method-section" aria-labelledby="method-title">
+      <section class="method-section" id="method" aria-labelledby="method-title">
         <div class="method-copy">
           <p class="eyebrow">Honest telemetry</p>
           <h2 id="method-title">Big numbers.<br>Precise labels.</h2>
@@ -310,9 +316,36 @@
       </section>
     </main>
 
-    <footer>
-      <p>Built with Web standards and an unreasonable affection for JavaScript.</p>
-      <p><a href="music/">Music</a> <a href="story/">Story</a> <a href="story/channels/">Channels</a> <a href="https://www.npmjs.com/~riaevangelist">RIA NPM ↗</a> <a href="https://www.npmjs.com/~thewizardnexus">TWiN NPM ↗</a> <a href="https://github.com/RIAEvangelist">RIA GitHub ↗</a> <a href="https://github.com/TheWizardNexus">TWiN GitHub ↗</a></p>
-    </footer>
+    <!-- shared-site-footer:start -->
+    <footer class="site-footer">
+        <div class="site-footer-intro">
+          <a class="site-footer-brand" href="" aria-label="RIAEvangelist home">R//A <span>RIAEvangelist</span></a>
+          <p>Music, software, motion, open-source telemetry, and the human stories connecting them.</p>
+        </div>
+        <nav class="site-footer-nav" aria-label="Complete site map">
+          <section class="site-footer-group">
+            <h2>Open source</h2>
+            <ul><li><a href="">Home</a></li><li><a href="#history">NPM history</a></li><li><a href="#packages">NPM modules</a></li><li><a href="#repositories">Repository atlas</a></li><li><a href="#beyond">Life &amp; work</a></li><li><a href="#method">Data methodology</a></li></ul>
+          </section>
+          <section class="site-footer-group">
+            <h2>Music</h2>
+            <ul><li><a href="music/">Music home</a></li><li><a href="music/releases/">All 36 releases</a></li><li><a href="music/collections/">Collections</a></li><li><a href="music/process/">How it is made</a></li><li><a href="music/origins/">Where it began</a></li></ul>
+          </section>
+          <section class="site-footer-group">
+            <h2>Music collections</h2>
+            <ul><li><a href="music/collections/reflection-and-purpose/">Reflection &amp; purpose</a></li><li><a href="music/collections/code-and-circuits/">Code &amp; circuits</a></li><li><a href="music/collections/resilience-and-resolve/">Resilience &amp; resolve</a></li><li><a href="music/collections/family-and-play/">Family &amp; play</a></li><li><a href="music/collections/spirit-and-stillness/">Spirit &amp; stillness</a></li><li><a href="music/collections/collaboration-and-community/">Collaboration &amp; community</a></li></ul>
+          </section>
+          <section class="site-footer-group">
+            <h2>Life chapters</h2>
+            <ul><li><a href="story/">Story home</a></li><li><a href="story/racing/">Racing</a></li><li><a href="story/technology/">Technology</a></li><li><a href="story/service/">Service</a></li><li><a href="story/japan-zen/">Japan &amp; Zen</a></li><li><a href="story/channels/">Channels</a></li></ul>
+          </section>
+          <section class="site-footer-group">
+            <h2>Elsewhere</h2>
+            <ul><li><a href="https://www.youtube.com/@BrandonNozakiMiller" target="_blank" rel="noopener noreferrer">NewZeroland / Brandon on YouTube ↗</a></li><li><a href="https://www.youtube.com/@AI-Wizard-Music" target="_blank" rel="noopener noreferrer">AI Wizard on YouTube ↗</a></li><li><a href="https://www.youtube.com/@digiNowIt" target="_blank" rel="noopener noreferrer">DigiNow on YouTube ↗</a></li><li><a href="https://www.youtube.com/@unclenozaki9325" target="_blank" rel="noopener noreferrer">AI Nerd on YouTube ↗</a></li><li><a href="https://github.com/RIAEvangelist" target="_blank" rel="noopener noreferrer">RIA GitHub ↗</a></li><li><a href="https://github.com/TheWizardNexus" target="_blank" rel="noopener noreferrer">TWiN GitHub ↗</a></li><li><a href="https://www.npmjs.com/~riaevangelist" target="_blank" rel="noopener noreferrer">RIA NPM ↗</a></li><li><a href="https://www.npmjs.com/~thewizardnexus" target="_blank" rel="noopener noreferrer">TWiN NPM ↗</a></li></ul>
+          </section>
+        </nav>
+        <p class="site-footer-note">Built for GitHub Pages with Web standards and an unreasonable affection for JavaScript.</p>
+      </footer>
+    <!-- shared-site-footer:end -->
   </body>
 </html>

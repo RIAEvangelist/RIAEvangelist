@@ -808,16 +808,23 @@ code { color: var(--cyan); font-size: 0.9em; }
 .source-links a { color: var(--cyan); }
 
 footer {
-  display: flex;
-  justify-content: space-between;
-  gap: 2rem;
-  padding-block: 2.5rem 4rem;
+  padding-block: 3rem 4rem;
   border-top: 1px solid var(--line);
   color: var(--muted);
   font-size: 0.85rem;
 }
-footer p { margin: 0; }
-footer a { margin-right: 0.8rem; color: var(--cyan); text-decoration: none; }
+
+.site-footer { display: grid; gap: 2.75rem; }
+.site-footer-intro { display: grid; grid-template-columns: minmax(12rem, 0.65fr) minmax(18rem, 1.35fr); gap: 2rem; align-items: end; }
+.site-footer-intro p { max-width: 42rem; margin: 0; font-size: clamp(1rem, 2vw, 1.25rem); line-height: 1.6; }
+.site-footer-brand { color: var(--ink); font: 850 1.05rem/1 ui-monospace, monospace; letter-spacing: 0.08em; text-decoration: none; }
+.site-footer-brand span { margin-left: 0.45rem; color: var(--pink); }
+.site-footer-nav { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: clamp(1.25rem, 3vw, 3rem); }
+.site-footer-group h2 { margin: 0 0 1rem; color: var(--quiet); font: 800 0.67rem/1.4 ui-monospace, monospace; letter-spacing: 0.12em; text-transform: uppercase; }
+.site-footer-group ul { display: grid; gap: 0.68rem; margin: 0; padding: 0; list-style: none; }
+.site-footer-group a { color: var(--muted); line-height: 1.35; text-decoration: none; }
+.site-footer-group a:hover, .site-footer-group a:focus-visible { color: var(--cyan); }
+.site-footer-note { margin: 0; padding-top: 1.25rem; border-top: 1px solid var(--line); color: var(--quiet); font-size: 0.75rem; line-height: 1.6; }
 
 button,
 a,
@@ -827,7 +834,7 @@ select,
 .repo-card { transition: border-color 160ms ease, color 160ms ease, background 160ms ease, transform 160ms ease; }
 
 @media (max-width: 850px) {
-  nav a:not(.github-link) { display: none; }
+  .page-nav a:not(.github-link) { display: none; }
   .hero { grid-template-columns: 1fr; padding-top: 4rem; }
   .signal-visual { width: min(100%, 29rem); }
   .metrics { grid-template-columns: 1fr; }
@@ -842,6 +849,7 @@ select,
   .method-section { grid-template-columns: 1fr; gap: 3rem; }
   .method-copy { position: static; }
   .source-links { grid-column: 1; margin-top: -1rem; }
+  .site-footer-nav { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
 @media (max-width: 560px) {
@@ -872,7 +880,7 @@ select,
   .repo-search { grid-column: auto; }
   .package-card { min-height: 22rem; }
   .method-notes article { padding-left: 2.6rem; }
-  footer { flex-direction: column; }
+  .site-footer-intro, .site-footer-nav { grid-template-columns: 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) {

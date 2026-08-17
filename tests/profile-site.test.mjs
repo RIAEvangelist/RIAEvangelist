@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import { readFile, readdir } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { renderSiteFooter, siteFooterGroups } from "../scripts/site-footer.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const read = (relativePath) => readFile(path.join(ROOT, relativePath), "utf8");
@@ -169,11 +170,12 @@ test("historical NPM archive reconciles every year, module, and lifetime total",
 });
 
 test("profile README and site expose the telemetry experience", async () => {
-  const [readme, html, script, styles, svg] = await Promise.all([
+  const [readme, html, script, styles, pageStyles, svg] = await Promise.all([
     read("README.md"),
     read("index.html"),
     read("app.js"),
     read("styles.css"),
+    read("pages.css"),
     read("assets/npm-downloads.svg"),
   ]);
 
@@ -187,6 +189,15 @@ test("profile README and site expose the telemetry experience", async () => {
   assert.match(html, /id="history-chart"/);
   assert.match(html, /id="history-range"/);
   assert.match(html, /id="history-table-foot"/);
+  assert.match(html, /class="music-gateway-covers"/);
+  for (const slug of [
+    "three-wishes-for-my-attorney-bernie",
+    "dont-tread-on-me",
+    "standing-in-the-crossfire",
+    "finding-purpose",
+  ]) {
+    assert.ok(html.includes(`assets/music/covers/${slug}.jpg`), `Homepage is missing the ${slug} cover`);
+  }
   assert.match(script, /data\/npm-stats\.json/);
   assert.match(script, /data\/repos\.json/);
   assert.match(script, /data\/npm-history\/index\.json/);
@@ -195,6 +206,8 @@ test("profile README and site expose the telemetry experience", async () => {
   assert.match(script, /historyTableFoot\.innerHTML/);
   assert.ok(script.indexOf("initializeHistory();") < script.indexOf("[state.npm, state.repos]"));
   assert.match(styles, /#history-chart\[hidden\]/);
+  assert.match(pageStyles, /\.release-cover[^}]+object-fit:\s*contain/s);
+  assert.match(pageStyles, /\.release-workspace-art img[^}]+height:\s*auto[^}]+object-fit:\s*contain/s);
   assert.match(readme, /thewizardnexus/);
   assert.match(readme, /1\.56\+ billion recorded NPM package downloads since February 27, 2015/);
   assert.ok(readme.indexOf("profile-npm-history:start") < readme.indexOf("# Roshi _ _"));
@@ -232,6 +245,11 @@ test("music catalog is complete, unique, secure, and coherently collected", asyn
 
   const profileIds = catalog.releases.filter((release) => release.profileFeature).map((release) => release.id).sort();
   assert.deepEqual(profileIds, [...PROFILE_MUSIC_IDS].sort());
+  const buildingAFuture = releaseById.get("057829090484");
+  assert.equal(
+    buildingAFuture.services.find(({ service }) => service === "youtubemusic")?.url,
+    "https://music.youtube.com/watch?v=V7eGZPA5-MQ",
+  );
 
   for (const release of catalog.releases) {
     assert.match(release.id, /^\d{12}$/);
@@ -296,8 +314,24 @@ test("generated music pages form a complete page-first catalog", async () => {
 
   assert.equal(pageCount, 5);
   assert.deepEqual([...generatedManifest.generated].sort(), [...expectedPaths].sort());
-  assert.match(pages.get("music/index.html"), />36</);
-  assert.match(pages.get("music/index.html"), /Short pages\. Deep catalog\./);
+  const hubHtml = pages.get("music/index.html");
+  assert.match(hubHtml, />36</);
+  assert.match(hubHtml, /Short pages\. Deep catalog\./);
+  assert.match(hubHtml, /<dt>Each release<\/dt><dd>Dedicated page<\/dd>/);
+  assert.equal((hubHtml.match(/<article class="release-card">/g) ?? []).length, 6);
+  for (const slug of [
+    "three-wishes-for-my-attorney-bernie",
+    "dont-tread-on-me",
+    "standing-in-the-crossfire",
+    "finding-purpose",
+    "the-time-has-come-run-if-you-must",
+    "building-a-future-for-you",
+  ]) {
+    assert.ok(hubHtml.includes(`music/releases/${slug}/`), `Start with a signal is missing ${slug}`);
+  }
+  const originsHtml = pages.get("music/origins/index.html");
+  assert.match(originsHtml, /Music began before I could walk\./);
+  assert.match(originsHtml, /listening and dancing to the Cars with my mom/);
 
   for (const relativePath of authorshipPaths) {
     const route = relativePath.replace(/index\.html$/, "");
@@ -361,6 +395,12 @@ test("story chapters are five focused, generated, shareable pages", async () => 
   assert.equal(new Set(slugs).size, 5);
   assert.deepEqual([...generatedManifest.generated].sort(), [...expectedPaths].sort());
   assert.match(pages.get("story/index.html"), /Less scrolling\. More paths\./);
+  const japanZen = story.pages.find(({ slug }) => slug === "japan-zen");
+  const lineageLinks = japanZen.sections.find(({ title }) => title.includes("returned to the United States")).links;
+  assert.ok(lineageLinks.some(({ url }) => url === "https://nitenichiryu.jp/2017/03/niten-ichi-ryu/"));
+  const channels = story.pages.find(({ slug }) => slug === "channels");
+  const newZeroland = channels.sections.find(({ title }) => title.includes("NewZeroland"));
+  assert.ok(newZeroland.links.some(({ url }) => url === "https://www.youtube.com/@BrandonNozakiMiller"));
 
   for (const page of story.pages) {
     assert.match(page.slug, /^[a-z0-9]+(?:-[a-z0-9]+)*$/);
@@ -414,6 +454,13 @@ test("profile README features the open-tab releases and routes readers to focuse
 
   for (const release of catalog.releases.filter(({ profileFeature }) => profileFeature)) {
     assert.ok(musicBlock.includes(release.landrUrl), `${release.id} LANDR link is missing from the README`);
+    const coverPath = `assets/music/covers/${release.slug}.jpg`;
+    assert.ok(musicBlock.includes(`src="${coverPath}"`), `${release.id} cover is missing from the README`);
+    assert.ok(musicBlock.includes(`alt="Cover art for ${release.title}"`), `${release.id} cover alt text is missing`);
+    const cover = await readFile(path.join(ROOT, coverPath));
+    assert.ok(cover.length > 1_000, `${release.id} cover file is unexpectedly small`);
+    assert.equal(cover[0], 0xff, `${release.id} cover is not a JPEG`);
+    assert.equal(cover[1], 0xd8, `${release.id} cover is not a JPEG`);
     const primaryServices = release.services.filter(({ service }) => ["spotify", "applemusic", "youtubemusic"].includes(service));
     assert.ok(primaryServices.length > 0, `${release.id} has no primary service links`);
     for (const { service, url } of primaryServices) {
@@ -425,6 +472,46 @@ test("profile README features the open-tab releases and routes readers to focuse
     assert.ok(readme.includes(`${SITE_BASE}/story/${route}/`), `README is missing the ${route} story link`);
   }
   assert.doesNotMatch(readme, /^## JavaScript vs Python$/m);
+});
+
+test("one shared footer maps every site section and subsection across all routes", async () => {
+  const [catalog, story, rootHtml, styles, musicManifest, storyManifest] = await Promise.all([
+    read("data/music.json").then(JSON.parse),
+    read("data/story.json").then(JSON.parse),
+    read("index.html"),
+    read("styles.css"),
+    read("music/.generated-pages.json").then(JSON.parse),
+    read("story/.generated-pages.json").then(JSON.parse),
+  ]);
+  const normalize = (value) => value.replace(/\s+/g, " ").trim();
+  const htmlPaths = ["index.html", ...musicManifest.generated, ...storyManifest.generated];
+  const collectionGroup = siteFooterGroups.find(({ title }) => title === "Music collections");
+  const storyGroup = siteFooterGroups.find(({ title }) => title === "Life chapters");
+  const elsewhereGroup = siteFooterGroups.find(({ title }) => title === "Elsewhere");
+
+  assert.equal(htmlPaths.length, 58);
+  assert.deepEqual(
+    collectionGroup.links.slice(0).map(([, href]) => href).sort(),
+    catalog.collections.map(({ slug }) => `music/collections/${slug}/`).sort(),
+  );
+  assert.deepEqual(
+    storyGroup.links.slice(1).map(([, href]) => href).sort(),
+    story.pages.map(({ slug }) => `story/${slug}/`).sort(),
+  );
+  assert.ok(elsewhereGroup.links.some(([, href]) => href === "https://www.youtube.com/@BrandonNozakiMiller"));
+  assert.match(rootHtml, /<section class="method-section" id="method"/);
+  assert.match(styles, /\.page-nav a:not\(\.github-link\)\s*\{\s*display:\s*none;/);
+  assert.doesNotMatch(styles, /(?<![.-])nav a:not\(\.github-link\)\s*\{\s*display:\s*none;/);
+
+  for (const relativePath of htmlPaths) {
+    const html = relativePath === "index.html" ? rootHtml : await read(relativePath);
+    const directory = path.posix.dirname(relativePath.replaceAll("\\", "/"));
+    const prefix = directory === "." ? "" : directory.split("/").map(() => "../").join("");
+    assert.ok(
+      normalize(html).includes(normalize(renderSiteFooter(prefix))),
+      `${relativePath} is missing the shared site footer`,
+    );
+  }
 });
 
 test("sitemap enumerates every generated music and story route", async () => {

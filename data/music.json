@@ -46,9 +46,9 @@
       "lede": "Long before these releases, music was already braided through my family, childhood, friendships, and experiments with technology.",
       "sections": [
         {
-          "title": "Music began with my grandmother.",
+          "title": "Music began before I could walk.",
           "body": [
-            "From the time I was two or three, I played piano and organ with my grandmother. She also played accordion, and those early hours made music feel like part of family life rather than something distant or formal."
+            "Before I could walk, I remember listening and dancing to the Cars with my mom. By the time I was two or three, I was playing piano and organ with my grandmother. She also played accordion, and those early hours made music feel like part of family life rather than something distant or formal."
           ]
         },
         {
@@ -574,6 +574,10 @@
         {
           "service": "spotify",
           "url": "https://open.spotify.com/album/5LMA5EnhMWvaGNaBLKf39O"
+        },
+        {
+          "service": "youtubemusic",
+          "url": "https://music.youtube.com/watch?v=V7eGZPA5-MQ"
         },
         {
           "service": "amazonmusic",

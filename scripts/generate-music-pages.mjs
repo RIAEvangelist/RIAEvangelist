@@ -1,6 +1,7 @@
 import { mkdir, readFile, readdir, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { renderSiteFooter } from "./site-footer.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const MUSIC_ROOT = path.join(ROOT, "music");
@@ -79,13 +80,6 @@ function header(prefix, current) {
   </header>`;
 }
 
-function footer(prefix) {
-  return `<footer class="page-footer">
-    <p>Music, software, motion, and human stories.</p>
-    <p><a href="${prefix}music/">Music</a><a href="${prefix}story/">Story</a><a href="https://www.youtube.com/@AI-Wizard-Music">AI Wizard ↗</a></p>
-  </footer>`;
-}
-
 function layout({ prefix, title, description, canonicalPath, image, current = "music", body, openGraphType = "website", headExtra = "" }) {
   const canonical = `${SITE_BASE}/${canonicalPath}`.replace(/\/+$/, "/");
   const imageTags = image ? `
@@ -117,7 +111,7 @@ ${extraHead}    <title>${escapeHtml(title)}</title>
     <a class="skip-link" href="#main">Skip to content</a>
     ${header(prefix, current)}
     <main id="main" class="subpage-main">${body}</main>
-    ${footer(prefix)}
+    ${renderSiteFooter(prefix)}
   </body>
 </html>
 `;
@@ -154,7 +148,14 @@ function collectionCard(collection, releases, prefix) {
 }
 
 function musicHub(catalog) {
-  const featured = catalog.releases.filter((release) => release.featured).slice(0, 4);
+  const featuredAdditions = new Set(["the-time-has-come-run-if-you-must", "building-a-future-for-you"]);
+  const featured = [
+    ...catalog.releases.filter((release) => release.featured).slice(0, 4),
+    ...catalog.releases.filter((release) => featuredAdditions.has(release.slug)),
+  ];
+  if (featured.length !== 6 || new Set(featured.map(({ slug }) => slug)).size !== 6) {
+    throw new Error("Start with a signal must contain six unique releases");
+  }
   const body = `
     <section class="subpage-hero music-hero">
       <div>
@@ -169,7 +170,7 @@ function musicHub(catalog) {
       <dl class="page-metrics">
         <div><dt>Releases</dt><dd>${catalog.releases.length}</dd></div>
         <div><dt>Collections</dt><dd>${catalog.collections.length}</dd></div>
-        <div><dt>Every release</dt><dd>Own page</dd></div>
+        <div><dt>Each release</dt><dd>Dedicated page</dd></div>
       </dl>
     </section>
     <section class="section-shell compact-section" aria-labelledby="music-paths-title">

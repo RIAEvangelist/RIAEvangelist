@@ -1,6 +1,7 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { renderSiteFooter } from "./site-footer.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SITE_BASE = "https://riaevangelist.github.io/RIAEvangelist";
@@ -57,7 +58,7 @@ function layout({ prefix, title, description, canonicalPath, body, image = "" })
     <a class="skip-link" href="#main">Skip to content</a>
     ${header(prefix)}
     <main id="main" class="subpage-main">${body}</main>
-    <footer class="page-footer"><p>Music, software, motion, and human stories.</p><p><a href="${prefix}music/">Music</a><a href="${prefix}story/">Story</a><a href="https://github.com/RIAEvangelist">GitHub ↗</a></p></footer>
+    ${renderSiteFooter(prefix)}
   </body>
 </html>
 `;
