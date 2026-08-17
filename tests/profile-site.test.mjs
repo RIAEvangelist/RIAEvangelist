@@ -452,3 +452,12 @@ test("implementation introduces no TypeScript or TSX", async () => {
   await walk(ROOT);
   assert.deepEqual(forbidden, []);
 });
+
+test("deployment remains GitHub Pages-only", async () => {
+  const workflow = await read(".github/workflows/profile-site.yml");
+
+  assert.match(workflow, /actions\/upload-pages-artifact@/);
+  assert.match(workflow, /actions\/deploy-pages@/);
+  await assert.rejects(read(".openai/hosting.json"), (error) => error?.code === "ENOENT");
+  await assert.rejects(read("worker/index.js"), (error) => error?.code === "ENOENT");
+});
