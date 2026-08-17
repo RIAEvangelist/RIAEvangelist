@@ -1,12 +1,18 @@
 {
-  "generatedAt": "2026-08-17T17:45:58.762Z",
+  "generatedAt": "2026-08-17T17:58:23.272Z",
   "source": {
-    "registry": "https://registry.npmjs.org/-/v1/search?text=maintainer%3Ariaevangelist&size=250",
+    "registry": [
+      "https://registry.npmjs.org/-/v1/search?text=maintainer%3Ariaevangelist&size=250",
+      "https://registry.npmjs.org/-/v1/search?text=maintainer%3Athewizardnexus&size=250"
+    ],
     "downloads": "https://api.npmjs.org/downloads/point/{period}/{packages}",
     "semantics": "Counts are successful package-tarball downloads, not unique people or verified installations."
   },
-  "maintainer": "riaevangelist",
-  "packageCount": 42,
+  "maintainers": [
+    "riaevangelist",
+    "thewizardnexus"
+  ],
+  "packageCount": 43,
   "periods": {
     "week": {
       "label": "Weekly",
@@ -25,9 +31,9 @@
     }
   },
   "totals": {
-    "week": 4597446,
-    "month": 23019236,
-    "year": 259776319
+    "week": 4597578,
+    "month": 23019368,
+    "year": 259776451
   },
   "packages": [
     {
@@ -47,6 +53,9 @@
       ],
       "publisher": "riaevangelist",
       "maintainers": [
+        "riaevangelist"
+      ],
+      "trackedMaintainers": [
         "riaevangelist"
       ],
       "links": {
@@ -79,6 +88,9 @@
         "riaevangelist",
         "vvinder"
       ],
+      "trackedMaintainers": [
+        "riaevangelist"
+      ],
       "links": {
         "npm": "https://www.npmjs.com/package/event-pubsub",
         "repository": "https://github.com/RIAEvangelist/event-pubsub",
@@ -107,6 +119,9 @@
       ],
       "publisher": "riaevangelist",
       "maintainers": [
+        "riaevangelist"
+      ],
+      "trackedMaintainers": [
         "riaevangelist"
       ],
       "links": {
@@ -138,6 +153,9 @@
       ],
       "publisher": "GitHub Actions",
       "maintainers": [
+        "riaevangelist"
+      ],
+      "trackedMaintainers": [
         "riaevangelist"
       ],
       "links": {
@@ -174,6 +192,9 @@
       "maintainers": [
         "riaevangelist"
       ],
+      "trackedMaintainers": [
+        "riaevangelist"
+      ],
       "links": {
         "npm": "https://www.npmjs.com/package/node-ipc",
         "repository": "https://github.com/RIAEvangelist/node-ipc",
@@ -204,6 +225,9 @@
       ],
       "publisher": "riaevangelist",
       "maintainers": [
+        "riaevangelist"
+      ],
+      "trackedMaintainers": [
         "riaevangelist"
       ],
       "links": {
@@ -239,6 +263,9 @@
         "riaevangelist",
         "mayberex"
       ],
+      "trackedMaintainers": [
+        "riaevangelist"
+      ],
       "links": {
         "npm": "https://www.npmjs.com/package/node-cmd",
         "repository": "https://github.com/RIAEvangelist/node-cmd",
@@ -266,6 +293,9 @@
       ],
       "publisher": "riaevangelist",
       "maintainers": [
+        "riaevangelist"
+      ],
+      "trackedMaintainers": [
         "riaevangelist"
       ],
       "links": {
@@ -302,6 +332,9 @@
         "peteward44",
         "mayberex"
       ],
+      "trackedMaintainers": [
+        "riaevangelist"
+      ],
       "links": {
         "npm": "https://www.npmjs.com/package/node-http-server",
         "repository": "https://github.com/RIAEvangelist/node-http-server",
@@ -330,6 +363,9 @@
       ],
       "publisher": "riaevangelist",
       "maintainers": [
+        "riaevangelist"
+      ],
+      "trackedMaintainers": [
         "riaevangelist"
       ],
       "links": {
@@ -366,6 +402,9 @@
       "maintainers": [
         "riaevangelist"
       ],
+      "trackedMaintainers": [
+        "riaevangelist"
+      ],
       "links": {
         "npm": "https://www.npmjs.com/package/ansi-colors-es6",
         "repository": "https://github.com/RIAEvangelist/ansi-colors",
@@ -393,6 +432,9 @@
       ],
       "publisher": "riaevangelist",
       "maintainers": [
+        "riaevangelist"
+      ],
+      "trackedMaintainers": [
         "riaevangelist"
       ],
       "links": {
@@ -427,6 +469,9 @@
         "madeline",
         "pdube"
       ],
+      "trackedMaintainers": [
+        "riaevangelist"
+      ],
       "links": {
         "npm": "https://www.npmjs.com/package/dominos",
         "repository": "https://github.com/RIAEvangelist/node-dominos-pizza-api",
@@ -455,6 +500,9 @@
       ],
       "publisher": "riaevangelist",
       "maintainers": [
+        "riaevangelist"
+      ],
+      "trackedMaintainers": [
         "riaevangelist"
       ],
       "links": {
@@ -486,6 +534,9 @@
       "maintainers": [
         "riaevangelist"
       ],
+      "trackedMaintainers": [
+        "riaevangelist"
+      ],
       "links": {
         "npm": "https://www.npmjs.com/package/serialport-js",
         "repository": "https://github.com/RIAEvangelist/serialport-js",
@@ -510,6 +561,9 @@
       ],
       "publisher": "riaevangelist",
       "maintainers": [
+        "riaevangelist"
+      ],
+      "trackedMaintainers": [
         "riaevangelist"
       ],
       "links": {
@@ -541,6 +595,9 @@
         "mayberex",
         "yamanote1138"
       ],
+      "trackedMaintainers": [
+        "riaevangelist"
+      ],
       "links": {
         "npm": "https://www.npmjs.com/package/phidgetapi",
         "repository": "https://github.com/RIAEvangelist/node-phidget-API",
@@ -565,6 +622,9 @@
       ],
       "publisher": "riaevangelist",
       "maintainers": [
+        "riaevangelist"
+      ],
+      "trackedMaintainers": [
         "riaevangelist"
       ],
       "links": {
@@ -602,6 +662,9 @@
         "mayberex",
         "riaevangelist"
       ],
+      "trackedMaintainers": [
+        "riaevangelist"
+      ],
       "links": {
         "npm": "https://www.npmjs.com/package/ws-share",
         "repository": "https://github.com/RIAEvangelist/ws-share",
@@ -626,6 +689,9 @@
       ],
       "publisher": "riaevangelist",
       "maintainers": [
+        "riaevangelist"
+      ],
+      "trackedMaintainers": [
         "riaevangelist"
       ],
       "links": {
@@ -659,6 +725,9 @@
       "maintainers": [
         "riaevangelist"
       ],
+      "trackedMaintainers": [
+        "riaevangelist"
+      ],
       "links": {
         "npm": "https://www.npmjs.com/package/node-parrot-drone",
         "repository": "https://github.com/RIAEvangelist/parrot-mini-drone",
@@ -686,6 +755,9 @@
       ],
       "publisher": "riaevangelist",
       "maintainers": [
+        "riaevangelist"
+      ],
+      "trackedMaintainers": [
         "riaevangelist"
       ],
       "links": {
@@ -720,6 +792,9 @@
       "maintainers": [
         "riaevangelist"
       ],
+      "trackedMaintainers": [
+        "riaevangelist"
+      ],
       "links": {
         "npm": "https://www.npmjs.com/package/nozaki-components",
         "repository": "https://github.com/RIAEvangelist/nozaki-components",
@@ -741,6 +816,9 @@
       "maintainers": [
         "riaevangelist"
       ],
+      "trackedMaintainers": [
+        "riaevangelist"
+      ],
       "links": {
         "npm": "https://www.npmjs.com/package/react-cpc",
         "repository": null,
@@ -760,6 +838,9 @@
       "keywords": [],
       "publisher": "riaevangelist",
       "maintainers": [
+        "riaevangelist"
+      ],
+      "trackedMaintainers": [
         "riaevangelist"
       ],
       "links": {
@@ -791,6 +872,9 @@
       "maintainers": [
         "riaevangelist"
       ],
+      "trackedMaintainers": [
+        "riaevangelist"
+      ],
       "links": {
         "npm": "https://www.npmjs.com/package/react-cpc-cli",
         "repository": "https://github.com/RIAEvangelist/react-cpc-cli",
@@ -816,6 +900,9 @@
       ],
       "publisher": "riaevangelist",
       "maintainers": [
+        "riaevangelist"
+      ],
+      "trackedMaintainers": [
         "riaevangelist"
       ],
       "links": {
@@ -849,6 +936,9 @@
       "maintainers": [
         "riaevangelist"
       ],
+      "trackedMaintainers": [
+        "riaevangelist"
+      ],
       "links": {
         "npm": "https://www.npmjs.com/package/parrot-jumping-drone",
         "repository": "https://github.com/RIAEvangelist/parrot-jumping-drone",
@@ -879,6 +969,9 @@
       "maintainers": [
         "riaevangelist"
       ],
+      "trackedMaintainers": [
+        "riaevangelist"
+      ],
       "links": {
         "npm": "https://www.npmjs.com/package/nwjs-cast",
         "repository": "https://github.com/RIAEvangelist/nwjs-cast",
@@ -903,6 +996,9 @@
       ],
       "publisher": "riaevangelist",
       "maintainers": [
+        "riaevangelist"
+      ],
+      "trackedMaintainers": [
         "riaevangelist"
       ],
       "links": {
@@ -933,6 +1029,9 @@
       "maintainers": [
         "riaevangelist"
       ],
+      "trackedMaintainers": [
+        "riaevangelist"
+      ],
       "links": {
         "npm": "https://www.npmjs.com/package/node-ai-cli",
         "repository": "https://github.com/RIAEvangelist/ai-cli",
@@ -959,6 +1058,9 @@
       ],
       "publisher": "riaevangelist",
       "maintainers": [
+        "riaevangelist"
+      ],
+      "trackedMaintainers": [
         "riaevangelist"
       ],
       "links": {
@@ -991,6 +1093,9 @@
       "maintainers": [
         "riaevangelist"
       ],
+      "trackedMaintainers": [
+        "riaevangelist"
+      ],
       "links": {
         "npm": "https://www.npmjs.com/package/range-class-js",
         "repository": "https://github.com/RIAEvangelist/range-class-js",
@@ -1016,6 +1121,9 @@
       "maintainers": [
         "riaevangelist"
       ],
+      "trackedMaintainers": [
+        "riaevangelist"
+      ],
       "links": {
         "npm": "https://www.npmjs.com/package/mcdonalds",
         "repository": "https://github.com/RIAEvangelist/node-mcdonalds-api",
@@ -1025,6 +1133,37 @@
         "week": 1,
         "month": 10,
         "year": 136
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "dbopfs",
+      "version": "1.0.0",
+      "description": "A browser-native database that maps tables and records to the Origin Private File System.",
+      "keywords": [
+        "opfs",
+        "database",
+        "browser",
+        "filesystem",
+        "storage",
+        "arcane"
+      ],
+      "publisher": "thewizardnexus",
+      "maintainers": [
+        "thewizardnexus"
+      ],
+      "trackedMaintainers": [
+        "thewizardnexus"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/dbopfs",
+        "repository": "https://github.com/TheWizardNexus/DBOPFS",
+        "homepage": "https://thewizardnexus.github.io/DBOPFS/"
+      },
+      "downloads": {
+        "week": 132,
+        "month": 132,
+        "year": 132
       },
       "historicalCaution": null
     },
@@ -1040,6 +1179,9 @@
       ],
       "publisher": "riaevangelist",
       "maintainers": [
+        "riaevangelist"
+      ],
+      "trackedMaintainers": [
         "riaevangelist"
       ],
       "links": {
@@ -1069,6 +1211,9 @@
       "maintainers": [
         "riaevangelist"
       ],
+      "trackedMaintainers": [
+        "riaevangelist"
+      ],
       "links": {
         "npm": "https://www.npmjs.com/package/veggiegrill",
         "repository": "https://github.com/RIAEvangelist/node-veggiegrill-api",
@@ -1096,6 +1241,9 @@
       "maintainers": [
         "riaevangelist"
       ],
+      "trackedMaintainers": [
+        "riaevangelist"
+      ],
       "links": {
         "npm": "https://www.npmjs.com/package/papajohns",
         "repository": "https://github.com/RIAEvangelist/node-papajohns-api",
@@ -1121,6 +1269,9 @@
       "maintainers": [
         "riaevangelist"
       ],
+      "trackedMaintainers": [
+        "riaevangelist"
+      ],
       "links": {
         "npm": "https://www.npmjs.com/package/nozaki.ninja",
         "repository": "https://github.com/RIAEvangelist/nozaki.ninja",
@@ -1144,6 +1295,9 @@
       ],
       "publisher": "riaevangelist",
       "maintainers": [
+        "riaevangelist"
+      ],
+      "trackedMaintainers": [
         "riaevangelist"
       ],
       "links": {
@@ -1172,6 +1326,9 @@
       "maintainers": [
         "riaevangelist"
       ],
+      "trackedMaintainers": [
+        "riaevangelist"
+      ],
       "links": {
         "npm": "https://www.npmjs.com/package/linkedin-reader",
         "repository": "https://github.com/RIAEvangelist/linkedin-reader",
@@ -1198,6 +1355,9 @@
       "maintainers": [
         "riaevangelist"
       ],
+      "trackedMaintainers": [
+        "riaevangelist"
+      ],
       "links": {
         "npm": "https://www.npmjs.com/package/carlsjr",
         "repository": "https://github.com/RIAEvangelist/node-carlsjr-api",
@@ -1217,6 +1377,9 @@
       "keywords": [],
       "publisher": "riaevangelist",
       "maintainers": [
+        "riaevangelist"
+      ],
+      "trackedMaintainers": [
         "riaevangelist"
       ],
       "links": {

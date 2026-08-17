@@ -5,8 +5,8 @@ import { fileURLToPath } from "node:url";
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DATA_DIR = path.join(ROOT, "data");
 const ASSET_DIR = path.join(ROOT, "assets");
-const OWNER = "RIAEvangelist";
-const NPM_MAINTAINER = "riaevangelist";
+const GITHUB_OWNERS = ["RIAEvangelist", "TheWizardNexus"];
+const NPM_MAINTAINERS = ["riaevangelist", "thewizardnexus"];
 const USER_AGENT = "RIAEvangelist-profile-telemetry/1.0";
 const PERIODS = [
   { key: "week", endpoint: "last-week", label: "Weekly" },
@@ -179,18 +179,24 @@ function createTelemetrySvg(snapshot) {
   <path d="M48 352H932" stroke="#2e2947"/>
   ${rows}
   <path d="M48 615H932" stroke="#2e2947"/>
-  <text x="48" y="637" class="foot">${snapshot.packageCount} packages maintained by ${escapeXml(snapshot.maintainer)} · rolling NPM API windows · refreshed ${escapeXml(refreshed)} UTC</text>
+  <text x="48" y="637" class="foot">${snapshot.packageCount} packages across ${escapeXml(snapshot.maintainers.join(" + "))} · rolling NPM API windows · refreshed ${escapeXml(refreshed)} UTC</text>
 </svg>`;
 }
 
 await mkdir(DATA_DIR, { recursive: true });
 await mkdir(ASSET_DIR, { recursive: true });
 
-const searchUrl = `https://registry.npmjs.org/-/v1/search?text=${encodeURIComponent(`maintainer:${NPM_MAINTAINER}`)}&size=250`;
-const search = await fetchJson(searchUrl);
-const registryPackages = search.objects
-  .map(({ package: pkg }) => pkg)
-  .filter((pkg) => pkg.maintainers?.some((maintainer) => maintainer.username?.toLowerCase() === NPM_MAINTAINER));
+const searchUrls = NPM_MAINTAINERS.map((maintainer) => `https://registry.npmjs.org/-/v1/search?text=${encodeURIComponent(`maintainer:${maintainer}`)}&size=250`);
+const searches = await Promise.all(searchUrls.map((url) => fetchJson(url)));
+const packageMap = new Map();
+searches.forEach((search, index) => {
+  const maintainerAccount = NPM_MAINTAINERS[index];
+  search.objects
+    .map(({ package: pkg }) => pkg)
+    .filter((pkg) => pkg.maintainers?.some((maintainer) => maintainer.username?.toLowerCase() === maintainerAccount))
+    .forEach((pkg) => packageMap.set(pkg.name, pkg));
+});
+const registryPackages = [...packageMap.values()];
 
 const packageNames = [...new Set(registryPackages.map((pkg) => pkg.name))].sort((a, b) => a.localeCompare(b));
 if (!packageNames.length) throw new Error("The NPM registry returned no maintained packages.");
@@ -211,6 +217,9 @@ const npmPackages = registryPackages.map((pkg) => {
     keywords: Array.isArray(pkg.keywords) ? pkg.keywords.slice(0, 12) : [],
     publisher: pkg.publisher?.username || null,
     maintainers: (pkg.maintainers || []).map((maintainer) => maintainer.username),
+    trackedMaintainers: (pkg.maintainers || [])
+      .map((maintainer) => maintainer.username?.toLowerCase())
+      .filter((maintainer) => NPM_MAINTAINERS.includes(maintainer)),
     links: packageLinks(pkg),
     downloads,
     historicalCaution: pkg.name === "heart-attack"
@@ -222,11 +231,11 @@ const npmPackages = registryPackages.map((pkg) => {
 const npmSnapshot = {
   generatedAt: new Date().toISOString(),
   source: {
-    registry: searchUrl,
+    registry: searchUrls,
     downloads: "https://api.npmjs.org/downloads/point/{period}/{packages}",
     semantics: "Counts are successful package-tarball downloads, not unique people or verified installations.",
   },
-  maintainer: NPM_MAINTAINER,
+  maintainers: NPM_MAINTAINERS,
   packageCount: npmPackages.length,
   periods: Object.fromEntries(PERIODS.map(({ key, label }) => {
     const sample = periodResponses[key][packageNames[0]];
@@ -238,17 +247,21 @@ const npmSnapshot = {
 
 const githubToken = process.env.PROFILE_GITHUB_TOKEN || process.env.GITHUB_TOKEN;
 const githubHeaders = githubToken ? { Authorization: `Bearer ${githubToken}`, "X-GitHub-Api-Version": "2022-11-28" } : {};
-const githubProfile = await fetchJson(`https://api.github.com/users/${OWNER}`, { headers: githubHeaders });
+const githubProfiles = [];
 const githubRepos = [];
-for (let page = 1; ; page += 1) {
-  const batch = await fetchJson(`https://api.github.com/users/${OWNER}/repos?per_page=100&page=${page}&type=owner&sort=updated`, { headers: githubHeaders });
-  githubRepos.push(...batch);
-  if (batch.length < 100) break;
+for (const owner of GITHUB_OWNERS) {
+  githubProfiles.push(await fetchJson(`https://api.github.com/users/${owner}`, { headers: githubHeaders }));
+  for (let page = 1; ; page += 1) {
+    const batch = await fetchJson(`https://api.github.com/users/${owner}/repos?per_page=100&page=${page}&type=owner&sort=updated`, { headers: githubHeaders });
+    githubRepos.push(...batch);
+    if (batch.length < 100) break;
+  }
 }
 
-const repositories = githubRepos.map((repo) => ({
+const repositories = [...new Map(githubRepos.map((repo) => [repo.full_name, repo])).values()].map((repo) => ({
   name: repo.name,
   fullName: repo.full_name,
+  owner: repo.owner.login,
   description: repo.description,
   explanation: repositoryExplanation(repo),
   url: repo.html_url,
@@ -269,15 +282,16 @@ const repositories = githubRepos.map((repo) => ({
 
 const repoSnapshot = {
   generatedAt: new Date().toISOString(),
-  owner: {
-    login: githubProfile.login,
-    name: githubProfile.name,
-    bio: githubProfile.bio,
-    avatar: githubProfile.avatar_url,
-    url: githubProfile.html_url,
-    followers: githubProfile.followers,
-    following: githubProfile.following,
-  },
+  owners: githubProfiles.map((profile) => ({
+    login: profile.login,
+    name: profile.name,
+    bio: profile.bio,
+    avatar: profile.avatar_url,
+    url: profile.html_url,
+    followers: profile.followers,
+    following: profile.following,
+    repositoryCount: repositories.filter((repo) => repo.owner.toLowerCase() === profile.login.toLowerCase()).length,
+  })),
   counts: {
     total: repositories.length,
     original: repositories.filter((repo) => !repo.fork).length,
@@ -296,7 +310,7 @@ const readmePattern = new RegExp(`${readmeStart}[\\s\\S]*?${readmeEnd}`);
 if (!readmePattern.test(readme)) throw new Error("README telemetry count markers are missing.");
 const readmeSummary = `${readmeStart}
 <p align="center">
-  <strong>${npmSnapshot.packageCount} maintained NPM modules · ${repoSnapshot.counts.total} public repositories · one navigable history</strong><br>
+  <strong>${npmSnapshot.packageCount} maintained NPM modules · ${repoSnapshot.counts.total} public repositories · two owned identities</strong><br>
   <a href="https://riaevangelist.github.io/RIAEvangelist/"><strong>Explore the live package pulse and complete code atlas →</strong></a>
 </p>
 ${readmeEnd}`;

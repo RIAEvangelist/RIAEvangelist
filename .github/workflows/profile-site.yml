@@ -31,16 +31,26 @@ jobs:
         run: |
           if [[ "${{ github.event_name }}" == "push" ]]; then
             node scripts/update-profile-data.mjs --max-age-hours=1
+            node scripts/update-npm-history.mjs --max-age-hours=1
           else
             node scripts/update-profile-data.mjs --force
+            node scripts/update-npm-history.mjs --force
           fi
+
+      - name: Validate the refreshed site and data archive
+        run: |
+          node --check app.js
+          node --check scripts/update-profile-data.mjs
+          node --check scripts/update-npm-history.mjs
+          node --test tests/profile-site.test.mjs
+          git diff --check
 
       - name: Record a refreshed snapshot when needed
         run: |
-          if [[ -n "$(git status --porcelain -- README.md data/npm-stats.json data/repos.json assets/npm-downloads.svg)" ]]; then
+          if [[ -n "$(git status --porcelain -- README.md data/npm-stats.json data/repos.json data/npm-history assets/npm-downloads.svg)" ]]; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add -- README.md data/npm-stats.json data/repos.json assets/npm-downloads.svg
+            git add -- README.md data/npm-stats.json data/repos.json data/npm-history assets/npm-downloads.svg
             git commit -m "chore: refresh public profile telemetry"
             git pull --rebase origin main
             git push origin HEAD:main

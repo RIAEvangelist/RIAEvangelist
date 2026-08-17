@@ -1,25 +1,60 @@
 {
-  "generatedAt": "2026-08-17T17:46:02.371Z",
-  "owner": {
-    "login": "RIAEvangelist",
-    "name": "Roshi _ _",
-    "bio": null,
-    "avatar": "https://avatars.githubusercontent.com/u/369041?v=4",
-    "url": "https://github.com/RIAEvangelist",
-    "followers": 246,
-    "following": 42
-  },
+  "generatedAt": "2026-08-17T17:58:24.729Z",
+  "owners": [
+    {
+      "login": "RIAEvangelist",
+      "name": "Roshi _ _",
+      "bio": null,
+      "avatar": "https://avatars.githubusercontent.com/u/369041?v=4",
+      "url": "https://github.com/RIAEvangelist",
+      "followers": 246,
+      "following": 42,
+      "repositoryCount": 120
+    },
+    {
+      "login": "TheWizardNexus",
+      "name": "The Wizard Nexus",
+      "bio": null,
+      "avatar": "https://avatars.githubusercontent.com/u/304530153?v=4",
+      "url": "https://github.com/TheWizardNexus",
+      "followers": 2,
+      "following": 0,
+      "repositoryCount": 5
+    }
+  ],
   "counts": {
-    "total": 120,
-    "original": 82,
+    "total": 125,
+    "original": 87,
     "forks": 38,
     "archived": 0,
-    "stars": 1541
+    "stars": 1543
   },
   "repositories": [
     {
+      "name": "RIAEvangelist",
+      "fullName": "RIAEvangelist/RIAEvangelist",
+      "owner": "RIAEvangelist",
+      "description": null,
+      "explanation": "RIAEvangelist is a public JavaScript project in the RIAEvangelist archive; its repository does not yet publish a one-line summary.",
+      "url": "https://github.com/RIAEvangelist/RIAEvangelist",
+      "homepage": null,
+      "language": "JavaScript",
+      "stars": 2,
+      "forks": 6,
+      "openIssues": 0,
+      "watchers": 2,
+      "archived": false,
+      "disabled": false,
+      "fork": false,
+      "topics": [],
+      "license": null,
+      "createdAt": "2021-03-08T05:47:52Z",
+      "updatedAt": "2026-08-17T17:51:09Z"
+    },
+    {
       "name": "node-ipc",
       "fullName": "RIAEvangelist/node-ipc",
+      "owner": "RIAEvangelist",
       "description": "A nodejs module for local and remote Inter Process Communication (IPC), Neural Networking, and able to facilitate machine learning.",
       "explanation": "A nodejs module for local and remote Inter Process Communication (IPC), Neural Networking, and able to facilitate machine learning.",
       "url": "https://github.com/RIAEvangelist/node-ipc",
@@ -51,6 +86,7 @@
     {
       "name": "vanilla-test",
       "fullName": "RIAEvangelist/vanilla-test",
+      "owner": "RIAEvangelist",
       "description": "minimalistic pure js es6 module for testing node, electron and the browser",
       "explanation": "minimalistic pure js es6 module for testing node, electron and the browser",
       "url": "https://github.com/RIAEvangelist/vanilla-test",
@@ -69,28 +105,9 @@
       "updatedAt": "2026-08-17T16:13:42Z"
     },
     {
-      "name": "RIAEvangelist",
-      "fullName": "RIAEvangelist/RIAEvangelist",
-      "description": null,
-      "explanation": "RIAEvangelist is a public JavaScript project in the RIAEvangelist archive; its repository does not yet publish a one-line summary.",
-      "url": "https://github.com/RIAEvangelist/RIAEvangelist",
-      "homepage": null,
-      "language": "JavaScript",
-      "stars": 2,
-      "forks": 6,
-      "openIssues": 0,
-      "watchers": 2,
-      "archived": false,
-      "disabled": false,
-      "fork": false,
-      "topics": [],
-      "license": null,
-      "createdAt": "2021-03-08T05:47:52Z",
-      "updatedAt": "2026-08-17T16:03:22Z"
-    },
-    {
       "name": "node-http-server",
       "fullName": "RIAEvangelist/node-http-server",
+      "owner": "RIAEvangelist",
       "description": "Simple to use node HTTP Server",
       "explanation": "Simple to use node HTTP Server",
       "url": "https://github.com/RIAEvangelist/node-http-server",
@@ -111,6 +128,7 @@
     {
       "name": "easy-stack",
       "fullName": "RIAEvangelist/easy-stack",
+      "owner": "RIAEvangelist",
       "description": "js stack for node and the browser which is super easy LIFO",
       "explanation": "js stack for node and the browser which is super easy LIFO",
       "url": "https://github.com/RIAEvangelist/easy-stack",
@@ -138,6 +156,7 @@
     {
       "name": "strong-type",
       "fullName": "RIAEvangelist/strong-type",
+      "owner": "RIAEvangelist",
       "description": "Strongly Typed native JS without a hard requirement for transpiling. What TypeScript should have been.",
       "explanation": "Strongly Typed native JS without a hard requirement for transpiling. What TypeScript should have been.",
       "url": "https://github.com/RIAEvangelist/strong-type",
@@ -158,6 +177,7 @@
     {
       "name": "js-queue",
       "fullName": "RIAEvangelist/js-queue",
+      "owner": "RIAEvangelist",
       "description": "Tiny FIFO task queue with explicit flow control for Node and browsers",
       "explanation": "Tiny FIFO task queue with explicit flow control for Node and browsers",
       "url": "https://github.com/RIAEvangelist/js-queue",
@@ -188,6 +208,7 @@
     {
       "name": "node-cmd",
       "fullName": "RIAEvangelist/node-cmd",
+      "owner": "RIAEvangelist",
       "description": "Command-line power for JavaScript: shell commands, direct executable calls, and child-process control with zero runtime dependencies.",
       "explanation": "Command-line power for JavaScript: shell commands, direct executable calls, and child-process control with zero runtime dependencies.",
       "url": "https://github.com/RIAEvangelist/node-cmd",
@@ -208,6 +229,7 @@
     {
       "name": "js-message",
       "fullName": "RIAEvangelist/js-message",
+      "owner": "RIAEvangelist",
       "description": "A tiny, normalized JavaScript and JSON message envelope for every runtime boundary",
       "explanation": "A tiny, normalized JavaScript and JSON message envelope for every runtime boundary",
       "url": "https://github.com/RIAEvangelist/js-message",
@@ -237,6 +259,7 @@
     {
       "name": "insane-alarm",
       "fullName": "RIAEvangelist/insane-alarm",
+      "owner": "RIAEvangelist",
       "description": "This alarm will wake you up no matter what!",
       "explanation": "This alarm will wake you up no matter what!",
       "url": "https://github.com/RIAEvangelist/insane-alarm",
@@ -257,6 +280,7 @@
     {
       "name": "life-first-framework",
       "fullName": "RIAEvangelist/life-first-framework",
+      "owner": "RIAEvangelist",
       "description": "An open framework for AI systems that put human life, dignity, agency, and accountability first.",
       "explanation": "An open framework for AI systems that put human life, dignity, agency, and accountability first.",
       "url": "https://github.com/RIAEvangelist/life-first-framework",
@@ -282,6 +306,7 @@
     {
       "name": "boss-libraries",
       "fullName": "RIAEvangelist/boss-libraries",
+      "owner": "RIAEvangelist",
       "description": "Pilot marketing site for boss libraries",
       "explanation": "Pilot marketing site for boss libraries",
       "url": "https://github.com/RIAEvangelist/boss-libraries",
@@ -302,6 +327,7 @@
     {
       "name": "parrot-jumping-drone",
       "fullName": "RIAEvangelist/parrot-jumping-drone",
+      "owner": "RIAEvangelist",
       "description": "Control all the Parrot jumping mini drones! Sumo drone, Night drone and Race mini drones!",
       "explanation": "Control all the Parrot jumping mini drones! Sumo drone, Night drone and Race mini drones!",
       "url": "https://github.com/RIAEvangelist/parrot-jumping-drone",
@@ -322,6 +348,7 @@
     {
       "name": "huMannity-trial-AI",
       "fullName": "RIAEvangelist/huMannity-trial-AI",
+      "owner": "RIAEvangelist",
       "description": "AI variation for huMannity",
       "explanation": "AI variation for huMannity",
       "url": "https://github.com/RIAEvangelist/huMannity-trial-AI",
@@ -342,6 +369,7 @@
     {
       "name": "node-dominos-pizza-api",
       "fullName": "RIAEvangelist/node-dominos-pizza-api",
+      "owner": "RIAEvangelist",
       "description": "This is a node.js wrapper for the dominos pizza apis",
       "explanation": "This is a node.js wrapper for the dominos pizza apis",
       "url": "https://github.com/RIAEvangelist/node-dominos-pizza-api",
@@ -362,6 +390,7 @@
     {
       "name": "murica-llm",
       "fullName": "RIAEvangelist/murica-llm",
+      "owner": "RIAEvangelist",
       "description": null,
       "explanation": "Murica Llm is a public HTML project in the RIAEvangelist archive; its repository does not yet publish a one-line summary.",
       "url": "https://github.com/RIAEvangelist/murica-llm",
@@ -382,6 +411,7 @@
     {
       "name": "is-my-node-supply-chain-secure",
       "fullName": "RIAEvangelist/is-my-node-supply-chain-secure",
+      "owner": "RIAEvangelist",
       "description": "Scans your computer for node modules that are potentially vulnerable to supply chain attacks. You still need to review the code of modules that are not vulnerable, but this helps.",
       "explanation": "Scans your computer for node modules that are potentially vulnerable to supply chain attacks. You still need to review the code of modules that are not vulnerable, but this helps.",
       "url": "https://github.com/RIAEvangelist/is-my-node-supply-chain-secure",
@@ -402,6 +432,7 @@
     {
       "name": "zero-motorcycle-canbus",
       "fullName": "RIAEvangelist/zero-motorcycle-canbus",
+      "owner": "RIAEvangelist",
       "description": "CANbus message discovery on Zero motorcycles",
       "explanation": "CANbus message discovery on Zero motorcycles",
       "url": "https://github.com/RIAEvangelist/zero-motorcycle-canbus",
@@ -422,6 +453,7 @@
     {
       "name": "SCv2-sketches",
       "fullName": "RIAEvangelist/SCv2-sketches",
+      "owner": "RIAEvangelist",
       "description": "Sketches for SCv2",
       "explanation": "Sketches for SCv2",
       "url": "https://github.com/RIAEvangelist/SCv2-sketches",
@@ -442,6 +474,7 @@
     {
       "name": "electron-video-player",
       "fullName": "RIAEvangelist/electron-video-player",
+      "owner": "RIAEvangelist",
       "description": "[DEPRECATED] electron based video player for all platforms",
       "explanation": "[DEPRECATED] electron based video player for all platforms",
       "url": "https://github.com/RIAEvangelist/electron-video-player",
@@ -462,6 +495,7 @@
     {
       "name": "nwjs-browser-framework",
       "fullName": "RIAEvangelist/nwjs-browser-framework",
+      "owner": "RIAEvangelist",
       "description": null,
       "explanation": "Nwjs Browser Framework is a public JavaScript project in the RIAEvangelist archive; its repository does not yet publish a one-line summary.",
       "url": "https://github.com/RIAEvangelist/nwjs-browser-framework",
@@ -482,6 +516,7 @@
     {
       "name": "node-phidget-API",
       "fullName": "RIAEvangelist/node-phidget-API",
+      "owner": "RIAEvangelist",
       "description": "Node.JS Phidget  API supporting all phidgets!",
       "explanation": "Node.JS Phidget  API supporting all phidgets!",
       "url": "https://github.com/RIAEvangelist/node-phidget-API",
@@ -502,6 +537,7 @@
     {
       "name": "delete-github-issue-bookmarklet",
       "fullName": "RIAEvangelist/delete-github-issue-bookmarklet",
+      "owner": "RIAEvangelist",
       "description": "Use this bookmarklet to quickly delete an issue",
       "explanation": "Use this bookmarklet to quickly delete an issue",
       "url": "https://github.com/RIAEvangelist/delete-github-issue-bookmarklet",
@@ -522,6 +558,7 @@
     {
       "name": "node-mcdonalds-api",
       "fullName": "RIAEvangelist/node-mcdonalds-api",
+      "owner": "RIAEvangelist",
       "description": "Node JS API for McDonalds fast food restaurants",
       "explanation": "Node JS API for McDonalds fast food restaurants",
       "url": "https://github.com/RIAEvangelist/node-mcdonalds-api",
@@ -542,6 +579,7 @@
     {
       "name": "precrisis",
       "fullName": "RIAEvangelist/precrisis",
+      "owner": "RIAEvangelist",
       "description": "Responsive landing page for PreCrisis.AI with smooth scrolling, animated navigation effects, and crisis prevention highlights.",
       "explanation": "Responsive landing page for PreCrisis.AI with smooth scrolling, animated navigation effects, and crisis prevention highlights.",
       "url": "https://github.com/RIAEvangelist/precrisis",
@@ -562,6 +600,7 @@
     {
       "name": "AI_book_writing_assistant",
       "fullName": "RIAEvangelist/AI_book_writing_assistant",
+      "owner": "RIAEvangelist",
       "description": "Helps people with the creative process of writing a book.",
       "explanation": "Helps people with the creative process of writing a book.",
       "url": "https://github.com/RIAEvangelist/AI_book_writing_assistant",
@@ -582,6 +621,7 @@
     {
       "name": "mobile_devtools",
       "fullName": "RIAEvangelist/mobile_devtools",
+      "owner": "RIAEvangelist",
       "description": "console for your phone",
       "explanation": "console for your phone",
       "url": "https://github.com/RIAEvangelist/mobile_devtools",
@@ -602,6 +642,7 @@
     {
       "name": "agent-smith",
       "fullName": "RIAEvangelist/agent-smith",
+      "owner": "RIAEvangelist",
       "description": "An agent to monitor your github account and others interactions with it.",
       "explanation": "An agent to monitor your github account and others interactions with it.",
       "url": "https://github.com/RIAEvangelist/agent-smith",
@@ -626,6 +667,7 @@
     {
       "name": "touch-drag",
       "fullName": "RIAEvangelist/touch-drag",
+      "owner": "RIAEvangelist",
       "description": "Drag, drop and sotable functionality built to work on all platforms, mobile, tablet and desktop",
       "explanation": "Drag, drop and sotable functionality built to work on all platforms, mobile, tablet and desktop",
       "url": "https://github.com/RIAEvangelist/touch-drag",
@@ -646,6 +688,7 @@
     {
       "name": "node-parrot-drone",
       "fullName": "RIAEvangelist/node-parrot-drone",
+      "owner": "RIAEvangelist",
       "description": "extendable node module to allow control of any Parrot drone.",
       "explanation": "extendable node module to allow control of any Parrot drone.",
       "url": "https://github.com/RIAEvangelist/node-parrot-drone",
@@ -666,6 +709,7 @@
     {
       "name": "pwa-starter",
       "fullName": "RIAEvangelist/pwa-starter",
+      "owner": "RIAEvangelist",
       "description": "Welcome to the PWABuilder pwa-starter! Looking to build a new Progressive Web App and not sure where to get started? This is what you are looking for!",
       "explanation": "Welcome to the PWABuilder pwa-starter! Looking to build a new Progressive Web App and not sure where to get started? This is what you are looking for!",
       "url": "https://github.com/RIAEvangelist/pwa-starter",
@@ -686,6 +730,7 @@
     {
       "name": "strut-editor-offline",
       "fullName": "RIAEvangelist/strut-editor-offline",
+      "owner": "RIAEvangelist",
       "description": "BEST FREE SOFTWARE TO MAKE IMPRESSIVE PRESENTATIONS.",
       "explanation": "BEST FREE SOFTWARE TO MAKE IMPRESSIVE PRESENTATIONS.",
       "url": "https://github.com/RIAEvangelist/strut-editor-offline",
@@ -706,6 +751,7 @@
     {
       "name": "PHP-Grepolis-JSON-API",
       "fullName": "RIAEvangelist/PHP-Grepolis-JSON-API",
+      "owner": "RIAEvangelist",
       "description": "A JSON API for the Grepolis game built in PHP",
       "explanation": "A JSON API for the Grepolis game built in PHP",
       "url": "https://github.com/RIAEvangelist/PHP-Grepolis-JSON-API",
@@ -726,6 +772,7 @@
     {
       "name": "node-ai-cli",
       "fullName": "RIAEvangelist/node-ai-cli",
+      "owner": "RIAEvangelist",
       "description": null,
       "explanation": "Node Ai Cli is a public JavaScript project in the RIAEvangelist archive; its repository does not yet publish a one-line summary.",
       "url": "https://github.com/RIAEvangelist/node-ai-cli",
@@ -746,6 +793,7 @@
     {
       "name": "simplepwa",
       "fullName": "RIAEvangelist/simplepwa",
+      "owner": "RIAEvangelist",
       "description": "👩‍💻 Simple PWA is a Progressive Web App template that provides the minimum file structure needed to create a PWA",
       "explanation": "👩‍💻 Simple PWA is a Progressive Web App template that provides the minimum file structure needed to create a PWA",
       "url": "https://github.com/RIAEvangelist/simplepwa",
@@ -766,6 +814,7 @@
     {
       "name": "awesome-webcomponents",
       "fullName": "RIAEvangelist/awesome-webcomponents",
+      "owner": "RIAEvangelist",
       "description": null,
       "explanation": "Awesome Webcomponents is a public JavaScript project in the RIAEvangelist archive; its repository does not yet publish a one-line summary.",
       "url": "https://github.com/RIAEvangelist/awesome-webcomponents",
@@ -786,6 +835,7 @@
     {
       "name": "event-pubsub",
       "fullName": "RIAEvangelist/event-pubsub",
+      "owner": "RIAEvangelist",
       "description": "Event Pubsub for Javascript will work in node js or browser",
       "explanation": "Event Pubsub for Javascript will work in node js or browser",
       "url": "https://github.com/RIAEvangelist/event-pubsub",
@@ -806,6 +856,7 @@
     {
       "name": "serialport-js",
       "fullName": "RIAEvangelist/serialport-js",
+      "owner": "RIAEvangelist",
       "description": "pure javascript serial port implementation for node.js, electron and nw.js",
       "explanation": "pure javascript serial port implementation for node.js, electron and nw.js",
       "url": "https://github.com/RIAEvangelist/serialport-js",
@@ -826,6 +877,7 @@
     {
       "name": "openai-node",
       "fullName": "RIAEvangelist/openai-node",
+      "owner": "RIAEvangelist",
       "description": "Node.js library for the OpenAI API",
       "explanation": "Node.js library for the OpenAI API",
       "url": "https://github.com/RIAEvangelist/openai-node",
@@ -846,6 +898,7 @@
     {
       "name": "ansi-colors",
       "fullName": "RIAEvangelist/ansi-colors",
+      "owner": "RIAEvangelist",
       "description": "Easily add ANSI colors to your text and symbols in the terminal. ansi-colors is the official ansi styling library for gulp, and is used by hundreds of other projects, including mocha and enquirer.",
       "explanation": "Easily add ANSI colors to your text and symbols in the terminal. ansi-colors is the official ansi styling library for gulp, and is used by hundreds of other projects, including mocha and enquirer.",
       "url": "https://github.com/RIAEvangelist/ansi-colors",
@@ -866,6 +919,7 @@
     {
       "name": "declassified-zero-sdk",
       "fullName": "RIAEvangelist/declassified-zero-sdk",
+      "owner": "RIAEvangelist",
       "description": "Development Kit for Zero Motorcycles",
       "explanation": "Development Kit for Zero Motorcycles",
       "url": "https://github.com/RIAEvangelist/declassified-zero-sdk",
@@ -886,6 +940,7 @@
     {
       "name": "chrome-app-user-agent-and-bookmarklet-webview",
       "fullName": "RIAEvangelist/chrome-app-user-agent-and-bookmarklet-webview",
+      "owner": "RIAEvangelist",
       "description": "webviewJS can be used to build communication between a chrome app and a webveiw. It can be called from an app to modify the user agent for analytics if executed at the proper time. Also webviewJS can be used to run bookmarklets in the webview, as well as pass whole js files, or raw, non stringified functions.",
       "explanation": "webviewJS can be used to build communication between a chrome app and a webveiw. It can be called from an app to modify the user agent for analytics if executed at the proper time. Also webviewJS can be used to run bookmarklets in the webview, as well as pass whole js files, or raw, non stringified functions.",
       "url": "https://github.com/RIAEvangelist/chrome-app-user-agent-and-bookmarklet-webview",
@@ -906,6 +961,7 @@
     {
       "name": "nwjs-cast",
       "fullName": "RIAEvangelist/nwjs-cast",
+      "owner": "RIAEvangelist",
       "description": "Chromecast implementation for nw.js and node.js",
       "explanation": "Chromecast implementation for nw.js and node.js",
       "url": "https://github.com/RIAEvangelist/nwjs-cast",
@@ -926,6 +982,7 @@
     {
       "name": "Bluetooth-To-Serial-Programming",
       "fullName": "RIAEvangelist/Bluetooth-To-Serial-Programming",
+      "owner": "RIAEvangelist",
       "description": "Diagrams and documents on hooking up bluetooth and serial boards",
       "explanation": "Diagrams and documents on hooking up bluetooth and serial boards",
       "url": "https://github.com/RIAEvangelist/Bluetooth-To-Serial-Programming",
@@ -946,6 +1003,7 @@
     {
       "name": "Chrome-Serial-App",
       "fullName": "RIAEvangelist/Chrome-Serial-App",
+      "owner": "RIAEvangelist",
       "description": "Chrome App for connecting to serial devices and serial USB",
       "explanation": "Chrome App for connecting to serial devices and serial USB",
       "url": "https://github.com/RIAEvangelist/Chrome-Serial-App",
@@ -966,6 +1024,7 @@
     {
       "name": "awesome-actions",
       "fullName": "RIAEvangelist/awesome-actions",
+      "owner": "RIAEvangelist",
       "description": "Repository template used to showcase Actions that tie into pull request and issue events",
       "explanation": "Repository template used to showcase Actions that tie into pull request and issue events",
       "url": "https://github.com/RIAEvangelist/awesome-actions",
@@ -986,6 +1045,7 @@
     {
       "name": "js-base64-file",
       "fullName": "RIAEvangelist/js-base64-file",
+      "owner": "RIAEvangelist",
       "description": "node loading, converting and saving of local and remote files as base64 images or files. Perfect for image data uri use!",
       "explanation": "node loading, converting and saving of local and remote files as base64 images or files. Perfect for image data uri use!",
       "url": "https://github.com/RIAEvangelist/js-base64-file",
@@ -1006,6 +1066,7 @@
     {
       "name": "node-error-classes",
       "fullName": "RIAEvangelist/node-error-classes",
+      "owner": "RIAEvangelist",
       "description": "Custom error classes for node.js ",
       "explanation": "Custom error classes for node.js",
       "url": "https://github.com/RIAEvangelist/node-error-classes",
@@ -1026,6 +1087,7 @@
     {
       "name": "vdo-ninja-trampoline",
       "fullName": "RIAEvangelist/vdo-ninja-trampoline",
+      "owner": "RIAEvangelist",
       "description": "VDO.Ninja Trampoline",
       "explanation": "VDO.Ninja Trampoline",
       "url": "https://github.com/RIAEvangelist/vdo-ninja-trampoline",
@@ -1046,6 +1108,7 @@
     {
       "name": "emoji-picker",
       "fullName": "RIAEvangelist/emoji-picker",
+      "owner": "RIAEvangelist",
       "description": "Add a slick emoji selector to input fields and textareas on your website.",
       "explanation": "Add a slick emoji selector to input fields and textareas on your website.",
       "url": "https://github.com/RIAEvangelist/emoji-picker",
@@ -1066,6 +1129,7 @@
     {
       "name": "asciimo",
       "fullName": "RIAEvangelist/asciimo",
+      "owner": "RIAEvangelist",
       "description": "asciimo - create awesome ascii art with javascript! works in the browser or node.js",
       "explanation": "asciimo - create awesome ascii art with javascript! works in the browser or node.js",
       "url": "https://github.com/RIAEvangelist/asciimo",
@@ -1086,6 +1150,7 @@
     {
       "name": "SimonSays",
       "fullName": "RIAEvangelist/SimonSays",
+      "owner": "RIAEvangelist",
       "description": "Simon says google app ",
       "explanation": "Simon says google app",
       "url": "https://github.com/RIAEvangelist/SimonSays",
@@ -1106,6 +1171,7 @@
     {
       "name": "slugify.js",
       "fullName": "RIAEvangelist/slugify.js",
+      "owner": "RIAEvangelist",
       "description": "Javascript slugify routine, handling diacritics and accents, with an English - Diacritic map.",
       "explanation": "Javascript slugify routine, handling diacritics and accents, with an English - Diacritic map.",
       "url": "https://github.com/RIAEvangelist/slugify.js",
@@ -1126,6 +1192,7 @@
     {
       "name": "node-codacy-coverage",
       "fullName": "RIAEvangelist/node-codacy-coverage",
+      "owner": "RIAEvangelist",
       "description": "Code Coverage reporter for Codacy",
       "explanation": "Code Coverage reporter for Codacy",
       "url": "https://github.com/RIAEvangelist/node-codacy-coverage",
@@ -1146,6 +1213,7 @@
     {
       "name": "awesome-nodejs",
       "fullName": "RIAEvangelist/awesome-nodejs",
+      "owner": "RIAEvangelist",
       "description": "A curated list of delightful Node.js packages and resources.",
       "explanation": "A curated list of delightful Node.js packages and resources.",
       "url": "https://github.com/RIAEvangelist/awesome-nodejs",
@@ -1166,6 +1234,7 @@
     {
       "name": "range-class-js",
       "fullName": "RIAEvangelist/range-class-js",
+      "owner": "RIAEvangelist",
       "description": "ES6 Range module for node and commonjs browser frameworks like react",
       "explanation": "ES6 Range module for node and commonjs browser frameworks like react",
       "url": "https://github.com/RIAEvangelist/range-class-js",
@@ -1186,6 +1255,7 @@
     {
       "name": "nodejs-vw",
       "fullName": "RIAEvangelist/nodejs-vw",
+      "owner": "RIAEvangelist",
       "description": "Módulo principal de vw. Este es el punto de partida de aplicación",
       "explanation": "Módulo principal de vw. Este es el punto de partida de aplicación",
       "url": "https://github.com/RIAEvangelist/nodejs-vw",
@@ -1206,6 +1276,7 @@
     {
       "name": "eslint-settings",
       "fullName": "RIAEvangelist/eslint-settings",
+      "owner": "RIAEvangelist",
       "description": "Full rule set of eslint with my settings",
       "explanation": "Full rule set of eslint with my settings",
       "url": "https://github.com/RIAEvangelist/eslint-settings",
@@ -1226,6 +1297,7 @@
     {
       "name": "nodejs-linux-installer",
       "fullName": "RIAEvangelist/nodejs-linux-installer",
+      "owner": "RIAEvangelist",
       "description": "This is an universal NodeJS installer for Linux.",
       "explanation": "This is an universal NodeJS installer for Linux.",
       "url": "https://github.com/RIAEvangelist/nodejs-linux-installer",
@@ -1246,6 +1318,7 @@
     {
       "name": "anonymous-communication",
       "fullName": "RIAEvangelist/anonymous-communication",
+      "owner": "RIAEvangelist",
       "description": "A desktop application for direct messaging anonymously.",
       "explanation": "A desktop application for direct messaging anonymously.",
       "url": "https://github.com/RIAEvangelist/anonymous-communication",
@@ -1266,6 +1339,7 @@
     {
       "name": "declassified-SC-v1-Server",
       "fullName": "RIAEvangelist/declassified-SC-v1-Server",
+      "owner": "RIAEvangelist",
       "description": "BBG code for SC controls and External coms",
       "explanation": "BBG code for SC controls and External coms",
       "url": "https://github.com/RIAEvangelist/declassified-SC-v1-Server",
@@ -1286,6 +1360,7 @@
     {
       "name": "arsdk-xml",
       "fullName": "RIAEvangelist/arsdk-xml",
+      "owner": "RIAEvangelist",
       "description": null,
       "explanation": "A personal fork retained for reference, experiments, or upstream contribution work.",
       "url": "https://github.com/RIAEvangelist/arsdk-xml",
@@ -1306,6 +1381,7 @@
     {
       "name": "arsdk_manifests",
       "fullName": "RIAEvangelist/arsdk_manifests",
+      "owner": "RIAEvangelist",
       "description": null,
       "explanation": "A personal fork retained for reference, experiments, or upstream contribution work.",
       "url": "https://github.com/RIAEvangelist/arsdk_manifests",
@@ -1326,6 +1402,7 @@
     {
       "name": "browser-error-classes",
       "fullName": "RIAEvangelist/browser-error-classes",
+      "owner": "RIAEvangelist",
       "description": "Better Javascript error classes for the browser that follow the standards.",
       "explanation": "Better Javascript error classes for the browser that follow the standards.",
       "url": "https://github.com/RIAEvangelist/browser-error-classes",
@@ -1346,6 +1423,7 @@
     {
       "name": "EV-J1772",
       "fullName": "RIAEvangelist/EV-J1772",
+      "owner": "RIAEvangelist",
       "description": "Ev pilot reading.",
       "explanation": "Ev pilot reading.",
       "url": "https://github.com/RIAEvangelist/EV-J1772",
@@ -1366,6 +1444,7 @@
     {
       "name": "digital-ocean-dashboard-app",
       "fullName": "RIAEvangelist/digital-ocean-dashboard-app",
+      "owner": "RIAEvangelist",
       "description": "electron react app to keep your Digital Ocean droplet data handy whenever you need it.",
       "explanation": "electron react app to keep your Digital Ocean droplet data handy whenever you need it.",
       "url": "https://github.com/RIAEvangelist/digital-ocean-dashboard-app",
@@ -1386,6 +1465,7 @@
     {
       "name": "diginow-cdn",
       "fullName": "RIAEvangelist/diginow-cdn",
+      "owner": "RIAEvangelist",
       "description": "diginow cdn for hosting browser modules",
       "explanation": "diginow cdn for hosting browser modules",
       "url": "https://github.com/RIAEvangelist/diginow-cdn",
@@ -1406,6 +1486,7 @@
     {
       "name": "tourPlanner",
       "fullName": "RIAEvangelist/tourPlanner",
+      "owner": "RIAEvangelist",
       "description": "Determine trip info for long rides",
       "explanation": "Determine trip info for long rides",
       "url": "https://github.com/RIAEvangelist/tourPlanner",
@@ -1426,6 +1507,7 @@
     {
       "name": "caniuse",
       "fullName": "RIAEvangelist/caniuse",
+      "owner": "RIAEvangelist",
       "description": "Raw browser/feature support data from caniuse.com",
       "explanation": "Raw browser/feature support data from caniuse.com",
       "url": "https://github.com/RIAEvangelist/caniuse",
@@ -1446,6 +1528,7 @@
     {
       "name": "adyen-web-dropin-prototype",
       "fullName": "RIAEvangelist/adyen-web-dropin-prototype",
+      "owner": "RIAEvangelist",
       "description": "This is a quick and dirty implementation and experiential report on implementing the Adyen Drop-in via native ES6/ESM",
       "explanation": "This is a quick and dirty implementation and experiential report on implementing the Adyen Drop-in via native ES6/ESM",
       "url": "https://github.com/RIAEvangelist/adyen-web-dropin-prototype",
@@ -1466,6 +1549,7 @@
     {
       "name": "node-carlsjr-api",
       "fullName": "RIAEvangelist/node-carlsjr-api",
+      "owner": "RIAEvangelist",
       "description": "A node JS API for Carl's Jr. fast food restaurants",
       "explanation": "A node JS API for Carl's Jr. fast food restaurants",
       "url": "https://github.com/RIAEvangelist/node-carlsjr-api",
@@ -1486,6 +1570,7 @@
     {
       "name": "node-hardees-api",
       "fullName": "RIAEvangelist/node-hardees-api",
+      "owner": "RIAEvangelist",
       "description": "A Node JS API for Hardee's fast food chains",
       "explanation": "A Node JS API for Hardee's fast food chains",
       "url": "https://github.com/RIAEvangelist/node-hardees-api",
@@ -1506,6 +1591,7 @@
     {
       "name": "node-papajohns-api",
       "fullName": "RIAEvangelist/node-papajohns-api",
+      "owner": "RIAEvangelist",
       "description": "An API for ordering papajohns pizza",
       "explanation": "An API for ordering papajohns pizza",
       "url": "https://github.com/RIAEvangelist/node-papajohns-api",
@@ -1526,6 +1612,7 @@
     {
       "name": "node-veggiegrill-api",
       "fullName": "RIAEvangelist/node-veggiegrill-api",
+      "owner": "RIAEvangelist",
       "description": "nodejs veggiegrill api",
       "explanation": "nodejs veggiegrill api",
       "url": "https://github.com/RIAEvangelist/node-veggiegrill-api",
@@ -1546,6 +1633,7 @@
     {
       "name": "ws-share",
       "fullName": "RIAEvangelist/ws-share",
+      "owner": "RIAEvangelist",
       "description": "A module allowing sharing of websockets  between different functions, modules, scripts, actions, stores, and/or components with vanilla js (plain javascript), react, webpack or browserify",
       "explanation": "A module allowing sharing of websockets  between different functions, modules, scripts, actions, stores, and/or components with vanilla js (plain javascript), react, webpack or browserify",
       "url": "https://github.com/RIAEvangelist/ws-share",
@@ -1566,6 +1654,7 @@
     {
       "name": "cdn",
       "fullName": "RIAEvangelist/cdn",
+      "owner": "RIAEvangelist",
       "description": "Digital Ocean CDN app for my npm modules that can be used in the browser",
       "explanation": "Digital Ocean CDN app for my npm modules that can be used in the browser",
       "url": "https://github.com/RIAEvangelist/cdn",
@@ -1586,6 +1675,7 @@
     {
       "name": "wait",
       "fullName": "RIAEvangelist/wait",
+      "owner": "RIAEvangelist",
       "description": "Async Awaitables",
       "explanation": "Async Awaitables",
       "url": "https://github.com/RIAEvangelist/wait",
@@ -1606,6 +1696,7 @@
     {
       "name": "nozaki.ninja",
       "fullName": "RIAEvangelist/nozaki.ninja",
+      "owner": "RIAEvangelist",
       "description": "nozaki.ninja website",
       "explanation": "nozaki.ninja website",
       "url": "https://github.com/RIAEvangelist/nozaki.ninja",
@@ -1626,6 +1717,7 @@
     {
       "name": "undefined",
       "fullName": "RIAEvangelist/undefined",
+      "owner": "RIAEvangelist",
       "description": "A proxy to use with objects or arrays that allows you to access keys and functions that are not defined without throwing errors or crashing your app.",
       "explanation": "A proxy to use with objects or arrays that allows you to access keys and functions that are not defined without throwing errors or crashing your app.",
       "url": "https://github.com/RIAEvangelist/undefined",
@@ -1646,6 +1738,7 @@
     {
       "name": "declassified-SC-v1-Firmware",
       "fullName": "RIAEvangelist/declassified-SC-v1-Firmware",
+      "owner": "RIAEvangelist",
       "description": "Firmware for Super Charger",
       "explanation": "Firmware for Super Charger",
       "url": "https://github.com/RIAEvangelist/declassified-SC-v1-Firmware",
@@ -1666,6 +1759,7 @@
     {
       "name": "nozaki",
       "fullName": "RIAEvangelist/nozaki",
+      "owner": "RIAEvangelist",
       "description": "nozaki cli for creating boilerplate web components",
       "explanation": "nozaki cli for creating boilerplate web components",
       "url": "https://github.com/RIAEvangelist/nozaki",
@@ -1686,6 +1780,7 @@
     {
       "name": "electron-server-update-ui-on-request",
       "fullName": "RIAEvangelist/electron-server-update-ui-on-request",
+      "owner": "RIAEvangelist",
       "description": "Simple example of an electron server which updates its ui based on an http request to it. Made for g10dras on #electron in the atom-shell slack ",
       "explanation": "Simple example of an electron server which updates its ui based on an http request to it. Made for g10dras on #electron in the atom-shell slack",
       "url": "https://github.com/RIAEvangelist/electron-server-update-ui-on-request",
@@ -1706,6 +1801,7 @@
     {
       "name": "nozaki-components",
       "fullName": "RIAEvangelist/nozaki-components",
+      "owner": "RIAEvangelist",
       "description": "modern vanilla components designed with ES6+ ESM first works in all modern browsers without transpiling.",
       "explanation": "modern vanilla components designed with ES6+ ESM first works in all modern browsers without transpiling.",
       "url": "https://github.com/RIAEvangelist/nozaki-components",
@@ -1737,6 +1833,7 @@
     {
       "name": "markdown-licenses",
       "fullName": "RIAEvangelist/markdown-licenses",
+      "owner": "RIAEvangelist",
       "description": "A collection of open source licenses in Markdown format. Contributions are always welcome!",
       "explanation": "A collection of open source licenses in Markdown format. Contributions are always welcome!",
       "url": "https://github.com/RIAEvangelist/markdown-licenses",
@@ -1757,6 +1854,7 @@
     {
       "name": "nozaki-colors",
       "fullName": "RIAEvangelist/nozaki-colors",
+      "owner": "RIAEvangelist",
       "description": "Another node cli colors module. Done simply and with native syntax. It's ment to make sense to engineers, not script kiddies.",
       "explanation": "Another node cli colors module. Done simply and with native syntax. It's ment to make sense to engineers, not script kiddies.",
       "url": "https://github.com/RIAEvangelist/nozaki-colors",
@@ -1782,6 +1880,7 @@
     {
       "name": "LabJack-nodejs",
       "fullName": "RIAEvangelist/LabJack-nodejs",
+      "owner": "RIAEvangelist",
       "description": "nodejs library for using LJM driver",
       "explanation": "nodejs library for using LJM driver",
       "url": "https://github.com/RIAEvangelist/LabJack-nodejs",
@@ -1802,6 +1901,7 @@
     {
       "name": "its-pizza-time",
       "fullName": "RIAEvangelist/its-pizza-time",
+      "owner": "RIAEvangelist",
       "description": null,
       "explanation": "A personal fork retained for reference, experiments, or upstream contribution work.",
       "url": "https://github.com/RIAEvangelist/its-pizza-time",
@@ -1822,6 +1922,7 @@
     {
       "name": "nodejs.org",
       "fullName": "RIAEvangelist/nodejs.org",
+      "owner": "RIAEvangelist",
       "description": "The Node.js website.",
       "explanation": "The Node.js website.",
       "url": "https://github.com/RIAEvangelist/nodejs.org",
@@ -1842,6 +1943,7 @@
     {
       "name": "libARController",
       "fullName": "RIAEvangelist/libARController",
+      "owner": "RIAEvangelist",
       "description": null,
       "explanation": "A personal fork retained for reference, experiments, or upstream contribution work.",
       "url": "https://github.com/RIAEvangelist/libARController",
@@ -1862,6 +1964,7 @@
     {
       "name": "play.js",
       "fullName": "RIAEvangelist/play.js",
+      "owner": "RIAEvangelist",
       "description": "play sound files from node.js to your speakers, simple as cake and kid approved!",
       "explanation": "play sound files from node.js to your speakers, simple as cake and kid approved!",
       "url": "https://github.com/RIAEvangelist/play.js",
@@ -1882,6 +1985,7 @@
     {
       "name": "csun-fsae-controls",
       "fullName": "RIAEvangelist/csun-fsae-controls",
+      "owner": "RIAEvangelist",
       "description": "control and data acquisition for CSUN fsae race car",
       "explanation": "control and data acquisition for CSUN fsae race car",
       "url": "https://github.com/RIAEvangelist/csun-fsae-controls",
@@ -1902,6 +2006,7 @@
     {
       "name": "Octopi",
       "fullName": "RIAEvangelist/Octopi",
+      "owner": "RIAEvangelist",
       "description": "Offline community tool for an organized personnel infrastructure during crisis",
       "explanation": "Offline community tool for an organized personnel infrastructure during crisis",
       "url": "https://github.com/RIAEvangelist/Octopi",
@@ -1922,6 +2027,7 @@
     {
       "name": "getUserMedia-notification",
       "fullName": "RIAEvangelist/getUserMedia-notification",
+      "owner": "RIAEvangelist",
       "description": "This HTML module or plugin is designed to help make the getUserMedia ( audio and video) and other HTML5 prompts more noticeable to the user. The idea was thought up by and created for Alexander De Ridder.",
       "explanation": "This HTML module or plugin is designed to help make the getUserMedia ( audio and video) and other HTML5 prompts more noticeable to the user. The idea was thought up by and created for Alexander De Ridder.",
       "url": "https://github.com/RIAEvangelist/getUserMedia-notification",
@@ -1942,6 +2048,7 @@
     {
       "name": "cloud9-server-chrome-app",
       "fullName": "RIAEvangelist/cloud9-server-chrome-app",
+      "owner": "RIAEvangelist",
       "description": "This is a Chrome app which you can use to run your own installed version of Cloud9 ( c9.io )",
       "explanation": "This is a Chrome app which you can use to run your own installed version of Cloud9 ( c9.io )",
       "url": "https://github.com/RIAEvangelist/cloud9-server-chrome-app",
@@ -1962,6 +2069,7 @@
     {
       "name": "node-webcam-photo",
       "fullName": "RIAEvangelist/node-webcam-photo",
+      "owner": "RIAEvangelist",
       "description": "capture photos from a webcam via node",
       "explanation": "capture photos from a webcam via node",
       "url": "https://github.com/RIAEvangelist/node-webcam-photo",
@@ -1982,6 +2090,7 @@
     {
       "name": "encrypted-chat",
       "fullName": "RIAEvangelist/encrypted-chat",
+      "owner": "RIAEvangelist",
       "description": null,
       "explanation": "Encrypted Chat is a public JavaScript project in the RIAEvangelist archive; its repository does not yet publish a one-line summary.",
       "url": "https://github.com/RIAEvangelist/encrypted-chat",
@@ -2002,6 +2111,7 @@
     {
       "name": "electron-github",
       "fullName": "RIAEvangelist/electron-github",
+      "owner": "RIAEvangelist",
       "description": "electron GitHub desktop app for all platforms",
       "explanation": "electron GitHub desktop app for all platforms",
       "url": "https://github.com/RIAEvangelist/electron-github",
@@ -2022,6 +2132,7 @@
     {
       "name": "learning-RIA",
       "fullName": "RIAEvangelist/learning-RIA",
+      "owner": "RIAEvangelist",
       "description": "Some basic lessons on learning RIA",
       "explanation": "Some basic lessons on learning RIA",
       "url": "https://github.com/RIAEvangelist/learning-RIA",
@@ -2042,6 +2153,7 @@
     {
       "name": "GitHub-Kanban",
       "fullName": "RIAEvangelist/GitHub-Kanban",
+      "owner": "RIAEvangelist",
       "description": "Automated Kanban Board for GitHub",
       "explanation": "Automated Kanban Board for GitHub",
       "url": "https://github.com/RIAEvangelist/GitHub-Kanban",
@@ -2062,6 +2174,7 @@
     {
       "name": "electron",
       "fullName": "RIAEvangelist/electron",
+      "owner": "RIAEvangelist",
       "description": "Build cross platform desktop apps with web technologies",
       "explanation": "Build cross platform desktop apps with web technologies",
       "url": "https://github.com/RIAEvangelist/electron",
@@ -2082,6 +2195,7 @@
     {
       "name": "pizzadash",
       "fullName": "RIAEvangelist/pizzadash",
+      "owner": "RIAEvangelist",
       "description": "This is a node.js application that \"hacks\" your Amazon Dash Button to order you a Domino's pizza!",
       "explanation": "This is a node.js application that \"hacks\" your Amazon Dash Button to order you a Domino's pizza!",
       "url": "https://github.com/RIAEvangelist/pizzadash",
@@ -2102,6 +2216,7 @@
     {
       "name": "node-sumo",
       "fullName": "RIAEvangelist/node-sumo",
+      "owner": "RIAEvangelist",
       "description": "A Node.js client for controlling Parrot Jumping Sumo drones.",
       "explanation": "A Node.js client for controlling Parrot Jumping Sumo drones.",
       "url": "https://github.com/RIAEvangelist/node-sumo",
@@ -2122,6 +2237,7 @@
     {
       "name": "ardrone3-pcap",
       "fullName": "RIAEvangelist/ardrone3-pcap",
+      "owner": "RIAEvangelist",
       "description": "An ArDrone3 packet sniffer for drones such as Bebop, Rolling Spider, ...",
       "explanation": "An ArDrone3 packet sniffer for drones such as Bebop, Rolling Spider, ...",
       "url": "https://github.com/RIAEvangelist/ardrone3-pcap",
@@ -2142,6 +2258,7 @@
     {
       "name": "bbb-can",
       "fullName": "RIAEvangelist/bbb-can",
+      "owner": "RIAEvangelist",
       "description": "Scripts to get CAN up on the BeagleBone Black",
       "explanation": "Scripts to get CAN up on the BeagleBone Black",
       "url": "https://github.com/RIAEvangelist/bbb-can",
@@ -2162,6 +2279,7 @@
     {
       "name": "trivial-port",
       "fullName": "RIAEvangelist/trivial-port",
+      "owner": "RIAEvangelist",
       "description": "Node.js library to open serial ports for reading and writing",
       "explanation": "Node.js library to open serial ports for reading and writing",
       "url": "https://github.com/RIAEvangelist/trivial-port",
@@ -2182,6 +2300,7 @@
     {
       "name": "We-are-hungry",
       "fullName": "RIAEvangelist/We-are-hungry",
+      "owner": "RIAEvangelist",
       "description": "An application to send free food to a random person or family in need, or register for free food if you are in need.",
       "explanation": "An application to send free food to a random person or family in need, or register for free food if you are in need.",
       "url": "https://github.com/RIAEvangelist/We-are-hungry",
@@ -2202,6 +2321,7 @@
     {
       "name": "shields",
       "fullName": "RIAEvangelist/shields",
+      "owner": "RIAEvangelist",
       "description": "Shields badge specification, website and default API server",
       "explanation": "Shields badge specification, website and default API server",
       "url": "https://github.com/RIAEvangelist/shields",
@@ -2222,6 +2342,7 @@
     {
       "name": "Nodemailer",
       "fullName": "RIAEvangelist/Nodemailer",
+      "owner": "RIAEvangelist",
       "description": "Send e-mails with Node.JS – easy as cake! E-mail made in Estonia",
       "explanation": "Send e-mails with Node.JS – easy as cake! E-mail made in Estonia",
       "url": "https://github.com/RIAEvangelist/Nodemailer",
@@ -2242,6 +2363,7 @@
     {
       "name": "canbus-beaglebone",
       "fullName": "RIAEvangelist/canbus-beaglebone",
+      "owner": "RIAEvangelist",
       "description": "Setup instructions for getting a Beaglebone Black ready for CANBus hacking fun",
       "explanation": "Setup instructions for getting a Beaglebone Black ready for CANBus hacking fun",
       "url": "https://github.com/RIAEvangelist/canbus-beaglebone",
@@ -2262,6 +2384,7 @@
     {
       "name": "dbad",
       "fullName": "RIAEvangelist/dbad",
+      "owner": "RIAEvangelist",
       "description": "Dont Be a Dick Public License",
       "explanation": "Dont Be a Dick Public License",
       "url": "https://github.com/RIAEvangelist/dbad",
@@ -2282,6 +2405,7 @@
     {
       "name": "dognews-keeper",
       "fullName": "RIAEvangelist/dognews-keeper",
+      "owner": "RIAEvangelist",
       "description": "App which allows you to view dognews magazine both online and off. It stores the Issues you have chosen to your device so you can see them even when offline.",
       "explanation": "App which allows you to view dognews magazine both online and off. It stores the Issues you have chosen to your device so you can see them even when offline.",
       "url": "https://github.com/RIAEvangelist/dognews-keeper",
@@ -2302,6 +2426,7 @@
     {
       "name": "online-offline-alarm-chrome-app",
       "fullName": "RIAEvangelist/online-offline-alarm-chrome-app",
+      "owner": "RIAEvangelist",
       "description": "An online and offline chrome app programmed one night after drinking too much",
       "explanation": "An online and offline chrome app programmed one night after drinking too much",
       "url": "https://github.com/RIAEvangelist/online-offline-alarm-chrome-app",
@@ -2322,6 +2447,7 @@
     {
       "name": "ria-app-framework",
       "fullName": "RIAEvangelist/ria-app-framework",
+      "owner": "RIAEvangelist",
       "description": "Modular HTML5 & JavaScript RIA Framework. Designed for maintainability, simplicity, and rapid development.",
       "explanation": "Modular HTML5 & JavaScript RIA Framework. Designed for maintainability, simplicity, and rapid development.",
       "url": "https://github.com/RIAEvangelist/ria-app-framework",
@@ -2342,6 +2468,7 @@
     {
       "name": "nw.js",
       "fullName": "RIAEvangelist/nw.js",
+      "owner": "RIAEvangelist",
       "description": "Call all Node.js modules directly from DOM and enable a new way of writing applications with all Web technologies.",
       "explanation": "Call all Node.js modules directly from DOM and enable a new way of writing applications with all Web technologies.",
       "url": "https://github.com/RIAEvangelist/nw.js",
@@ -2362,6 +2489,7 @@
     {
       "name": "node-can",
       "fullName": "RIAEvangelist/node-can",
+      "owner": "RIAEvangelist",
       "description": "NodeJS SocketCAN extension",
       "explanation": "NodeJS SocketCAN extension",
       "url": "https://github.com/RIAEvangelist/node-can",
@@ -2382,6 +2510,7 @@
     {
       "name": "pandora-tv-fullscreen-chrome-extension",
       "fullName": "RIAEvangelist/pandora-tv-fullscreen-chrome-extension",
+      "owner": "RIAEvangelist",
       "description": "This is an extension for the asian TV website Pandora.tv to allow users to go fullscreen in chrome.",
       "explanation": "This is an extension for the asian TV website Pandora.tv to allow users to go fullscreen in chrome.",
       "url": "https://github.com/RIAEvangelist/pandora-tv-fullscreen-chrome-extension",
@@ -2402,6 +2531,7 @@
     {
       "name": "readable-licenses",
       "fullName": "RIAEvangelist/readable-licenses",
+      "owner": "RIAEvangelist",
       "description": "Make your open source license text more pleasant to read.",
       "explanation": "Make your open source license text more pleasant to read.",
       "url": "https://github.com/RIAEvangelist/readable-licenses",
@@ -2422,6 +2552,7 @@
     {
       "name": "PPIHC-Weather-Server",
       "fullName": "RIAEvangelist/PPIHC-Weather-Server",
+      "owner": "RIAEvangelist",
       "description": "Server reporting conditions and weather for PPIHC Track Corners, Parking areas and other points of interest on the PPIHC Course.",
       "explanation": "Server reporting conditions and weather for PPIHC Track Corners, Parking areas and other points of interest on the PPIHC Course.",
       "url": "https://github.com/RIAEvangelist/PPIHC-Weather-Server",
@@ -2442,6 +2573,7 @@
     {
       "name": "pikespeak-2014",
       "fullName": "RIAEvangelist/pikespeak-2014",
+      "owner": "RIAEvangelist",
       "description": "An app built in a van while driving to Pikes Peak International Hillclimb for the race",
       "explanation": "An app built in a van while driving to Pikes Peak International Hillclimb for the race",
       "url": "https://github.com/RIAEvangelist/pikespeak-2014",
@@ -2462,6 +2594,7 @@
     {
       "name": "markdown-here",
       "fullName": "RIAEvangelist/markdown-here",
+      "owner": "RIAEvangelist",
       "description": "Google Chrome, Firefox, and Thunderbird extension that lets you write email in Markdown and render it before sending.",
       "explanation": "Google Chrome, Firefox, and Thunderbird extension that lets you write email in Markdown and render it before sending.",
       "url": "https://github.com/RIAEvangelist/markdown-here",
@@ -2478,6 +2611,111 @@
       "license": "MIT",
       "createdAt": "2013-08-25T19:35:23Z",
       "updatedAt": "2013-08-25T19:35:38Z"
+    },
+    {
+      "name": "DBOPFS-Studio",
+      "fullName": "TheWizardNexus/DBOPFS-Studio",
+      "owner": "TheWizardNexus",
+      "description": "An OPFS and DBOPFS workspace for Chrome, Edge, Brave, Vivaldi, Opera, and other Chromium browsers: explore, edit, preview, print, and manage site storage.",
+      "explanation": "An OPFS and DBOPFS workspace for Chrome, Edge, Brave, Vivaldi, Opera, and other Chromium browsers: explore, edit, preview, print, and manage site storage.",
+      "url": "https://github.com/TheWizardNexus/DBOPFS-Studio",
+      "homepage": null,
+      "language": "JavaScript",
+      "stars": 0,
+      "forks": 0,
+      "openIssues": 0,
+      "watchers": 0,
+      "archived": false,
+      "disabled": false,
+      "fork": false,
+      "topics": [],
+      "license": "NOASSERTION",
+      "createdAt": "2026-08-13T19:17:47Z",
+      "updatedAt": "2026-08-17T17:11:33Z"
+    },
+    {
+      "name": "DBOPFS",
+      "fullName": "TheWizardNexus/DBOPFS",
+      "owner": "TheWizardNexus",
+      "description": "OPFS based Database",
+      "explanation": "OPFS based Database",
+      "url": "https://github.com/TheWizardNexus/DBOPFS",
+      "homepage": null,
+      "language": "JavaScript",
+      "stars": 1,
+      "forks": 0,
+      "openIssues": 0,
+      "watchers": 1,
+      "archived": false,
+      "disabled": false,
+      "fork": false,
+      "topics": [],
+      "license": "NOASSERTION",
+      "createdAt": "2026-08-11T20:08:22Z",
+      "updatedAt": "2026-08-17T16:29:39Z"
+    },
+    {
+      "name": "TheWizardNexus",
+      "fullName": "TheWizardNexus/TheWizardNexus",
+      "owner": "TheWizardNexus",
+      "description": "GitHub profile for The Wizard Nexus — behavioral health innovation powered by PreCrisis AI.",
+      "explanation": "GitHub profile for The Wizard Nexus — behavioral health innovation powered by PreCrisis AI.",
+      "url": "https://github.com/TheWizardNexus/TheWizardNexus",
+      "homepage": null,
+      "language": "Unclassified",
+      "stars": 1,
+      "forks": 0,
+      "openIssues": 0,
+      "watchers": 1,
+      "archived": false,
+      "disabled": false,
+      "fork": false,
+      "topics": [],
+      "license": null,
+      "createdAt": "2026-07-13T18:33:00Z",
+      "updatedAt": "2026-08-14T23:09:47Z"
+    },
+    {
+      "name": "arcane-os-sdk",
+      "fullName": "TheWizardNexus/arcane-os-sdk",
+      "owner": "TheWizardNexus",
+      "description": "sdk for building apps for Acane OS",
+      "explanation": "sdk for building apps for Acane OS",
+      "url": "https://github.com/TheWizardNexus/arcane-os-sdk",
+      "homepage": null,
+      "language": "JavaScript",
+      "stars": 0,
+      "forks": 0,
+      "openIssues": 0,
+      "watchers": 0,
+      "archived": false,
+      "disabled": false,
+      "fork": false,
+      "topics": [],
+      "license": "AGPL-3.0",
+      "createdAt": "2026-08-13T23:55:03Z",
+      "updatedAt": "2026-08-14T21:38:18Z"
+    },
+    {
+      "name": "Astrolabe",
+      "fullName": "TheWizardNexus/Astrolabe",
+      "owner": "TheWizardNexus",
+      "description": "An astrolabe makes a complex sky understandable and navigable just like this repo does for the TWiN ecosystem",
+      "explanation": "An astrolabe makes a complex sky understandable and navigable just like this repo does for the TWiN ecosystem",
+      "url": "https://github.com/TheWizardNexus/Astrolabe",
+      "homepage": null,
+      "language": "HTML",
+      "stars": 0,
+      "forks": 0,
+      "openIssues": 0,
+      "watchers": 0,
+      "archived": false,
+      "disabled": false,
+      "fork": false,
+      "topics": [],
+      "license": null,
+      "createdAt": "2026-08-13T23:20:42Z",
+      "updatedAt": "2026-08-14T11:08:16Z"
     }
   ]
 }

@@ -1,3 +1,3 @@
 dist/
 *.tgz
-.codex-profile-site.lock.json
+.codex-*.lock.json

@@ -20,12 +20,19 @@
 
 <!-- profile-telemetry-counts:start -->
 <p align="center">
-  <strong>42 maintained NPM modules · 120 public repositories · one navigable history</strong><br>
+  <strong>43 maintained NPM modules · 125 public repositories · two owned identities</strong><br>
   <a href="https://riaevangelist.github.io/RIAEvangelist/"><strong>Explore the live package pulse and complete code atlas →</strong></a>
 </p>
 <!-- profile-telemetry-counts:end -->
 
-The dashboard totals every public package currently maintained by [`riaevangelist`](https://www.npmjs.com/~riaevangelist), shows weekly, monthly, and yearly downloads per module, and explains every public repository. Counts use the official NPM rolling download windows and refresh automatically each day. They represent package downloads—not unique people or verified installations.
+<!-- profile-npm-history:start -->
+<p align="center">
+  <strong>1,561,507,166 recorded NPM downloads since February 27, 2015</strong><br>
+  <a href="https://riaevangelist.github.io/RIAEvangelist/#history">Explore every calendar year and the recorded lifetime →</a>
+</p>
+<!-- profile-npm-history:end -->
+
+The dashboard totals every public package currently maintained by the owned [`riaevangelist`](https://www.npmjs.com/~riaevangelist) and [`thewizardnexus`](https://www.npmjs.com/~thewizardnexus) identities, shows weekly, monthly, yearly, calendar-year, and recorded-lifetime downloads per module, and explains the public repositories across both GitHub accounts. Counts use the official NPM API and refresh automatically each day. They represent package downloads—not unique people or verified installations.
 
 ## Earned milestones
 

@@ -15,6 +15,7 @@
     <meta name="twitter:description" content="Traditional JavaScript. Ridiculous reach. Explore the live package pulse and complete code atlas.">
     <meta name="twitter:image" content="https://riaevangelist.github.io/RIAEvangelist/assets/og.png">
     <link rel="canonical" href="https://riaevangelist.github.io/RIAEvangelist/">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <title>RIAEvangelist // Open-source signal</title>
     <link rel="stylesheet" href="styles.css">
     <script src="app.js" defer></script>
@@ -28,6 +29,7 @@
         <span>RIAEvangelist</span>
       </a>
       <nav aria-label="Primary navigation">
+        <a href="#history">History</a>
         <a href="#packages">Modules</a>
         <a href="#repositories">Repositories</a>
         <a class="github-link" href="https://github.com/RIAEvangelist">GitHub ↗</a>
@@ -50,8 +52,8 @@
           <div class="orbit orbit-one"><i></i><i></i><i></i></div>
           <div class="orbit orbit-two"><i></i><i></i></div>
           <div class="signal-core"><b id="signal-total">259.8M</b><span>yearly downloads</span></div>
-          <p class="signal-label label-one"><span id="module-count">42</span> modules</p>
-          <p class="signal-label label-two"><span id="repo-count">120</span> repos</p>
+          <p class="signal-label label-one"><span id="module-count">43</span> modules</p>
+          <p class="signal-label label-two"><span id="repo-count">125</span> repos</p>
           <p class="signal-label label-three">pure JS energy</p>
         </div>
       </section>
@@ -59,22 +61,87 @@
       <section class="metrics" aria-label="Overall NPM downloads">
         <div class="metric metric-pink">
           <p>Last week</p>
-          <strong id="total-week" data-count="4597446">4,597,446</strong>
+          <strong id="total-week" data-count="4597578">4,597,578</strong>
           <span>downloads across every maintained module</span>
         </div>
         <div class="metric metric-violet">
           <p>Last month</p>
-          <strong id="total-month" data-count="23019236">23,019,236</strong>
+          <strong id="total-month" data-count="23019368">23,019,368</strong>
           <span>rolling NPM download total</span>
         </div>
         <div class="metric metric-cyan">
           <p>Last year</p>
-          <strong id="total-year" data-count="259776319">259,776,319</strong>
+          <strong id="total-year" data-count="259776451">259,776,451</strong>
           <span>one year of open-source utility</span>
         </div>
       </section>
 
       <p class="freshness" id="freshness"><span></span> Loading the latest verified NPM snapshot…</p>
+
+      <section class="history-section section-shell" id="history" aria-labelledby="history-title">
+        <div class="section-heading history-heading">
+          <div>
+            <p class="eyebrow">Recorded NPM history</p>
+            <h2 id="history-title">Every year.<br>The full signal.</h2>
+          </div>
+          <div class="section-side">
+            <p>Explore calendar-year and recorded-lifetime downloads across the complete current module catalog. Annual reference data from npm-stat is reconciled against NPM’s official range API before publication.</p>
+            <div class="history-controls">
+              <label class="select-field">
+                <span>Time range</span>
+                <select id="history-range" aria-controls="history-chart history-table-body">
+                  <option value="lifetime">Recorded lifetime</option>
+                </select>
+              </label>
+              <label class="select-field">
+                <span>Module</span>
+                <select id="history-module" aria-controls="history-chart history-table-body">
+                  <option value="all">All modules</option>
+                </select>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="history-milestone">
+          <div class="milestone-orbit" aria-hidden="true"><i></i><i></i></div>
+          <p>First recorded NPM download day</p>
+          <strong id="history-first-date">Finding the first signal…</strong>
+          <span id="history-first-detail">Checking every available package day against the official record.</span>
+        </div>
+
+        <article class="history-panel" aria-labelledby="history-chart-title">
+          <header class="history-panel-header">
+            <div>
+              <p class="eyebrow" id="history-chart-kicker">Recorded lifetime</p>
+              <h3 id="history-chart-title">All modules</h3>
+              <p id="history-chart-period">Loading the historical archive…</p>
+            </div>
+            <p class="history-panel-total"><span>Total downloads</span><strong id="history-total">—</strong></p>
+          </header>
+
+          <div class="history-chart-frame" id="history-chart-frame">
+            <canvas id="history-chart" role="img" aria-label="Loading the NPM download history chart"></canvas>
+            <p class="chart-empty" id="history-chart-empty" hidden>No official NPM history is available for this range.</p>
+            <output class="chart-tooltip" id="history-chart-tooltip" hidden></output>
+          </div>
+
+          <dl class="history-stats">
+            <div><dt>Average</dt><dd id="history-average">—</dd></div>
+            <div><dt>Peak</dt><dd id="history-peak">—</dd></div>
+            <div><dt>Coverage</dt><dd id="history-coverage">—</dd></div>
+          </dl>
+
+          <div class="history-table-wrap">
+            <table>
+              <caption id="history-table-caption">Historical download summary</caption>
+              <thead><tr><th scope="col">Period</th><th scope="col">Downloads</th><th scope="col">Share</th></tr></thead>
+              <tbody id="history-table-body"><tr><td colspan="3">Loading historical totals…</td></tr></tbody>
+            </table>
+          </div>
+          <p class="history-status" id="history-status" role="status" aria-live="polite">Loading the official historical record…</p>
+        </article>
+      </section>
 
       <section class="package-preview section-shell" id="packages" aria-labelledby="package-title">
         <div class="section-heading">
@@ -83,7 +150,7 @@
             <h2 id="package-title">The modules moving the most code</h2>
           </div>
           <div class="section-side">
-            <p>Official rolling NPM download windows, summed across packages maintained by <code>riaevangelist</code>.</p>
+            <p>Official rolling NPM download windows, summed across packages maintained by the owned <code>riaevangelist</code> and <code>thewizardnexus</code> identities.</p>
             <div class="period-switcher" role="group" aria-label="Rank packages by download period">
               <button type="button" data-period="week" aria-pressed="false">Week</button>
               <button type="button" data-period="month" aria-pressed="false">Month</button>
@@ -110,7 +177,7 @@
             <input id="package-search" type="search" placeholder="Try node, browser, queue…" autocomplete="off">
           </label>
         </div>
-        <p class="result-count" id="package-result-count">Loading 42 modules…</p>
+        <p class="result-count" id="package-result-count">Loading 43 modules…</p>
         <div class="package-grid" id="package-grid" aria-live="polite"></div>
       </section>
 
@@ -124,16 +191,20 @@
         </div>
 
         <div class="repo-stats" role="group" aria-label="GitHub repository summary">
-          <p><strong id="repo-total">120</strong><span>public repos</span></p>
-          <p><strong id="repo-original">82</strong><span>original works</span></p>
+          <p><strong id="repo-total">125</strong><span>public repos</span></p>
+          <p><strong id="repo-original">87</strong><span>original works</span></p>
           <p><strong id="repo-forks">38</strong><span>forks</span></p>
-          <p><strong id="repo-stars">1,541</strong><span>stars earned</span></p>
+          <p><strong id="repo-stars">1,543</strong><span>stars earned</span></p>
         </div>
 
         <div class="repo-toolbar">
           <label class="search-field repo-search">
             <span>Search the code atlas</span>
             <input id="repo-search" type="search" placeholder="Search names, explanations, topics…" autocomplete="off">
+          </label>
+          <label class="select-field">
+            <span>Account</span>
+            <select id="repo-owner"><option value="all">Both accounts</option></select>
           </label>
           <label class="select-field">
             <span>Language</span>
@@ -178,16 +249,16 @@
           <article>
             <b>03</b>
             <h3>Maintained catalog</h3>
-            <p>The overall total sums every public package where <code>riaevangelist</code> is listed as a maintainer, including co-maintained work.</p>
+            <p>The overall total deduplicates every public package where <code>riaevangelist</code> or <code>thewizardnexus</code> is listed as a maintainer, including co-maintained work.</p>
           </article>
         </div>
-        <p class="source-links">Data: <a href="https://github.com/npm/registry/blob/main/docs/download-counts.md">official NPM download API</a> · <a href="https://docs.github.com/en/rest/repos/repos#list-repositories-for-a-user">GitHub repositories API</a></p>
+        <p class="source-links">Data: <a href="https://github.com/npm/registry/blob/main/docs/download-counts.md">official NPM download API</a> · <a href="https://www.npm-stat.com/">npm-stat historical reference</a> · <a href="https://docs.github.com/en/rest/repos/repos#list-repositories-for-a-user">GitHub repositories API</a></p>
       </section>
     </main>
 
     <footer>
       <p>Built with Web standards and an unreasonable affection for JavaScript.</p>
-      <p><a href="https://www.npmjs.com/~riaevangelist">NPM ↗</a> <a href="https://github.com/RIAEvangelist">GitHub ↗</a> <a href="https://www.youtube.com/brandonnozakimiller">YouTube ↗</a></p>
+      <p><a href="https://www.npmjs.com/~riaevangelist">RIA NPM ↗</a> <a href="https://www.npmjs.com/~thewizardnexus">TWiN NPM ↗</a> <a href="https://github.com/RIAEvangelist">RIA GitHub ↗</a> <a href="https://github.com/TheWizardNexus">TWiN GitHub ↗</a> <a href="https://www.youtube.com/brandonnozakimiller">YouTube ↗</a></p>
     </footer>
   </body>
 </html>
