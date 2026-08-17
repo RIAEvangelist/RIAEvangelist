@@ -45,7 +45,7 @@ const footerGroups = [
   {
     title: "Elsewhere",
     links: [
-      ["NewZeroland / Brandon on YouTube ↗", "https://www.youtube.com/@BrandonNozakiMiller"],
+      ["Electric Motorcycle Influencer days ↗", "https://www.youtube.com/@BrandonNozakiMiller"],
       ["AI Wizard on YouTube ↗", "https://www.youtube.com/@AI-Wizard-Music"],
       ["DigiNow on YouTube ↗", "https://www.youtube.com/@digiNowIt"],
       ["AI Nerd on YouTube ↗", "https://www.youtube.com/@unclenozaki9325"],

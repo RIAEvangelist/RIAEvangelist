@@ -498,7 +498,10 @@ test("one shared footer maps every site section and subsection across all routes
     storyGroup.links.slice(1).map(([, href]) => href).sort(),
     story.pages.map(({ slug }) => `story/${slug}/`).sort(),
   );
-  assert.ok(elsewhereGroup.links.some(([, href]) => href === "https://www.youtube.com/@BrandonNozakiMiller"));
+  assert.ok(elsewhereGroup.links.some(([label, href]) => (
+    label === "Electric Motorcycle Influencer days ↗"
+      && href === "https://www.youtube.com/@BrandonNozakiMiller"
+  )));
   assert.match(rootHtml, /<section class="method-section" id="method"/);
   assert.match(styles, /\.page-nav a:not\(\.github-link\)\s*\{\s*display:\s*none;/);
   assert.doesNotMatch(styles, /(?<![.-])nav a:not\(\.github-link\)\s*\{\s*display:\s*none;/);
