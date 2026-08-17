@@ -4,6 +4,7 @@ const dateFormatter = new Intl.DateTimeFormat("en-US", { month: "short", day: "n
 const longDateFormatter = new Intl.DateTimeFormat("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" });
 const monthFormatter = new Intl.DateTimeFormat("en-US", { month: "short", year: "numeric", timeZone: "UTC" });
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const averageStartMonth = "2021-01";
 
 const state = {
   npm: null,
@@ -46,6 +47,7 @@ const elements = {
   historyChartTitle: document.querySelector("#history-chart-title"),
   historyChartPeriod: document.querySelector("#history-chart-period"),
   historyTotal: document.querySelector("#history-total"),
+  historyAverageLabel: document.querySelector("#history-average-label"),
   historyAverage: document.querySelector("#history-average"),
   historyPeak: document.querySelector("#history-peak"),
   historyCoverage: document.querySelector("#history-coverage"),
@@ -55,6 +57,7 @@ const elements = {
   historyChartTooltip: document.querySelector("#history-chart-tooltip"),
   historyTableCaption: document.querySelector("#history-table-caption"),
   historyTableBody: document.querySelector("#history-table-body"),
+  historyTableFoot: document.querySelector("#history-table-foot"),
   historyStatus: document.querySelector("#history-status"),
   repoTotal: document.querySelector("#repo-total"),
   repoOriginal: document.querySelector("#repo-original"),
@@ -338,12 +341,15 @@ function renderHistoryTable(rows, total, caption) {
   elements.historyTableCaption.textContent = caption;
   if (!rows.length) {
     elements.historyTableBody.innerHTML = '<tr><td colspan="3">No official download history is available for this period.</td></tr>';
+    elements.historyTableFoot.hidden = true;
     return;
   }
   elements.historyTableBody.innerHTML = rows.map(({ label, value }) => {
     const share = total > 0 ? (value / total) * 100 : 0;
     return `<tr><th scope="row">${escapeHtml(label)}</th><td>${numberFormatter.format(value)}</td><td>${share.toFixed(1)}%</td></tr>`;
   }).join("");
+  elements.historyTableFoot.hidden = false;
+  elements.historyTableFoot.innerHTML = `<tr><th scope="row">Total</th><td>${numberFormatter.format(total)}</td><td>${total > 0 ? "100.0%" : "0.0%"}</td></tr>`;
 }
 
 function historyPackage() {
@@ -370,6 +376,8 @@ function renderLifetimeHistory() {
     tooltipLabel: formatMonth(period),
   }));
   const total = pkg ? pkg.total : state.history.lifetimeTotal;
+  const averagePoints = points.filter((point) => point.period >= averageStartMonth);
+  const averageTotal = averagePoints.reduce((sum, point) => sum + point.value, 0);
   const availableYears = new Set(state.history.years.filter((year) => year.availableFrom).map((year) => String(year.year)));
   const annual = pkg
     ? pkg.annual.filter(([year]) => availableYears.has(year)).map(([year, value]) => ({ label: year, value }))
@@ -381,7 +389,8 @@ function renderLifetimeHistory() {
   elements.historyChartTitle.textContent = label;
   elements.historyChartPeriod.textContent = `${formatLongDate(state.history.period.availableFrom)}–${formatLongDate(state.history.period.through)} · monthly trend`;
   elements.historyTotal.textContent = numberFormatter.format(total);
-  elements.historyAverage.textContent = `${numberFormatter.format(Math.round(total / Math.max(points.length, 1)))} / month`;
+  elements.historyAverageLabel.textContent = "Average since 2021";
+  elements.historyAverage.textContent = `${numberFormatter.format(Math.round(averageTotal / Math.max(averagePoints.length, 1)))} / month`;
   elements.historyPeak.textContent = peak ? `${formatMonth(peak.period)} · ${compactFormatter.format(peak.value)}` : "No recorded downloads";
   elements.historyCoverage.textContent = `${numberFormatter.format(points.length)} months · ${state.history.packageCount} modules`;
   elements.historyChartCanvas.hidden = false;
@@ -403,6 +412,7 @@ function renderHistoryUnavailableState({ kicker, title, period, coverage, emptyM
   elements.historyChartTitle.textContent = title;
   elements.historyChartPeriod.textContent = period;
   elements.historyTotal.textContent = "—";
+  elements.historyAverageLabel.textContent = "Average";
   elements.historyAverage.textContent = "Unavailable";
   elements.historyPeak.textContent = "Unavailable";
   elements.historyCoverage.textContent = coverage;
@@ -458,6 +468,7 @@ function renderYearHistory(year) {
   }
 
   elements.historyChartPeriod.textContent = `${formatLongDate(year.period.availableFrom)}–${formatLongDate(year.period.availableUntil)} · daily trend`;
+  elements.historyAverageLabel.textContent = "Daily average";
   elements.historyAverage.textContent = `${numberFormatter.format(Math.round(total / points.length))} / day`;
   elements.historyPeak.textContent = peak?.value ? `${formatDate(peak.period)} · ${compactFormatter.format(peak.value)}` : "No recorded downloads";
   elements.historyCoverage.textContent = state.historyModule === "all"

@@ -107,9 +107,13 @@ test("profile README and site expose the telemetry experience", async () => {
   assert.match(html, /id="repo-owner"/);
   assert.match(html, /id="history-chart"/);
   assert.match(html, /id="history-range"/);
+  assert.match(html, /id="history-table-foot"/);
   assert.match(script, /data\/npm-stats\.json/);
   assert.match(script, /data\/repos\.json/);
   assert.match(script, /data\/npm-history\/index\.json/);
+  assert.match(script, /averageStartMonth = "2021-01"/);
+  assert.match(script, /Average since 2021/);
+  assert.match(script, /historyTableFoot\.innerHTML/);
   assert.ok(script.indexOf("initializeHistory();") < script.indexOf("[state.npm, state.repos]"));
   assert.match(styles, /#history-chart\[hidden\]/);
   assert.match(readme, /thewizardnexus/);

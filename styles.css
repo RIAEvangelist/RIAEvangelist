@@ -493,6 +493,10 @@ code { color: var(--cyan); font-size: 0.9em; }
 .history-table-wrap td:first-child { text-align: left; }
 .history-table-wrap tbody tr:last-child td { border-bottom: 0; }
 .history-table-wrap tbody td:nth-child(2) { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; }
+.history-table-wrap tfoot th,
+.history-table-wrap tfoot td { border-top: 1px solid rgba(57,230,230,0.38); border-bottom: 0; background: rgba(57,230,230,0.06); color: var(--ink); font-weight: 800; }
+.history-table-wrap tfoot td:nth-child(2) { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; }
+.history-table-wrap tfoot[hidden] { display: none; }
 
 .history-status { margin: 1.2rem 0 0; color: var(--quiet); font: 650 0.65rem/1.6 ui-monospace, SFMono-Regular, Consolas, monospace; }
 
