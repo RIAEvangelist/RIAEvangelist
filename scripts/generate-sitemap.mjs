@@ -29,6 +29,8 @@ async function main() {
   const routes = [
     ["", "daily", "1.0"],
     ["music/", "monthly", "0.9"],
+    ["music/process/", "yearly", "0.8"],
+    ["music/origins/", "yearly", "0.8"],
     ["music/releases/", "monthly", "0.9"],
     ...Array.from({ length: Math.ceil(music.releases.length / PAGE_SIZE) - 1 }, (_, index) => [
       `music/releases/page/${index + 2}/`,

@@ -108,6 +108,8 @@ I build with traditional JavaScript, Node.js, AI-assisted workflows, and open-so
   <a href="https://riaevangelist.github.io/RIAEvangelist/music/"><strong>Explore all 36 releases, short collections, and individual release workspaces →</strong></a>
 </p>
 
+**Authorship note:** Most vocals are performed by Brandon and other real people. AI voices were used more at the beginning and are now occasional; Brandon performs some instruments, and AI remains a heavily used creative and production partner. [See how the music is made →](https://riaevangelist.github.io/RIAEvangelist/music/process/) · [Start with the origins →](https://riaevangelist.github.io/RIAEvangelist/music/origins/)
+
 Ten releases from the current listening desk. Choose a service below, or use **LANDR** for every available destination.
 
 | Release workspace | Listen |

@@ -281,8 +281,10 @@ test("generated music pages form a complete page-first catalog", async () => {
   ));
   const detailPaths = catalog.releases.map((release) => `music/releases/${release.slug}/index.html`);
   const collectionPaths = catalog.collections.map((collection) => `music/collections/${collection.slug}/index.html`);
+  const authorshipPaths = ["music/process/index.html", "music/origins/index.html"];
   const expectedPaths = [
     "music/index.html",
+    ...authorshipPaths,
     ...paginationPaths,
     "music/collections/index.html",
     ...detailPaths,
@@ -296,6 +298,13 @@ test("generated music pages form a complete page-first catalog", async () => {
   assert.deepEqual([...generatedManifest.generated].sort(), [...expectedPaths].sort());
   assert.match(pages.get("music/index.html"), />36</);
   assert.match(pages.get("music/index.html"), /Short pages\. Deep catalog\./);
+
+  for (const relativePath of authorshipPaths) {
+    const route = relativePath.replace(/index\.html$/, "");
+    const html = pages.get(relativePath);
+    assert.ok(html.includes(`<link rel="canonical" href="${SITE_BASE}/${route}">`));
+    assertNoRootRelativeUrls(html, relativePath);
+  }
 
   const paginationPages = paginationPaths.map((relativePath) => pages.get(relativePath));
   for (const release of catalog.releases) {
@@ -395,6 +404,13 @@ test("profile README features the open-tab releases and routes readers to focuse
   assert.match(musicBlock, /cdn\.simpleicons\.org\/spotify\//i);
   assert.match(musicBlock, /cdn\.simpleicons\.org\/applemusic\//i);
   assert.match(musicBlock, /cdn\.simpleicons\.org\/youtubemusic\//i);
+  assert.match(musicBlock, /Most vocals are performed by Brandon and other real people\./);
+  assert.match(musicBlock, /AI voices were used more at the beginning and are now occasional/);
+  assert.match(musicBlock, /Brandon performs some instruments/);
+  assert.match(musicBlock, /AI remains a heavily used creative and production partner/);
+  for (const route of ["process", "origins"]) {
+    assert.ok(musicBlock.includes(`${SITE_BASE}/music/${route}/`), `README is missing the music ${route} link`);
+  }
 
   for (const release of catalog.releases.filter(({ profileFeature }) => profileFeature)) {
     assert.ok(musicBlock.includes(release.landrUrl), `${release.id} LANDR link is missing from the README`);
@@ -421,6 +437,8 @@ test("sitemap enumerates every generated music and story route", async () => {
   const expectedUrls = [
     `${SITE_BASE}/`,
     `${SITE_BASE}/music/`,
+    `${SITE_BASE}/music/process/`,
+    `${SITE_BASE}/music/origins/`,
     `${SITE_BASE}/music/releases/`,
     ...Array.from({ length: pageCount - 1 }, (_, index) => `${SITE_BASE}/music/releases/page/${index + 2}/`),
     `${SITE_BASE}/music/collections/`,

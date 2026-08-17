@@ -160,7 +160,7 @@ function musicHub(catalog) {
       <div>
         <p class="eyebrow">AI Wizard · music catalog</p>
         <h1 class="page-title">Music, memory<br><span>& signal.</span></h1>
-        <p class="page-lede">${escapeHtml(catalog.catalogDescription)}</p>
+        <p class="page-lede">${escapeHtml(catalog.artistStory.hubStatement)}</p>
         <div class="hero-actions">
           <a class="button button-primary" href="releases/">Browse every release</a>
           <a class="button button-quiet" href="https://www.youtube.com/@AI-Wizard-Music">AI Wizard on YouTube ↗</a>
@@ -175,12 +175,13 @@ function musicHub(catalog) {
     <section class="section-shell compact-section" aria-labelledby="music-paths-title">
       <div class="section-heading compact-heading">
         <div><p class="eyebrow">Choose a path</p><h2 id="music-paths-title">Short pages. Deep catalog.</h2></div>
-        <p>Move through curated collections, paginated release indexes, or a dedicated workspace for each song and record.</p>
+        <p>Move through the releases, or step into the human history and transparent creative process behind them.</p>
       </div>
       <div class="hub-card-grid">
         <a class="hub-card" href="releases/"><b>01</b><span><strong>All releases</strong><small>Paginated catalog</small></span></a>
         <a class="hub-card" href="collections/"><b>02</b><span><strong>Collections</strong><small>Grouped by signal</small></span></a>
-        <a class="hub-card" href="../story/channels/"><b>03</b><span><strong>Watch & follow</strong><small>Channels and films</small></span></a>
+        <a class="hub-card" href="process/"><b>03</b><span><strong>How it is made</strong><small>Human performance · AI partnership</small></span></a>
+        <a class="hub-card" href="origins/"><b>04</b><span><strong>Where it began</strong><small>Family, instruments & first stages</small></span></a>
       </div>
     </section>
     <section class="section-shell compact-section" aria-labelledby="featured-title">
@@ -198,6 +199,37 @@ function musicHub(catalog) {
     description: catalog.catalogDescription,
     canonicalPath: "music/",
     image: catalog.releases.find((release) => release.featured)?.artwork,
+    body
+  });
+}
+
+function musicStoryPage(page, slug, otherPage, otherSlug) {
+  const prefix = "../../";
+  const sections = page.sections.map((section, index) => `<article class="story-section">
+      <header><b>${String(index + 1).padStart(2, "0")}</b><h2>${escapeHtml(section.title)}</h2></header>
+      <div class="story-copy">${section.body.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("\n")}</div>
+    </article>`).join("\n");
+  const body = `
+    <section class="subpage-hero short-hero music-story-hero">
+      <div>
+        <p class="breadcrumbs"><a href="../">Music</a> / ${escapeHtml(page.title)}</p>
+        <p class="eyebrow">${escapeHtml(page.eyebrow)}</p>
+        <h1 class="page-title">${escapeHtml(page.title)}</h1>
+        <p class="page-lede">${escapeHtml(page.lede)}</p>
+      </div>
+    </section>
+    <section class="story-sections" aria-label="${escapeHtml(page.title)}">${sections}</section>
+    <nav class="chapter-nav" aria-label="Music story navigation">
+      <a href="../">Music catalog</a>
+      <a href="../${otherSlug}/">${escapeHtml(otherPage.title)}</a>
+      <a href="../releases/">Every release</a>
+    </nav>`;
+
+  return layout({
+    prefix,
+    title: `${page.title} // RIAEvangelist music`,
+    description: page.description,
+    canonicalPath: `music/${slug}/`,
     body
   });
 }
@@ -305,6 +337,20 @@ function validateCatalog(catalog) {
   const slugs = new Set();
   const landrUrls = new Set();
   const collectionSlugs = new Set(catalog.collections.map(({ slug }) => slug));
+  if (!catalog.catalogTitle?.trim() || !catalog.catalogDescription?.trim()) throw new Error("Incomplete music catalog metadata");
+  if (!catalog.artistStory?.hubStatement?.trim()) throw new Error("Missing music authorship statement");
+  for (const key of ["process", "origins"]) {
+    const page = catalog.artistStory[key];
+    if (!page?.eyebrow?.trim() || !page?.title?.trim() || !page?.description?.trim() || !page?.lede?.trim()) {
+      throw new Error(`Incomplete music story page: ${key}`);
+    }
+    if (!Array.isArray(page.sections) || page.sections.length < 2) throw new Error(`Music story page needs sections: ${key}`);
+    for (const section of page.sections) {
+      if (!section?.title?.trim() || !Array.isArray(section.body) || !section.body.length || section.body.some((paragraph) => !paragraph?.trim())) {
+        throw new Error(`Incomplete music story section: ${key}`);
+      }
+    }
+  }
   if (catalog.releases.length !== 36) throw new Error(`Expected 36 releases, found ${catalog.releases.length}`);
   if (collectionSlugs.size !== catalog.collections.length) throw new Error("Duplicate collection slug");
   for (const release of catalog.releases) {
@@ -371,6 +417,8 @@ async function main() {
   const drift = [];
 
   await writePage("music/index.html", musicHub(catalog), generated, drift);
+  await writePage("music/process/index.html", musicStoryPage(catalog.artistStory.process, "process", catalog.artistStory.origins, "origins"), generated, drift);
+  await writePage("music/origins/index.html", musicStoryPage(catalog.artistStory.origins, "origins", catalog.artistStory.process, "process"), generated, drift);
   const pageCount = Math.max(1, Math.ceil(catalog.releases.length / PAGE_SIZE));
   for (let page = 1; page <= pageCount; page += 1) {
     const result = releasesPage(catalog, page);

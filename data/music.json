@@ -1,6 +1,87 @@
 {
   "catalogTitle": "AI Wizard music catalog",
   "catalogDescription": "Songs and records shaped through human experience, code culture, memory, motion, and collaboration with AI.",
+  "artistStory": {
+    "hubStatement": "Most of the singing in this catalog is me, joined by other real people. I began by using more AI voices and still use them occasionally; today AI is a close creative and production partner, while the performances, memories, friends, family, and feeling at the center are human.",
+    "process": {
+      "eyebrow": "Human voices · AI partnership",
+      "title": "Human at the center. AI in the room.",
+      "description": "How Brandon Nozaki Miller combines human vocals and instruments with AI-assisted creation, editing, cleanup, and polish.",
+      "lede": "The music is personal and human-made, with AI used openly as a serious creative and production partner.",
+      "sections": [
+        {
+          "title": "Most of the singing is human.",
+          "body": [
+            "Most of the vocals across this catalog are mine or performances by other real people. Friends, family, and collaborators bring their own voices and presence into the work.",
+            "I began by experimenting more heavily with AI voices. I still use them occasionally when they fit a song, but they are one color in the palette—not the whole picture."
+          ]
+        },
+        {
+          "title": "I play, record, and arrange.",
+          "body": [
+            "Depending on where and how I record, I also play some of the instruments. Each release can combine live performance, programmed parts, arrangement, editing, and collaboration in a different way.",
+            "The point is not to pretend every sound came from the same process. It is to shape the strongest honest version of the song."
+          ]
+        },
+        {
+          "title": "AI is a real creative partner.",
+          "body": [
+            "I use AI heavily for ideation, iteration, cleanup, and polish. It helps me explore possibilities, repair rough edges, and carry a human performance or idea to a publishable finish.",
+            "That sits alongside the editing, correction, layering, and processing tools recorded music has used for years. I am transparent about it because the partnership matters to how this work is made."
+          ]
+        },
+        {
+          "title": "The soul is not synthetic.",
+          "body": [
+            "There is a lot of me in this music: my history, feelings, friends, family, and memories of people who are no longer here.",
+            "The catalog carries blood, sweat, tears, play, grief, and love. AI helps me make those ideas clearer and more polished; it does not replace the lives behind them."
+          ]
+        }
+      ]
+    },
+    "origins": {
+      "eyebrow": "Before the catalog",
+      "title": "A lifetime of sound before the first release.",
+      "description": "Brandon Nozaki Miller's first-person musical path from family instruments and blues practice to live performance and electronic production.",
+      "lede": "Long before these releases, music was already braided through my family, childhood, friendships, and experiments with technology.",
+      "sections": [
+        {
+          "title": "Music began with my grandmother.",
+          "body": [
+            "From the time I was two or three, I played piano and organ with my grandmother. She also played accordion, and those early hours made music feel like part of family life rather than something distant or formal."
+          ]
+        },
+        {
+          "title": "Then came reeds, strings, and the blues.",
+          "body": [
+            "With my parents' support, I learned saxophone at an early age and guitar in high school.",
+            "I spent years learning harmonica while sitting next to a giant box speaker, listening closely to blues classics and the songs the Blues Brothers covered."
+          ]
+        },
+        {
+          "title": "I first performed as Elwood.",
+          "body": [
+            "My first performance was as a teenager at Musikfest. Our Blues Brothers reenactment band played the Pringles Stage after Tool, and I was Elwood.",
+            "That memory still carries the mix of theater, nerve, humor, and live energy that I want music to hold."
+          ]
+        },
+        {
+          "title": "Fruity Loops opened another door.",
+          "body": [
+            "I started making electronic music in the early Fruity Loops days. Some of those first songs led to an invitation to perform at a trance festival in Paris.",
+            "Code, tools, and new technology have been part of my musical vocabulary ever since—not separate from the human story, but ways to carry it farther."
+          ]
+        },
+        {
+          "title": "The catalog holds people and time.",
+          "body": [
+            "The music carries pieces of my friends and family, childhood instruments, early stages, places I have lived, and memories of friends who are no longer here.",
+            "That is why I treat AI as a partner rather than a disguise. The tools help me finish the work, but the reasons for making it are deeply personal."
+          ]
+        }
+      ]
+    }
+  },
   "collections": [
     {
       "slug": "reflection-and-purpose",

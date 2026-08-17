@@ -1,6 +1,8 @@
 {
   "generated": [
     "music/index.html",
+    "music/process/index.html",
+    "music/origins/index.html",
     "music/releases/index.html",
     "music/releases/page/2/index.html",
     "music/releases/page/3/index.html",
