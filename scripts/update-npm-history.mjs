@@ -363,6 +363,10 @@ function fullNumber(value) {
   return new Intl.NumberFormat("en-US").format(value);
 }
 
+function billionFloor(value) {
+  return (Math.floor(value / 10_000_000) / 100).toFixed(2);
+}
+
 function longDate(value) {
   return new Intl.DateTimeFormat("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" })
     .format(new Date(`${value}T00:00:00Z`));
@@ -371,7 +375,7 @@ function longDate(value) {
 async function updateReadme(index) {
   const start = "<!-- profile-npm-history:start -->";
   const end = "<!-- profile-npm-history:end -->";
-  const block = `${start}\n<p align="center">\n  <strong>${fullNumber(index.lifetimeTotal)} recorded NPM downloads since ${longDate(index.firstRecordedDownload.date)}</strong><br>\n  <a href="https://riaevangelist.github.io/RIAEvangelist/#history">Explore every calendar year and the recorded lifetime →</a>\n</p>\n${end}`;
+  const block = `${start}\n<p align="center">\n  <a href="https://riaevangelist.github.io/RIAEvangelist/"><strong>Explore the live open-source dashboard →</strong></a><br>\n  <strong>${billionFloor(index.lifetimeTotal)}+ billion recorded NPM package downloads since ${longDate(index.firstRecordedDownload.date)}</strong>\n</p>\n${end}`;
   const readme = await readFile(README_PATH, "utf8");
   const pattern = new RegExp(`${start}[\\s\\S]*?${end}`);
   const updated = pattern.test(readme)

@@ -1,3 +1,16 @@
+<p align="center">
+  <a href="https://riaevangelist.github.io/RIAEvangelist/">
+    <img src="assets/profile-header.png" width="100%" alt="RIAEvangelist — traditional JavaScript, ridiculous reach">
+  </a>
+</p>
+
+<!-- profile-npm-history:start -->
+<p align="center">
+  <a href="https://riaevangelist.github.io/RIAEvangelist/"><strong>Explore the live open-source dashboard →</strong></a><br>
+  <strong>1.56+ billion recorded NPM package downloads since February 27, 2015</strong>
+</p>
+<!-- profile-npm-history:end -->
+
 # Roshi _ _
 
 ### RIAEvangelist
@@ -25,12 +38,13 @@
 </p>
 <!-- profile-telemetry-counts:end -->
 
-<!-- profile-npm-history:start -->
 <p align="center">
-  <strong>1,561,507,166 recorded NPM downloads since February 27, 2015</strong><br>
-  <a href="https://riaevangelist.github.io/RIAEvangelist/#history">Explore every calendar year and the recorded lifetime →</a>
+  <a href="https://riaevangelist.github.io/RIAEvangelist/#history">
+    <img src="assets/npm-history-chart.png" width="100%" alt="Recorded NPM lifetime chart and first recorded download day">
+  </a>
 </p>
-<!-- profile-npm-history:end -->
+
+<p align="center"><sub>Historical snapshot through August 16, 2026 — open the live dashboard for current totals.</sub></p>
 
 The dashboard totals every public package currently maintained by the owned [`riaevangelist`](https://www.npmjs.com/~riaevangelist) and [`thewizardnexus`](https://www.npmjs.com/~thewizardnexus) identities, shows weekly, monthly, yearly, calendar-year, and recorded-lifetime downloads per module, and explains the public repositories across both GitHub accounts. Counts use the official NPM API and refresh automatically each day. They represent package downloads—not unique people or verified installations.
 

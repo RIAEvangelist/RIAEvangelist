@@ -101,6 +101,8 @@ test("profile README and site expose the telemetry experience", async () => {
   ]);
 
   assert.match(readme, /assets\/npm-downloads\.svg/);
+  assert.match(readme, /assets\/profile-header\.png/);
+  assert.match(readme, /assets\/npm-history-chart\.png/);
   assert.match(readme, /riaevangelist\.github\.io\/RIAEvangelist/);
   assert.match(html, /id="package-grid"/);
   assert.match(html, /id="repo-grid"/);
@@ -117,7 +119,8 @@ test("profile README and site expose the telemetry experience", async () => {
   assert.ok(script.indexOf("initializeHistory();") < script.indexOf("[state.npm, state.repos]"));
   assert.match(styles, /#history-chart\[hidden\]/);
   assert.match(readme, /thewizardnexus/);
-  assert.match(readme, /recorded NPM downloads since February 27, 2015/);
+  assert.match(readme, /1\.56\+ billion recorded NPM package downloads since February 27, 2015/);
+  assert.ok(readme.indexOf("profile-npm-history:start") < readme.indexOf("# Roshi _ _"));
   assert.match(svg, /WEEKLY/);
   assert.match(svg, /MONTHLY/);
   assert.match(svg, /YEARLY/);
