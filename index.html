@@ -4,20 +4,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#070711">
-    <meta name="description" content="Live NPM download telemetry and the complete public repository atlas for RIAEvangelist.">
+    <meta name="description" content="RIAEvangelist: live open-source telemetry, a 36-release music catalog, and focused chapters on electric racing, technology, service, Japan, and Zen.">
     <meta property="og:type" content="website">
     <meta property="og:title" content="RIAEvangelist // Open-source signal">
-    <meta property="og:description" content="Live NPM download telemetry and a navigable atlas of every public RIAEvangelist repository.">
+    <meta property="og:description" content="Live open-source telemetry, a 36-release music catalog, and focused chapters beyond the code.">
     <meta property="og:url" content="https://riaevangelist.github.io/RIAEvangelist/">
     <meta property="og:image" content="https://riaevangelist.github.io/RIAEvangelist/assets/og.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="RIAEvangelist // Open-source signal">
-    <meta name="twitter:description" content="Traditional JavaScript. Ridiculous reach. Explore the live package pulse and complete code atlas.">
+    <meta name="twitter:description" content="Traditional JavaScript, live telemetry, music, electric racing, technology, service, and Zen—organized as focused pages.">
     <meta name="twitter:image" content="https://riaevangelist.github.io/RIAEvangelist/assets/og.png">
     <link rel="canonical" href="https://riaevangelist.github.io/RIAEvangelist/">
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <title>RIAEvangelist // Open-source signal</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="pages.css">
     <script src="app.js" defer></script>
   </head>
   <body>
@@ -28,10 +29,12 @@
         <span class="brand-mark" aria-hidden="true">R//A</span>
         <span>RIAEvangelist</span>
       </a>
-      <nav aria-label="Primary navigation">
+      <nav class="page-nav" aria-label="Primary navigation">
         <a href="#history">History</a>
         <a href="#packages">Modules</a>
         <a href="#repositories">Repositories</a>
+        <a href="music/">Music</a>
+        <a href="story/">Story</a>
         <a class="github-link" href="https://github.com/RIAEvangelist">GitHub ↗</a>
       </nav>
     </header>
@@ -231,6 +234,56 @@
         <button class="load-more" id="load-more" type="button" hidden>Reveal more repositories</button>
       </section>
 
+      <section class="section-shell" id="beyond" aria-labelledby="beyond-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Beyond the telemetry</p>
+            <h2 id="beyond-title">Choose a chapter.</h2>
+          </div>
+          <div class="section-side">
+            <p>Music, machines, service, and the experiences behind the code—kept on focused pages so this dashboard stays a dashboard.</p>
+          </div>
+        </div>
+        <div class="story-gateway-grid home-gateway-grid">
+          <a class="story-gateway" href="music/">
+            <span class="eyebrow">Music catalog</span>
+            <strong>Every release, with every listening link.</strong>
+            <small>Browse featured work, themed collections, and individual release workspaces.</small>
+            <b>Enter the catalog →</b>
+          </a>
+          <a class="story-gateway" href="story/racing/">
+            <span class="eyebrow">Racing</span>
+            <strong>Electric motorcycles at speed and at distance.</strong>
+            <small>Records, Pikes Peak, and the road beyond the finish line.</small>
+            <b>Read the chapter →</b>
+          </a>
+          <a class="story-gateway" href="story/technology/">
+            <span class="eyebrow">Technology</span>
+            <strong>From bionic vision to local-first tools.</strong>
+            <small>Assistive technology, open source, JavaScript, and experiments made useful.</small>
+            <b>Read the chapter →</b>
+          </a>
+          <a class="story-gateway" href="story/service/">
+            <span class="eyebrow">Service</span>
+            <strong>Veterans, mental health, and community.</strong>
+            <small>Work shaped by service, practical support, Rotary, and RYLA.</small>
+            <b>Read the chapter →</b>
+          </a>
+          <a class="story-gateway" href="story/japan-zen/">
+            <span class="eyebrow">Japan &amp; Zen</span>
+            <strong>Study, discipline, and clarity over noise.</strong>
+            <small>Lessons from Japan, traditional arts, and a continuing Zen practice.</small>
+            <b>Read the chapter →</b>
+          </a>
+          <a class="story-gateway" href="story/channels/">
+            <span class="eyebrow">Watch</span>
+            <strong>Music, racing, builds, and nerdy experiments.</strong>
+            <small>A guide to AI Wizard Music and the video archives.</small>
+            <b>Choose a channel →</b>
+          </a>
+        </div>
+      </section>
+
       <section class="method-section" aria-labelledby="method-title">
         <div class="method-copy">
           <p class="eyebrow">Honest telemetry</p>
@@ -259,7 +312,7 @@
 
     <footer>
       <p>Built with Web standards and an unreasonable affection for JavaScript.</p>
-      <p><a href="https://www.npmjs.com/~riaevangelist">RIA NPM ↗</a> <a href="https://www.npmjs.com/~thewizardnexus">TWiN NPM ↗</a> <a href="https://github.com/RIAEvangelist">RIA GitHub ↗</a> <a href="https://github.com/TheWizardNexus">TWiN GitHub ↗</a> <a href="https://www.youtube.com/brandonnozakimiller">YouTube ↗</a></p>
+      <p><a href="music/">Music</a> <a href="story/">Story</a> <a href="story/channels/">Channels</a> <a href="https://www.npmjs.com/~riaevangelist">RIA NPM ↗</a> <a href="https://www.npmjs.com/~thewizardnexus">TWiN NPM ↗</a> <a href="https://github.com/RIAEvangelist">RIA GitHub ↗</a> <a href="https://github.com/TheWizardNexus">TWiN GitHub ↗</a></p>
     </footer>
   </body>
 </html>

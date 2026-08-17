@@ -1,0 +1,2102 @@
+{
+  "catalogTitle": "AI Wizard music catalog",
+  "catalogDescription": "Songs and records shaped through human experience, code culture, memory, motion, and collaboration with AI.",
+  "collections": [
+    {
+      "slug": "reflection-and-purpose",
+      "title": "Reflection & purpose",
+      "description": "Personal songs about identity, direction, memory, care, and the work of becoming.",
+      "releaseIds": [
+        "991043380511",
+        "057829531826",
+        "057829090484",
+        "057829090965",
+        "056870046389",
+        "055855803566",
+        "055855934024",
+        "055905426578",
+        "055905804314"
+      ]
+    },
+    {
+      "slug": "code-and-circuits",
+      "title": "Code & circuits",
+      "description": "Programming culture, digital systems, and the human pulse inside technical work.",
+      "releaseIds": [
+        "055855317322",
+        "056870317687",
+        "057829090965",
+        "055855493170",
+        "055855803566"
+      ]
+    },
+    {
+      "slug": "resilience-and-resolve",
+      "title": "Resilience & resolve",
+      "description": "Songs about pressure, persistence, recovery, courage, and standing together.",
+      "releaseIds": [
+        "057829997363",
+        "057829695757",
+        "057829695276",
+        "056870317687",
+        "055905207047",
+        "056870328232",
+        "055905804222",
+        "055855493026",
+        "055855877093",
+        "055905426578",
+        "990591026773",
+        "055855934178",
+        "055905224013",
+        "055905278726"
+      ]
+    },
+    {
+      "slug": "family-and-play",
+      "title": "Family & play",
+      "description": "Bright, surreal, and family-shaped adventures built for curiosity and fun.",
+      "releaseIds": [
+        "057829090484",
+        "056870580272",
+        "055855208002",
+        "056870328232",
+        "055905520306",
+        "055855935991",
+        "055855925855",
+        "055855368287",
+        "056870029849"
+      ]
+    },
+    {
+      "slug": "spirit-and-stillness",
+      "title": "Spirit & stillness",
+      "description": "Contemplative work about attention, memory, illumination, and inner life.",
+      "releaseIds": [
+        "057829090965",
+        "056870653440",
+        "990591026711",
+        "056870046389",
+        "055905545057",
+        "055855503190",
+        "055855934024",
+        "055855877093",
+        "055905804314",
+        "055855492982",
+        "055855934178"
+      ]
+    },
+    {
+      "slug": "collaboration-and-community",
+      "title": "Collaboration & community",
+      "description": "Shared releases that bring together family, friends, veterans, and creative partners.",
+      "releaseIds": [
+        "991043380511",
+        "057829997363",
+        "057829695757",
+        "057829695276",
+        "057829531826",
+        "055855317322",
+        "056870580272",
+        "055905207047",
+        "056870653440",
+        "055905426578",
+        "056870029849",
+        "990591026773",
+        "055905224013",
+        "055905278726"
+      ]
+    }
+  ],
+  "releases": [
+    {
+      "id": "991043380511",
+      "slug": "three-wishes-for-my-attorney-bernie",
+      "title": "Three Wishes for My Attorney Bernie",
+      "artist": "Brandon Nozaki Miller",
+      "type": "Single",
+      "releaseDate": "2026-04-07",
+      "artwork": "https://linkstorage.linkfire.com/medialinks/images/3684b13c-27ab-4a81-82c0-f7fe22309554/artwork-440x440.jpg",
+      "landrUrl": "https://artists.landr.com/991043380511",
+      "summary": "A reflective single that addresses an attorney named Bernie through the idea of three wishes.",
+      "collectionSlugs": [
+        "reflection-and-purpose",
+        "collaboration-and-community"
+      ],
+      "featured": true,
+      "profileFeature": true,
+      "services": [
+        {
+          "service": "applemusic",
+          "url": "https://music.apple.com/us/album/1891502316?app=music"
+        },
+        {
+          "service": "spotify",
+          "url": "https://open.spotify.com/album/1rZaDBxw6cTMjS9zbhppLE"
+        },
+        {
+          "service": "youtubemusic",
+          "url": "https://music.youtube.com/playlist?list=OLAK5uy_lfYShuzzzZsEQ1mgbYoazbVNya_TGlbFE"
+        },
+        {
+          "service": "amazonmusic",
+          "url": "https://music.amazon.com/albums/B0GWFJ6HFG"
+        },
+        {
+          "service": "tidal",
+          "url": "https://tidal.com/album/513894074"
+        },
+        {
+          "service": "itunes",
+          "url": "https://music.apple.com/us/album/1891502316?app=itunes"
+        }
+      ]
+    },
+    {
+      "id": "057829997363",
+      "slug": "dont-tread-on-me",
+      "title": "Don't Tread On Me!",
+      "artist": "Brandon Nozaki Miller, Elizabeth Rose",
+      "type": "Single",
+      "releaseDate": "2025-11-04",
+      "artwork": "https://linkstorage.linkfire.com/medialinks/images/15845010-6efc-4489-91a3-d9c9b36c8592/artwork-440x440.jpg",
+      "landrUrl": "https://artists.landr.com/057829997363",
+      "summary": "A collaborative declaration of independence and resolve from Brandon Nozaki Miller and Elizabeth Rose.",
+      "collectionSlugs": [
+        "resilience-and-resolve",
+        "collaboration-and-community"
+      ],
+      "featured": true,
+      "profileFeature": true,
+      "services": [
+        {
+          "service": "spotify",
+          "url": "https://open.spotify.com/album/5VfPgsRs1hCOLqyIq5ruE6"
+        },
+        {
+          "service": "youtubemusic",
+          "url": "https://music.youtube.com/playlist?list=OLAK5uy_kNt29FaAz1ipQludG1Uf9W6aZE_HCRLHk"
+        },
+        {
+          "service": "amazonmusic",
+          "url": "https://music.amazon.com/albums/B0H65LW8YM"
+        },
+        {
+          "service": "tidal",
+          "url": "https://tidal.com/album/471718814"
+        },
+        {
+          "service": "deezer",
+          "url": "https://www.deezer.com/album/818925721"
+        },
+        {
+          "service": "iheartradio",
+          "url": "https://www.iheart.com/artist/45226668/albums/359176977/"
+        },
+        {
+          "service": "qobuz",
+          "url": "https://open.qobuz.com/album/cex9aqxz0028t"
+        }
+      ]
+    },
+    {
+      "id": "057829695757",
+      "slug": "standing-in-the-crossfire",
+      "title": "Standing in the Crossfire",
+      "artist": "Brandon Nozaki Miller, If I Told You I'd Have to Kill You",
+      "type": "Single",
+      "releaseDate": "2025-09-28",
+      "artwork": "https://linkstorage.linkfire.com/medialinks/images/8e2eac78-51b1-4be7-a19e-f23cbfd986be/artwork-440x440.jpg",
+      "landrUrl": "https://artists.landr.com/057829695757",
+      "summary": "A tense collaboration centered on pressure, conflict, and holding firm.",
+      "collectionSlugs": [
+        "resilience-and-resolve",
+        "collaboration-and-community"
+      ],
+      "featured": true,
+      "profileFeature": true,
+      "services": [
+        {
+          "service": "applemusic",
+          "url": "https://music.apple.com/us/album/1842708767?app=music"
+        },
+        {
+          "service": "spotify",
+          "url": "https://open.spotify.com/album/6c1D63WD7GTP8LiHgEuNEV"
+        },
+        {
+          "service": "youtubemusic",
+          "url": "https://music.youtube.com/playlist?list=OLAK5uy_kVP-rRGm05QeRuklvjw32SwcXCU2kyFcU"
+        },
+        {
+          "service": "amazonmusic",
+          "url": "https://music.amazon.com/albums/B0H628CKNT"
+        },
+        {
+          "service": "tidal",
+          "url": "https://tidal.com/album/463490845"
+        },
+        {
+          "service": "deezer",
+          "url": "https://www.deezer.com/album/828957001"
+        },
+        {
+          "service": "pandora",
+          "url": "https://www.pandora.com/artist/brandon-nozaki-miller-and-if-i-told-you-id-have-to-kill-you/standing-in-the-crossfire/AL27clpr3cdfdw4"
+        },
+        {
+          "service": "iheartradio",
+          "url": "https://www.iheart.com/artist/45226668/albums/352541032/"
+        },
+        {
+          "service": "qobuz",
+          "url": "https://open.qobuz.com/album/p3mwx1imw2iea"
+        },
+        {
+          "service": "itunes",
+          "url": "https://music.apple.com/us/album/1842708767?app=itunes"
+        }
+      ]
+    },
+    {
+      "id": "057829695276",
+      "slug": "the-time-has-come-run-if-you-must",
+      "title": "The Time Has Come, Run If You Must!",
+      "artist": "Brandon Nozaki Miller, Elizabeth Rose",
+      "type": "Single",
+      "releaseDate": "2025-09-28",
+      "artwork": "https://linkstorage.linkfire.com/medialinks/images/7bb83259-e405-40cc-bc69-f0f2027819ae/artwork-440x440.jpg",
+      "landrUrl": "https://artists.landr.com/057829695276",
+      "summary": "An urgent collaboration about reaching a decisive moment and choosing what comes next.",
+      "collectionSlugs": [
+        "resilience-and-resolve",
+        "collaboration-and-community"
+      ],
+      "featured": false,
+      "profileFeature": true,
+      "services": [
+        {
+          "service": "applemusic",
+          "url": "https://music.apple.com/us/album/1842703388?app=music"
+        },
+        {
+          "service": "spotify",
+          "url": "https://open.spotify.com/album/42eQxtMCjjyzp2tJMi55aD"
+        },
+        {
+          "service": "youtubemusic",
+          "url": "https://music.youtube.com/playlist?list=OLAK5uy_kT7cHh06wCFHrBbeVOjeuXbKd9TrXeVW0"
+        },
+        {
+          "service": "amazonmusic",
+          "url": "https://music.amazon.com/albums/B0H62FRMCF"
+        },
+        {
+          "service": "tidal",
+          "url": "https://tidal.com/album/463486068"
+        },
+        {
+          "service": "deezer",
+          "url": "https://www.deezer.com/album/828940811"
+        },
+        {
+          "service": "pandora",
+          "url": "https://www.pandora.com/artist/brandon-nozaki-miller-and-elizabeth-rose/the-time-has-come-run-if-you-must/AL6plbPzPgKmhzX"
+        },
+        {
+          "service": "iheartradio",
+          "url": "https://www.iheart.com/artist/45226668/albums/352536686/"
+        },
+        {
+          "service": "qobuz",
+          "url": "https://open.qobuz.com/album/mom1t8ki8xdz3"
+        },
+        {
+          "service": "itunes",
+          "url": "https://music.apple.com/us/album/1842703388?app=itunes"
+        }
+      ]
+    },
+    {
+      "id": "057829531826",
+      "slug": "finding-purpose",
+      "title": "Finding Purpose",
+      "artist": "Taylor Cavanaugh, Brandon Nozaki Miller, If I Told You I'd Have to Kill You",
+      "type": "Single",
+      "releaseDate": "2025-09-08",
+      "artwork": "https://linkstorage.linkfire.com/medialinks/images/7d85967f-7f05-4c6a-868f-548a5232fd08/artwork-440x440.jpg",
+      "landrUrl": "https://artists.landr.com/057829531826",
+      "summary": "A reflective collaboration centered on direction, service, and the search for meaning.",
+      "collectionSlugs": [
+        "reflection-and-purpose",
+        "collaboration-and-community"
+      ],
+      "featured": true,
+      "profileFeature": true,
+      "services": [
+        {
+          "service": "applemusic",
+          "url": "https://music.apple.com/us/album/1838506464?app=music"
+        },
+        {
+          "service": "spotify",
+          "url": "https://open.spotify.com/album/4RwsATs3mpc40QKnKINNpC"
+        },
+        {
+          "service": "youtubemusic",
+          "url": "https://music.youtube.com/playlist?list=OLAK5uy_m7AqGO9bXi4NUsb5QW3MMscQnkxS3Wxes"
+        },
+        {
+          "service": "amazonmusic",
+          "url": "https://music.amazon.com/albums/B0FQ78XTG1"
+        },
+        {
+          "service": "tidal",
+          "url": "https://tidal.com/album/459295337"
+        },
+        {
+          "service": "deezer",
+          "url": "https://www.deezer.com/album/818086791"
+        },
+        {
+          "service": "pandora",
+          "url": "https://www.pandora.com/artist/taylor-cavanaugh-brandon-nozaki-miller-and-if-i-told-you-id-have-to-kill-you/finding-purpose/ALzc66nfVV7JZmX"
+        },
+        {
+          "service": "iheartradio",
+          "url": "https://www.iheart.com/artist/47980613/albums/349133836/"
+        },
+        {
+          "service": "qobuz",
+          "url": "https://open.qobuz.com/album/kwc7844jicg62"
+        },
+        {
+          "service": "itunes",
+          "url": "https://music.apple.com/us/album/1838506464?app=itunes"
+        }
+      ]
+    },
+    {
+      "id": "055855317322",
+      "slug": "mic-drop",
+      "title": "Mic Drop (feat. Brandon Nozaki Miller) - Single",
+      "artist": "AI Wizard",
+      "type": "Single",
+      "releaseDate": "2024-07-19",
+      "artwork": "https://linkstorage.linkfire.com/medialinks/images/a3349b70-ddd9-4785-94ac-49cf8cc0c759/artwork-440x440.jpg",
+      "landrUrl": "https://artists.landr.com/055855317322",
+      "summary": "An AI Wizard single built around a sharp, performance-minded mic-drop concept.",
+      "collectionSlugs": [
+        "code-and-circuits",
+        "collaboration-and-community"
+      ],
+      "featured": false,
+      "profileFeature": false,
+      "services": [
+        {
+          "service": "spotify",
+          "url": "https://open.spotify.com/album/2i7HW4nUPpSVW44qd82Ok3"
+        },
+        {
+          "service": "youtubemusic",
+          "url": "https://music.youtube.com/playlist?list=OLAK5uy_kFq6Fa9Uq2C6jav6ybuVdmwzB0v5MVMTs"
+        },
+        {
+          "service": "deezer",
+          "url": "https://www.deezer.com/album/617991171"
+        },
+        {
+          "service": "qobuz",
+          "url": "https://open.qobuz.com/album/myuimyujo6vhc"
+        }
+      ]
+    },
+    {
+      "id": "056870317687",
+      "slug": "war-in-the-wires",
+      "title": "War in the Wires",
+      "artist": "Brandon Nozaki Miller",
+      "type": "Album",
+      "releaseDate": "2025-03-03",
+      "artwork": "https://linkstorage.linkfire.com/medialinks/images/06b40aaf-e970-438a-a9b5-de1dfc4a26b6/artwork-440x440.jpg",
+      "landrUrl": "https://artists.landr.com/056870317687",
+      "summary": "A Brandon Nozaki Miller album exploring conflict and human agency inside connected systems.",
+      "collectionSlugs": [
+        "code-and-circuits",
+        "resilience-and-resolve"
+      ],
+      "featured": true,
+      "profileFeature": false,
+      "services": [
+        {
+          "service": "applemusic",
+          "url": "https://music.apple.com/us/album/1799853229?app=music"
+        },
+        {
+          "service": "spotify",
+          "url": "https://open.spotify.com/album/1v76gcevguxfjuKfQzsDKW"
+        },
+        {
+          "service": "youtubemusic",
+          "url": "https://music.youtube.com/playlist?list=OLAK5uy_k0u-JNc7eJh8p8G_Qg15l4AEjx26ugOxo"
+        },
+        {
+          "service": "amazonmusic",
+          "url": "https://music.amazon.com/albums/B0DZ3RWMCG"
+        },
+        {
+          "service": "tidal",
+          "url": "https://tidal.com/album/421598973"
+        },
+        {
+          "service": "deezer",
+          "url": "https://www.deezer.com/album/722362991"
+        },
+        {
+          "service": "pandora",
+          "url": "https://www.pandora.com/artist/brandon-nozaki-miller/war-in-the-wires/AL959zqK9nhPXKX"
+        },
+        {
+          "service": "iheartradio",
+          "url": "https://www.iheart.com/artist/45226668/albums/316896585/"
+        },
+        {
+          "service": "qobuz",
+          "url": "https://open.qobuz.com/album/au1t2quzgp08c"
+        },
+        {
+          "service": "itunes",
+          "url": "https://music.apple.com/us/album/1799853229?app=itunes"
+        }
+      ]
+    },
+    {
+      "id": "057829090484",
+      "slug": "building-a-future-for-you",
+      "title": "Building A Future for You",
+      "artist": "Brandon Nozaki Miller",
+      "type": "Single",
+      "releaseDate": "2025-07-23",
+      "artwork": "https://linkstorage.linkfire.com/medialinks/images/96d7ec6a-2973-4493-9c96-9d51765b41ce/artwork-440x440.jpg",
+      "landrUrl": "https://artists.landr.com/057829090484",
+      "summary": "A hopeful single about building something lasting for the next generation.",
+      "collectionSlugs": [
+        "reflection-and-purpose",
+        "family-and-play"
+      ],
+      "featured": false,
+      "profileFeature": true,
+      "services": [
+        {
+          "service": "applemusic",
+          "url": "https://music.apple.com/us/album/1828569692?app=music"
+        },
+        {
+          "service": "spotify",
+          "url": "https://open.spotify.com/album/5LMA5EnhMWvaGNaBLKf39O"
+        },
+        {
+          "service": "amazonmusic",
+          "url": "https://music.amazon.com/albums/B0H5QPCZ47"
+        },
+        {
+          "service": "tidal",
+          "url": "https://tidal.com/album/449940278"
+        },
+        {
+          "service": "deezer",
+          "url": "https://www.deezer.com/album/793177311"
+        },
+        {
+          "service": "pandora",
+          "url": "https://www.pandora.com/artist/brandon-nozaki-miller/building-a-future-for-you/ALgbc7kd3rvgJxK"
+        },
+        {
+          "service": "iheartradio",
+          "url": "https://www.iheart.com/artist/45226668/albums/341447457/"
+        },
+        {
+          "service": "qobuz",
+          "url": "https://open.qobuz.com/album/v7xs4a5rgmxsm"
+        },
+        {
+          "service": "itunes",
+          "url": "https://music.apple.com/us/album/1828569692?app=itunes"
+        }
+      ]
+    },
+    {
+      "id": "057829090965",
+      "slug": "a-mirror-that-holds-a-you",
+      "title": "A Mirror That Holds A You",
+      "artist": "Brandon Nozaki Miller, Rinzai-Ji, Flash Evangelist, AI Wizard",
+      "type": "Single",
+      "releaseDate": "2025-07-24",
+      "artwork": "https://linkstorage.linkfire.com/medialinks/images/083d7320-b3b8-47a1-901f-fc89f3912119/artwork-440x440.jpg",
+      "landrUrl": "https://artists.landr.com/057829090965",
+      "summary": "A contemplative collaboration using the mirror as a frame for identity and self-recognition.",
+      "collectionSlugs": [
+        "reflection-and-purpose",
+        "spirit-and-stillness",
+        "code-and-circuits"
+      ],
+      "featured": true,
+      "profileFeature": true,
+      "services": [
+        {
+          "service": "applemusic",
+          "url": "https://music.apple.com/us/album/1828571221?app=music"
+        },
+        {
+          "service": "spotify",
+          "url": "https://open.spotify.com/album/7L6kFxhjWAEi4TbiNV5Uoh"
+        },
+        {
+          "service": "youtubemusic",
+          "url": "https://music.youtube.com/playlist?list=OLAK5uy_nwn4ex7f6V8tlbXrh3yCcjYE5JvPgs0hA"
+        },
+        {
+          "service": "amazonmusic",
+          "url": "https://music.amazon.com/albums/B0H5QLPW2Z"
+        },
+        {
+          "service": "tidal",
+          "url": "https://tidal.com/album/449950565"
+        },
+        {
+          "service": "deezer",
+          "url": "https://www.deezer.com/album/793204741"
+        },
+        {
+          "service": "pandora",
+          "url": "https://www.pandora.com/artist/brandon-nozaki-miller-rinzai-ji-flash-evangelist-and-ai-wizard/a-mirror-that-holds-a-you/ALjklq7mzq3k3m9"
+        },
+        {
+          "service": "iheartradio",
+          "url": "https://www.iheart.com/artist/45226668/albums/341455499/"
+        },
+        {
+          "service": "qobuz",
+          "url": "https://open.qobuz.com/album/dczg1xwzc53ny"
+        },
+        {
+          "service": "itunes",
+          "url": "https://music.apple.com/us/album/1828571221?app=itunes"
+        }
+      ]
+    },
+    {
+      "id": "055855493170",
+      "slug": "javascript-vs-python",
+      "title": "JavaScript Vs Python",
+      "artist": "AI Wizard",
+      "type": "EP",
+      "releaseDate": "2024-08-29",
+      "artwork": "https://linkstorage.linkfire.com/medialinks/images/110fde62-9a01-4e00-bc20-76f05ce2f578/artwork-440x440.jpg",
+      "landrUrl": "https://artists.landr.com/055855493170",
+      "summary": "An AI Wizard EP turning a classic programming-language comparison into music.",
+      "collectionSlugs": [
+        "code-and-circuits"
+      ],
+      "featured": true,
+      "profileFeature": true,
+      "services": [
+        {
+          "service": "applemusic",
+          "url": "https://music.apple.com/us/album/1765624281?app=music"
+        },
+        {
+          "service": "spotify",
+          "url": "https://open.spotify.com/album/5ES9aLG8IIEnH7CyD5i8qz"
+        },
+        {
+          "service": "youtubemusic",
+          "url": "https://music.youtube.com/playlist?list=OLAK5uy_lV9OvHz2t9d0IAVvR40kSNLWL6Hb29rik"
+        },
+        {
+          "service": "amazonmusic",
+          "url": "https://music.amazon.com/albums/B0H46H7HMF"
+        },
+        {
+          "service": "tidal",
+          "url": "https://tidal.com/album/384268487"
+        },
+        {
+          "service": "deezer",
+          "url": "https://www.deezer.com/album/636142181"
+        },
+        {
+          "service": "pandora",
+          "url": "https://www.pandora.com/artist/ai-wizard/javascript-vs-python/ALpV623fnc3JvPk"
+        },
+        {
+          "service": "iheartradio",
+          "url": "https://www.iheart.com/artist/40837200/albums/286569843/"
+        },
+        {
+          "service": "qobuz",
+          "url": "https://open.qobuz.com/album/buax2eriqtpu5"
+        },
+        {
+          "service": "itunes",
+          "url": "https://music.apple.com/us/album/1765624281?app=itunes"
+        }
+      ]
+    },
+    {
+      "id": "056870580272",
+      "slug": "grapes-and-lemonade",
+      "title": "Grapes and Lemonade",
+      "artist": "Brandon Nozaki Miller, Juliet Miller",
+      "type": "Single",
+      "releaseDate": "2025-03-22",
+      "artwork": "https://linkstorage.linkfire.com/medialinks/images/35167cb5-9d1e-414f-8e28-c8828af20b84/artwork-440x440.jpg",
+      "landrUrl": "https://artists.landr.com/056870580272",
+      "summary": "A bright family collaboration pairing everyday images with playful energy.",
+      "collectionSlugs": [
+        "family-and-play",
+        "collaboration-and-community"
+      ],
+      "featured": false,
+      "profileFeature": true,
+      "services": [
+        {
+          "service": "applemusic",
+          "url": "https://music.apple.com/us/album/1803781423?app=music"
+        },
+        {
+          "service": "spotify",
+          "url": "https://open.spotify.com/album/0BQMLlTX1QD8N413EXBpjh"
+        },
+        {
+          "service": "youtubemusic",
+          "url": "https://music.youtube.com/playlist?list=OLAK5uy_ln_wYRDgTwOR4XChQko5g4wHcM59PIBjY"
+        },
+        {
+          "service": "amazonmusic",
+          "url": "https://music.amazon.com/albums/B0H4ZP3J7Q"
+        },
+        {
+          "service": "tidal",
+          "url": "https://tidal.com/album/425615958"
+        },
+        {
+          "service": "deezer",
+          "url": "https://www.deezer.com/album/731326581"
+        },
+        {
+          "service": "pandora",
+          "url": "https://www.pandora.com/artist/brandon-nozaki-miller-and-juliet-miller-childrens/grapes-and-lemonade/ALrbZxdV9xV3hJk"
+        },
+        {
+          "service": "iheartradio",
+          "url": "https://www.iheart.com/artist/45226668/albums/320240662/"
+        },
+        {
+          "service": "qobuz",
+          "url": "https://open.qobuz.com/album/b87ck5n2s6it4"
+        },
+        {
+          "service": "itunes",
+          "url": "https://music.apple.com/us/album/1803781423?app=itunes"
+        }
+      ]
+    },
+    {
+      "id": "055905207047",
+      "slug": "welcome-to-the-collective",
+      "title": "Welcome to the Collective",
+      "artist": "Vet Collective",
+      "type": "Single",
+      "releaseDate": "2024-11-24",
+      "artwork": "https://linkstorage.linkfire.com/medialinks/images/ab27a713-b91c-4e1d-82b2-ecf3b430837b/artwork-440x440.jpg",
+      "landrUrl": "https://artists.landr.com/055905207047",
+      "summary": "A Vet Collective single welcoming veterans and allies into a shared community.",
+      "collectionSlugs": [
+        "collaboration-and-community",
+        "resilience-and-resolve"
+      ],
+      "featured": false,
+      "profileFeature": false,
+      "services": [
+        {
+          "service": "applemusic",
+          "url": "https://music.apple.com/us/album/1781545586?app=music"
+        },
+        {
+          "service": "spotify",
+          "url": "https://open.spotify.com/album/4mWEv6qD6lKZq796SSsujj"
+        },
+        {
+          "service": "youtubemusic",
+          "url": "https://music.youtube.com/playlist?list=OLAK5uy_lLbnq3XbpvyMxm78Ao_Q_JNBzr4U3A2KM"
+        },
+        {
+          "service": "amazonmusic",
+          "url": "https://music.amazon.com/albums/B0H4D14TNT"
+        },
+        {
+          "service": "tidal",
+          "url": "https://tidal.com/album/401646787"
+        },
+        {
+          "service": "deezer",
+          "url": "https://www.deezer.com/album/954361531"
+        },
+        {
+          "service": "iheartradio",
+          "url": "https://www.iheart.com/artist/44843496/albums/300502149/"
+        },
+        {
+          "service": "qobuz",
+          "url": "https://open.qobuz.com/album/x9zboj69xp8wm"
+        },
+        {
+          "service": "itunes",
+          "url": "https://music.apple.com/us/album/1781545586?app=itunes"
+        }
+      ]
+    },
+    {
+      "id": "056870653440",
+      "slug": "tieff-in-dein-ertz",
+      "title": "Tieff in dein Ertz",
+      "artist": "Brandon Nozaki Miller, Elizabeth Rose",
+      "type": "Single",
+      "releaseDate": "2025-03-28",
+      "artwork": "https://linkstorage.linkfire.com/medialinks/images/4196ad31-a175-439d-a53f-27f57d214927/artwork-440x440.jpg",
+      "landrUrl": "https://artists.landr.com/056870653440",
+      "summary": "A Brandon Nozaki Miller and Elizabeth Rose collaboration with a German-titled theme of emotional depth.",
+      "collectionSlugs": [
+        "spirit-and-stillness",
+        "collaboration-and-community"
+      ],
+      "featured": false,
+      "profileFeature": true,
+      "services": [
+        {
+          "service": "applemusic",
+          "url": "https://music.apple.com/us/album/1805171113?app=music"
+        },
+        {
+          "service": "spotify",
+          "url": "https://open.spotify.com/album/5nJTHAYk7Mvw7l26RDu7Pz"
+        },
+        {
+          "service": "youtubemusic",
+          "url": "https://music.youtube.com/playlist?list=OLAK5uy_lEW3-HQd8zgPTt8ymE8Ra_eX5AJ-sIgNA"
+        },
+        {
+          "service": "amazonmusic",
+          "url": "https://music.amazon.com/albums/B0H51ZPB7X"
+        },
+        {
+          "service": "tidal",
+          "url": "https://tidal.com/album/426825147"
+        },
+        {
+          "service": "deezer",
+          "url": "https://www.deezer.com/album/734477461"
+        },
+        {
+          "service": "pandora",
+          "url": "https://www.pandora.com/artist/brandon-nozaki-miller-and-elizabeth-rose/tieff-in-dein-ertz/ALrjbjkvwVnKJqq"
+        },
+        {
+          "service": "iheartradio",
+          "url": "https://www.iheart.com/artist/45226668/albums/321235098/"
+        },
+        {
+          "service": "qobuz",
+          "url": "https://open.qobuz.com/album/xjfj5bc1a27so"
+        },
+        {
+          "service": "itunes",
+          "url": "https://music.apple.com/us/album/1805171113?app=itunes"
+        }
+      ]
+    },
+    {
+      "id": "990591026711",
+      "slug": "sandalwood-and-lavender",
+      "title": "Sandalwood & Lavender",
+      "artist": "Brandon Nozaki Miller",
+      "type": "Single",
+      "releaseDate": "2025-04-25",
+      "artwork": "https://linkstorage.linkfire.com/medialinks/images/5932a6ac-a449-45f0-9682-b0c0123b7912/artwork-440x440.jpg",
+      "landrUrl": "https://artists.landr.com/990591026711",
+      "summary": "A reflective single shaped around calming scents and a quiet interior atmosphere.",
+      "collectionSlugs": [
+        "spirit-and-stillness"
+      ],
+      "featured": false,
+      "profileFeature": false,
+      "services": [
+        {
+          "service": "applemusic",
+          "url": "https://music.apple.com/us/album/1810767364?app=music"
+        },
+        {
+          "service": "spotify",
+          "url": "https://open.spotify.com/album/6szhXLFY0rKWJzx4792n6a"
+        },
+        {
+          "service": "youtubemusic",
+          "url": "https://music.youtube.com/playlist?list=OLAK5uy_muZIisBAnGJ0xXUmB8Ms2yooo8CY4vvOs"
+        },
+        {
+          "service": "itunes",
+          "url": "https://music.apple.com/us/album/1810767364?app=itunes"
+        }
+      ]
+    },
+    {
+      "id": "055855208002",
+      "slug": "sprinkle-beast",
+      "title": "Sprinkle Beast",
+      "artist": "AI Wizard",
+      "type": "Single",
+      "releaseDate": "2024-07-08",
+      "artwork": "https://linkstorage.linkfire.com/medialinks/images/96fe994f-45b4-40bc-bcfb-d56810211554/artwork-440x440.jpg",
+      "landrUrl": "https://artists.landr.com/055855208002",
+      "summary": "A playful AI Wizard single introducing the larger-than-life Sprinkle Beast.",
+      "collectionSlugs": [
+        "family-and-play"
+      ],
+      "featured": false,
+      "profileFeature": false,
+      "services": [
+        {
+          "service": "applemusic",
+          "url": "https://music.apple.com/us/album/1756149614?app=music"
+        },
+        {
+          "service": "spotify",
+          "url": "https://open.spotify.com/album/3ojQtPVlomvw2lXA4zBhxF"
+        },
+        {
+          "service": "youtubemusic",
+          "url": "https://music.youtube.com/playlist?list=OLAK5uy_l_HBsCt1stTgt8vpG8RtVJrxsQDpEsrnE"
+        },
+        {
+          "service": "amazonmusic",
+          "url": "https://music.amazon.com/albums/B0H42L592P"
+        },
+        {
+          "service": "tidal",
+          "url": "https://tidal.com/album/373988534"
+        },
+        {
+          "service": "itunes",
+          "url": "https://music.apple.com/us/album/1756149614?app=itunes"
+        }
+      ]
+    },
+    {
+      "id": "056870328232",
+      "slug": "never-yeild-sprinkle-beasts-roar",
+      "title": "Never Yeild, Sprinkle Beast's Roar",
+      "artist": "AI Wizard, Brandon Nozaki Miller",
+      "type": "Single",
+      "releaseDate": "2025-03-03",
+      "artwork": "https://linkstorage.linkfire.com/medialinks/images/e28eca99-038f-4416-b946-2da88bed0450/artwork-440x440.jpg",
+      "landrUrl": "https://artists.landr.com/056870328232",
+      "summary": "A defiant collaboration built around persistence and the roar of Sprinkle Beast.",
+      "collectionSlugs": [
+        "family-and-play",
+        "resilience-and-resolve"
+      ],
+      "featured": false,
+      "profileFeature": false,
+      "services": [
+        {
+          "service": "applemusic",
+          "url": "https://music.apple.com/us/album/1799841967?app=music"
+        },
+        {
+          "service": "spotify",
+          "url": "https://open.spotify.com/album/5PD6G8JFRW5D3FMX69bYD7"
+        },
+        {
+          "service": "youtubemusic",
+          "url": "https://music.youtube.com/playlist?list=OLAK5uy_lneCdFOl1j7HVeufm40ksfaObWuw_UZ0A"
+        },
+        {
+          "service": "amazonmusic",
+          "url": "https://music.amazon.com/albums/B0H4WJNLZC"
+        },
+        {
+          "service": "tidal",
+          "url": "https://tidal.com/album/421583680"
+        },
+        {
+          "service": "deezer",
+          "url": "https://www.deezer.com/album/722347401"
+        },
+        {
+          "service": "pandora",
+          "url": "https://www.pandora.com/artist/ai-wizard-and-brandon-nozaki-miller/never-yeild-sprinkle-beasts-roar/ALl5jx7fwV5PV49"
+        },
+        {
+          "service": "iheartradio",
+          "url": "https://www.iheart.com/artist/40837200/albums/316884227/"
+        },
+        {
+          "service": "qobuz",
+          "url": "https://open.qobuz.com/album/rcxliet063dls"
+        },
+        {
+          "service": "itunes",
+          "url": "https://music.apple.com/us/album/1799841967?app=itunes"
+        }
+      ]
+    },
+    {
+      "id": "056870046389",
+      "slug": "a-light-in-the-distance",
+      "title": "A Light in the Distance",
+      "artist": "Brandon Nozaki Miller",
+      "type": "Single",
+      "releaseDate": "2025-02-10",
+      "artwork": "https://linkstorage.linkfire.com/medialinks/images/88025066-958a-49a5-9eb6-2fbb5b0a0393/artwork-440x440.jpg",
+      "landrUrl": "https://artists.landr.com/056870046389",
+      "summary": "A hopeful single centered on finding guidance beyond the immediate dark.",
+      "collectionSlugs": [
+        "reflection-and-purpose",
+        "spirit-and-stillness"
+      ],
+      "featured": false,
+      "profileFeature": false,
+      "services": [
+        {
+          "service": "applemusic",
+          "url": "https://music.apple.com/us/album/1795408777?app=music"
+        },
+        {
+          "service": "spotify",
+          "url": "https://open.spotify.com/album/3Pah1WyMMTdFcsILqbiTz3"
+        },
+        {
+          "service": "youtubemusic",
+          "url": "https://music.youtube.com/playlist?list=OLAK5uy_m7e50eTPfkej-WEFt0RiyjmweiXumNLM0"
+        },
+        {
+          "service": "amazonmusic",
+          "url": "https://music.amazon.com/albums/B0H4RB9CXB"
+        },
+        {
+          "service": "tidal",
+          "url": "https://tidal.com/album/416980855"
+        },
+        {
+          "service": "deezer",
+          "url": "https://www.deezer.com/album/710616041"
+        },
+        {
+          "service": "pandora",
+          "url": "https://www.pandora.com/artist/brandon-nozaki-miller/a-light-in-the-distance/ALX35Vx4gtVgpkP"
+        },
+        {
+          "service": "iheartradio",
+          "url": "https://www.iheart.com/artist/45226668/albums/312978862/"
+        },
+        {
+          "service": "qobuz",
+          "url": "https://open.qobuz.com/album/mjr0wwwsju7ca"
+        },
+        {
+          "service": "itunes",
+          "url": "https://music.apple.com/us/album/1795408777?app=itunes"
+        }
+      ]
+    },
+    {
+      "id": "055905804222",
+      "slug": "we-are-pheonix",
+      "title": "We Are Pheonix",
+      "artist": "AI Wizard, Brandon Nozaki Miller",
+      "type": "Single",
+      "releaseDate": "2025-01-22",
+      "artwork": "https://linkstorage.linkfire.com/medialinks/images/a617590d-4db4-43b2-8ba8-7a4e7c9a4b9d/artwork-440x440.jpg",
+      "landrUrl": "https://artists.landr.com/055905804222",
+      "summary": "A resilience anthem framed around renewal, ascent, and starting again.",
+      "collectionSlugs": [
+        "resilience-and-resolve"
+      ],
+      "featured": false,
+      "profileFeature": false,
+      "services": [
+        {
+          "service": "applemusic",
+          "url": "https://music.apple.com/us/album/1791875061?app=music"
+        },
+        {
+          "service": "spotify",
+          "url": "https://open.spotify.com/album/3pgz2PhUiGuj9r3EPOEzKu"
+        },
+        {
+          "service": "youtubemusic",
+          "url": "https://music.youtube.com/playlist?list=OLAK5uy_mad04HeW8oUPnIgkxT85ZxNHJUIs9Ab1g"
+        },
+        {
+          "service": "amazonmusic",
+          "url": "https://music.amazon.com/albums/B0H4MFLZWK"
+        },
+        {
+          "service": "tidal",
+          "url": "https://tidal.com/album/413047825"
+        },
+        {
+          "service": "deezer",
+          "url": "https://www.deezer.com/album/701243501"
+        },
+        {
+          "service": "pandora",
+          "url": "https://www.pandora.com/artist/ai-wizard-and-brandon-nozaki-miller/we-are-pheonix/ALj2ftqhk2659bk"
+        },
+        {
+          "service": "iheartradio",
+          "url": "https://www.iheart.com/artist/40837200/albums/309890229/"
+        },
+        {
+          "service": "qobuz",
+          "url": "https://open.qobuz.com/album/vc8956o7bk05e"
+        },
+        {
+          "service": "itunes",
+          "url": "https://music.apple.com/us/album/1791875061?app=itunes"
+        }
+      ]
+    },
+    {
+      "id": "055905520306",
+      "slug": "booty-fruity-forever",
+      "title": "Booty Fruity Forever",
+      "artist": "AI Wizard",
+      "type": "Single",
+      "releaseDate": "2024-12-26",
+      "artwork": "https://linkstorage.linkfire.com/medialinks/images/1e59146a-181e-4f97-92d8-9d1bbc30067d/artwork-440x440.jpg",
+      "landrUrl": "https://artists.landr.com/055905520306",
+      "summary": "A playful AI Wizard single with an irreverent, fruit-filled party concept.",
+      "collectionSlugs": [
+        "family-and-play"
+      ],
+      "featured": false,
+      "profileFeature": false,
+      "services": [
+        {
+          "service": "applemusic",
+          "url": "https://music.apple.com/us/album/1787355835?app=music"
+        },
+        {
+          "service": "spotify",
+          "url": "https://open.spotify.com/album/0Q7L5cl914I2hOji7IWXGP"
+        },
+        {
+          "service": "youtubemusic",
+          "url": "https://music.youtube.com/playlist?list=OLAK5uy_lTdD502r_L0T0ybY9AsytyR4JUGVzu1rs"
+        },
+        {
+          "service": "amazonmusic",
+          "url": "https://www.amazon.com/Booty-Fruity-Forever-AI-Wizard/dp/B0DRJKLNK8"
+        },
+        {
+          "service": "tidal",
+          "url": "https://tidal.com/album/408030795"
+        },
+        {
+          "service": "deezer",
+          "url": "https://www.deezer.com/album/689393561"
+        },
+        {
+          "service": "pandora",
+          "url": "https://www.pandora.com/artist/ai-wizard/booty-fruity-forever/ALvJfcbt2klwZ7k"
+        },
+        {
+          "service": "iheartradio",
+          "url": "https://www.iheart.com/artist/40837200/albums/305936493/"
+        },
+        {
+          "service": "qobuz",
+          "url": "https://open.qobuz.com/album/kejwb9jjvi4vx"
+        },
+        {
+          "service": "itunes",
+          "url": "https://music.apple.com/us/album/1787355835?app=itunes"
+        }
+      ]
+    },
+    {
+      "id": "055905545057",
+      "slug": "sands-of-illumination",
+      "title": "Sands of Illumination - رمال التنوير",
+      "artist": "AI Wizard",
+      "type": "Single",
+      "releaseDate": "2024-12-29",
+      "artwork": "https://linkstorage.linkfire.com/medialinks/images/fa02d2aa-4c4e-41b6-ad45-a1a03506849b/artwork-440x440.jpg",
+      "landrUrl": "https://artists.landr.com/055905545057",
+      "summary": "A bilingual-titled AI Wizard single shaped around illumination and desert imagery.",
+      "collectionSlugs": [
+        "spirit-and-stillness"
+      ],
+      "featured": false,
+      "profileFeature": false,
+      "services": [
+        {
+          "service": "applemusic",
+          "url": "https://music.apple.com/us/album/1787737515?app=music"
+        },
+        {
+          "service": "spotify",
+          "url": "https://open.spotify.com/album/2NNYn3QSA4fCST8ykFS1T3"
+        },
+        {
+          "service": "youtubemusic",
+          "url": "https://music.youtube.com/playlist?list=OLAK5uy_lyMdW04i5bsOawOdlYC1Eo8F5OpZNDaSo"
+        },
+        {
+          "service": "amazonmusic",
+          "url": "https://music.amazon.com/albums/B0H4FF5SF4"
+        },
+        {
+          "service": "tidal",
+          "url": "https://tidal.com/album/408388793"
+        },
+        {
+          "service": "deezer",
+          "url": "https://www.deezer.com/album/690029851"
+        },
+        {
+          "service": "pandora",
+          "url": "https://www.pandora.com/artist/ai-wizard/sands-of-illumination-rml-ltnwyr/AL94wKrkXPc6j5X"
+        },
+        {
+          "service": "iheartradio",
+          "url": "https://www.iheart.com/artist/40837200/albums/306267453/"
+        },
+        {
+          "service": "qobuz",
+          "url": "https://open.qobuz.com/album/g3b9azgn7cqdl"
+        },
+        {
+          "service": "itunes",
+          "url": "https://music.apple.com/us/album/1787737515?app=itunes"
+        }
+      ]
+    },
+    {
+      "id": "055855935991",
+      "slug": "jujus-grand-adventure",
+      "title": "JuJu's Grand Adventure",
+      "artist": "AI Wizard",
+      "type": "EP",
+      "releaseDate": "2024-10-21",
+      "artwork": "https://linkstorage.linkfire.com/medialinks/images/f1af02bd-f972-4415-8188-8656d75fe1f5/artwork-440x440.jpg",
+      "landrUrl": "https://artists.landr.com/055855935991",
+      "summary": "A playful AI Wizard EP following JuJu through an imaginative adventure.",
+      "collectionSlugs": [
+        "family-and-play"
+      ],
+      "featured": false,
+      "profileFeature": false,
+      "services": [
+        {
+          "service": "applemusic",
+          "url": "https://music.apple.com/us/album/1775157838?app=music"
+        },
+        {
+          "service": "spotify",
+          "url": "https://open.spotify.com/album/5oyuBaIvkJ34cU118OREZT"
+        },
+        {
+          "service": "youtubemusic",
+          "url": "https://music.youtube.com/playlist?list=OLAK5uy_kmlgoiZKVS8fWDqRcce-7nbMfhJaqdivQ"
+        },
+        {
+          "service": "amazonmusic",
+          "url": "https://music.amazon.com/albums/B0H4BW56FQ"
+        },
+        {
+          "service": "tidal",
+          "url": "https://tidal.com/album/394604667"
+        },
+        {
+          "service": "deezer",
+          "url": "https://www.deezer.com/album/659880381"
+        },
+        {
+          "service": "pandora",
+          "url": "https://www.pandora.com/artist/ai-wizard/jujus-grand-adventure/ALwlpl4wbwj75w2"
+        },
+        {
+          "service": "iheartradio",
+          "url": "https://www.iheart.com/artist/40837200/albums/294931526/"
+        },
+        {
+          "service": "qobuz",
+          "url": "https://open.qobuz.com/album/koa2evkjxbtfy"
+        },
+        {
+          "service": "itunes",
+          "url": "https://music.apple.com/us/album/1775157838?app=itunes"
+        }
+      ]
+    },
+    {
+      "id": "055855925855",
+      "slug": "spooky-scary-spider",
+      "title": "Spooky Scary Spider",
+      "artist": "AI Wizard",
+      "type": "Single",
+      "releaseDate": "2024-10-19",
+      "artwork": "https://linkstorage.linkfire.com/medialinks/images/c513a205-7900-4ec9-9feb-4d5cb375ea7b/artwork-440x440.jpg",
+      "landrUrl": "https://artists.landr.com/055855925855",
+      "summary": "A Halloween-ready AI Wizard single built around a spooky spider.",
+      "collectionSlugs": [
+        "family-and-play"
+      ],
+      "featured": false,
+      "profileFeature": false,
+      "services": [
+        {
+          "service": "applemusic",
+          "url": "https://music.apple.com/us/album/1774969119?app=music"
+        },
+        {
+          "service": "spotify",
+          "url": "https://open.spotify.com/album/5yO2Lw18nKHzXR8X06REHU"
+        },
+        {
+          "service": "youtubemusic",
+          "url": "https://music.youtube.com/playlist?list=OLAK5uy_npnIPFy_SSWKB2ZnC_y8qQOEvsrx7qeeM"
+        },
+        {
+          "service": "amazonmusic",
+          "url": "https://music.amazon.com/albums/B0DKCD66NZ"
+        },
+        {
+          "service": "tidal",
+          "url": "https://tidal.com/album/394463842"
+        },
+        {
+          "service": "deezer",
+          "url": "https://www.deezer.com/album/659200551"
+        },
+        {
+          "service": "pandora",
+          "url": "https://www.pandora.com/artist/ai-wizard/spooky-scary-spider/AL3hhcf9r7cXrP9"
+        },
+        {
+          "service": "iheartradio",
+          "url": "https://www.iheart.com/artist/40837200/albums/294786547/"
+        },
+        {
+          "service": "qobuz",
+          "url": "https://open.qobuz.com/album/bnn9jyy3xlnwn"
+        },
+        {
+          "service": "itunes",
+          "url": "https://music.apple.com/us/album/1774969119?app=itunes"
+        }
+      ]
+    },
+    {
+      "id": "055855493026",
+      "slug": "cutting-through-erik-the-red-beard",
+      "title": "Cutting Through - Erik The Red Beard",
+      "artist": "AI Wizard",
+      "type": "Single",
+      "releaseDate": "2024-08-29",
+      "artwork": "https://linkstorage.linkfire.com/medialinks/images/5f8ebfce-43d5-444b-bd75-693114587505/artwork-440x440.jpg",
+      "landrUrl": "https://artists.landr.com/055855493026",
+      "summary": "A character-driven AI Wizard single centered on Erik the Red Beard and forward motion.",
+      "collectionSlugs": [
+        "resilience-and-resolve"
+      ],
+      "featured": false,
+      "profileFeature": false,
+      "services": [
+        {
+          "service": "applemusic",
+          "url": "https://music.apple.com/us/album/1765624430?app=music"
+        },
+        {
+          "service": "spotify",
+          "url": "https://open.spotify.com/album/5q0AcZbK5UsrzueBm3lk5c"
+        },
+        {
+          "service": "youtubemusic",
+          "url": "https://music.youtube.com/playlist?list=OLAK5uy_lE-KYN0qPWgze-mzWfptMnRmg1aY6-DCs"
+        },
+        {
+          "service": "amazonmusic",
+          "url": "https://music.amazon.com/albums/B0H46DPYG6"
+        },
+        {
+          "service": "tidal",
+          "url": "https://tidal.com/album/384268493"
+        },
+        {
+          "service": "deezer",
+          "url": "https://www.deezer.com/album/636142541"
+        },
+        {
+          "service": "pandora",
+          "url": "https://www.pandora.com/artist/ai-wizard/cutting-through-erik-the-red-beard/ALtpXn3hjzrll5m"
+        },
+        {
+          "service": "iheartradio",
+          "url": "https://www.iheart.com/artist/40837200/albums/286569801/"
+        },
+        {
+          "service": "qobuz",
+          "url": "https://open.qobuz.com/album/vzpd05eixhlct"
+        },
+        {
+          "service": "itunes",
+          "url": "https://music.apple.com/us/album/1765624430?app=itunes"
+        }
+      ]
+    },
+    {
+      "id": "055855803566",
+      "slug": "og-in-an-upside-down-world",
+      "title": "OG In an Upside-Down World",
+      "artist": "AI Wizard",
+      "type": "Single",
+      "releaseDate": "2024-10-03",
+      "artwork": "https://linkstorage.linkfire.com/medialinks/images/8e49065c-4696-4d20-b046-88219c795948/artwork-440x440.jpg",
+      "landrUrl": "https://artists.landr.com/055855803566",
+      "summary": "An AI Wizard single viewing experience and identity from an upside-down perspective.",
+      "collectionSlugs": [
+        "reflection-and-purpose",
+        "code-and-circuits"
+      ],
+      "featured": false,
+      "profileFeature": false,
+      "services": [
+        {
+          "service": "applemusic",
+          "url": "https://music.apple.com/us/album/1772205607?app=music"
+        },
+        {
+          "service": "spotify",
+          "url": "https://open.spotify.com/album/7aAHFzxcpy7sECeuBci9j3"
+        },
+        {
+          "service": "youtubemusic",
+          "url": "https://music.youtube.com/playlist?list=OLAK5uy_kBaMbx0ZtQaL_8LQh1ONwW7MDd6NlchY4"
+        },
+        {
+          "service": "amazonmusic",
+          "url": "https://music.amazon.com/albums/B0DJG72B4W"
+        },
+        {
+          "service": "tidal",
+          "url": "https://tidal.com/album/391202345"
+        },
+        {
+          "service": "deezer",
+          "url": "https://www.deezer.com/album/651706491"
+        },
+        {
+          "service": "pandora",
+          "url": "https://www.pandora.com/artist/ai-wizard/og-in-an-upside-down-world/ALpmZ2jqj5K5vlZ"
+        },
+        {
+          "service": "iheartradio",
+          "url": "https://www.iheart.com/artist/40837200/albums/292249397/"
+        },
+        {
+          "service": "qobuz",
+          "url": "https://open.qobuz.com/album/ztrcvyemx3c7e"
+        },
+        {
+          "service": "itunes",
+          "url": "https://music.apple.com/us/album/1772205607?app=itunes"
+        }
+      ]
+    },
+    {
+      "id": "055855503190",
+      "slug": "chiriyuku-hana",
+      "title": "散りゆく花",
+      "artist": "AI Wizard",
+      "type": "Single",
+      "releaseDate": "2024-08-29",
+      "artwork": "https://linkstorage.linkfire.com/medialinks/images/5c7c7e2f-a022-43ed-8a69-85c93abd7dd1/artwork-440x440.jpg",
+      "landrUrl": "https://artists.landr.com/055855503190",
+      "summary": "A Japanese-titled AI Wizard single reflecting on flowers as they fall.",
+      "collectionSlugs": [
+        "spirit-and-stillness"
+      ],
+      "featured": false,
+      "profileFeature": false,
+      "services": [
+        {
+          "service": "applemusic",
+          "url": "https://music.apple.com/us/album/1765622066?app=music"
+        },
+        {
+          "service": "spotify",
+          "url": "https://open.spotify.com/album/643FlqYNFXwkxp296Hxni8"
+        },
+        {
+          "service": "youtubemusic",
+          "url": "https://music.youtube.com/playlist?list=OLAK5uy_mT1Qn1-O65bQFQEoUbc10ZAbYENfWzkiw"
+        },
+        {
+          "service": "amazonmusic",
+          "url": "https://music.amazon.com/albums/B0H4697YLK"
+        },
+        {
+          "service": "tidal",
+          "url": "https://tidal.com/album/384267742"
+        },
+        {
+          "service": "deezer",
+          "url": "https://www.deezer.com/album/636140441"
+        },
+        {
+          "service": "pandora",
+          "url": "https://www.pandora.com/artist/ai-wizard/san-riyukuhua/ALh23cq5qhfqZ3c"
+        },
+        {
+          "service": "iheartradio",
+          "url": "https://www.iheart.com/artist/40837200/albums/286568772/"
+        },
+        {
+          "service": "qobuz",
+          "url": "https://open.qobuz.com/album/hslega2tm9n5s"
+        },
+        {
+          "service": "itunes",
+          "url": "https://music.apple.com/us/album/1765622066?app=itunes"
+        }
+      ]
+    },
+    {
+      "id": "055855934024",
+      "slug": "echos-of-the-past",
+      "title": "Echo's of the past",
+      "artist": "AI Wizard",
+      "type": "Single",
+      "releaseDate": "2024-10-20",
+      "artwork": "https://linkstorage.linkfire.com/medialinks/images/71107347-4437-4ebf-9ad4-808c90dbd7e5/artwork-440x440.jpg",
+      "landrUrl": "https://artists.landr.com/055855934024",
+      "summary": "A reflective AI Wizard single looking back at what the past leaves behind.",
+      "collectionSlugs": [
+        "reflection-and-purpose",
+        "spirit-and-stillness"
+      ],
+      "featured": false,
+      "profileFeature": false,
+      "services": [
+        {
+          "service": "applemusic",
+          "url": "https://music.apple.com/us/album/1775097018?app=music"
+        },
+        {
+          "service": "spotify",
+          "url": "https://open.spotify.com/album/1HHoQIX47SGsMZ2qSit0ke"
+        },
+        {
+          "service": "youtubemusic",
+          "url": "https://music.youtube.com/playlist?list=OLAK5uy_n9yhV7Env7uTz07_c_oM9F5s98iXs79T8"
+        },
+        {
+          "service": "amazonmusic",
+          "url": "https://music.amazon.com/albums/B0H4C1QRP8"
+        },
+        {
+          "service": "tidal",
+          "url": "https://tidal.com/album/394561636"
+        },
+        {
+          "service": "deezer",
+          "url": "https://www.deezer.com/album/659708721"
+        },
+        {
+          "service": "pandora",
+          "url": "https://www.pandora.com/artist/ai-wizard/echos-of-the-past/ALZb5wt2hzqh4P6"
+        },
+        {
+          "service": "iheartradio",
+          "url": "https://www.iheart.com/artist/40837200/albums/294891018/"
+        },
+        {
+          "service": "qobuz",
+          "url": "https://open.qobuz.com/album/glchjtf8oi7vm"
+        },
+        {
+          "service": "itunes",
+          "url": "https://music.apple.com/us/album/1775097018?app=itunes"
+        }
+      ]
+    },
+    {
+      "id": "055855877093",
+      "slug": "battle-cry-of-the-archangel",
+      "title": "Battle Cry of the Archangel",
+      "artist": "Flash Evangelist",
+      "type": "Single",
+      "releaseDate": "2024-10-13",
+      "artwork": "https://linkstorage.linkfire.com/medialinks/images/3d54a28d-a15c-4832-9bf6-86bfb88dc69c/artwork-440x440.jpg",
+      "landrUrl": "https://artists.landr.com/055855877093",
+      "summary": "A Flash Evangelist single framing resolve as an archangel battle cry.",
+      "collectionSlugs": [
+        "resilience-and-resolve",
+        "spirit-and-stillness"
+      ],
+      "featured": false,
+      "profileFeature": false,
+      "services": [
+        {
+          "service": "applemusic",
+          "url": "https://music.apple.com/us/album/1773654084?app=music"
+        },
+        {
+          "service": "spotify",
+          "url": "https://open.spotify.com/album/7IW9OnP5rHuu9Gvfq4Pvol"
+        },
+        {
+          "service": "youtubemusic",
+          "url": "https://music.youtube.com/playlist?list=OLAK5uy_kXT3qM9HHpfOuQpHNbRqHiML12Sh4wzvg"
+        },
+        {
+          "service": "amazonmusic",
+          "url": "https://music.amazon.com/albums/B0H4BLTYB1"
+        },
+        {
+          "service": "tidal",
+          "url": "https://tidal.com/album/393010181"
+        },
+        {
+          "service": "deezer",
+          "url": "https://www.deezer.com/album/656337011"
+        },
+        {
+          "service": "pandora",
+          "url": "https://www.pandora.com/artist/flash-evangelist/battle-cry-of-the-archangel/AL7J7gln2vzfv3k"
+        },
+        {
+          "service": "iheartradio",
+          "url": "https://www.iheart.com/artist/44295085/albums/293684460/"
+        },
+        {
+          "service": "qobuz",
+          "url": "https://open.qobuz.com/album/dn0fuxjjxwb85"
+        },
+        {
+          "service": "itunes",
+          "url": "https://music.apple.com/us/album/1773654084?app=itunes"
+        }
+      ]
+    },
+    {
+      "id": "055855368287",
+      "slug": "hammering-octopus-rainbow-tacos",
+      "title": "Hammering Octopus's Rainbow Tacos",
+      "artist": "AI Wizard",
+      "type": "Single",
+      "releaseDate": "2024-07-30",
+      "artwork": "https://linkstorage.linkfire.com/medialinks/images/de93c099-c2fd-4487-b67a-5131b576d5ab/artwork-440x440.jpg",
+      "landrUrl": "https://artists.landr.com/055855368287",
+      "summary": "A surreal, high-energy AI Wizard single combining octopuses, rainbows, and tacos.",
+      "collectionSlugs": [
+        "family-and-play"
+      ],
+      "featured": false,
+      "profileFeature": false,
+      "services": [
+        {
+          "service": "applemusic",
+          "url": "https://music.apple.com/us/album/1760146478?app=music"
+        },
+        {
+          "service": "spotify",
+          "url": "https://open.spotify.com/album/4Q6qDsiO5vH7V47qoJXy21"
+        },
+        {
+          "service": "youtubemusic",
+          "url": "https://music.youtube.com/playlist?list=OLAK5uy_lY8JxQf5Wnpn3VYHyg_ZH1Dp9XPP8MIYs"
+        },
+        {
+          "service": "deezer",
+          "url": "https://www.deezer.com/album/622403441"
+        },
+        {
+          "service": "qobuz",
+          "url": "https://open.qobuz.com/album/oc47xpttgzr1a"
+        },
+        {
+          "service": "itunes",
+          "url": "https://music.apple.com/us/album/1760146478?app=itunes"
+        }
+      ]
+    },
+    {
+      "id": "055905426578",
+      "slug": "elite-mind",
+      "title": "Elite Mind",
+      "artist": "Epic Mind",
+      "type": "Single",
+      "releaseDate": "2024-12-16",
+      "artwork": "https://linkstorage.linkfire.com/medialinks/images/48944a49-bd0e-4e8f-8083-445e76f5c533/artwork-440x440.jpg",
+      "landrUrl": "https://artists.landr.com/055905426578",
+      "summary": "An Epic Mind collaboration centered on discipline, focus, and an elevated mindset.",
+      "collectionSlugs": [
+        "reflection-and-purpose",
+        "resilience-and-resolve",
+        "collaboration-and-community"
+      ],
+      "featured": false,
+      "profileFeature": false,
+      "services": [
+        {
+          "service": "applemusic",
+          "url": "https://music.apple.com/us/album/1785661452?app=music"
+        },
+        {
+          "service": "spotify",
+          "url": "https://open.spotify.com/album/6a8CG01lmJxungT3FR0NHO"
+        },
+        {
+          "service": "youtubemusic",
+          "url": "https://music.youtube.com/playlist?list=OLAK5uy_nzFzNwKfMjHGlan0LmoLXiXalxgDDrIck"
+        },
+        {
+          "service": "amazonmusic",
+          "url": "https://music.amazon.com/albums/B0H4F17289"
+        },
+        {
+          "service": "tidal",
+          "url": "https://tidal.com/album/406054870"
+        },
+        {
+          "service": "deezer",
+          "url": "https://www.deezer.com/album/684603801"
+        },
+        {
+          "service": "pandora",
+          "url": "https://www.pandora.com/artist/epic-mind/elite-mind/ALm9n2bhxc2Jqjk"
+        },
+        {
+          "service": "iheartradio",
+          "url": "https://www.iheart.com/artist/33944870/albums/304304754/"
+        },
+        {
+          "service": "qobuz",
+          "url": "https://open.qobuz.com/album/q7xcddve8261k"
+        },
+        {
+          "service": "itunes",
+          "url": "https://music.apple.com/us/album/1785661452?app=itunes"
+        }
+      ]
+    },
+    {
+      "id": "056870029849",
+      "slug": "juju-and-dadas-epic-pirate-shanties",
+      "title": "JuJu and DaDa's Epic Pirate Shanties",
+      "artist": "AI Wizard, Juliet Miller, Brandon Nozaki Miller",
+      "type": "EP",
+      "releaseDate": "2025-02-08",
+      "artwork": "https://linkstorage.linkfire.com/medialinks/images/f7f1354b-f276-4c88-8594-bfd232de0c4c/artwork-440x440.jpg",
+      "landrUrl": "https://artists.landr.com/056870029849",
+      "summary": "A family EP of playful pirate-shanty adventures with JuJu and DaDa.",
+      "collectionSlugs": [
+        "family-and-play",
+        "collaboration-and-community"
+      ],
+      "featured": true,
+      "profileFeature": false,
+      "services": [
+        {
+          "service": "applemusic",
+          "url": "https://music.apple.com/us/album/1795243628?app=music"
+        },
+        {
+          "service": "spotify",
+          "url": "https://open.spotify.com/album/2DGR846WTkia7TOXlaMx34"
+        },
+        {
+          "service": "amazonmusic",
+          "url": "https://music.amazon.com/albums/B0DWKXD5PR"
+        },
+        {
+          "service": "tidal",
+          "url": "https://tidal.com/album/416800882"
+        },
+        {
+          "service": "deezer",
+          "url": "https://www.deezer.com/album/710107631"
+        },
+        {
+          "service": "pandora",
+          "url": "https://www.pandora.com/artist/ai-wizard-juliet-miller-and-brandon-nozaki-miller/juju-and-dadas-epic-pirate-shanties/ALdh9Jbqklk94JJ"
+        },
+        {
+          "service": "iheartradio",
+          "url": "https://www.iheart.com/artist/40837200/albums/312807809/"
+        },
+        {
+          "service": "qobuz",
+          "url": "https://open.qobuz.com/album/fixrwoytoxtqn"
+        },
+        {
+          "service": "itunes",
+          "url": "https://music.apple.com/us/album/1795243628?app=itunes"
+        }
+      ]
+    },
+    {
+      "id": "055905804314",
+      "slug": "bring-back-warmth-to-hearts-grown-cold",
+      "title": "Bring Back Warmth to Hearts Grown Cold",
+      "artist": "AI Wizard",
+      "type": "Single",
+      "releaseDate": "2025-01-22",
+      "artwork": "https://linkstorage.linkfire.com/medialinks/images/0b73227c-dcf4-434e-a016-95d0770471b7/artwork-440x440.jpg",
+      "landrUrl": "https://artists.landr.com/055905804314",
+      "summary": "A compassionate AI Wizard single about restoring warmth where it has been lost.",
+      "collectionSlugs": [
+        "reflection-and-purpose",
+        "spirit-and-stillness"
+      ],
+      "featured": false,
+      "profileFeature": false,
+      "services": [
+        {
+          "service": "applemusic",
+          "url": "https://music.apple.com/us/album/1791877708?app=music"
+        },
+        {
+          "service": "spotify",
+          "url": "https://open.spotify.com/album/52lCt8MEcnK7ClX27HBHWH"
+        },
+        {
+          "service": "youtubemusic",
+          "url": "https://music.youtube.com/playlist?list=OLAK5uy_l9hQBd70alEZHd9FPyDxlCG1HaUBgw7kQ"
+        },
+        {
+          "service": "amazonmusic",
+          "url": "https://music.amazon.com/albums/B0H4MFTNZB"
+        },
+        {
+          "service": "tidal",
+          "url": "https://tidal.com/album/413049142"
+        },
+        {
+          "service": "deezer",
+          "url": "https://www.deezer.com/album/701247231"
+        },
+        {
+          "service": "pandora",
+          "url": "https://www.pandora.com/artist/ai-wizard/bring-back-warmth-to-hearts-grown-cold/ALz93rq7Zrk9rJ2"
+        },
+        {
+          "service": "iheartradio",
+          "url": "https://www.iheart.com/artist/40837200/albums/309891421/"
+        },
+        {
+          "service": "qobuz",
+          "url": "https://open.qobuz.com/album/f0f29tr9rexl7"
+        },
+        {
+          "service": "itunes",
+          "url": "https://music.apple.com/us/album/1791877708?app=itunes"
+        }
+      ]
+    },
+    {
+      "id": "990591026773",
+      "slug": "side-by-side",
+      "title": "Side by Side",
+      "artist": "Brandon Nozaki Miller, Flash Evangelist",
+      "type": "Single",
+      "releaseDate": "2025-04-25",
+      "artwork": "https://linkstorage.linkfire.com/medialinks/images/aeec5148-86f3-4d32-98ca-c2ac7b4b5ebb/artwork-440x440.jpg",
+      "landrUrl": "https://artists.landr.com/990591026773",
+      "summary": "A collaborative single about solidarity, companionship, and moving forward together.",
+      "collectionSlugs": [
+        "collaboration-and-community",
+        "resilience-and-resolve"
+      ],
+      "featured": false,
+      "profileFeature": false,
+      "services": [
+        {
+          "service": "applemusic",
+          "url": "https://music.apple.com/us/album/1810747696?app=music"
+        },
+        {
+          "service": "spotify",
+          "url": "https://open.spotify.com/album/055rBiaLCOa2VKuDHDRB2U"
+        },
+        {
+          "service": "youtubemusic",
+          "url": "https://music.youtube.com/playlist?list=OLAK5uy_kVC39b5AhNIBl7bTW2P6n58Wl7HMWjTQI"
+        },
+        {
+          "service": "amazonmusic",
+          "url": "https://music.amazon.com/albums/B0F6D4Y51C"
+        },
+        {
+          "service": "tidal",
+          "url": "https://tidal.com/album/432140456"
+        },
+        {
+          "service": "deezer",
+          "url": "https://www.deezer.com/album/747730421"
+        },
+        {
+          "service": "pandora",
+          "url": "https://www.pandora.com/artist/brandon-nozaki-miller-and-flash-evangelist/side-by-side/ALJcP2zvXKpvXt9"
+        },
+        {
+          "service": "iheartradio",
+          "url": "https://www.iheart.com/artist/37549595/albums/159164678/"
+        },
+        {
+          "service": "itunes",
+          "url": "https://music.apple.com/us/album/1810747696?app=itunes"
+        }
+      ]
+    },
+    {
+      "id": "055855492982",
+      "slug": "meeting-the-devine",
+      "title": "Meeting The Devine",
+      "artist": "AI Wizard",
+      "type": "Single",
+      "releaseDate": "2024-08-29",
+      "artwork": "https://linkstorage.linkfire.com/medialinks/images/1b0c8f18-eca7-4c41-b9f5-e735cdd1d944/artwork-440x440.jpg",
+      "landrUrl": "https://artists.landr.com/055855492982",
+      "summary": "A contemplative AI Wizard single framed as an encounter with the sacred.",
+      "collectionSlugs": [
+        "spirit-and-stillness"
+      ],
+      "featured": false,
+      "profileFeature": false,
+      "services": [
+        {
+          "service": "applemusic",
+          "url": "https://music.apple.com/us/album/1765618806?app=music"
+        },
+        {
+          "service": "spotify",
+          "url": "https://open.spotify.com/album/4Vv4Ob0gmUHJK8KZuwAo2u"
+        },
+        {
+          "service": "youtubemusic",
+          "url": "https://music.youtube.com/playlist?list=OLAK5uy_nqcqc-Uo9CAjdaugrzT2YpejgXmwBhTV4"
+        },
+        {
+          "service": "amazonmusic",
+          "url": "https://music.amazon.com/albums/B0H46HZXF4"
+        },
+        {
+          "service": "tidal",
+          "url": "https://tidal.com/album/384263790"
+        },
+        {
+          "service": "deezer",
+          "url": "https://www.deezer.com/album/636133281"
+        },
+        {
+          "service": "pandora",
+          "url": "https://www.pandora.com/artist/ai-wizard/meeting-the-devine/ALv3P3dPxl9nVmm"
+        },
+        {
+          "service": "iheartradio",
+          "url": "https://www.iheart.com/artist/40837200/albums/286566941/"
+        },
+        {
+          "service": "qobuz",
+          "url": "https://open.qobuz.com/album/r1etoteymy3r0"
+        },
+        {
+          "service": "itunes",
+          "url": "https://music.apple.com/us/album/1765618806?app=itunes"
+        }
+      ]
+    },
+    {
+      "id": "055855934178",
+      "slug": "battle-for-your-soul",
+      "title": "Battle for Your Soul",
+      "artist": "Flash Evangelist",
+      "type": "Single",
+      "releaseDate": "2024-10-21",
+      "artwork": "https://linkstorage.linkfire.com/medialinks/images/d5d0be92-ed1d-46d7-acdf-9215295e05b1/artwork-440x440.jpg",
+      "landrUrl": "https://artists.landr.com/055855934178",
+      "summary": "A Flash Evangelist single framing inner conflict as a battle for the soul.",
+      "collectionSlugs": [
+        "spirit-and-stillness",
+        "resilience-and-resolve"
+      ],
+      "featured": false,
+      "profileFeature": false,
+      "services": [
+        {
+          "service": "applemusic",
+          "url": "https://music.apple.com/us/album/1775100446?app=music"
+        },
+        {
+          "service": "spotify",
+          "url": "https://open.spotify.com/album/2zX7BNv3k0zvrIGVQDtCyk"
+        },
+        {
+          "service": "youtubemusic",
+          "url": "https://music.youtube.com/playlist?list=OLAK5uy_mUvz6F1q-k35xonFWGvWAMTvBGOraKUkI"
+        },
+        {
+          "service": "amazonmusic",
+          "url": "https://music.amazon.com/albums/B0DKDN4VVJ"
+        },
+        {
+          "service": "tidal",
+          "url": "https://tidal.com/album/394562682"
+        },
+        {
+          "service": "deezer",
+          "url": "https://www.deezer.com/album/659717601"
+        },
+        {
+          "service": "pandora",
+          "url": "https://www.pandora.com/artist/flash-evangelist/battle-for-your-soul/ALZgtdV3rfpdq9w"
+        },
+        {
+          "service": "iheartradio",
+          "url": "https://www.iheart.com/artist/44295085/albums/294893020/"
+        },
+        {
+          "service": "qobuz",
+          "url": "https://open.qobuz.com/album/vwt5xdjic90qh"
+        },
+        {
+          "service": "itunes",
+          "url": "https://music.apple.com/us/album/1775100446?app=itunes"
+        }
+      ]
+    },
+    {
+      "id": "055905224013",
+      "slug": "wrong-one",
+      "title": "Wrong One",
+      "artist": "Voynich, Brandon Nozaki Miller",
+      "type": "Single",
+      "releaseDate": "2024-11-25",
+      "artwork": "https://linkstorage.linkfire.com/medialinks/images/a1f81dc7-bc95-4e0f-a365-4af0048dc2e2/artwork-440x440.jpg",
+      "landrUrl": "https://artists.landr.com/055905224013",
+      "summary": "A Voynich collaboration built around confrontation and choosing the wrong opponent.",
+      "collectionSlugs": [
+        "resilience-and-resolve",
+        "collaboration-and-community"
+      ],
+      "featured": false,
+      "profileFeature": false,
+      "services": [
+        {
+          "service": "applemusic",
+          "url": "https://music.apple.com/us/album/1781651479?app=music"
+        },
+        {
+          "service": "spotify",
+          "url": "https://open.spotify.com/album/24X0KLRN4pC5jVzKoex9DQ"
+        },
+        {
+          "service": "youtubemusic",
+          "url": "https://music.youtube.com/playlist?list=OLAK5uy_nWJyKlP8zb9EYYAn_IvoVy8adD_CM9R3U"
+        },
+        {
+          "service": "amazonmusic",
+          "url": "https://music.amazon.com/albums/B0DNZJFBFB"
+        },
+        {
+          "service": "tidal",
+          "url": "https://tidal.com/album/401745210"
+        },
+        {
+          "service": "deezer",
+          "url": "https://www.deezer.com/album/675136031"
+        },
+        {
+          "service": "pandora",
+          "url": "https://www.pandora.com/artist/voynich/wrong-1/ALwxbP2br5lV4PJ"
+        },
+        {
+          "service": "iheartradio",
+          "url": "https://www.iheart.com/artist/467359/albums/300590202/"
+        },
+        {
+          "service": "qobuz",
+          "url": "https://open.qobuz.com/album/qcq29y109xn09"
+        },
+        {
+          "service": "itunes",
+          "url": "https://music.apple.com/us/album/1781651479?app=itunes"
+        }
+      ]
+    },
+    {
+      "id": "055905278726",
+      "slug": "objection-your-honor-vol-1",
+      "title": "Objection Your Honor vol 1",
+      "artist": "Voynich",
+      "type": "Album",
+      "releaseDate": "2024-12-01",
+      "artwork": "https://linkstorage.linkfire.com/medialinks/images/ffde9fc3-224c-4819-9dac-ed7f9c9e6142/artwork-440x440.jpg",
+      "landrUrl": "https://artists.landr.com/055905278726",
+      "summary": "A Voynich album presenting its case through a courtroom-inspired title.",
+      "collectionSlugs": [
+        "resilience-and-resolve",
+        "collaboration-and-community"
+      ],
+      "featured": false,
+      "profileFeature": false,
+      "services": [
+        {
+          "service": "applemusic",
+          "url": "https://music.apple.com/us/album/1782719628?app=music"
+        },
+        {
+          "service": "spotify",
+          "url": "https://open.spotify.com/album/24WcyFsajazkcJ7440RbGt"
+        },
+        {
+          "service": "youtubemusic",
+          "url": "https://music.youtube.com/playlist?list=OLAK5uy_kML9kLZ_vvnwtewrl5_9voVvCdkrdmffY"
+        },
+        {
+          "service": "amazonmusic",
+          "url": "https://music.amazon.com/albums/B0DPD6NDL4"
+        },
+        {
+          "service": "tidal",
+          "url": "https://tidal.com/album/402948989"
+        },
+        {
+          "service": "deezer",
+          "url": "https://www.deezer.com/album/677798481"
+        },
+        {
+          "service": "pandora",
+          "url": "https://www.pandora.com/artist/voynich/objection-your-honor-vol-1/ALggz5Xgb9Pvvlc"
+        },
+        {
+          "service": "iheartradio",
+          "url": "https://www.iheart.com/artist/467359/albums/301605563/"
+        },
+        {
+          "service": "qobuz",
+          "url": "https://open.qobuz.com/album/e6eaa7kh5krej"
+        },
+        {
+          "service": "itunes",
+          "url": "https://music.apple.com/us/album/1782719628?app=itunes"
+        }
+      ]
+    }
+  ]
+}

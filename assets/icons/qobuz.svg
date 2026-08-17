@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-labelledby="title">
+  <title id="title">Qobuz</title>
+  <rect width="24" height="24" rx="6" fill="#0070ef"/>
+  <path d="M12 5.5a6.3 6.3 0 1 0 3.8 11.4l2 2 1.2-1.2-2-2A6.3 6.3 0 0 0 12 5.5Zm0 2a4.3 4.3 0 1 1 0 8.6 4.3 4.3 0 0 1 0-8.6Z" fill="#fff"/>
+</svg>

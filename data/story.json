@@ -1,0 +1,255 @@
+{
+  "title": "The story beyond the telemetry",
+  "description": "Focused chapters on electric racing, technology, service, Japan and Zen, and the video archives that connect them.",
+  "pages": [
+    {
+      "slug": "racing",
+      "eyebrow": "Electric first",
+      "title": "Electric first. Fast followed.",
+      "lede": "I came to motorcycles through electricity first. A commuter Zero became a Bonneville record bike, then a development platform for racing, charging, and software—and took me to Pikes Peak.",
+      "facts": [
+        { "value": "101.652 mph", "label": "AMA/FIM one-mile record · 2012" },
+        { "value": "#111", "label": "Pikes Peak · 2013 + 2015" },
+        { "value": "3rd", "label": "2015 Electric Production" }
+      ],
+      "sections": [
+        {
+          "kicker": "Bonneville · 2012",
+          "title": "A commuter motorcycle became a record bike.",
+          "body": [
+            "The measured one-mile record was 101.652 mph on a modified production Zero S ZF6 under 150 kg, certified through AMA and FIM timing. The work connected riding, software, development testing, and the early DigiNow and Hollywood Electrics community.",
+            "The point was never speed alone. It was learning what electric drivetrains could become when riders, engineers, and builders treated the machine as a platform."
+          ],
+          "links": [
+            { "label": "The Life Electric", "url": "https://www.motorcycle.com/manufacturer/zero/the-life-electric-next-gen-hot-rodding-video.html", "note": "Motorcycle.com profile" },
+            { "label": "102 mph electric record", "url": "https://www.torquenews.com/1075/electric-cowboys-102-mileshr-electric-motorcycle-land-speed-record", "note": "Torque News · 2012" },
+            { "label": "Bethlehem native sets record", "url": "https://www.lehighvalleylive.com/bethlehem/2012/09/bethlehem_native_sets_amateur.html", "note": "Press archive" }
+          ]
+        },
+        {
+          "kicker": "Pikes Peak · 2013 + 2015",
+          "title": "Development work moved from the salt to the mountain.",
+          "body": [
+            "Official Pikes Peak results record the #111 Zero S in 2013 and a third-place Electric Production finish on a Zero SR in 2015. Each run joined motorcycle setup, energy strategy, charging, software, and the realities of a changing mountain course."
+          ],
+          "links": [
+            { "label": "Official historical results", "url": "https://ppihc.org/wp-content/uploads/Pikes-Peak-International-Hill-Climb-Historical-Results-2016-2024.pdf", "note": "PPIHC results archive" },
+            { "label": "Electric motorcycles defend the title", "url": "https://mylifeatspeed.com/electric-motorcycles-to-defend-title-at-pikes-peak/", "note": "My Life at Speed · 2015" },
+            { "label": "Hollywood Electrics at Pikes Peak", "url": "https://www.autoevolution.com/news/zero-motorcycles-and-hollywood-electrics-race-at-the-pikes-peak-international-hill-climb-video-57106.html", "note": "AutoEvolution · 2013" }
+          ]
+        },
+        {
+          "kicker": "Distance testing · 2019",
+          "title": "Long distance exposed the infrastructure problem.",
+          "body": [
+            "An 821-mile, 23-hour reconnaissance ride helped prepare for a 1,000-mile electric Iron Butt attempt. The published record supports the preparation and route test—not a claim of completed certification."
+          ],
+          "links": [
+            { "label": "The 821-mile route test", "url": "https://electrek.co/2019/08/01/riding-1000-miles-electric-motorcycle-iron-butt/", "note": "Electrek · 2019" },
+            { "label": "Preparing the electric attempt", "url": "https://www.rideapart.com/news/362803/energica-esse-esse-9-iron-butt/", "note": "RideApart · 2019" }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "technology",
+      "eyebrow": "Make hidden systems legible",
+      "title": "From artificial vision to local-first tools.",
+      "lede": "My favorite technology gives people more agency: restoring a signal, exposing a hidden system, shortening the distance between an idea and a useful tool.",
+      "facts": [
+        { "value": "Artificial vision", "label": "Second Sight development team" },
+        { "value": "Local first", "label": "DBOPFS Studio" },
+        { "value": "ECMAScript", "label": "ActionScript 3 → JavaScript" }
+      ],
+      "sections": [
+        {
+          "kicker": "Second Sight Medical Products",
+          "title": "Technology in service of sight.",
+          "body": [
+            "At Second Sight Medical Products, I worked with a development team on artificial-vision technology intended to help blind people see. The work belongs to a large clinical, engineering, research, and patient community; this page does not reduce that shared effort to a single inventor story."
+          ],
+          "links": [
+            { "label": "Second Sight Medical", "url": "https://www.youtube.com/@secondsightmedical8106", "note": "Artificial-vision videos and patient stories" },
+            { "label": "Second Sight Europe", "url": "https://www.youtube.com/@SecondSightEurope", "note": "Argus II explainers and stories" },
+            { "label": "Independent profile", "url": "https://www.motorcycle.com/manufacturer/zero/the-life-electric-next-gen-hot-rodding-video.html", "note": "Motorcycle.com" }
+          ]
+        },
+        {
+          "kicker": "DigiNow",
+          "title": "Charging hardware became a company, a race program, and a public archive.",
+          "body": [
+            "DigiNow grew from practical electric-motorcycle charging problems into adapters, Super Charger systems, vehicle experiments, racing footage, and prototypes that connected phones and tablets to motorcycles."
+          ],
+          "links": [
+            { "label": "DigiNow video archive", "url": "https://www.youtube.com/@digiNowIt", "note": "Charging, prototypes, and racing" },
+            { "label": "SuperCharger v2.5 archive", "url": "https://www.indiegogo.com/en/projects/brandonnozakimiller/diginow-supercharger-v2-5-mass-production#/section/project-story", "note": "Project story" }
+          ]
+        },
+        {
+          "kicker": "DBOPFS Studio",
+          "title": "Browser-owned data, made understandable.",
+          "body": [
+            "DBOPFS Studio is a local-first Chromium workspace for exploring, editing, previewing, printing, and managing application data stored in origin-private OPFS. It makes a normally invisible browser data layer inspectable without turning it into a cloud service."
+          ],
+          "links": [
+            { "label": "Open DBOPFS Studio", "url": "https://thewizardnexus.github.io/DBOPFS-Studio/", "note": "Live local-first application" },
+            { "label": "Watch the 29-second tour", "url": "https://www.youtube.com/watch?v=y8FlLBzy-RU", "note": "DBOPFS Studio 0.1" }
+          ]
+        },
+        {
+          "kicker": "Flash → traditional JavaScript",
+          "title": "ActionScript 3 was my first ECMAScript language.",
+          "body": [
+            "I loved Flash before the browser platform moved on. ActionScript 3 taught me the shape of ECMAScript, and that lineage still informs how I write traditional JavaScript: direct, portable, understandable, and close to the platform."
+          ],
+          "links": []
+        }
+      ]
+    },
+    {
+      "slug": "service",
+      "eyebrow": "Service before spectacle",
+      "title": "Build for people. Stay useful.",
+      "lede": "Military service, community leadership, overseas intelligence and technology work, and mental-health advocacy all shaped the same operating principle: make the work practical, humane, and accountable.",
+      "facts": [
+        { "value": "USAF", "label": "Veteran" },
+        { "value": "Rotary + RYLA", "label": "Community leadership" },
+        { "value": "Human first", "label": "Mental-health advocacy" }
+      ],
+      "sections": [
+        {
+          "kicker": "Military and overseas work",
+          "title": "Service changed how I understand systems and responsibility.",
+          "body": [
+            "I served in the United States Air Force and later worked with military-adjacent organizations, international teams, and intelligence and technology contractors around the world. The public version of that history stays deliberately high level: the lasting lesson is that technical choices always land on real people."
+          ],
+          "links": [
+            { "label": "Professional timeline", "url": "https://www.linkedin.com/in/turtlesallthewaydown/", "note": "Career and education context on LinkedIn" }
+          ]
+        },
+        {
+          "kicker": "Veterans and mental health",
+          "title": "Support should feel human before it feels institutional.",
+          "body": [
+            "My advocacy centers practical tools, community, and honest conversations that respect lived experience—especially for veterans navigating transition, isolation, and mental-health challenges. I care about technology that lowers friction without pretending software can replace human care."
+          ],
+          "links": [
+            { "label": "AI Nerd video archive", "url": "https://www.youtube.com/@unclenozaki9325", "note": "Open-source AI and Veteran LifeLine work" }
+          ]
+        },
+        {
+          "kicker": "Rotary and RYLA",
+          "title": "Leadership is something people practice together.",
+          "body": [
+            "I have worked closely with Rotary and Rotary Youth Leadership Awards communities. Their emphasis on service, ethical leadership, and developing young people fits the same pattern I value in open source: share responsibility, make room for others, and leave a system stronger."
+          ],
+          "links": []
+        }
+      ]
+    },
+    {
+      "slug": "japan-zen",
+      "eyebrow": "Practice is the through-line",
+      "title": "Japan, Zen, and the discipline of attention.",
+      "lede": "Living and attending high school in Japan gave me a vocabulary of practice long before I had a vocabulary for product design, leadership, or engineering.",
+      "facts": [
+        { "value": "Japan", "label": "High-school chapter" },
+        { "value": "Rinzai-ji", "label": "Zen lineage" },
+        { "value": "Six paths", "label": "Judo · Kyudo · Shodo · Kado · Sado · Budo" }
+      ],
+      "sections": [
+        {
+          "kicker": "A formative chapter in Japan",
+          "title": "The arts were different. The demand for attention was the same.",
+          "body": [
+            "While living and attending high school in Japan, I studied judo, kyudo, shodo, kado, sado, and budo. I do not present that list as mastery. It marks an early encounter with forms that make repetition, posture, care, and presence visible."
+          ],
+          "links": []
+        },
+        {
+          "kicker": "Rinzai-ji",
+          "title": "Zen study continued after I returned to the United States.",
+          "body": [
+            "My Zen practice began in the Rinzai-ji tradition after I returned from overseas work. Bodhi Manda Zen Center provides public context for that lineage and its history; this page describes my personal chronology rather than claiming a formal title or credential."
+          ],
+          "links": [
+            { "label": "Bodhi Manda Zen Center", "url": "https://bmzc.org/", "note": "Rinzai practice and retreat center" },
+            { "label": "Rinzai-ji lineage history", "url": "https://bmzc.org/history", "note": "BMZC historical context" }
+          ]
+        },
+        {
+          "kicker": "Zen in the work",
+          "title": "Clarity over noise is not a slogan. It is a constraint.",
+          "body": [
+            "Attention shapes how I build: prefer the direct path, make hidden state visible, avoid ceremony that does not serve the user, and keep moving without confusing motion for progress. Entrepreneurship becomes a practice of creating useful things, learning in public, and serving people well."
+          ],
+          "links": []
+        }
+      ]
+    },
+    {
+      "slug": "channels",
+      "eyebrow": "Watch the chapters",
+      "title": "Different channels. One connected life.",
+      "lede": "Music, electric racing, charging hardware, AI experiments, open-source work, and product demos each have their own archive.",
+      "facts": [
+        { "value": "AI Wizard", "label": "Music label" },
+        { "value": "NewZeroland", "label": "Electric motorcycles + life" },
+        { "value": "DigiNow", "label": "Charging + racing archive" }
+      ],
+      "sections": [
+        {
+          "kicker": "Music",
+          "title": "AI Wizard",
+          "body": [
+            "The music channel holds releases made through human experience and AI-assisted craft. It is the listening counterpart to the full catalog on this site."
+          ],
+          "links": [
+            { "label": "AI Wizard on YouTube", "url": "https://www.youtube.com/@AI-Wizard-Music", "note": "Music and visual releases" }
+          ]
+        },
+        {
+          "kicker": "Racing and life",
+          "title": "NewZeroland / Brandon Nozaki Miller",
+          "body": [
+            "The channel began around electric motorcycles and grew to include charging, inventing, racing, travel, and the practical life around early electric mobility."
+          ],
+          "links": [
+            { "label": "Watch NewZeroland", "url": "https://www.youtube.com/@BrandonNozakiMiller", "note": "Electric motorcycles and more" }
+          ]
+        },
+        {
+          "kicker": "Hardware and experiments",
+          "title": "DigiNow Inc",
+          "body": [
+            "The DigiNow archive connects charging hardware, race weekends, prototype interfaces, and the experiments that sometimes became projects or companies."
+          ],
+          "links": [
+            { "label": "Watch DigiNow", "url": "https://www.youtube.com/@digiNowIt", "note": "Charging, racing, and prototypes" }
+          ]
+        },
+        {
+          "kicker": "AI and open source",
+          "title": "AI Nerd",
+          "body": [
+            "The AI Nerd archive covers on-device models, early mental-health and veteran-support prototypes, open-source projects, and practical guidance on development, architecture, engineering, and testing."
+          ],
+          "links": [
+            { "label": "Watch AI Nerd", "url": "https://www.youtube.com/@unclenozaki9325", "note": "AI and open-source archive" }
+          ]
+        },
+        {
+          "kicker": "Featured short",
+          "title": "DBOPFS Studio 0.1 in 29 seconds.",
+          "body": [
+            "A compact tour of the local-first workspace for making origin-private DBOPFS data legible."
+          ],
+          "links": [
+            { "label": "Watch the DBOPFS Studio tour", "url": "https://www.youtube.com/watch?v=y8FlLBzy-RU", "note": "The Wizard Nexus · 2026" },
+            { "label": "Open DBOPFS Studio", "url": "https://thewizardnexus.github.io/DBOPFS-Studio/", "note": "Live application" }
+          ]
+        }
+      ]
+    }
+  ]
+}
