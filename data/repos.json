@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-21T07:07:17.793Z",
+  "generatedAt": "2026-08-21T22:59:46.458Z",
   "owners": [
     {
       "login": "RIAEvangelist",
@@ -8,7 +8,7 @@
       "avatar": "https://avatars.githubusercontent.com/u/369041?v=4",
       "url": "https://github.com/RIAEvangelist",
       "followers": 246,
-      "following": 42,
+      "following": 43,
       "repositoryCount": 120
     },
     {
@@ -49,7 +49,28 @@
       "topics": [],
       "license": null,
       "createdAt": "2021-03-08T05:47:52Z",
-      "updatedAt": "2026-08-20T07:08:08Z"
+      "updatedAt": "2026-08-21T22:59:42Z"
+    },
+    {
+      "name": "event-pubsub",
+      "fullName": "RIAEvangelist/event-pubsub",
+      "owner": "RIAEvangelist",
+      "description": "Event Pubsub for Javascript will work in node js or browser",
+      "explanation": "Event Pubsub for Javascript will work in node js or browser",
+      "url": "https://github.com/RIAEvangelist/event-pubsub",
+      "homepage": "https://riaevangelist.github.io/event-pubsub/",
+      "language": "JavaScript",
+      "stars": 21,
+      "forks": 17,
+      "openIssues": 5,
+      "watchers": 21,
+      "archived": false,
+      "disabled": false,
+      "fork": false,
+      "topics": [],
+      "license": "MIT",
+      "createdAt": "2014-02-18T21:48:27Z",
+      "updatedAt": "2026-08-21T22:56:47Z"
     },
     {
       "name": "node-ipc",
@@ -62,7 +83,7 @@
       "language": "JavaScript",
       "stars": 64,
       "forks": 11,
-      "openIssues": 5,
+      "openIssues": 4,
       "watchers": 64,
       "archived": false,
       "disabled": false,
@@ -81,7 +102,7 @@
       ],
       "license": "MIT",
       "createdAt": "2023-01-13T09:35:34Z",
-      "updatedAt": "2026-08-17T17:33:19Z"
+      "updatedAt": "2026-08-21T22:44:28Z"
     },
     {
       "name": "vanilla-test",
@@ -481,7 +502,7 @@
       "homepage": null,
       "language": "JavaScript",
       "stars": 141,
-      "forks": 34,
+      "forks": 33,
       "openIssues": 3,
       "watchers": 141,
       "archived": false,
@@ -831,27 +852,6 @@
       "license": "NOASSERTION",
       "createdAt": "2016-02-08T08:21:33Z",
       "updatedAt": "2023-08-08T18:05:39Z"
-    },
-    {
-      "name": "event-pubsub",
-      "fullName": "RIAEvangelist/event-pubsub",
-      "owner": "RIAEvangelist",
-      "description": "Event Pubsub for Javascript will work in node js or browser",
-      "explanation": "Event Pubsub for Javascript will work in node js or browser",
-      "url": "https://github.com/RIAEvangelist/event-pubsub",
-      "homepage": null,
-      "language": "JavaScript",
-      "stars": 21,
-      "forks": 17,
-      "openIssues": 5,
-      "watchers": 21,
-      "archived": false,
-      "disabled": false,
-      "fork": false,
-      "topics": [],
-      "license": "MIT",
-      "createdAt": "2014-02-18T21:48:27Z",
-      "updatedAt": "2023-07-19T17:44:48Z"
     },
     {
       "name": "serialport-js",
@@ -2631,7 +2631,7 @@
       "topics": [],
       "license": null,
       "createdAt": "2026-07-13T18:33:00Z",
-      "updatedAt": "2026-08-20T07:25:04Z"
+      "updatedAt": "2026-08-21T18:47:08Z"
     },
     {
       "name": "DBOPFS",
