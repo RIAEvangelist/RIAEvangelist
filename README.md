@@ -48,6 +48,26 @@
 
 The dashboard totals every public package currently maintained by the owned [`riaevangelist`](https://www.npmjs.com/~riaevangelist) and [`thewizardnexus`](https://www.npmjs.com/~thewizardnexus) identities, shows weekly, monthly, yearly, calendar-year, and recorded-lifetime downloads per module, and explains the public repositories across both GitHub accounts. Counts use the official NPM API and refresh automatically each day. They represent package downloads—not unique people or verified installations.
 
+<!-- profile-package-showcase:start -->
+## Featured packages
+
+<p align="center">
+  <a href="https://github.com/RIAEvangelist/event-pubsub">
+    <img src="assets/packages/event-pubsub.png" width="100%" alt="event-pubsub — fast synchronous events for Node.js and browsers">
+  </a>
+</p>
+
+### [`event-pubsub`](https://github.com/RIAEvangelist/event-pubsub) · [GitHub release `6.0.0`](https://github.com/RIAEvangelist/event-pubsub/releases/tag/6.0.0)
+
+GitHub release `6.0.0` delivers small, synchronous, extensible publish/subscribe events for modern Node.js and browsers—with wildcard subscriptions, one-shot handlers, fluent methods, and zero runtime dependencies. The live NPM badge and unversioned install command below reflect NPM's independently published latest version.
+
+[![NPM version](https://img.shields.io/npm/v/event-pubsub.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/event-pubsub) [![Weekly downloads](https://img.shields.io/npm/dw/event-pubsub.svg?style=for-the-badge&logo=npm&label=Weekly%20downloads)](https://www.npmjs.com/package/event-pubsub) [![CI](https://img.shields.io/github/actions/workflow/status/RIAEvangelist/event-pubsub/ci.yml?branch=main&style=for-the-badge&label=CI)](https://github.com/RIAEvangelist/event-pubsub/actions/workflows/ci.yml) [![Coverage](https://img.shields.io/endpoint?url=https://riaevangelist.github.io/event-pubsub/badges/lines.json&style=for-the-badge)](https://riaevangelist.github.io/event-pubsub/coverage.html)
+
+`npm install event-pubsub`
+
+[Documentation →](https://riaevangelist.github.io/event-pubsub/) · [NPM package →](https://www.npmjs.com/package/event-pubsub) · [6.0.0 release notes →](https://github.com/RIAEvangelist/event-pubsub/releases/tag/6.0.0)
+<!-- profile-package-showcase:end -->
+
 ## Earned milestones
 
 [![Quickdraw](https://img.shields.io/badge/Quickdraw-Earned-F5C542?style=for-the-badge&logo=github&logoColor=white)](https://github.com/RIAEvangelist?achievement=quickdraw&tab=achievements) [![Arctic Code Vault Contributor](https://img.shields.io/badge/Arctic%20Code%20Vault-Contributor-00B4D8?style=for-the-badge&logo=github&logoColor=white)](https://github.com/RIAEvangelist?achievement=arctic-code-vault-contributor&tab=achievements) [![Starstruck x3](https://img.shields.io/badge/Starstruck-x3-FF69B4?style=for-the-badge&logo=github&logoColor=white)](https://github.com/RIAEvangelist?achievement=starstruck&tab=achievements) [![Pull Shark x2](https://img.shields.io/badge/Pull%20Shark-x2-7C3AED?style=for-the-badge&logo=github&logoColor=white)](https://github.com/RIAEvangelist?achievement=pull-shark&tab=achievements)

@@ -217,6 +217,33 @@ test("profile README and site expose the telemetry experience", async () => {
   assert.match(svg, /js-message/);
 });
 
+test("profile showcases event-pubsub 6.0.0 with a local package banner", async () => {
+  const [readme, banner] = await Promise.all([
+    read("README.md"),
+    readFile(path.join(ROOT, "assets/packages/event-pubsub.png")),
+  ]);
+  const startMarker = "<!-- profile-package-showcase:start -->";
+  const endMarker = "<!-- profile-package-showcase:end -->";
+  const start = readme.indexOf(startMarker);
+  const end = readme.indexOf(endMarker);
+
+  assert.ok(start >= 0, "Missing profile package showcase start marker");
+  assert.ok(end > start, "Missing profile package showcase end marker");
+  const packageBlock = readme.slice(start, end + endMarker.length);
+
+  assert.match(packageBlock, /src="assets\/packages\/event-pubsub\.png"/);
+  assert.match(packageBlock, /https:\/\/github\.com\/RIAEvangelist\/event-pubsub/);
+  assert.match(packageBlock, /https:\/\/www\.npmjs\.com\/package\/event-pubsub/);
+  assert.match(packageBlock, /https:\/\/riaevangelist\.github\.io\/event-pubsub\//);
+  assert.match(packageBlock, /https:\/\/github\.com\/RIAEvangelist\/event-pubsub\/releases\/tag\/6\.0\.0/);
+  assert.match(packageBlock, /GitHub release `6\.0\.0`/);
+  assert.match(packageBlock, /NPM's independently published latest version/);
+  assert.match(packageBlock, /npm install event-pubsub/);
+  assert.equal(banner.subarray(1, 4).toString("ascii"), "PNG");
+  assert.equal(banner.readUInt32BE(16), 2172);
+  assert.equal(banner.readUInt32BE(20), 724);
+});
+
 test("music catalog is complete, unique, secure, and coherently collected", async () => {
   const catalog = JSON.parse(await read("data/music.json"));
   const ids = catalog.releases.map((release) => release.id);
