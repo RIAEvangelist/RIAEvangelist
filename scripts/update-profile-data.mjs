@@ -109,6 +109,18 @@ function displayedPackages(packages) {
   return packages.filter((pkg) => !HIDDEN_PACKAGE_NAMES.has(pkg.name));
 }
 
+function createHomepageLeaderboard(snapshot) {
+  const top = [...displayedPackages(snapshot.packages)]
+    .sort((a, b) => b.downloads.year - a.downloads.year || a.name.localeCompare(b.name))
+    .slice(0, 5);
+  const max = Math.max(top[0]?.downloads.year || 1, 1);
+
+  return top.map((pkg, index) => {
+    const width = Math.max((pkg.downloads.year / max) * 100, 1.5);
+    return `          <a href="${escapeXml(pkg.links.npm)}" style="--bar: ${width.toFixed(2)}%"><b>${String(index + 1).padStart(2, "0")}</b><span><strong>${escapeXml(pkg.name)}</strong><small>${fullNumber(pkg.downloads.year)} yearly</small></span><i aria-hidden="true"></i></a>`;
+  }).join("\n");
+}
+
 function createReadmeFeaturedPackages(snapshot) {
   const packageByName = new Map(displayedPackages(snapshot.packages).map((pkg) => [pkg.name, pkg]));
   const cells = PROFILE_DISPLAY.featuredPackages.map((feature) => {
@@ -357,7 +369,11 @@ const repoSnapshot = {
 };
 
 const readmePath = path.join(ROOT, "README.md");
-const readme = await readFile(readmePath, "utf8");
+const indexPath = path.join(ROOT, "index.html");
+const [readme, index] = await Promise.all([
+  readFile(readmePath, "utf8"),
+  readFile(indexPath, "utf8"),
+]);
 const readmeStart = "<!-- profile-telemetry-counts:start -->";
 const readmeEnd = "<!-- profile-telemetry-counts:end -->";
 const readmePattern = new RegExp(`${readmeStart}[\\s\\S]*?${readmeEnd}`);
@@ -376,12 +392,28 @@ if (!showcasePattern.test(readme)) throw new Error("README package showcase mark
 const updatedReadme = readme
   .replace(readmePattern, readmeSummary)
   .replace(showcasePattern, createReadmeFeaturedPackages(npmSnapshot));
+const indexWithMetrics = Object.entries({
+  "total-week": npmSnapshot.totals.week,
+  "total-month": npmSnapshot.totals.month,
+  "total-year": npmSnapshot.totals.year,
+}).reduce((html, [id, total]) => {
+  const pattern = new RegExp(`<strong id="${id}" data-count="\\d+">[\\d,]+</strong>`);
+  if (!pattern.test(html)) throw new Error(`Homepage ${id} fallback is missing.`);
+  return html.replace(pattern, `<strong id="${id}" data-count="${total}">${fullNumber(total)}</strong>`);
+}, index);
+const leaderboardPattern = /(<div class="leaderboard" id="leaderboard"[^>]*>\r?\n)[\s\S]*?(\r?\n        <\/div>)/;
+if (!leaderboardPattern.test(indexWithMetrics)) throw new Error("Homepage leaderboard fallback is missing.");
+const updatedIndex = indexWithMetrics.replace(
+  leaderboardPattern,
+  (_, opening, closing) => `${opening}${createHomepageLeaderboard(npmSnapshot)}${closing}`,
+);
 
 await Promise.all([
   writeFile(snapshotPath, `${JSON.stringify(npmSnapshot, null, 2)}\n`, "utf8"),
   writeFile(path.join(DATA_DIR, "repos.json"), `${JSON.stringify(repoSnapshot, null, 2)}\n`, "utf8"),
   writeFile(path.join(ASSET_DIR, "npm-downloads.svg"), `${createTelemetrySvg(npmSnapshot)}\n`, "utf8"),
   writeFile(readmePath, updatedReadme, "utf8"),
+  writeFile(indexPath, updatedIndex, "utf8"),
 ]);
 
 console.log(`Updated ${npmSnapshot.packageCount} NPM packages and ${repoSnapshot.counts.total} GitHub repositories.`);

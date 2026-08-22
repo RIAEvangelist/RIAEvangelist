@@ -116,12 +116,13 @@ test("profile display policy is explicit, unique, and image-backed", () => {
 });
 
 test("NPM totals are exact sums of a unique maintained package inventory", async () => {
-  const [snapshotText, html, svg, script, updater] = await Promise.all([
+  const [snapshotText, html, svg, script, updater, workflow] = await Promise.all([
     read("data/npm-stats.json"),
     read("index.html"),
     read("assets/npm-downloads.svg"),
     read("app.js"),
     read("scripts/update-profile-data.mjs"),
+    read(".github/workflows/profile-site.yml"),
   ]);
   const snapshot = JSON.parse(snapshotText);
   const names = snapshot.packages.map((pkg) => pkg.name);
@@ -142,8 +143,24 @@ test("NPM totals are exact sums of a unique maintained package inventory", async
     assert.ok(html.includes(`id="${elementId}" data-count="${total}">${numberFormatter.format(total)}</strong>`));
     assert.ok(svg.includes(`${numberFormatter.format(total)} downloads`));
   }
+  const topYearly = snapshot.packages
+    .filter((pkg) => !HIDDEN_PACKAGE_NAMES.has(pkg.name))
+    .sort((a, b) => b.downloads.year - a.downloads.year || a.name.localeCompare(b.name))
+    .slice(0, 5);
+  const leaderboard = html.match(/<div class="leaderboard" id="leaderboard"[^>]*>([\s\S]*?)<\/div>/)?.[1];
+  assert.ok(leaderboard, "Homepage leaderboard fallback is missing");
+  const leaderboardRows = [...leaderboard.matchAll(/<a href="([^"]+)"[^>]*><b>(\d+)<\/b><span><strong>([^<]+)<\/strong><small>([\d,]+) yearly<\/small><\/span><i aria-hidden="true"><\/i><\/a>/g)]
+    .map((match) => ({ url: match[1], rank: match[2], name: match[3], downloads: match[4] }));
+  assert.deepEqual(leaderboardRows, topYearly.map((pkg, index) => ({
+    url: pkg.links.npm,
+    rank: String(index + 1).padStart(2, "0"),
+    name: pkg.name,
+    downloads: numberFormatter.format(pkg.downloads.year),
+  })));
   assert.match(script, /const totals = npm\.totals/);
   assert.match(updater, /const totals = snapshot\.totals/);
+  assert.match(updater, /writeFile\(indexPath, updatedIndex/);
+  assert.match(workflow, /git add -- README\.md index\.html/);
 });
 
 test("repository atlas accounts for every record and explains each one", async () => {
@@ -314,13 +331,15 @@ test("profile README shows only image-backed featured packages in two columns be
   assert.ok(!/<sub>[^<]*\n[^<]*<\/sub>/.test(packageBlock), "Package metadata must remain on one line inside the HTML table");
 });
 
-test("profile showcases event-pubsub 6.0.0 with a local package banner", async () => {
+test("profile distinguishes event-pubsub NPM latest from its GitHub source release", async () => {
   const [readme, banner, snapshotText] = await Promise.all([
     read("README.md"),
     readFile(path.join(ROOT, "assets/packages/event-pubsub.png")),
     read("data/npm-stats.json"),
   ]);
   const eventPubsub = JSON.parse(snapshotText).packages.find((pkg) => pkg.name === "event-pubsub");
+  const [major, minor, patch] = eventPubsub.version.split(".").map(Number);
+  assert.ok((major * 1_000_000) + (minor * 1_000) + patch >= 6_001_000, "NPM latest must be event-pubsub 6.1.0 or newer");
   const startMarker = "<!-- profile-package-showcase:start -->";
   const endMarker = "<!-- profile-package-showcase:end -->";
   const start = readme.indexOf(startMarker);
