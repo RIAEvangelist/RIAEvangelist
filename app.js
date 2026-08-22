@@ -127,21 +127,6 @@ function displayedPackages(packages = []) {
   return packages.filter((pkg) => !hiddenPackageNames.has(pkg.name));
 }
 
-function downloadTotals(packages) {
-  return ["week", "month", "year"].reduce((totals, period) => {
-    totals[period] = packages.reduce((sum, pkg) => sum + pkg.downloads[period], 0);
-    return totals;
-  }, {});
-}
-
-function sumPairSeries(packages, property) {
-  const totals = new Map();
-  for (const pkg of packages) {
-    for (const [period, value] of pkg[property]) totals.set(period, (totals.get(period) || 0) + value);
-  }
-  return [...totals.entries()].sort(([left], [right]) => left.localeCompare(right));
-}
-
 function animateNumber(element, target) {
   element.dataset.count = String(target);
   if (reduceMotion || state.animated) {
@@ -163,7 +148,7 @@ function animateNumber(element, target) {
 function renderOverview() {
   const { npm, repos } = state;
   const packages = displayedPackages(npm.packages);
-  const totals = downloadTotals(packages);
+  const totals = npm.totals;
   elements.moduleCount.textContent = numberFormatter.format(packages.length);
   elements.repoCount.textContent = numberFormatter.format(repos.counts.total);
   elements.signalTotal.textContent = compactFormatter.format(totals.year);
@@ -394,14 +379,14 @@ function peakPoint(points) {
 function renderLifetimeHistory() {
   const pkg = historyPackage();
   const packages = displayedPackages(state.history.packages);
-  const pairs = pkg ? pkg.monthly : sumPairSeries(packages, "monthly");
+  const pairs = pkg ? pkg.monthly : state.history.monthly;
   const points = pairs.map(([period, value]) => ({
     period,
     value,
     axisLabel: formatMonth(period),
     tooltipLabel: formatMonth(period),
   }));
-  const total = pkg ? pkg.total : packages.reduce((sum, candidate) => sum + candidate.total, 0);
+  const total = pkg ? pkg.total : state.history.lifetimeTotal;
   const averagePoints = points.filter((point) => point.period >= averageStartMonth);
   const averageTotal = averagePoints.reduce((sum, point) => sum + point.value, 0);
   const availableYears = new Set(state.history.years.filter((year) => year.availableFrom).map((year) => String(year.year)));
@@ -409,7 +394,7 @@ function renderLifetimeHistory() {
     ? pkg.annual.filter(([year]) => availableYears.has(year)).map(([year, value]) => ({ label: year, value }))
     : state.history.years.filter((year) => year.availableFrom).map((year) => ({
       label: year.partial ? `${year.year} YTD` : String(year.year),
-      value: packages.reduce((sum, candidate) => sum + (candidate.annual.find(([candidateYear]) => candidateYear === String(year.year))?.[1] || 0), 0),
+      value: year.total,
     }));
   const peak = peakPoint(points);
   const label = historySeriesLabel();
@@ -421,12 +406,14 @@ function renderLifetimeHistory() {
   elements.historyAverageLabel.textContent = "Average since 2021";
   elements.historyAverage.textContent = `${numberFormatter.format(Math.round(averageTotal / Math.max(averagePoints.length, 1)))} / month`;
   elements.historyPeak.textContent = peak ? `${formatMonth(peak.period)} · ${compactFormatter.format(peak.value)}` : "No recorded downloads";
-  elements.historyCoverage.textContent = `${numberFormatter.format(points.length)} months · ${packages.length} modules`;
+  elements.historyCoverage.textContent = pkg
+    ? `${numberFormatter.format(points.length)} months`
+    : `${numberFormatter.format(points.length)} months · ${numberFormatter.format(state.history.packageCount)} contributing modules`;
   elements.historyChartCanvas.hidden = false;
   elements.historyChartEmpty.hidden = true;
   setHistoryChart(points, `${label}, recorded NPM lifetime`, "monthly");
   renderHistoryTable(annual, total, `${label} by calendar year`);
-  elements.historyStatus.textContent = `Official NPM archive reconciled against the NPM API · ${numberFormatter.format(packages.length)} displayed modules · archive refreshed ${formatTimestamp(state.history.generatedAt)}`;
+  elements.historyStatus.textContent = `Official NPM archive reconciled against the NPM API · ${numberFormatter.format(state.history.packageCount)} packages contribute to All modules totals · ${numberFormatter.format(packages.length)} individually displayed · archive refreshed ${formatTimestamp(state.history.generatedAt)}`;
 }
 
 function monthlyRows(points) {
@@ -473,14 +460,14 @@ function renderYearHistory(year) {
   }
   const downloads = pkg
     ? pkg.downloads
-    : year.dates.map((_, index) => displayedYearPackages.reduce((sum, candidate) => sum + candidate.downloads[index], 0));
+    : year.overall;
   const points = year.dates.map((period, index) => ({
     period,
     value: downloads[index],
     axisLabel: new Intl.DateTimeFormat("en-US", { month: "short", timeZone: "UTC" }).format(new Date(`${period}T00:00:00Z`)),
     tooltipLabel: formatDate(period),
   }));
-  const total = downloads.reduce((sum, value) => sum + value, 0);
+  const total = pkg ? downloads.reduce((sum, value) => sum + value, 0) : year.total;
   const peak = peakPoint(points);
 
   elements.historyChartKicker.textContent = yearLabel;
@@ -505,13 +492,13 @@ function renderYearHistory(year) {
   elements.historyAverage.textContent = `${numberFormatter.format(Math.round(total / points.length))} / day`;
   elements.historyPeak.textContent = peak?.value ? `${formatDate(peak.period)} · ${compactFormatter.format(peak.value)}` : "No recorded downloads";
   elements.historyCoverage.textContent = state.historyModule === "all"
-    ? `${numberFormatter.format(points.length)} days · ${displayedYearPackages.filter((candidate) => candidate.total > 0).length} active modules`
+    ? `${numberFormatter.format(points.length)} days · ${numberFormatter.format(year.activePackageCount)} contributing modules`
     : `${numberFormatter.format(points.length)} officially reconciled days`;
   elements.historyChartCanvas.hidden = false;
   elements.historyChartEmpty.hidden = true;
   setHistoryChart(points, `${label}, ${yearLabel}`, "daily");
   renderHistoryTable(monthlyRows(points), total, `${label} by month in ${year.year}`);
-  elements.historyStatus.textContent = `Official NPM archive reconciled against the NPM API · ${numberFormatter.format(displayedYearPackages.length)} displayed modules · refreshed ${formatTimestamp(year.generatedAt)}`;
+  elements.historyStatus.textContent = `Official NPM archive reconciled against the NPM API · ${numberFormatter.format(year.packages.length)} packages contribute to All modules totals · ${numberFormatter.format(displayedYearPackages.length)} individually displayed · refreshed ${formatTimestamp(year.generatedAt)}`;
 }
 
 async function renderSelectedHistory() {

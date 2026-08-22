@@ -109,10 +109,6 @@ function displayedPackages(packages) {
   return packages.filter((pkg) => !HIDDEN_PACKAGE_NAMES.has(pkg.name));
 }
 
-function downloadTotals(packages) {
-  return Object.fromEntries(PERIODS.map(({ key }) => [key, packages.reduce((sum, pkg) => sum + pkg.downloads[key], 0)]));
-}
-
 function createReadmeFeaturedPackages(snapshot) {
   const packageByName = new Map(displayedPackages(snapshot.packages).map((pkg) => [pkg.name, pkg]));
   const cells = PROFILE_DISPLAY.featuredPackages.map((feature) => {
@@ -161,7 +157,7 @@ function createTelemetrySvg(snapshot) {
   const width = 980;
   const height = 650;
   const packages = displayedPackages(snapshot.packages);
-  const totals = downloadTotals(packages);
+  const totals = snapshot.totals;
   const top = [...packages].sort((a, b) => b.downloads.year - a.downloads.year).slice(0, 5);
   const refreshed = new Date(snapshot.generatedAt).toLocaleDateString("en-US", {
     year: "numeric",
@@ -182,7 +178,7 @@ function createTelemetrySvg(snapshot) {
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="title description">
   <title id="title">RIAEvangelist NPM download telemetry</title>
-  <desc id="description">${fullNumber(totals.week)} weekly, ${fullNumber(totals.month)} monthly, and ${fullNumber(totals.year)} yearly downloads across ${packages.length} displayed modules, followed by the top five modules.</desc>
+  <desc id="description">${fullNumber(totals.week)} weekly, ${fullNumber(totals.month)} monthly, and ${fullNumber(totals.year)} yearly downloads across all ${snapshot.packageCount} maintained modules, followed by the top five displayed modules.</desc>
   <defs>
     <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
       <stop stop-color="#151226"/>
@@ -237,7 +233,7 @@ function createTelemetrySvg(snapshot) {
   <path d="M48 352H932" stroke="#2e2947"/>
   ${rows}
   <path d="M48 615H932" stroke="#2e2947"/>
-  <text x="48" y="637" class="foot">${packages.length} displayed packages across ${escapeXml(snapshot.maintainers.join(" + "))} · rolling NPM API windows · refreshed ${escapeXml(refreshed)} UTC</text>
+  <text x="48" y="637" class="foot">${snapshot.packageCount} packages in totals · ${packages.length} individually displayed · ${escapeXml(snapshot.maintainers.join(" + "))} · refreshed ${escapeXml(refreshed)} UTC</text>
 </svg>`;
 }
 

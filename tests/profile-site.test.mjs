@@ -10,6 +10,7 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const read = (relativePath) => readFile(path.join(ROOT, relativePath), "utf8");
 const SITE_BASE = "https://riaevangelist.github.io/RIAEvangelist";
 const MUSIC_PAGE_SIZE = 8;
+const numberFormatter = new Intl.NumberFormat("en-US");
 const PROFILE_DISPLAY = globalThis.RIA_PROFILE_DISPLAY;
 const HIDDEN_PACKAGE_NAMES = new Set(PROFILE_DISPLAY.hiddenPackages);
 const CATALOG_MUSIC_IDS = [
@@ -88,25 +89,41 @@ function assertNoRootRelativeUrls(html, label) {
   assert.doesNotMatch(html, /\b(?:href|src)=["']\/(?!\/)/, `${label} contains a root-relative URL`);
 }
 
-function sumPairSeriesForTest(packages, property) {
-  return packages.reduce((total, pkg) => total + pkg[property].reduce((sum, [, value]) => sum + value, 0), 0);
-}
-
 test("profile display policy is explicit, unique, and image-backed", () => {
   assert.deepEqual([...PROFILE_DISPLAY.hiddenPackages].sort(), ["heart-attack", "oneday-test", "peacenotwar"]);
   const featuredNames = PROFILE_DISPLAY.featuredPackages.map((feature) => feature.name);
   assert.equal(new Set(featuredNames).size, featuredNames.length);
-  assert.deepEqual(featuredNames, ["event-pubsub", "node-cmd", "node-http-server", "strong-type", "vanilla-test", "dbopfs"]);
+  assert.deepEqual(new Set(featuredNames), new Set([
+    "event-pubsub",
+    "node-ipc",
+    "node-cmd",
+    "node-http-server",
+    "strong-type",
+    "vanilla-test",
+    "js-message",
+    "js-queue",
+    "easy-stack",
+    "dbopfs",
+  ]));
+  assert.equal(featuredNames.length % 2, 0, "The two-column Featured packages grid requires complete rows");
   for (const feature of PROFILE_DISPLAY.featuredPackages) {
     assert.ok(!HIDDEN_PACKAGE_NAMES.has(feature.name));
     assertHttps(feature.repository, `${feature.name} repository`);
     if (feature.image.startsWith("http")) assertHttps(feature.image, `${feature.name} header`);
     else assert.equal(feature.image, "assets/packages/event-pubsub.png");
+    if (feature.documentation) assertHttps(feature.documentation, `${feature.name} documentation`);
   }
 });
 
 test("NPM totals are exact sums of a unique maintained package inventory", async () => {
-  const snapshot = JSON.parse(await read("data/npm-stats.json"));
+  const [snapshotText, html, svg, script, updater] = await Promise.all([
+    read("data/npm-stats.json"),
+    read("index.html"),
+    read("assets/npm-downloads.svg"),
+    read("app.js"),
+    read("scripts/update-profile-data.mjs"),
+  ]);
+  const snapshot = JSON.parse(snapshotText);
   const names = snapshot.packages.map((pkg) => pkg.name);
 
   assert.deepEqual(snapshot.maintainers, ["riaevangelist", "thewizardnexus"]);
@@ -117,12 +134,16 @@ test("NPM totals are exact sums of a unique maintained package inventory", async
   assert.ok(names.includes("dbopfs"));
   assert.ok(PROFILE_DISPLAY.hiddenPackages.every((name) => names.includes(name)), "Display policy must not erase authoritative telemetry");
 
-  for (const period of ["week", "month", "year"]) {
+  for (const [period, elementId] of [["week", "total-week"], ["month", "total-month"], ["year", "total-year"]]) {
     const total = snapshot.packages.reduce((sum, pkg) => sum + pkg.downloads[period], 0);
     assert.equal(snapshot.totals[period], total);
     assert.match(snapshot.periods[period].start, /^\d{4}-\d{2}-\d{2}$/);
     assert.match(snapshot.periods[period].end, /^\d{4}-\d{2}-\d{2}$/);
+    assert.ok(html.includes(`id="${elementId}" data-count="${total}">${numberFormatter.format(total)}</strong>`));
+    assert.ok(svg.includes(`${numberFormatter.format(total)} downloads`));
   }
+  assert.match(script, /const totals = npm\.totals/);
+  assert.match(updater, /const totals = snapshot\.totals/);
 });
 
 test("repository atlas accounts for every record and explains each one", async () => {
@@ -227,8 +248,9 @@ test("profile README and site expose the telemetry experience", async () => {
   assert.match(script, /averageStartMonth = "2021-01"/);
   assert.match(script, /Average since 2021/);
   assert.match(script, /displayedPackages\(state\.history\.packages\)/);
-  assert.match(script, /sumPairSeries\(packages, "monthly"\)/);
-  assert.match(script, /displayedYearPackages\.reduce/);
+  assert.match(script, /const pairs = pkg \? pkg\.monthly : state\.history\.monthly/);
+  assert.match(script, /const total = pkg \? pkg\.total : state\.history\.lifetimeTotal/);
+  assert.match(script, /: year\.overall/);
   assert.match(script, /historyTableFoot\.innerHTML/);
   assert.ok(script.indexOf("initializeHistory();") < script.indexOf("[state.npm, state.repos]"));
   assert.match(styles, /#history-chart\[hidden\]/);
@@ -241,7 +263,7 @@ test("profile README and site expose the telemetry experience", async () => {
   assert.match(svg, /MONTHLY/);
   assert.match(svg, /YEARLY/);
   assert.match(svg, /js-message/);
-  assert.match(svg, /40 displayed packages/);
+  assert.match(svg, /43 packages in totals · 40 individually displayed/);
   for (const name of PROFILE_DISPLAY.hiddenPackages) {
     assert.ok(!readme.includes(name), `${name} must not be displayed in the README`);
     assert.ok(!svg.includes(name), `${name} must not be displayed in the telemetry card`);
@@ -320,7 +342,7 @@ test("profile showcases event-pubsub 6.0.0 with a local package banner", async (
   assert.equal(banner.readUInt32BE(20), 724);
 });
 
-test("All modules charts sum only the public profile package set", async () => {
+test("All modules totals retain the full archive while individual displays stay curated", async () => {
   const [indexText, currentYearText, script, screenshot] = await Promise.all([
     read("data/npm-history/index.json"),
     read(`data/npm-history/${new Date().getUTCFullYear()}.json`),
@@ -332,18 +354,15 @@ test("All modules charts sum only the public profile package set", async () => {
   const packages = index.packages.filter((pkg) => !HIDDEN_PACKAGE_NAMES.has(pkg.name));
   const visibleTotal = packages.reduce((sum, pkg) => sum + pkg.total, 0);
   const hiddenTotal = index.packages.filter((pkg) => HIDDEN_PACKAGE_NAMES.has(pkg.name)).reduce((sum, pkg) => sum + pkg.total, 0);
-  const visibleNames = new Set(packages.map((pkg) => pkg.name));
-  const visibleYearPackages = currentYear.packages.filter((pkg) => visibleNames.has(pkg.name));
 
   assert.equal(packages.length, index.packageCount - PROFILE_DISPLAY.hiddenPackages.length);
   assert.equal(visibleTotal + hiddenTotal, index.lifetimeTotal);
-  assert.equal(sumPairSeriesForTest(packages, "monthly"), visibleTotal);
-  assert.equal(visibleYearPackages.reduce((sum, pkg) => sum + pkg.total, 0), packages.reduce((sum, pkg) => {
-    return sum + (pkg.annual.find(([year]) => year === String(currentYear.year))?.[1] || 0);
-  }, 0));
-  assert.match(script, /const pairs = pkg \? pkg\.monthly : sumPairSeries\(packages, "monthly"\)/);
-  assert.match(script, /const total = pkg \? pkg\.total : packages\.reduce/);
-  assert.match(script, /displayedYearPackages\.reduce/);
+  assert.equal(index.monthly.reduce((sum, [, value]) => sum + value, 0), index.lifetimeTotal);
+  assert.equal(currentYear.overall.reduce((sum, value) => sum + value, 0), currentYear.total);
+  assert.match(script, /const pairs = pkg \? pkg\.monthly : state\.history\.monthly/);
+  assert.match(script, /const total = pkg \? pkg\.total : state\.history\.lifetimeTotal/);
+  assert.match(script, /: year\.overall/);
+  assert.match(script, /year\.activePackageCount/);
   assert.equal(screenshot.subarray(1, 4).toString("ascii"), "PNG");
   assert.ok(screenshot.readUInt32BE(16) >= 1200);
   assert.ok(screenshot.readUInt32BE(20) >= 800);

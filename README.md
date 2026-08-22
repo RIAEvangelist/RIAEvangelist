@@ -46,7 +46,7 @@
 
 <p align="center"><sub>Historical snapshot through August 21, 2026 — open the live dashboard for current totals.</sub></p>
 
-The source archive tracks every public package maintained by the owned [`riaevangelist`](https://www.npmjs.com/~riaevangelist) and [`thewizardnexus`](https://www.npmjs.com/~thewizardnexus) identities. The dashboard displays a curated 40-module profile; its headline totals and all-module charts sum that visible set, while per-module views and the repository atlas explain the work across both accounts. Counts use the official NPM API and refresh automatically each day. They represent package downloads—not unique people or verified installations.
+The source archive, headline totals, and All modules charts include every public package maintained by the owned [`riaevangelist`](https://www.npmjs.com/~riaevangelist) and [`thewizardnexus`](https://www.npmjs.com/~thewizardnexus) identities. The individual catalog displays a curated 40-module profile, while per-module views and the repository atlas explain the visible work across both accounts. Counts use the official NPM API and refresh automatically each day. They represent package downloads—not unique people or verified installations.
 
 ## Earned milestones
 
@@ -116,14 +116,21 @@ The public package repositories with purpose-built header artwork, maintained th
       <sub><a href="https://github.com/RIAEvangelist/event-pubsub">Source ↗</a> · <a href="https://www.npmjs.com/package/event-pubsub">NPM ↗</a> · <a href="https://riaevangelist.github.io/event-pubsub/">Documentation ↗</a></sub>
     </td>
     <td width="50%" valign="top">
+      <a href="https://github.com/RIAEvangelist/node-ipc"><img src="https://raw.githubusercontent.com/RIAEvangelist/node-ipc/main/assets/node-ipc-header.png" width="100%" alt="node-ipc — local and remote inter-process communication for Node.js"></a><br>
+      <a href="https://github.com/RIAEvangelist/node-ipc"><strong>node-ipc</strong></a><br>
+      <sub>NPM <code>v12.0.0</code></sub><br>
+      <sub>A nodejs module for local and remote Inter Process Communication (IPC), Neural Networking, and able to facilitate machine learning.</sub><br>
+      <sub><a href="https://github.com/RIAEvangelist/node-ipc">Source ↗</a> · <a href="https://www.npmjs.com/package/node-ipc">NPM ↗</a> · <a href="https://riaevangelist.github.io/node-ipc/">Documentation ↗</a></sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
       <a href="https://github.com/RIAEvangelist/node-cmd"><img src="https://raw.githubusercontent.com/RIAEvangelist/node-cmd/main/assets/node-cmd-header.png" width="100%" alt="node-cmd — command-line and process control for JavaScript"></a><br>
       <a href="https://github.com/RIAEvangelist/node-cmd"><strong>node-cmd</strong></a><br>
       <sub>NPM <code>v6.0.0</code></sub><br>
       <sub>Command-line power for JavaScript: run shell commands, launch executables, and control child processes with zero runtime dependencies.</sub><br>
       <sub><a href="https://github.com/RIAEvangelist/node-cmd">Source ↗</a> · <a href="https://www.npmjs.com/package/node-cmd">NPM ↗</a> · <a href="https://riaevangelist.github.io/node-cmd/">Site ↗</a></sub>
     </td>
-  </tr>
-  <tr>
     <td width="50%" valign="top">
       <a href="https://github.com/RIAEvangelist/node-http-server"><img src="https://raw.githubusercontent.com/RIAEvangelist/node-http-server/main/assets/node-http-server-header.webp" width="100%" alt="node-http-server — small server, modern HTTP"></a><br>
       <a href="https://github.com/RIAEvangelist/node-http-server"><strong>node-http-server</strong></a><br>
@@ -131,6 +138,8 @@ The public package repositories with purpose-built header artwork, maintained th
       <sub>A lightweight, secure, zero-runtime-dependency HTTP and HTTPS static server for Node.js.</sub><br>
       <sub><a href="https://github.com/RIAEvangelist/node-http-server">Source ↗</a> · <a href="https://www.npmjs.com/package/node-http-server">NPM ↗</a> · <a href="https://riaevangelist.github.io/node-http-server/">Site ↗</a></sub>
     </td>
+  </tr>
+  <tr>
     <td width="50%" valign="top">
       <a href="https://github.com/RIAEvangelist/strong-type"><img src="https://raw.githubusercontent.com/RIAEvangelist/strong-type/main/assets/strong-type-header.png" width="100%" alt="strong-type — native JavaScript type enforcement"></a><br>
       <a href="https://github.com/RIAEvangelist/strong-type"><strong>strong-type</strong></a><br>
@@ -138,14 +147,37 @@ The public package repositories with purpose-built header artwork, maintained th
       <sub>Dependency-free native ESM type enforcement for JavaScript values, objects, classes, browsers, and Node.</sub><br>
       <sub><a href="https://github.com/RIAEvangelist/strong-type">Source ↗</a> · <a href="https://www.npmjs.com/package/strong-type">NPM ↗</a> · <a href="https://riaevangelist.github.io/strong-type/">Site ↗</a></sub>
     </td>
-  </tr>
-  <tr>
     <td width="50%" valign="top">
       <a href="https://github.com/RIAEvangelist/vanilla-test"><img src="https://raw.githubusercontent.com/RIAEvangelist/vanilla-test/main/assets/vanilla-test-header.png" width="100%" alt="vanilla-test — native JavaScript testing for Node.js and browsers"></a><br>
       <a href="https://github.com/RIAEvangelist/vanilla-test"><strong>vanilla-test</strong></a><br>
       <sub>NPM <code>v2.1.1</code></sub><br>
       <sub>Zero-build, Web-standard JavaScript testing for Node and browsers</sub><br>
       <sub><a href="https://github.com/RIAEvangelist/vanilla-test">Source ↗</a> · <a href="https://www.npmjs.com/package/vanilla-test">NPM ↗</a> · <a href="https://riaevangelist.github.io/vanilla-test/">Site ↗</a></sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://github.com/RIAEvangelist/js-message"><img src="https://raw.githubusercontent.com/RIAEvangelist/js-message/main/assets/js-message-header.png" width="100%" alt="js-message — normalized messages across browser and server runtimes"></a><br>
+      <a href="https://github.com/RIAEvangelist/js-message"><strong>js-message</strong></a><br>
+      <sub>NPM <code>v3.0.0</code></sub><br>
+      <sub>A tiny, normalized JavaScript and JSON message envelope for every runtime boundary</sub><br>
+      <sub><a href="https://github.com/RIAEvangelist/js-message">Source ↗</a> · <a href="https://www.npmjs.com/package/js-message">NPM ↗</a> · <a href="https://riaevangelist.github.io/js-message/">Site ↗</a></sub>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://github.com/RIAEvangelist/js-queue"><img src="https://raw.githubusercontent.com/RIAEvangelist/js-queue/main/assets/js-queue-header.png" width="100%" alt="js-queue — explicit FIFO flow control for JavaScript"></a><br>
+      <a href="https://github.com/RIAEvangelist/js-queue"><strong>js-queue</strong></a><br>
+      <sub>NPM <code>v3.0.0</code></sub><br>
+      <sub>A tiny FIFO task queue with explicit flow control for Node and browsers</sub><br>
+      <sub><a href="https://github.com/RIAEvangelist/js-queue">Source ↗</a> · <a href="https://www.npmjs.com/package/js-queue">NPM ↗</a> · <a href="https://riaevangelist.github.io/js-queue/">Site ↗</a></sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://github.com/RIAEvangelist/easy-stack"><img src="https://raw.githubusercontent.com/RIAEvangelist/easy-stack/main/assets/easy-stack-header.png" width="100%" alt="easy-stack — explicit LIFO flow control for JavaScript"></a><br>
+      <a href="https://github.com/RIAEvangelist/easy-stack"><strong>easy-stack</strong></a><br>
+      <sub>NPM <code>v2.0.0</code></sub><br>
+      <sub>Zero-dependency cooperative LIFO execution for Node.js and browsers</sub><br>
+      <sub><a href="https://github.com/RIAEvangelist/easy-stack">Source ↗</a> · <a href="https://www.npmjs.com/package/easy-stack">NPM ↗</a> · <a href="https://riaevangelist.github.io/easy-stack/">Site ↗</a></sub>
     </td>
     <td width="50%" valign="top">
       <a href="https://github.com/TheWizardNexus/DBOPFS"><img src="https://raw.githubusercontent.com/TheWizardNexus/DBOPFS/main/docs/assets/og.png" width="100%" alt="DBOPFS — a browser-native database written in files"></a><br>
