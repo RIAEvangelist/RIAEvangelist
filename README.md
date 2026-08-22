@@ -134,7 +134,7 @@ The public package repositories with purpose-built header artwork, maintained th
     <td width="50%" valign="top">
       <a href="https://github.com/RIAEvangelist/node-http-server"><img src="https://raw.githubusercontent.com/RIAEvangelist/node-http-server/main/assets/node-http-server-header.webp" width="100%" alt="node-http-server — small server, modern HTTP"></a><br>
       <a href="https://github.com/RIAEvangelist/node-http-server"><strong>node-http-server</strong></a><br>
-      <sub>NPM <code>v9.0.2</code></sub><br>
+      <sub>NPM <code>v9.1.0</code></sub><br>
       <sub>A lightweight, secure, zero-runtime-dependency HTTP and HTTPS static server for Node.js.</sub><br>
       <sub><a href="https://github.com/RIAEvangelist/node-http-server">Source ↗</a> · <a href="https://www.npmjs.com/package/node-http-server">NPM ↗</a> · <a href="https://riaevangelist.github.io/node-http-server/">Site ↗</a></sub>
     </td>
