@@ -1,6 +1,7 @@
 import { mkdir, readFile, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import "../profile-display.js";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DATA_DIR = path.join(ROOT, "data");
@@ -8,6 +9,9 @@ const ASSET_DIR = path.join(ROOT, "assets");
 const GITHUB_OWNERS = ["RIAEvangelist", "TheWizardNexus"];
 const NPM_MAINTAINERS = ["riaevangelist", "thewizardnexus"];
 const USER_AGENT = "RIAEvangelist-profile-telemetry/1.0";
+const PROFILE_DISPLAY = globalThis.RIA_PROFILE_DISPLAY;
+if (!PROFILE_DISPLAY) throw new Error("profile-display.js did not initialize RIA_PROFILE_DISPLAY.");
+const HIDDEN_PACKAGE_NAMES = new Set(PROFILE_DISPLAY.hiddenPackages);
 const PERIODS = [
   { key: "week", endpoint: "last-week", label: "Weekly" },
   { key: "month", endpoint: "last-month", label: "Monthly" },
@@ -101,18 +105,38 @@ function escapeXml(value) {
     .replaceAll("'", "&apos;");
 }
 
-function createReadmeModuleCatalog(snapshot) {
-  const packages = [...snapshot.packages].sort((left, right) => left.name.localeCompare(right.name));
-  const cells = packages.map((pkg) => {
-    const maintainers = pkg.trackedMaintainers.map((maintainer) => `@${maintainer}`).join(" + ");
-    const description = String(pkg.historicalCaution || pkg.description).replace(/\s+/g, " ").trim();
+function displayedPackages(packages) {
+  return packages.filter((pkg) => !HIDDEN_PACKAGE_NAMES.has(pkg.name));
+}
+
+function downloadTotals(packages) {
+  return Object.fromEntries(PERIODS.map(({ key }) => [key, packages.reduce((sum, pkg) => sum + pkg.downloads[key], 0)]));
+}
+
+function createReadmeFeaturedPackages(snapshot) {
+  const packageByName = new Map(displayedPackages(snapshot.packages).map((pkg) => [pkg.name, pkg]));
+  const cells = PROFILE_DISPLAY.featuredPackages.map((feature) => {
+    const pkg = packageByName.get(feature.name);
+    if (!pkg) throw new Error(`Featured package ${feature.name} is missing from the displayed NPM inventory.`);
+    if (pkg.links.repository !== feature.repository) {
+      throw new Error(`Featured package ${feature.name} repository does not match profile-display.js.`);
+    }
+    const description = String(pkg.description).replace(/\s+/g, " ").trim();
+    const site = feature.documentation || (pkg.links.homepage && pkg.links.homepage !== feature.repository ? pkg.links.homepage : "");
+    const siteLink = site
+      ? ` · <a href="${escapeXml(site)}">${feature.documentation ? "Documentation" : "Site"} ↗</a>`
+      : "";
+    const release = feature.sourceRelease
+      ? ` · <a href="${escapeXml(feature.sourceRelease.url)}">GitHub source release ${escapeXml(feature.sourceRelease.version)} ↗</a>`
+      : "";
     return `    <td width="50%" valign="top">
-      <a href="${escapeXml(pkg.links.npm)}"><strong>${escapeXml(pkg.name)}</strong></a><br>
-      <sub>NPM <code>v${escapeXml(pkg.version)}</code> · ${escapeXml(maintainers)}</sub><br>
-      <sub>${escapeXml(description)}</sub>
+      <a href="${escapeXml(feature.repository)}"><img src="${escapeXml(feature.image)}" width="100%" alt="${escapeXml(feature.alt)}"></a><br>
+      <a href="${escapeXml(feature.repository)}"><strong>${escapeXml(pkg.name)}</strong></a><br>
+      <sub>NPM <code>v${escapeXml(pkg.version)}</code>${release}</sub><br>
+      <sub>${escapeXml(description)}</sub><br>
+      <sub><a href="${escapeXml(feature.repository)}">Source ↗</a> · <a href="${escapeXml(pkg.links.npm)}">NPM ↗</a>${siteLink}</sub>
     </td>`;
   });
-  if (cells.length % 2 !== 0) cells.push('    <td width="50%" valign="top"></td>');
 
   const rows = [];
   for (let index = 0; index < cells.length; index += 2) {
@@ -122,21 +146,23 @@ ${cells[index + 1]}
   </tr>`);
   }
 
-  return `<!-- profile-module-catalog:start -->
-## All NPM modules
+  return `<!-- profile-package-showcase:start -->
+## Featured packages
 
-Every public package currently maintained through the [\`riaevangelist\`](https://www.npmjs.com/~riaevangelist) and [\`thewizardnexus\`](https://www.npmjs.com/~thewizardnexus) identities. Package names link to NPM; the inventory and versions refresh automatically.
+The public package repositories with purpose-built header artwork, maintained through the [\`riaevangelist\`](https://www.npmjs.com/~riaevangelist) and [\`thewizardnexus\`](https://www.npmjs.com/~thewizardnexus) identities. Versions refresh automatically from NPM.
 
 <table>
 ${rows.join("\n")}
 </table>
-<!-- profile-module-catalog:end -->`;
+<!-- profile-package-showcase:end -->`;
 }
 
 function createTelemetrySvg(snapshot) {
   const width = 980;
   const height = 650;
-  const top = [...snapshot.packages].sort((a, b) => b.downloads.year - a.downloads.year).slice(0, 5);
+  const packages = displayedPackages(snapshot.packages);
+  const totals = downloadTotals(packages);
+  const top = [...packages].sort((a, b) => b.downloads.year - a.downloads.year).slice(0, 5);
   const refreshed = new Date(snapshot.generatedAt).toLocaleDateString("en-US", {
     year: "numeric",
     month: "short",
@@ -156,7 +182,7 @@ function createTelemetrySvg(snapshot) {
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="title description">
   <title id="title">RIAEvangelist NPM download telemetry</title>
-  <desc id="description">${fullNumber(snapshot.totals.week)} weekly, ${fullNumber(snapshot.totals.month)} monthly, and ${fullNumber(snapshot.totals.year)} yearly downloads across ${snapshot.packageCount} maintained modules, followed by the top five modules.</desc>
+  <desc id="description">${fullNumber(totals.week)} weekly, ${fullNumber(totals.month)} monthly, and ${fullNumber(totals.year)} yearly downloads across ${packages.length} displayed modules, followed by the top five modules.</desc>
   <defs>
     <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
       <stop stop-color="#151226"/>
@@ -189,20 +215,20 @@ function createTelemetrySvg(snapshot) {
   <g transform="translate(48 145)">
     <rect width="280" height="138" rx="18" fill="#0c0b17" stroke="#352c4c"/>
     <text x="22" y="36" class="metric-label">WEEKLY</text>
-    <text x="22" y="82" class="metric">${escapeXml(compactNumber(snapshot.totals.week))}</text>
-    <text x="22" y="111" class="foot">${escapeXml(fullNumber(snapshot.totals.week))} downloads</text>
+    <text x="22" y="82" class="metric">${escapeXml(compactNumber(totals.week))}</text>
+    <text x="22" y="111" class="foot">${escapeXml(fullNumber(totals.week))} downloads</text>
   </g>
   <g transform="translate(350 145)">
     <rect width="280" height="138" rx="18" fill="#0c0b17" stroke="#352c4c"/>
     <text x="22" y="36" class="metric-label">MONTHLY</text>
-    <text x="22" y="82" class="metric">${escapeXml(compactNumber(snapshot.totals.month))}</text>
-    <text x="22" y="111" class="foot">${escapeXml(fullNumber(snapshot.totals.month))} downloads</text>
+    <text x="22" y="82" class="metric">${escapeXml(compactNumber(totals.month))}</text>
+    <text x="22" y="111" class="foot">${escapeXml(fullNumber(totals.month))} downloads</text>
   </g>
   <g transform="translate(652 145)">
     <rect width="280" height="138" rx="18" fill="#0c0b17" stroke="#352c4c"/>
     <text x="22" y="36" class="metric-label">YEARLY</text>
-    <text x="22" y="82" class="metric">${escapeXml(compactNumber(snapshot.totals.year))}</text>
-    <text x="22" y="111" class="foot">${escapeXml(fullNumber(snapshot.totals.year))} downloads</text>
+    <text x="22" y="82" class="metric">${escapeXml(compactNumber(totals.year))}</text>
+    <text x="22" y="111" class="foot">${escapeXml(fullNumber(totals.year))} downloads</text>
   </g>
   <text x="48" y="335" class="eyebrow">TOP MODULES</text>
   <text x="525" y="335" class="column">WEEK</text>
@@ -211,7 +237,7 @@ function createTelemetrySvg(snapshot) {
   <path d="M48 352H932" stroke="#2e2947"/>
   ${rows}
   <path d="M48 615H932" stroke="#2e2947"/>
-  <text x="48" y="637" class="foot">${snapshot.packageCount} packages across ${escapeXml(snapshot.maintainers.join(" + "))} · rolling NPM API windows · refreshed ${escapeXml(refreshed)} UTC</text>
+  <text x="48" y="637" class="foot">${packages.length} displayed packages across ${escapeXml(snapshot.maintainers.join(" + "))} · rolling NPM API windows · refreshed ${escapeXml(refreshed)} UTC</text>
 </svg>`;
 }
 
@@ -340,19 +366,20 @@ const readmeStart = "<!-- profile-telemetry-counts:start -->";
 const readmeEnd = "<!-- profile-telemetry-counts:end -->";
 const readmePattern = new RegExp(`${readmeStart}[\\s\\S]*?${readmeEnd}`);
 if (!readmePattern.test(readme)) throw new Error("README telemetry count markers are missing.");
+const profilePackages = displayedPackages(npmSnapshot.packages);
 const readmeSummary = `${readmeStart}
 <p align="center">
-  <strong>${npmSnapshot.packageCount} maintained NPM modules · ${repoSnapshot.counts.total} public repositories · two owned identities</strong><br>
+  <strong>${profilePackages.length} displayed NPM modules · ${repoSnapshot.counts.total} public repositories · two owned identities</strong><br>
   <a href="https://riaevangelist.github.io/RIAEvangelist/"><strong>Explore the live package pulse and complete code atlas →</strong></a>
 </p>
 ${readmeEnd}`;
-const moduleStart = "<!-- profile-module-catalog:start -->";
-const moduleEnd = "<!-- profile-module-catalog:end -->";
-const modulePattern = new RegExp(`${moduleStart}[\\s\\S]*?${moduleEnd}`);
-if (!modulePattern.test(readme)) throw new Error("README module catalog markers are missing.");
+const showcaseStart = "<!-- profile-package-showcase:start -->";
+const showcaseEnd = "<!-- profile-package-showcase:end -->";
+const showcasePattern = new RegExp(`${showcaseStart}[\\s\\S]*?${showcaseEnd}`);
+if (!showcasePattern.test(readme)) throw new Error("README package showcase markers are missing.");
 const updatedReadme = readme
   .replace(readmePattern, readmeSummary)
-  .replace(modulePattern, createReadmeModuleCatalog(npmSnapshot));
+  .replace(showcasePattern, createReadmeFeaturedPackages(npmSnapshot));
 
 await Promise.all([
   writeFile(snapshotPath, `${JSON.stringify(npmSnapshot, null, 2)}\n`, "utf8"),

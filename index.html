@@ -19,6 +19,7 @@
     <title>RIAEvangelist // Open-source signal</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="pages.css">
+    <script src="profile-display.js" defer></script>
     <script src="app.js" defer></script>
   </head>
   <body>
@@ -54,8 +55,8 @@
         <div class="signal-visual" aria-hidden="true">
           <div class="orbit orbit-one"><i></i><i></i><i></i></div>
           <div class="orbit orbit-two"><i></i><i></i></div>
-          <div class="signal-core"><b id="signal-total">259.8M</b><span>yearly downloads</span></div>
-          <p class="signal-label label-one"><span id="module-count">43</span> modules</p>
+          <div class="signal-core"><b id="signal-total">261M</b><span>yearly downloads</span></div>
+          <p class="signal-label label-one"><span id="module-count">40</span> modules</p>
           <p class="signal-label label-two"><span id="repo-count">125</span> repos</p>
           <p class="signal-label label-three">pure JS energy</p>
         </div>
@@ -64,17 +65,17 @@
       <section class="metrics" aria-label="Overall NPM downloads">
         <div class="metric metric-pink">
           <p>Last week</p>
-          <strong id="total-week" data-count="4597578">4,597,578</strong>
-          <span>downloads across every maintained module</span>
+          <strong id="total-week" data-count="4607333">4,607,333</strong>
+          <span>downloads across every displayed module</span>
         </div>
         <div class="metric metric-violet">
           <p>Last month</p>
-          <strong id="total-month" data-count="23019368">23,019,368</strong>
+          <strong id="total-month" data-count="23662618">23,662,618</strong>
           <span>rolling NPM download total</span>
         </div>
         <div class="metric metric-cyan">
           <p>Last year</p>
-          <strong id="total-year" data-count="259776451">259,776,451</strong>
+          <strong id="total-year" data-count="260994962">260,994,962</strong>
           <span>one year of open-source utility</span>
         </div>
       </section>
@@ -88,7 +89,7 @@
             <h2 id="history-title">Every year.<br>The full signal.</h2>
           </div>
           <div class="section-side">
-            <p>Explore calendar-year and recorded-lifetime downloads across the complete current module catalog. Annual reference data from npm-stat is reconciled against NPM’s official range API before publication.</p>
+            <p>Explore calendar-year and recorded-lifetime downloads across the public profile module catalog. Annual reference data from npm-stat is reconciled against NPM’s official range API before publication.</p>
             <div class="history-controls">
               <label class="select-field">
                 <span>Time range</span>
@@ -154,7 +155,7 @@
             <h2 id="package-title">The modules moving the most code</h2>
           </div>
           <div class="section-side">
-            <p>Official rolling NPM download windows, summed across packages maintained by the owned <code>riaevangelist</code> and <code>thewizardnexus</code> identities.</p>
+            <p>Official rolling NPM download windows, summed across the displayed packages maintained by the owned <code>riaevangelist</code> and <code>thewizardnexus</code> identities.</p>
             <div class="period-switcher" role="group" aria-label="Rank packages by download period">
               <button type="button" data-period="week" aria-pressed="false">Week</button>
               <button type="button" data-period="month" aria-pressed="false">Month</button>
@@ -173,15 +174,15 @@
 
         <div class="catalog-heading">
           <div>
-            <p class="eyebrow">Complete module index</p>
-            <h3>Every maintained package.</h3>
+            <p class="eyebrow">Public profile module index</p>
+            <h3>The packages selected for this profile.</h3>
           </div>
           <label class="search-field">
             <span>Search modules</span>
             <input id="package-search" type="search" placeholder="Try node, browser, queue…" autocomplete="off">
           </label>
         </div>
-        <p class="result-count" id="package-result-count">Loading 43 modules…</p>
+        <p class="result-count" id="package-result-count">Loading 40 modules…</p>
         <div class="package-grid" id="package-grid" aria-live="polite"></div>
       </section>
 
@@ -308,8 +309,8 @@
           </article>
           <article>
             <b>03</b>
-            <h3>Maintained catalog</h3>
-            <p>The overall total deduplicates every public package where <code>riaevangelist</code> or <code>thewizardnexus</code> is listed as a maintainer, including co-maintained work.</p>
+            <h3>Profile catalog</h3>
+            <p>The source archive tracks every public package maintained by <code>riaevangelist</code> or <code>thewizardnexus</code>; displayed totals and charts sum the packages selected for this public profile.</p>
           </article>
         </div>
         <p class="source-links">Data: <a href="https://github.com/npm/registry/blob/main/docs/download-counts.md">official NPM download API</a> · <a href="https://www.npm-stat.com/">npm-stat historical reference</a> · <a href="https://docs.github.com/en/rest/repos/repos#list-repositories-for-a-user">GitHub repositories API</a></p>

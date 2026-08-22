@@ -5,6 +5,9 @@ const longDateFormatter = new Intl.DateTimeFormat("en-US", { month: "long", day:
 const monthFormatter = new Intl.DateTimeFormat("en-US", { month: "short", year: "numeric", timeZone: "UTC" });
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const averageStartMonth = "2021-01";
+const profileDisplay = globalThis.RIA_PROFILE_DISPLAY;
+if (!profileDisplay) throw new Error("profile-display.js must load before app.js.");
+const hiddenPackageNames = new Set(profileDisplay.hiddenPackages);
 
 const state = {
   npm: null,
@@ -120,6 +123,25 @@ async function fetchJson(url) {
   return response.json();
 }
 
+function displayedPackages(packages = []) {
+  return packages.filter((pkg) => !hiddenPackageNames.has(pkg.name));
+}
+
+function downloadTotals(packages) {
+  return ["week", "month", "year"].reduce((totals, period) => {
+    totals[period] = packages.reduce((sum, pkg) => sum + pkg.downloads[period], 0);
+    return totals;
+  }, {});
+}
+
+function sumPairSeries(packages, property) {
+  const totals = new Map();
+  for (const pkg of packages) {
+    for (const [period, value] of pkg[property]) totals.set(period, (totals.get(period) || 0) + value);
+  }
+  return [...totals.entries()].sort(([left], [right]) => left.localeCompare(right));
+}
+
 function animateNumber(element, target) {
   element.dataset.count = String(target);
   if (reduceMotion || state.animated) {
@@ -140,12 +162,14 @@ function animateNumber(element, target) {
 
 function renderOverview() {
   const { npm, repos } = state;
-  elements.moduleCount.textContent = numberFormatter.format(npm.packageCount);
+  const packages = displayedPackages(npm.packages);
+  const totals = downloadTotals(packages);
+  elements.moduleCount.textContent = numberFormatter.format(packages.length);
   elements.repoCount.textContent = numberFormatter.format(repos.counts.total);
-  elements.signalTotal.textContent = compactFormatter.format(npm.totals.year);
-  animateNumber(elements.totalWeek, npm.totals.week);
-  animateNumber(elements.totalMonth, npm.totals.month);
-  animateNumber(elements.totalYear, npm.totals.year);
+  elements.signalTotal.textContent = compactFormatter.format(totals.year);
+  animateNumber(elements.totalWeek, totals.week);
+  animateNumber(elements.totalMonth, totals.month);
+  animateNumber(elements.totalYear, totals.year);
   state.animated = true;
 
   elements.repoTotal.textContent = numberFormatter.format(repos.counts.total);
@@ -157,7 +181,7 @@ function renderOverview() {
 function renderLeaderboard() {
   const period = state.period;
   const periodInfo = state.npm.periods[period];
-  const top = [...state.npm.packages]
+  const top = displayedPackages(state.npm.packages)
     .sort((a, b) => b.downloads[period] - a.downloads[period] || a.name.localeCompare(b.name))
     .slice(0, 6);
   const max = Math.max(top[0]?.downloads[period] || 1, 1);
@@ -176,11 +200,12 @@ function renderLeaderboard() {
 
 function renderPackages() {
   const query = state.packageQuery.trim().toLowerCase();
-  const packages = [...state.npm.packages]
+  const allPackages = displayedPackages(state.npm.packages);
+  const packages = [...allPackages]
     .filter((pkg) => !query || [pkg.name, pkg.description, ...(pkg.keywords || [])].join(" ").toLowerCase().includes(query))
     .sort((a, b) => b.downloads[state.period] - a.downloads[state.period] || a.name.localeCompare(b.name));
 
-  elements.packageResultCount.textContent = `${numberFormatter.format(packages.length)} of ${numberFormatter.format(state.npm.packageCount)} modules · ranked by ${state.npm.periods[state.period].label.toLowerCase()} downloads`;
+  elements.packageResultCount.textContent = `${numberFormatter.format(packages.length)} of ${numberFormatter.format(allPackages.length)} modules · ranked by ${state.npm.periods[state.period].label.toLowerCase()} downloads`;
 
   if (!packages.length) {
     elements.packageGrid.innerHTML = '<p class="empty-state">No module matches that signal. Try a broader search.</p>';
@@ -355,7 +380,7 @@ function renderHistoryTable(rows, total, caption) {
 function historyPackage() {
   return state.historyModule === "all"
     ? null
-    : state.history.packages.find((pkg) => pkg.name === state.historyModule);
+    : displayedPackages(state.history.packages).find((pkg) => pkg.name === state.historyModule);
 }
 
 function historySeriesLabel() {
@@ -368,20 +393,24 @@ function peakPoint(points) {
 
 function renderLifetimeHistory() {
   const pkg = historyPackage();
-  const pairs = pkg ? pkg.monthly : state.history.monthly;
+  const packages = displayedPackages(state.history.packages);
+  const pairs = pkg ? pkg.monthly : sumPairSeries(packages, "monthly");
   const points = pairs.map(([period, value]) => ({
     period,
     value,
     axisLabel: formatMonth(period),
     tooltipLabel: formatMonth(period),
   }));
-  const total = pkg ? pkg.total : state.history.lifetimeTotal;
+  const total = pkg ? pkg.total : packages.reduce((sum, candidate) => sum + candidate.total, 0);
   const averagePoints = points.filter((point) => point.period >= averageStartMonth);
   const averageTotal = averagePoints.reduce((sum, point) => sum + point.value, 0);
   const availableYears = new Set(state.history.years.filter((year) => year.availableFrom).map((year) => String(year.year)));
   const annual = pkg
     ? pkg.annual.filter(([year]) => availableYears.has(year)).map(([year, value]) => ({ label: year, value }))
-    : state.history.years.filter((year) => year.availableFrom).map((year) => ({ label: year.partial ? `${year.year} YTD` : String(year.year), value: year.total }));
+    : state.history.years.filter((year) => year.availableFrom).map((year) => ({
+      label: year.partial ? `${year.year} YTD` : String(year.year),
+      value: packages.reduce((sum, candidate) => sum + (candidate.annual.find(([candidateYear]) => candidateYear === String(year.year))?.[1] || 0), 0),
+    }));
   const peak = peakPoint(points);
   const label = historySeriesLabel();
 
@@ -392,12 +421,12 @@ function renderLifetimeHistory() {
   elements.historyAverageLabel.textContent = "Average since 2021";
   elements.historyAverage.textContent = `${numberFormatter.format(Math.round(averageTotal / Math.max(averagePoints.length, 1)))} / month`;
   elements.historyPeak.textContent = peak ? `${formatMonth(peak.period)} · ${compactFormatter.format(peak.value)}` : "No recorded downloads";
-  elements.historyCoverage.textContent = `${numberFormatter.format(points.length)} months · ${state.history.packageCount} modules`;
+  elements.historyCoverage.textContent = `${numberFormatter.format(points.length)} months · ${packages.length} modules`;
   elements.historyChartCanvas.hidden = false;
   elements.historyChartEmpty.hidden = true;
   setHistoryChart(points, `${label}, recorded NPM lifetime`, "monthly");
   renderHistoryTable(annual, total, `${label} by calendar year`);
-  elements.historyStatus.textContent = `Officially reconciled record · ${numberFormatter.format(state.history.dataQuality.correction)} downloads restored versus the npm-stat reference · archive refreshed ${formatTimestamp(state.history.generatedAt)}`;
+  elements.historyStatus.textContent = `Official NPM archive reconciled against the NPM API · ${numberFormatter.format(packages.length)} displayed modules · archive refreshed ${formatTimestamp(state.history.generatedAt)}`;
 }
 
 function monthlyRows(points) {
@@ -427,6 +456,8 @@ function renderHistoryUnavailableState({ kicker, title, period, coverage, emptyM
 function renderYearHistory(year) {
   const label = historySeriesLabel();
   const pkg = state.historyModule === "all" ? null : year.packages.find((candidate) => candidate.name === state.historyModule);
+  const displayedNames = new Set(displayedPackages(state.history.packages).map((candidate) => candidate.name));
+  const displayedYearPackages = year.packages.filter((candidate) => displayedNames.has(candidate.name));
   const yearLabel = year.period.partial ? `${year.year} YTD` : `Calendar year ${year.year}`;
   if (state.historyModule !== "all" && !pkg) {
     renderHistoryUnavailableState({
@@ -440,7 +471,9 @@ function renderYearHistory(year) {
     });
     return;
   }
-  const downloads = pkg ? pkg.downloads : year.overall;
+  const downloads = pkg
+    ? pkg.downloads
+    : year.dates.map((_, index) => displayedYearPackages.reduce((sum, candidate) => sum + candidate.downloads[index], 0));
   const points = year.dates.map((period, index) => ({
     period,
     value: downloads[index],
@@ -472,20 +505,21 @@ function renderYearHistory(year) {
   elements.historyAverage.textContent = `${numberFormatter.format(Math.round(total / points.length))} / day`;
   elements.historyPeak.textContent = peak?.value ? `${formatDate(peak.period)} · ${compactFormatter.format(peak.value)}` : "No recorded downloads";
   elements.historyCoverage.textContent = state.historyModule === "all"
-    ? `${numberFormatter.format(points.length)} days · ${year.activePackageCount} active modules`
+    ? `${numberFormatter.format(points.length)} days · ${displayedYearPackages.filter((candidate) => candidate.total > 0).length} active modules`
     : `${numberFormatter.format(points.length)} officially reconciled days`;
   elements.historyChartCanvas.hidden = false;
   elements.historyChartEmpty.hidden = true;
   setHistoryChart(points, `${label}, ${yearLabel}`, "daily");
   renderHistoryTable(monthlyRows(points), total, `${label} by month in ${year.year}`);
-  const correction = year.dataQuality.correction;
-  elements.historyStatus.textContent = correction
-    ? `Official NPM reconciliation restored ${numberFormatter.format(correction)} downloads missing from the npm-stat reference · refreshed ${formatTimestamp(year.generatedAt)}`
-    : `NPM official range series exactly matches the npm-stat annual reference · refreshed ${formatTimestamp(year.generatedAt)}`;
+  elements.historyStatus.textContent = `Official NPM archive reconciled against the NPM API · ${numberFormatter.format(displayedYearPackages.length)} displayed modules · refreshed ${formatTimestamp(year.generatedAt)}`;
 }
 
 async function renderSelectedHistory() {
   if (!state.history) return;
+  if (state.historyModule !== "all" && hiddenPackageNames.has(state.historyModule)) {
+    state.historyModule = "all";
+    elements.historyModule.value = "all";
+  }
   const request = ++state.historyRequest;
   if (state.historyRange === "lifetime") {
     renderLifetimeHistory();
@@ -522,7 +556,7 @@ function populateHistoryControls() {
       const suffix = !year.availableFrom ? " · unavailable" : year.partial ? " · YTD" : "";
       return `<option value="${year.year}">${year.year}${suffix}</option>`;
     }).join("");
-  elements.historyModule.innerHTML = '<option value="all">All modules</option>' + state.history.packages
+  elements.historyModule.innerHTML = '<option value="all">All modules</option>' + displayedPackages(state.history.packages)
     .map((pkg) => `<option value="${escapeHtml(pkg.name)}">${escapeHtml(pkg.name)} · ${compactFormatter.format(pkg.total)}</option>`)
     .join("");
 }
@@ -533,8 +567,10 @@ async function initializeHistory() {
     populateHistoryControls();
     const first = state.history.firstRecordedDownload;
     elements.historyFirstDate.textContent = formatLongDate(first.date);
-    const contributors = first.packages.map((pkg) => `${pkg.name} ${numberFormatter.format(pkg.downloads)}`).join(" · ");
-    elements.historyFirstDetail.textContent = `${numberFormatter.format(first.downloads)} downloads across ${first.packages.length} modules: ${contributors}.`;
+    const firstPackages = displayedPackages(first.packages);
+    const firstDownloads = firstPackages.reduce((sum, pkg) => sum + pkg.downloads, 0);
+    const contributors = firstPackages.map((pkg) => `${pkg.name} ${numberFormatter.format(pkg.downloads)}`).join(" · ");
+    elements.historyFirstDetail.textContent = `${numberFormatter.format(firstDownloads)} downloads across ${firstPackages.length} modules: ${contributors}.`;
     await renderSelectedHistory();
   } catch (error) {
     elements.historyStatus.textContent = "The historical archive is temporarily unavailable; live rolling telemetry remains active.";

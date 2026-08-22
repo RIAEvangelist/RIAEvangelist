@@ -4,11 +4,14 @@ import { readFile, readdir } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { renderSiteFooter, siteFooterGroups } from "../scripts/site-footer.mjs";
+import "../profile-display.js";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const read = (relativePath) => readFile(path.join(ROOT, relativePath), "utf8");
 const SITE_BASE = "https://riaevangelist.github.io/RIAEvangelist";
 const MUSIC_PAGE_SIZE = 8;
+const PROFILE_DISPLAY = globalThis.RIA_PROFILE_DISPLAY;
+const HIDDEN_PACKAGE_NAMES = new Set(PROFILE_DISPLAY.hiddenPackages);
 const CATALOG_MUSIC_IDS = [
   "991043380511",
   "057829997363",
@@ -85,6 +88,23 @@ function assertNoRootRelativeUrls(html, label) {
   assert.doesNotMatch(html, /\b(?:href|src)=["']\/(?!\/)/, `${label} contains a root-relative URL`);
 }
 
+function sumPairSeriesForTest(packages, property) {
+  return packages.reduce((total, pkg) => total + pkg[property].reduce((sum, [, value]) => sum + value, 0), 0);
+}
+
+test("profile display policy is explicit, unique, and image-backed", () => {
+  assert.deepEqual([...PROFILE_DISPLAY.hiddenPackages].sort(), ["heart-attack", "oneday-test", "peacenotwar"]);
+  const featuredNames = PROFILE_DISPLAY.featuredPackages.map((feature) => feature.name);
+  assert.equal(new Set(featuredNames).size, featuredNames.length);
+  assert.deepEqual(featuredNames, ["event-pubsub", "node-cmd", "node-http-server", "strong-type", "vanilla-test", "dbopfs"]);
+  for (const feature of PROFILE_DISPLAY.featuredPackages) {
+    assert.ok(!HIDDEN_PACKAGE_NAMES.has(feature.name));
+    assertHttps(feature.repository, `${feature.name} repository`);
+    if (feature.image.startsWith("http")) assertHttps(feature.image, `${feature.name} header`);
+    else assert.equal(feature.image, "assets/packages/event-pubsub.png");
+  }
+});
+
 test("NPM totals are exact sums of a unique maintained package inventory", async () => {
   const snapshot = JSON.parse(await read("data/npm-stats.json"));
   const names = snapshot.packages.map((pkg) => pkg.name);
@@ -95,6 +115,7 @@ test("NPM totals are exact sums of a unique maintained package inventory", async
   assert.ok(snapshot.packages.every((pkg) => pkg.maintainers.some((name) => snapshot.maintainers.includes(name.toLowerCase()))));
   assert.ok(snapshot.packages.every((pkg) => pkg.trackedMaintainers.length > 0));
   assert.ok(names.includes("dbopfs"));
+  assert.ok(PROFILE_DISPLAY.hiddenPackages.every((name) => names.includes(name)), "Display policy must not erase authoritative telemetry");
 
   for (const period of ["week", "month", "year"]) {
     const total = snapshot.packages.reduce((sum, pkg) => sum + pkg.downloads[period], 0);
@@ -136,6 +157,7 @@ test("historical NPM archive reconciles every year, module, and lifetime total",
   assert.equal(index.period.availableFrom, "2015-01-10");
   assert.equal(index.dataQuality.officialTotal, index.lifetimeTotal);
   assert.equal(index.dataQuality.correction, index.dataQuality.officialTotal - index.dataQuality.npmStatReferenceTotal);
+  assert.ok(PROFILE_DISPLAY.hiddenPackages.every((name) => packageNames.includes(name)), "Display policy must not erase the historical archive");
 
   for (const pkg of index.packages) {
     assert.equal(pkg.annual.reduce((sum, [, value]) => sum + value, 0), pkg.total);
@@ -189,6 +211,7 @@ test("profile README and site expose the telemetry experience", async () => {
   assert.match(html, /id="history-chart"/);
   assert.match(html, /id="history-range"/);
   assert.match(html, /id="history-table-foot"/);
+  assert.ok(html.indexOf('src="profile-display.js"') < html.indexOf('src="app.js"'), "Display policy must load before the app");
   assert.match(html, /class="music-gateway-covers"/);
   for (const slug of [
     "three-wishes-for-my-attorney-bernie",
@@ -203,6 +226,9 @@ test("profile README and site expose the telemetry experience", async () => {
   assert.match(script, /data\/npm-history\/index\.json/);
   assert.match(script, /averageStartMonth = "2021-01"/);
   assert.match(script, /Average since 2021/);
+  assert.match(script, /displayedPackages\(state\.history\.packages\)/);
+  assert.match(script, /sumPairSeries\(packages, "monthly"\)/);
+  assert.match(script, /displayedYearPackages\.reduce/);
   assert.match(script, /historyTableFoot\.innerHTML/);
   assert.ok(script.indexOf("initializeHistory();") < script.indexOf("[state.npm, state.repos]"));
   assert.match(styles, /#history-chart\[hidden\]/);
@@ -215,56 +241,64 @@ test("profile README and site expose the telemetry experience", async () => {
   assert.match(svg, /MONTHLY/);
   assert.match(svg, /YEARLY/);
   assert.match(svg, /js-message/);
+  assert.match(svg, /40 displayed packages/);
+  for (const name of PROFILE_DISPLAY.hiddenPackages) {
+    assert.ok(!readme.includes(name), `${name} must not be displayed in the README`);
+    assert.ok(!svg.includes(name), `${name} must not be displayed in the telemetry card`);
+  }
 });
 
-test("profile README lists every maintained NPM module in two columns before music", async () => {
+test("profile README shows only image-backed featured packages in two columns before music", async () => {
   const [readme, snapshotText] = await Promise.all([
     read("README.md"),
     read("data/npm-stats.json"),
   ]);
   const snapshot = JSON.parse(snapshotText);
-  const startMarker = "<!-- profile-module-catalog:start -->";
-  const endMarker = "<!-- profile-module-catalog:end -->";
+  const startMarker = "<!-- profile-package-showcase:start -->";
+  const endMarker = "<!-- profile-package-showcase:end -->";
   const start = readme.indexOf(startMarker);
   const end = readme.indexOf(endMarker);
   const music = readme.indexOf("<!-- profile-music-catalog:start -->");
 
-  assert.equal(readme.split(startMarker).length - 1, 1, "Module catalog start marker must be unique");
-  assert.equal(readme.split(endMarker).length - 1, 1, "Module catalog end marker must be unique");
-  assert.ok(start >= 0, "Missing profile module catalog start marker");
-  assert.ok(end > start, "Missing profile module catalog end marker");
-  assert.ok(music > end, "The module catalog must appear above the music catalog");
+  assert.equal(readme.split(startMarker).length - 1, 1, "Package showcase start marker must be unique");
+  assert.equal(readme.split(endMarker).length - 1, 1, "Package showcase end marker must be unique");
+  assert.ok(start >= 0, "Missing profile package showcase start marker");
+  assert.ok(end > start, "Missing profile package showcase end marker");
+  assert.ok(music > end, "The package showcase must appear directly above the music catalog");
 
-  const moduleBlock = readme.slice(start, end + endMarker.length);
-  const rows = [...moduleBlock.matchAll(/<tr>([\s\S]*?)<\/tr>/g)];
-  const npmLinks = [...moduleBlock.matchAll(/href="https:\/\/www\.npmjs\.com\/package\/([^"]+)"/g)];
-  const labels = [...moduleBlock.matchAll(/<strong>([^<]+)<\/strong>/g)].map((match) => match[1]);
-  const expectedLabels = snapshot.packages.map((pkg) => pkg.name).sort((left, right) => left.localeCompare(right));
-  assert.equal(rows.length, Math.ceil(snapshot.packageCount / 2));
-  assert.equal(npmLinks.length, snapshot.packageCount);
-  assert.equal(new Set(npmLinks.map((match) => match[1])).size, snapshot.packageCount);
+  const packageBlock = readme.slice(start, end + endMarker.length);
+  const rows = [...packageBlock.matchAll(/<tr>([\s\S]*?)<\/tr>/g)];
+  const images = [...packageBlock.matchAll(/<img src="([^"]+)" width="100%" alt="([^"]+)">/g)];
+  const labels = [...packageBlock.matchAll(/<strong>([^<]+)<\/strong>/g)].map((match) => match[1]);
+  const expectedLabels = PROFILE_DISPLAY.featuredPackages.map((feature) => feature.name);
+  assert.equal(rows.length, PROFILE_DISPLAY.featuredPackages.length / 2);
+  assert.equal(images.length, PROFILE_DISPLAY.featuredPackages.length);
   assert.deepEqual(labels, expectedLabels);
+  assert.doesNotMatch(packageBlock, /All NPM modules/);
 
   for (const row of rows) {
     assert.equal((row[1].match(/<td width="50%" valign="top">/g) || []).length, 2);
   }
-  for (const pkg of snapshot.packages) {
-    assert.ok(moduleBlock.includes(`href="${pkg.links.npm}"`), `${pkg.name} is missing its NPM link`);
-    assert.ok(moduleBlock.includes(`<strong>${pkg.name}</strong>`), `${pkg.name} is missing its label`);
-    assert.ok(moduleBlock.includes(`<code>v${pkg.version}</code>`), `${pkg.name} is missing its version`);
+  for (const feature of PROFILE_DISPLAY.featuredPackages) {
+    const pkg = snapshot.packages.find((candidate) => candidate.name === feature.name);
+    assert.ok(pkg, `${feature.name} is missing from the telemetry snapshot`);
+    assert.ok(packageBlock.includes(`src="${feature.image}"`), `${feature.name} is missing its header image`);
+    assert.ok(packageBlock.includes(`href="${feature.repository}"`), `${feature.name} is missing its repository link`);
+    assert.ok(packageBlock.includes(`href="${pkg.links.npm}"`), `${feature.name} is missing its NPM link`);
+    assert.ok(packageBlock.includes(`<strong>${feature.name}</strong>`), `${feature.name} is missing its label`);
+    assert.ok(packageBlock.includes(`<code>v${pkg.version}</code>`), `${feature.name} is missing its NPM version`);
   }
-  for (const maintainer of snapshot.maintainers) {
-    assert.ok(moduleBlock.includes(`@${maintainer}`), `${maintainer} is missing from the module catalog`);
-  }
-  assert.ok(!/<sub>[^<]*\n[^<]*<\/sub>/.test(moduleBlock), "Module metadata must remain on one line inside the HTML table");
-  assert.match(moduleBlock, /heart-attack[\s\S]+self-replicating behavior; this dashboard does not recommend installation/);
+  for (const name of PROFILE_DISPLAY.hiddenPackages) assert.ok(!packageBlock.includes(name), `${name} must not be featured`);
+  assert.ok(!/<sub>[^<]*\n[^<]*<\/sub>/.test(packageBlock), "Package metadata must remain on one line inside the HTML table");
 });
 
 test("profile showcases event-pubsub 6.0.0 with a local package banner", async () => {
-  const [readme, banner] = await Promise.all([
+  const [readme, banner, snapshotText] = await Promise.all([
     read("README.md"),
     readFile(path.join(ROOT, "assets/packages/event-pubsub.png")),
+    read("data/npm-stats.json"),
   ]);
+  const eventPubsub = JSON.parse(snapshotText).packages.find((pkg) => pkg.name === "event-pubsub");
   const startMarker = "<!-- profile-package-showcase:start -->";
   const endMarker = "<!-- profile-package-showcase:end -->";
   const start = readme.indexOf(startMarker);
@@ -279,12 +313,40 @@ test("profile showcases event-pubsub 6.0.0 with a local package banner", async (
   assert.match(packageBlock, /https:\/\/www\.npmjs\.com\/package\/event-pubsub/);
   assert.match(packageBlock, /https:\/\/riaevangelist\.github\.io\/event-pubsub\//);
   assert.match(packageBlock, /https:\/\/github\.com\/RIAEvangelist\/event-pubsub\/releases\/tag\/6\.0\.0/);
-  assert.match(packageBlock, /GitHub release `6\.0\.0`/);
-  assert.match(packageBlock, /NPM's independently published latest version/);
-  assert.match(packageBlock, /npm install event-pubsub/);
+  assert.match(packageBlock, /GitHub source release 6\.0\.0/);
+  assert.ok(packageBlock.includes(`NPM <code>v${eventPubsub.version}</code>`));
   assert.equal(banner.subarray(1, 4).toString("ascii"), "PNG");
   assert.equal(banner.readUInt32BE(16), 2172);
   assert.equal(banner.readUInt32BE(20), 724);
+});
+
+test("All modules charts sum only the public profile package set", async () => {
+  const [indexText, currentYearText, script, screenshot] = await Promise.all([
+    read("data/npm-history/index.json"),
+    read(`data/npm-history/${new Date().getUTCFullYear()}.json`),
+    read("app.js"),
+    readFile(path.join(ROOT, "assets/npm-history-chart.png")),
+  ]);
+  const index = JSON.parse(indexText);
+  const currentYear = JSON.parse(currentYearText);
+  const packages = index.packages.filter((pkg) => !HIDDEN_PACKAGE_NAMES.has(pkg.name));
+  const visibleTotal = packages.reduce((sum, pkg) => sum + pkg.total, 0);
+  const hiddenTotal = index.packages.filter((pkg) => HIDDEN_PACKAGE_NAMES.has(pkg.name)).reduce((sum, pkg) => sum + pkg.total, 0);
+  const visibleNames = new Set(packages.map((pkg) => pkg.name));
+  const visibleYearPackages = currentYear.packages.filter((pkg) => visibleNames.has(pkg.name));
+
+  assert.equal(packages.length, index.packageCount - PROFILE_DISPLAY.hiddenPackages.length);
+  assert.equal(visibleTotal + hiddenTotal, index.lifetimeTotal);
+  assert.equal(sumPairSeriesForTest(packages, "monthly"), visibleTotal);
+  assert.equal(visibleYearPackages.reduce((sum, pkg) => sum + pkg.total, 0), packages.reduce((sum, pkg) => {
+    return sum + (pkg.annual.find(([year]) => year === String(currentYear.year))?.[1] || 0);
+  }, 0));
+  assert.match(script, /const pairs = pkg \? pkg\.monthly : sumPairSeries\(packages, "monthly"\)/);
+  assert.match(script, /const total = pkg \? pkg\.total : packages\.reduce/);
+  assert.match(script, /displayedYearPackages\.reduce/);
+  assert.equal(screenshot.subarray(1, 4).toString("ascii"), "PNG");
+  assert.ok(screenshot.readUInt32BE(16) >= 1200);
+  assert.ok(screenshot.readUInt32BE(20) >= 800);
 });
 
 test("music catalog is complete, unique, secure, and coherently collected", async () => {

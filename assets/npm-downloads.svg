@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="980" height="650" viewBox="0 0 980 650" role="img" aria-labelledby="title description">
   <title id="title">RIAEvangelist NPM download telemetry</title>
-  <desc id="description">4,609,148 weekly, 23,674,529 monthly, and 261,098,248 yearly downloads across 43 maintained modules, followed by the top five modules.</desc>
+  <desc id="description">4,607,333 weekly, 23,662,618 monthly, and 260,994,962 yearly downloads across 40 displayed modules, followed by the top five modules.</desc>
   <defs>
     <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
       <stop stop-color="#151226"/>
@@ -34,19 +34,19 @@
     <rect width="280" height="138" rx="18" fill="#0c0b17" stroke="#352c4c"/>
     <text x="22" y="36" class="metric-label">WEEKLY</text>
     <text x="22" y="82" class="metric">4.6M</text>
-    <text x="22" y="111" class="foot">4,609,148 downloads</text>
+    <text x="22" y="111" class="foot">4,607,333 downloads</text>
   </g>
   <g transform="translate(350 145)">
     <rect width="280" height="138" rx="18" fill="#0c0b17" stroke="#352c4c"/>
     <text x="22" y="36" class="metric-label">MONTHLY</text>
     <text x="22" y="82" class="metric">23.7M</text>
-    <text x="22" y="111" class="foot">23,674,529 downloads</text>
+    <text x="22" y="111" class="foot">23,662,618 downloads</text>
   </g>
   <g transform="translate(652 145)">
     <rect width="280" height="138" rx="18" fill="#0c0b17" stroke="#352c4c"/>
     <text x="22" y="36" class="metric-label">YEARLY</text>
-    <text x="22" y="82" class="metric">261.1M</text>
-    <text x="22" y="111" class="foot">261,098,248 downloads</text>
+    <text x="22" y="82" class="metric">261M</text>
+    <text x="22" y="111" class="foot">260,994,962 downloads</text>
   </g>
   <text x="48" y="335" class="eyebrow">TOP MODULES</text>
   <text x="525" y="335" class="column">WEEK</text>
@@ -79,5 +79,5 @@
       <text x="710" y="562" class="value">3,641,068</text>
       <text x="918" y="562" class="value">37,989,839</text>
   <path d="M48 615H932" stroke="#2e2947"/>
-  <text x="48" y="637" class="foot">43 packages across riaevangelist + thewizardnexus · rolling NPM API windows · refreshed Aug 22, 2026 UTC</text>
+  <text x="48" y="637" class="foot">40 displayed packages across riaevangelist + thewizardnexus · rolling NPM API windows · refreshed Aug 22, 2026 UTC</text>
 </svg>
