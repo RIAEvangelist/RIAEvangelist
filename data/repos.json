@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-21T22:59:46.458Z",
+  "generatedAt": "2026-08-22T00:50:57.216Z",
   "owners": [
     {
       "login": "RIAEvangelist",
@@ -27,7 +27,7 @@
     "original": 87,
     "forks": 38,
     "archived": 0,
-    "stars": 1543
+    "stars": 1542
   },
   "repositories": [
     {
@@ -49,7 +49,28 @@
       "topics": [],
       "license": null,
       "createdAt": "2021-03-08T05:47:52Z",
-      "updatedAt": "2026-08-21T22:59:42Z"
+      "updatedAt": "2026-08-22T00:50:43Z"
+    },
+    {
+      "name": "node-cmd",
+      "fullName": "RIAEvangelist/node-cmd",
+      "owner": "RIAEvangelist",
+      "description": "Command-line power for JavaScript: shell commands, direct executable calls, and child-process control with zero runtime dependencies.",
+      "explanation": "Command-line power for JavaScript: shell commands, direct executable calls, and child-process control with zero runtime dependencies.",
+      "url": "https://github.com/RIAEvangelist/node-cmd",
+      "homepage": "https://riaevangelist.github.io/node-cmd/",
+      "language": "HTML",
+      "stars": 284,
+      "forks": 31,
+      "openIssues": 7,
+      "watchers": 284,
+      "archived": false,
+      "disabled": false,
+      "fork": false,
+      "topics": [],
+      "license": "MIT",
+      "createdAt": "2014-02-21T07:38:49Z",
+      "updatedAt": "2026-08-21T23:50:00Z"
     },
     {
       "name": "event-pubsub",
@@ -225,27 +246,6 @@
       "license": "MIT",
       "createdAt": "2015-12-04T01:41:18Z",
       "updatedAt": "2026-08-17T15:28:17Z"
-    },
-    {
-      "name": "node-cmd",
-      "fullName": "RIAEvangelist/node-cmd",
-      "owner": "RIAEvangelist",
-      "description": "Command-line power for JavaScript: shell commands, direct executable calls, and child-process control with zero runtime dependencies.",
-      "explanation": "Command-line power for JavaScript: shell commands, direct executable calls, and child-process control with zero runtime dependencies.",
-      "url": "https://github.com/RIAEvangelist/node-cmd",
-      "homepage": "https://riaevangelist.github.io/node-cmd/",
-      "language": "HTML",
-      "stars": 285,
-      "forks": 31,
-      "openIssues": 7,
-      "watchers": 285,
-      "archived": false,
-      "disabled": false,
-      "fork": false,
-      "topics": [],
-      "license": "MIT",
-      "createdAt": "2014-02-21T07:38:49Z",
-      "updatedAt": "2026-08-17T15:24:53Z"
     },
     {
       "name": "js-message",

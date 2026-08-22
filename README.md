@@ -239,7 +239,7 @@ Every public package currently maintained through the [`riaevangelist`](https://
     <td width="50%" valign="top">
       <a href="https://www.npmjs.com/package/node-error-classes"><strong>node-error-classes</strong></a><br>
       <sub>NPM <code>v2.0.1</code> · @riaevangelist</sub><br>
-      <sub>Custom error classes for node.js </sub>
+      <sub>Custom error classes for node.js</sub>
     </td>
     <td width="50%" valign="top">
       <a href="https://www.npmjs.com/package/node-http-server"><strong>node-http-server</strong></a><br>
@@ -311,7 +311,7 @@ Every public package currently maintained through the [`riaevangelist`](https://
     <td width="50%" valign="top">
       <a href="https://www.npmjs.com/package/parrot-jumping-drone"><strong>parrot-jumping-drone</strong></a><br>
       <sub>NPM <code>v0.0.1</code> · @riaevangelist</sub><br>
-      <sub>Control all the Parrot jumping mini drones! Sumo drone, Night drone and Race mini drones! </sub>
+      <sub>Control all the Parrot jumping mini drones! Sumo drone, Night drone and Race mini drones!</sub>
     </td>
     <td width="50%" valign="top">
       <a href="https://www.npmjs.com/package/parrot-mini-drone"><strong>parrot-mini-drone</strong></a><br>
