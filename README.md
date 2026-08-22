@@ -121,6 +121,275 @@ I build with traditional JavaScript, Node.js, AI-assisted workflows, and open-so
 - [Connect on LinkedIn](https://www.linkedin.com/in/turtlesallthewaydown/) for professional updates and collaboration.
 - [Explore my repositories](https://github.com/RIAEvangelist?tab=repositories) for open-source projects and experiments.
 
+<!-- profile-module-catalog:start -->
+## All NPM modules
+
+Every public package currently maintained through the [`riaevangelist`](https://www.npmjs.com/~riaevangelist) and [`thewizardnexus`](https://www.npmjs.com/~thewizardnexus) identities. Package names link to NPM; the inventory and versions refresh automatically.
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://www.npmjs.com/package/ansi-colors-es6"><strong>ansi-colors-es6</strong></a><br>
+      <sub>NPM <code>v5.0.0</code> · @riaevangelist</sub><br>
+      <sub>ES6+ module to easily add ANSI colors to your browser console and node terminal. A faster drop-in replacement for chalk, kleur and turbocolor (without the dependencies and rendering bugs).</sub>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://www.npmjs.com/package/awesome-webcomponents"><strong>awesome-webcomponents</strong></a><br>
+      <sub>NPM <code>v0.0.58</code> · @riaevangelist</sub><br>
+      <sub>awesome native js web components</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://www.npmjs.com/package/bluetooth-programmer"><strong>bluetooth-programmer</strong></a><br>
+      <sub>NPM <code>v1.0.1</code> · @riaevangelist</sub><br>
+      <sub>Api to make programming bluetooth modules via USB or Serial simple and easy.</sub>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://www.npmjs.com/package/browser-error-classes"><strong>browser-error-classes</strong></a><br>
+      <sub>NPM <code>v1.0.0</code> · @riaevangelist</sub><br>
+      <sub>&lt;a name=&quot;Errors&quot;&gt;&lt;/a&gt; ## Errors : &lt;code&gt;object&lt;/code&gt; # Custom and Explicit Javascript Error Classes</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://www.npmjs.com/package/carlsjr"><strong>carlsjr</strong></a><br>
+      <sub>NPM <code>v0.0.1</code> · @riaevangelist</sub><br>
+      <sub>Carls Jr. api</sub>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://www.npmjs.com/package/dbopfs"><strong>dbopfs</strong></a><br>
+      <sub>NPM <code>v1.0.0</code> · @thewizardnexus</sub><br>
+      <sub>A browser-native database that maps tables and records to the Origin Private File System.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://www.npmjs.com/package/dominos"><strong>dominos</strong></a><br>
+      <sub>NPM <code>v3.3.1</code> · @riaevangelist</sub><br>
+      <sub>node js API for Domino&apos;s pizza</sub>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://www.npmjs.com/package/easy-stack"><strong>easy-stack</strong></a><br>
+      <sub>NPM <code>v2.0.0</code> · @riaevangelist</sub><br>
+      <sub>Zero-dependency cooperative LIFO execution for Node.js and browsers</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://www.npmjs.com/package/event-pubsub"><strong>event-pubsub</strong></a><br>
+      <sub>NPM <code>v5.0.3</code> · @riaevangelist</sub><br>
+      <sub>Super light and fast Extensible ES6+ events and EventEmitters for Node and the browser. Easy for any developer level, use the same exact code in node and the browser. No frills, just high speed events!</sub>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://www.npmjs.com/package/hardees"><strong>hardees</strong></a><br>
+      <sub>NPM <code>v0.0.1</code> · @riaevangelist</sub><br>
+      <sub>Hardee&apos;s api</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://www.npmjs.com/package/heart-attack"><strong>heart-attack</strong></a><br>
+      <sub>NPM <code>v0.0.911</code> · @riaevangelist</sub><br>
+      <sub>Historical registry entry. Its published metadata describes self-replicating behavior; this dashboard does not recommend installation.</sub>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://www.npmjs.com/package/js-base64-file"><strong>js-base64-file</strong></a><br>
+      <sub>NPM <code>v2.0.3</code> · @riaevangelist</sub><br>
+      <sub>load fetch convert and save local and remote files and images to base64 in js</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://www.npmjs.com/package/js-message"><strong>js-message</strong></a><br>
+      <sub>NPM <code>v3.0.0</code> · @riaevangelist</sub><br>
+      <sub>A tiny, normalized JavaScript and JSON message envelope for every runtime boundary</sub>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://www.npmjs.com/package/js-queue"><strong>js-queue</strong></a><br>
+      <sub>NPM <code>v3.0.0</code> · @riaevangelist</sub><br>
+      <sub>A tiny FIFO task queue with explicit flow control for Node and browsers</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://www.npmjs.com/package/linkedin-reader"><strong>linkedin-reader</strong></a><br>
+      <sub>NPM <code>v0.0.1</code> · @riaevangelist</sub><br>
+      <sub>A node module that can be used to automate reading LinkedIn pages</sub>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://www.npmjs.com/package/mcdonalds"><strong>mcdonalds</strong></a><br>
+      <sub>NPM <code>v0.0.1</code> · @riaevangelist</sub><br>
+      <sub>mcdonalds api</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://www.npmjs.com/package/node-ai-cli"><strong>node-ai-cli</strong></a><br>
+      <sub>NPM <code>v0.2.2</code> · @riaevangelist</sub><br>
+      <sub>A CLI for communicationg with OpenAI and similar GPTs</sub>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://www.npmjs.com/package/node-cmd"><strong>node-cmd</strong></a><br>
+      <sub>NPM <code>v6.0.0</code> · @riaevangelist</sub><br>
+      <sub>Command-line power for JavaScript: run shell commands, launch executables, and control child processes with zero runtime dependencies.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://www.npmjs.com/package/node-error-classes"><strong>node-error-classes</strong></a><br>
+      <sub>NPM <code>v2.0.1</code> · @riaevangelist</sub><br>
+      <sub>Custom error classes for node.js </sub>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://www.npmjs.com/package/node-http-server"><strong>node-http-server</strong></a><br>
+      <sub>NPM <code>v9.0.2</code> · @riaevangelist</sub><br>
+      <sub>A lightweight, secure, zero-runtime-dependency HTTP and HTTPS static server for Node.js.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://www.npmjs.com/package/node-ipc"><strong>node-ipc</strong></a><br>
+      <sub>NPM <code>v12.0.0</code> · @riaevangelist</sub><br>
+      <sub>A nodejs module for local and remote Inter Process Communication (IPC), Neural Networking, and able to facilitate machine learning.</sub>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://www.npmjs.com/package/node-parrot-drone"><strong>node-parrot-drone</strong></a><br>
+      <sub>NPM <code>v0.1.0</code> · @riaevangelist</sub><br>
+      <sub>extendable node module to allow control of any Parrot Mini Drone</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://www.npmjs.com/package/nozaki"><strong>nozaki</strong></a><br>
+      <sub>NPM <code>v1.2.0</code> · @riaevangelist</sub><br>
+      <sub>nozaki cli for creating boilerplate web components</sub>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://www.npmjs.com/package/nozaki-color"><strong>nozaki-color</strong></a><br>
+      <sub>NPM <code>v0.0.0</code> · @riaevangelist</sub><br>
+      <sub>use nozaki-colors</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://www.npmjs.com/package/nozaki-colors"><strong>nozaki-colors</strong></a><br>
+      <sub>NPM <code>v1.0.1</code> · @riaevangelist</sub><br>
+      <sub>Another node cli colors module. Done simply and with native syntax. It&apos;s ment to make sense to engineers, not script kiddies.</sub>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://www.npmjs.com/package/nozaki-components"><strong>nozaki-components</strong></a><br>
+      <sub>NPM <code>v0.1.5</code> · @riaevangelist</sub><br>
+      <sub>modern vanilla components designed with ES6+ ESM first works in all modern browsers without transpiling.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://www.npmjs.com/package/nozaki.ninja"><strong>nozaki.ninja</strong></a><br>
+      <sub>NPM <code>v0.0.0</code> · @riaevangelist</sub><br>
+      <sub>nozaki.ninja website api</sub>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://www.npmjs.com/package/nwjs-cast"><strong>nwjs-cast</strong></a><br>
+      <sub>NPM <code>v0.0.3</code> · @riaevangelist</sub><br>
+      <sub>chromecast integration for node, nw.js and node-webkit. Find and interact with all available chromecasts on the network.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://www.npmjs.com/package/oneday-test"><strong>oneday-test</strong></a><br>
+      <sub>NPM <code>v9.1.1</code> · @riaevangelist</sub><br>
+      <sub>NO MORE WAR! Spread peace and love, not hate. Forgive those that have hurt you, none of us are perfect.</sub>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://www.npmjs.com/package/papajohns"><strong>papajohns</strong></a><br>
+      <sub>NPM <code>v0.0.1</code> · @riaevangelist</sub><br>
+      <sub>papajohns pizza api for nodejs</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://www.npmjs.com/package/parrot-jumping-drone"><strong>parrot-jumping-drone</strong></a><br>
+      <sub>NPM <code>v0.0.1</code> · @riaevangelist</sub><br>
+      <sub>Control all the Parrot jumping mini drones! Sumo drone, Night drone and Race mini drones! </sub>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://www.npmjs.com/package/parrot-mini-drone"><strong>parrot-mini-drone</strong></a><br>
+      <sub>NPM <code>v0.0.1</code> · @riaevangelist</sub><br>
+      <sub>extendable node module to allow control of any Parrot Mini Drone</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://www.npmjs.com/package/peacenotwar"><strong>peacenotwar</strong></a><br>
+      <sub>NPM <code>v9.1.7</code> · @riaevangelist</sub><br>
+      <sub>NO MORE WAR! Spread peace and love, not hate. Forgive those that have hurt you, none of us are perfect.</sub>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://www.npmjs.com/package/phidgetapi"><strong>phidgetapi</strong></a><br>
+      <sub>NPM <code>v2.3.1</code> · @riaevangelist</sub><br>
+      <sub>Full official phidget interface API for node.js</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://www.npmjs.com/package/range-class-js"><strong>range-class-js</strong></a><br>
+      <sub>NPM <code>v1.0.1</code> · @riaevangelist</sub><br>
+      <sub>Javascript Range min, max, and step validation</sub>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://www.npmjs.com/package/react-cpc"><strong>react-cpc</strong></a><br>
+      <sub>NPM <code>v0.0.14</code> · @riaevangelist</sub><br>
+      <sub>React Cross Platform Components for desktop apps</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://www.npmjs.com/package/react-cpc-cli"><strong>react-cpc-cli</strong></a><br>
+      <sub>NPM <code>v0.0.2</code> · @riaevangelist</sub><br>
+      <sub>CLI tool for react-cpc</sub>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://www.npmjs.com/package/ria"><strong>ria</strong></a><br>
+      <sub>NPM <code>v2.0.2</code> · @riaevangelist</sub><br>
+      <sub>Node tool for developing RIA Apps using the RIA app framework. Helps initialize the app and create modules using UI templates and archetecture.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://www.npmjs.com/package/serialport-js"><strong>serialport-js</strong></a><br>
+      <sub>NPM <code>v1.1.0</code> · @riaevangelist</sub><br>
+      <sub>Serialport js - node.js serial duplex connection.</sub>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://www.npmjs.com/package/strong-type"><strong>strong-type</strong></a><br>
+      <sub>NPM <code>v2.0.0</code> · @riaevangelist</sub><br>
+      <sub>Dependency-free native ESM type enforcement for JavaScript values, objects, classes, browsers, and Node.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://www.npmjs.com/package/vanilla-test"><strong>vanilla-test</strong></a><br>
+      <sub>NPM <code>v2.1.1</code> · @riaevangelist</sub><br>
+      <sub>Zero-build, Web-standard JavaScript testing for Node and browsers</sub>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://www.npmjs.com/package/veggiegrill"><strong>veggiegrill</strong></a><br>
+      <sub>NPM <code>v0.0.1</code> · @riaevangelist</sub><br>
+      <sub>nodejs veggie grill api</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://www.npmjs.com/package/ws-share"><strong>ws-share</strong></a><br>
+      <sub>NPM <code>v2.0.2</code> · @riaevangelist</sub><br>
+      <sub>sharing websockets for node and the browser isomorphically. Use between different node modules or components for react, flux, reflux, webpack or browserify</sub>
+    </td>
+    <td width="50%" valign="top"></td>
+  </tr>
+</table>
+<!-- profile-module-catalog:end -->
+
 <!-- profile-music-catalog:start -->
 ## Music catalog
 

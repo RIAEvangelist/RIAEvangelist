@@ -101,6 +101,38 @@ function escapeXml(value) {
     .replaceAll("'", "&apos;");
 }
 
+function createReadmeModuleCatalog(snapshot) {
+  const packages = [...snapshot.packages].sort((left, right) => left.name.localeCompare(right.name));
+  const cells = packages.map((pkg) => {
+    const maintainers = pkg.trackedMaintainers.map((maintainer) => `@${maintainer}`).join(" + ");
+    const description = String(pkg.historicalCaution || pkg.description).replace(/\s+/g, " ").trim();
+    return `    <td width="50%" valign="top">
+      <a href="${escapeXml(pkg.links.npm)}"><strong>${escapeXml(pkg.name)}</strong></a><br>
+      <sub>NPM <code>v${escapeXml(pkg.version)}</code> · ${escapeXml(maintainers)}</sub><br>
+      <sub>${escapeXml(description)}</sub>
+    </td>`;
+  });
+  if (cells.length % 2 !== 0) cells.push('    <td width="50%" valign="top"></td>');
+
+  const rows = [];
+  for (let index = 0; index < cells.length; index += 2) {
+    rows.push(`  <tr>
+${cells[index]}
+${cells[index + 1]}
+  </tr>`);
+  }
+
+  return `<!-- profile-module-catalog:start -->
+## All NPM modules
+
+Every public package currently maintained through the [\`riaevangelist\`](https://www.npmjs.com/~riaevangelist) and [\`thewizardnexus\`](https://www.npmjs.com/~thewizardnexus) identities. Package names link to NPM; the inventory and versions refresh automatically.
+
+<table>
+${rows.join("\n")}
+</table>
+<!-- profile-module-catalog:end -->`;
+}
+
 function createTelemetrySvg(snapshot) {
   const width = 980;
   const height = 650;
@@ -314,7 +346,13 @@ const readmeSummary = `${readmeStart}
   <a href="https://riaevangelist.github.io/RIAEvangelist/"><strong>Explore the live package pulse and complete code atlas →</strong></a>
 </p>
 ${readmeEnd}`;
-const updatedReadme = readme.replace(readmePattern, readmeSummary);
+const moduleStart = "<!-- profile-module-catalog:start -->";
+const moduleEnd = "<!-- profile-module-catalog:end -->";
+const modulePattern = new RegExp(`${moduleStart}[\\s\\S]*?${moduleEnd}`);
+if (!modulePattern.test(readme)) throw new Error("README module catalog markers are missing.");
+const updatedReadme = readme
+  .replace(readmePattern, readmeSummary)
+  .replace(modulePattern, createReadmeModuleCatalog(npmSnapshot));
 
 await Promise.all([
   writeFile(snapshotPath, `${JSON.stringify(npmSnapshot, null, 2)}\n`, "utf8"),

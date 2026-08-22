@@ -217,6 +217,49 @@ test("profile README and site expose the telemetry experience", async () => {
   assert.match(svg, /js-message/);
 });
 
+test("profile README lists every maintained NPM module in two columns before music", async () => {
+  const [readme, snapshotText] = await Promise.all([
+    read("README.md"),
+    read("data/npm-stats.json"),
+  ]);
+  const snapshot = JSON.parse(snapshotText);
+  const startMarker = "<!-- profile-module-catalog:start -->";
+  const endMarker = "<!-- profile-module-catalog:end -->";
+  const start = readme.indexOf(startMarker);
+  const end = readme.indexOf(endMarker);
+  const music = readme.indexOf("<!-- profile-music-catalog:start -->");
+
+  assert.equal(readme.split(startMarker).length - 1, 1, "Module catalog start marker must be unique");
+  assert.equal(readme.split(endMarker).length - 1, 1, "Module catalog end marker must be unique");
+  assert.ok(start >= 0, "Missing profile module catalog start marker");
+  assert.ok(end > start, "Missing profile module catalog end marker");
+  assert.ok(music > end, "The module catalog must appear above the music catalog");
+
+  const moduleBlock = readme.slice(start, end + endMarker.length);
+  const rows = [...moduleBlock.matchAll(/<tr>([\s\S]*?)<\/tr>/g)];
+  const npmLinks = [...moduleBlock.matchAll(/href="https:\/\/www\.npmjs\.com\/package\/([^"]+)"/g)];
+  const labels = [...moduleBlock.matchAll(/<strong>([^<]+)<\/strong>/g)].map((match) => match[1]);
+  const expectedLabels = snapshot.packages.map((pkg) => pkg.name).sort((left, right) => left.localeCompare(right));
+  assert.equal(rows.length, Math.ceil(snapshot.packageCount / 2));
+  assert.equal(npmLinks.length, snapshot.packageCount);
+  assert.equal(new Set(npmLinks.map((match) => match[1])).size, snapshot.packageCount);
+  assert.deepEqual(labels, expectedLabels);
+
+  for (const row of rows) {
+    assert.equal((row[1].match(/<td width="50%" valign="top">/g) || []).length, 2);
+  }
+  for (const pkg of snapshot.packages) {
+    assert.ok(moduleBlock.includes(`href="${pkg.links.npm}"`), `${pkg.name} is missing its NPM link`);
+    assert.ok(moduleBlock.includes(`<strong>${pkg.name}</strong>`), `${pkg.name} is missing its label`);
+    assert.ok(moduleBlock.includes(`<code>v${pkg.version}</code>`), `${pkg.name} is missing its version`);
+  }
+  for (const maintainer of snapshot.maintainers) {
+    assert.ok(moduleBlock.includes(`@${maintainer}`), `${maintainer} is missing from the module catalog`);
+  }
+  assert.ok(!/<sub>[^<]*\n[^<]*<\/sub>/.test(moduleBlock), "Module metadata must remain on one line inside the HTML table");
+  assert.match(moduleBlock, /heart-attack[\s\S]+self-replicating behavior; this dashboard does not recommend installation/);
+});
+
 test("profile showcases event-pubsub 6.0.0 with a local package banner", async () => {
   const [readme, banner] = await Promise.all([
     read("README.md"),
