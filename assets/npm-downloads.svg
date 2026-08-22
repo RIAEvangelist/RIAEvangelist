@@ -45,7 +45,7 @@
   <g transform="translate(652 145)">
     <rect width="280" height="138" rx="18" fill="#0c0b17" stroke="#352c4c"/>
     <text x="22" y="36" class="metric-label">YEARLY</text>
-    <text x="22" y="82" class="metric">261M</text>
+    <text x="22" y="82" class="metric">261.1M</text>
     <text x="22" y="111" class="foot">261,098,248 downloads</text>
   </g>
   <text x="48" y="335" class="eyebrow">TOP MODULES</text>
