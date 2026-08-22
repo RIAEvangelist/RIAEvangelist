@@ -13,8 +13,8 @@
       alt: "event-pubsub — fast synchronous events for Node.js and browsers",
       documentation: "https://riaevangelist.github.io/event-pubsub/",
       sourceRelease: Object.freeze({
-        version: "6.0.0",
-        url: "https://github.com/RIAEvangelist/event-pubsub/releases/tag/6.0.0",
+        version: "6.1.0",
+        url: "https://github.com/RIAEvangelist/event-pubsub/releases/tag/6.1.0",
       }),
     }),
     Object.freeze({

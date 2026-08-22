@@ -111,7 +111,7 @@ The public package repositories with purpose-built header artwork, maintained th
     <td width="50%" valign="top">
       <a href="https://github.com/RIAEvangelist/event-pubsub"><img src="assets/packages/event-pubsub.png" width="100%" alt="event-pubsub — fast synchronous events for Node.js and browsers"></a><br>
       <a href="https://github.com/RIAEvangelist/event-pubsub"><strong>event-pubsub</strong></a><br>
-      <sub>NPM <code>v6.1.0</code> · <a href="https://github.com/RIAEvangelist/event-pubsub/releases/tag/6.0.0">GitHub source release 6.0.0 ↗</a></sub><br>
+      <sub>NPM <code>v6.1.0</code> · <a href="https://github.com/RIAEvangelist/event-pubsub/releases/tag/6.1.0">GitHub source release 6.1.0 ↗</a></sub><br>
       <sub>Small, synchronous, extensible publish/subscribe events for modern Node.js and browsers.</sub><br>
       <sub><a href="https://github.com/RIAEvangelist/event-pubsub">Source ↗</a> · <a href="https://www.npmjs.com/package/event-pubsub">NPM ↗</a> · <a href="https://riaevangelist.github.io/event-pubsub/">Documentation ↗</a></sub>
     </td>

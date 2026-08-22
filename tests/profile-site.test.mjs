@@ -331,7 +331,7 @@ test("profile README shows only image-backed featured packages in two columns be
   assert.ok(!/<sub>[^<]*\n[^<]*<\/sub>/.test(packageBlock), "Package metadata must remain on one line inside the HTML table");
 });
 
-test("profile distinguishes event-pubsub NPM latest from its GitHub source release", async () => {
+test("profile presents event-pubsub NPM and GitHub release 6.1.0", async () => {
   const [readme, banner, snapshotText] = await Promise.all([
     read("README.md"),
     readFile(path.join(ROOT, "assets/packages/event-pubsub.png")),
@@ -353,8 +353,8 @@ test("profile distinguishes event-pubsub NPM latest from its GitHub source relea
   assert.match(packageBlock, /https:\/\/github\.com\/RIAEvangelist\/event-pubsub/);
   assert.match(packageBlock, /https:\/\/www\.npmjs\.com\/package\/event-pubsub/);
   assert.match(packageBlock, /https:\/\/riaevangelist\.github\.io\/event-pubsub\//);
-  assert.match(packageBlock, /https:\/\/github\.com\/RIAEvangelist\/event-pubsub\/releases\/tag\/6\.0\.0/);
-  assert.match(packageBlock, /GitHub source release 6\.0\.0/);
+  assert.match(packageBlock, /https:\/\/github\.com\/RIAEvangelist\/event-pubsub\/releases\/tag\/6\.1\.0/);
+  assert.match(packageBlock, /GitHub source release 6\.1\.0/);
   assert.ok(packageBlock.includes(`NPM <code>v${eventPubsub.version}</code>`));
   assert.equal(banner.subarray(1, 4).toString("ascii"), "PNG");
   assert.equal(banner.readUInt32BE(16), 2172);
