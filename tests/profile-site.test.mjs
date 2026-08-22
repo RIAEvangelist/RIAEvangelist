@@ -552,7 +552,7 @@ test("generated music pages form a complete page-first catalog", async () => {
   for (const [relativePath, html] of pages) assertNoRootRelativeUrls(html, relativePath);
 });
 
-test("story chapters are five focused, generated, shareable pages", async () => {
+test("story chapters are six focused, generated, shareable pages", async () => {
   const story = JSON.parse(await read("data/story.json"));
   const slugs = story.pages.map((page) => page.slug);
   const expectedPaths = ["story/index.html", ...slugs.map((slug) => `story/${slug}/index.html`)];
@@ -561,8 +561,8 @@ test("story chapters are five focused, generated, shareable pages", async () => 
   const canonicals = new Set();
   const titles = new Set();
 
-  assert.equal(story.pages.length, 5);
-  assert.equal(new Set(slugs).size, 5);
+  assert.equal(story.pages.length, 6);
+  assert.equal(new Set(slugs).size, 6);
   assert.deepEqual([...generatedManifest.generated].sort(), [...expectedPaths].sort());
   assert.match(pages.get("story/index.html"), /Less scrolling\. More paths\./);
   const japanZen = story.pages.find(({ slug }) => slug === "japan-zen");
@@ -575,6 +575,20 @@ test("story chapters are five focused, generated, shareable pages", async () => 
     label === "Watch the electric motorcycle archive"
       && url === "https://www.youtube.com/@BrandonNozakiMiller"
   )));
+  const military = story.pages.find(({ slug }) => slug === "military-history");
+  const redactedSection = military.sections.find(({ redaction }) => redaction);
+  assert.deepEqual(Object.keys(redactedSection.redaction).sort(), ["label", "lines", "message"]);
+  assert.equal(redactedSection.redaction.label, "PUBLIC RECORD // REDACTED");
+  assert.ok(redactedSection.redaction.lines.length >= 3);
+  assert.match(redactedSection.redaction.message, /should not be read as a claim that the omitted material is classified/);
+  const militaryHtml = pages.get("story/military-history/index.html");
+  assert.match(militaryHtml, /class="redacted-message" role="note"/);
+  assert.match(militaryHtml, /class="redacted-lines" aria-hidden="true"/);
+  assert.match(militaryHtml, /aria-labelledby="redaction-military-history-1-label"/);
+  assert.match(militaryHtml, /aria-describedby="redaction-military-history-1-message"/);
+  assert.equal((militaryHtml.match(/\[REDACTED\]/g) || []).length, redactedSection.redaction.lines.length);
+  assert.ok(militaryHtml.includes(escapeHtml(redactedSection.redaction.message)));
+  assert.doesNotMatch(militaryHtml, /class="redacted-message"[^>]*(?:hidden|display:\s*none|visibility:\s*hidden|opacity:\s*0)/);
 
   for (const page of story.pages) {
     assert.match(page.slug, /^[a-z0-9]+(?:-[a-z0-9]+)*$/);
@@ -642,7 +656,7 @@ test("profile README features the open-tab releases and routes readers to focuse
     }
   }
 
-  for (const route of ["racing", "service", "japan-zen", "technology", "channels"]) {
+  for (const route of ["racing", "military-history", "service", "japan-zen", "technology", "channels"]) {
     assert.ok(readme.includes(`${SITE_BASE}/story/${route}/`), `README is missing the ${route} story link`);
   }
   assert.doesNotMatch(readme, /^## JavaScript vs Python$/m);
@@ -663,7 +677,7 @@ test("one shared footer maps every site section and subsection across all routes
   const storyGroup = siteFooterGroups.find(({ title }) => title === "Life chapters");
   const elsewhereGroup = siteFooterGroups.find(({ title }) => title === "Elsewhere");
 
-  assert.equal(htmlPaths.length, 58);
+  assert.equal(htmlPaths.length, 59);
   assert.deepEqual(
     collectionGroup.links.slice(0).map(([, href]) => href).sort(),
     catalog.collections.map(({ slug }) => `music/collections/${slug}/`).sort(),

@@ -92,6 +92,18 @@ function sourceLinks(links) {
   return `<div class="source-card-grid">${links.map((link) => `<a class="source-card" href="${escapeHtml(link.url)}" target="_blank" rel="noopener noreferrer"><strong>${escapeHtml(link.label)}</strong><small>${escapeHtml(link.note)}</small><span>Open source ↗</span></a>`).join("\n")}</div>`;
 }
 
+function redactedMessage(redaction, id) {
+  if (!redaction) return "";
+  const labelId = `${id}-label`;
+  const messageId = `${id}-message`;
+  const lines = redaction.lines.map((line) => `<p><span>${escapeHtml(line)}</span><i></i><b>[REDACTED]</b></p>`).join("\n");
+  return `<aside class="redacted-message" role="note" aria-labelledby="${labelId}" aria-describedby="${messageId}">
+          <p class="redacted-label" id="${labelId}">${escapeHtml(redaction.label)}</p>
+          <div class="redacted-lines" aria-hidden="true">${lines}</div>
+          <p class="redacted-copy" id="${messageId}">${escapeHtml(redaction.message)}</p>
+        </aside>`;
+}
+
 function storyPage(page) {
   const prefix = "../../";
   const body = `
@@ -102,7 +114,7 @@ function storyPage(page) {
     <section class="story-sections" aria-label="${escapeHtml(page.title)} chapters">
       ${page.sections.map((section, index) => `<article class="story-section">
         <header><b>${String(index + 1).padStart(2, "0")}</b><div><p class="eyebrow">${escapeHtml(section.kicker)}</p><h2>${escapeHtml(section.title)}</h2></div></header>
-        <div class="story-copy">${section.body.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("\n")}${sourceLinks(section.links)}</div>
+        <div class="story-copy">${section.body.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("\n")}${redactedMessage(section.redaction, `redaction-${page.slug}-${index + 1}`)}${sourceLinks(section.links)}</div>
       </article>`).join("\n")}
     </section>
     <nav class="chapter-nav" aria-label="More story chapters"><a href="../">All chapters</a><a href="${prefix}music/">Music catalog</a><a href="${prefix}">Live telemetry</a></nav>`;
@@ -111,12 +123,19 @@ function storyPage(page) {
 
 function validate(story) {
   const slugs = new Set();
-  if (story.pages.length !== 5) throw new Error(`Expected 5 story pages, found ${story.pages.length}`);
+  if (story.pages.length !== 6) throw new Error(`Expected 6 story pages, found ${story.pages.length}`);
   for (const page of story.pages) {
     if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(page.slug) || slugs.has(page.slug)) throw new Error(`Invalid or duplicate story slug: ${page.slug}`);
     slugs.add(page.slug);
     if (!page.sections.length || !page.facts.length) throw new Error(`Incomplete story page: ${page.slug}`);
-    for (const section of page.sections) for (const link of section.links) if (!/^https:\/\//.test(link.url)) throw new Error(`Unsafe story URL: ${page.slug}`);
+    for (const section of page.sections) {
+      for (const link of section.links) if (!/^https:\/\//.test(link.url)) throw new Error(`Unsafe story URL: ${page.slug}`);
+      if (section.redaction) {
+        if (!section.redaction.label?.trim() || !section.redaction.message?.trim() || !section.redaction.lines?.length) {
+          throw new Error(`Incomplete redaction notice: ${page.slug}`);
+        }
+      }
+    }
   }
 }
 

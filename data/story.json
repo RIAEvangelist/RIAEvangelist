@@ -1,6 +1,6 @@
 {
   "title": "The story beyond the telemetry",
-  "description": "Focused chapters on electric racing, technology, service, Japan and Zen, and the video archives that connect them.",
+  "description": "Focused chapters on electric racing, technology, military history, service, Japan and Zen, and the video archives that connect them.",
   "pages": [
     {
       "slug": "racing",
@@ -107,26 +107,52 @@
       ]
     },
     {
-      "slug": "service",
-      "eyebrow": "Service before spectacle",
-      "title": "Build for people. Stay useful.",
-      "lede": "Military service, community leadership, overseas intelligence and technology work, and mental-health advocacy all shaped the same operating principle: make the work practical, humane, and accountable.",
+      "slug": "military-history",
+      "eyebrow": "Service with boundaries",
+      "title": "Military service. A deliberately limited record.",
+      "lede": "I served in the United States Air Force and later worked with military-adjacent organizations, international teams, and intelligence and technology contractors. This public chapter stays deliberately high level.",
       "facts": [
         { "value": "USAF", "label": "Veteran" },
-        { "value": "Rotary + RYLA", "label": "Community leadership" },
-        { "value": "Human first", "label": "Mental-health advocacy" }
+        { "value": "Public account", "label": "Intentionally limited" },
+        { "value": "People first", "label": "Lasting principle" }
       ],
       "sections": [
         {
-          "kicker": "Military and overseas work",
+          "kicker": "United States Air Force",
           "title": "Service changed how I understand systems and responsibility.",
           "body": [
-            "I served in the United States Air Force and later worked with military-adjacent organizations, international teams, and intelligence and technology contractors around the world. The public version of that history stays deliberately high level: the lasting lesson is that technical choices always land on real people."
+            "I served in the United States Air Force. That experience remains part of how I approach responsibility, technical work, and the people affected by both."
+          ],
+          "redaction": {
+            "label": "PUBLIC RECORD // REDACTED",
+            "message": "Some details are intentionally omitted. Specific dates, locations, clients, assignments, methods, and operational details are not included in this public profile. That boundary protects confidentiality and the people connected to the work; it should not be read as a claim that the omitted material is classified.",
+            "lines": ["SERVICE RECORD", "ASSIGNMENT HISTORY", "OPERATIONAL DETAILS"]
+          },
+          "links": []
+        },
+        {
+          "kicker": "Work after service",
+          "title": "The settings changed. The responsibility did not.",
+          "body": [
+            "I later worked with military-adjacent organizations, international teams, and intelligence and technology contractors around the world. The public version stays high level; the lasting lesson is that technical choices always land on real people."
           ],
           "links": [
             { "label": "Professional timeline", "url": "https://www.linkedin.com/in/turtlesallthewaydown/", "note": "Career and education context on LinkedIn" }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "slug": "service",
+      "eyebrow": "Service before spectacle",
+      "title": "Build for people. Stay useful.",
+      "lede": "Veteran mental-health advocacy, community leadership, Rotary, and RYLA shaped the same operating principle: make support practical, humane, and accountable.",
+      "facts": [
+        { "value": "Veterans", "label": "Mental-health advocacy" },
+        { "value": "Rotary + RYLA", "label": "Community leadership" },
+        { "value": "Human first", "label": "Operating principle" }
+      ],
+      "sections": [
         {
           "kicker": "Veterans and mental health",
           "title": "Support should feel human before it feels institutional.",

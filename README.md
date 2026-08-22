@@ -68,6 +68,8 @@ As a USAF veteran and mental health advocate, I am working to make support more 
 
 [Read the service & community chapter →](https://riaevangelist.github.io/RIAEvangelist/story/service/)
 
+[Read the military history chapter—public details deliberately limited →](https://riaevangelist.github.io/RIAEvangelist/story/military-history/)
+
 ### Entrepreneurship & Zen
 
 ![Entrepreneurship](https://img.shields.io/badge/Entrepreneurship-Build%20With%20Purpose-F59E0B?style=for-the-badge) ![Zen](https://img.shields.io/badge/Zen-Clarity%20Over%20Noise-2F4F4F?style=for-the-badge)

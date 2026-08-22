@@ -37,6 +37,7 @@ const footerGroups = [
       ["Story home", "story/"],
       ["Racing", "story/racing/"],
       ["Technology", "story/technology/"],
+      ["Military history", "story/military-history/"],
       ["Service", "story/service/"],
       ["Japan & Zen", "story/japan-zen/"],
       ["Channels", "story/channels/"],
