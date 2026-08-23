@@ -638,7 +638,7 @@ code { color: var(--cyan); font-size: 0.9em; }
 
 .package-metrics {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 0.35rem;
   margin: auto 0 1rem;
 }

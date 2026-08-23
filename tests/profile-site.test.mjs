@@ -229,6 +229,23 @@ test("historical NPM archive reconciles every year, module, and lifetime total",
   assert.ok(dbopfs.total > 0);
 });
 
+test("public profile module index shows every displayed package's recorded total", async () => {
+  const [snapshot, history, script, styles] = await Promise.all([
+    read("data/npm-stats.json").then(JSON.parse),
+    read("data/npm-history/index.json").then(JSON.parse),
+    read("app.js"),
+    read("styles.css"),
+  ]);
+  const totals = new Map(history.packages.map((pkg) => [pkg.name, pkg.total]));
+  const displayed = snapshot.packages.filter((pkg) => !HIDDEN_PACKAGE_NAMES.has(pkg.name));
+
+  assert.ok(displayed.every((pkg) => Number.isSafeInteger(totals.get(pkg.name))));
+  assert.match(script, /const recordedTotals = new Map\(\(state\.history\?\.packages \|\| \[\]\)/);
+  assert.match(script, /<dt>Total<\/dt><dd>\$\{escapeHtml\(totalValue\)\}<\/dd>/);
+  assert.match(script, /if \(state\.npm\) renderPackages\(\);/);
+  assert.match(styles, /\.package-metrics\s*\{[^}]*grid-template-columns:\s*repeat\(4,\s*minmax\(0,\s*1fr\)\)/s);
+});
+
 test("profile README and site expose the telemetry experience", async () => {
   const [readme, html, script, styles, pageStyles, svg] = await Promise.all([
     read("README.md"),

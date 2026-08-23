@@ -186,6 +186,7 @@ function renderLeaderboard() {
 function renderPackages() {
   const query = state.packageQuery.trim().toLowerCase();
   const allPackages = displayedPackages(state.npm.packages);
+  const recordedTotals = new Map((state.history?.packages || []).map((pkg) => [pkg.name, pkg.total]));
   const packages = [...allPackages]
     .filter((pkg) => !query || [pkg.name, pkg.description, ...(pkg.keywords || [])].join(" ").toLowerCase().includes(query))
     .sort((a, b) => b.downloads[state.period] - a.downloads[state.period] || a.name.localeCompare(b.name));
@@ -198,6 +199,11 @@ function renderPackages() {
   }
 
   elements.packageGrid.innerHTML = packages.map((pkg) => {
+    const recordedTotal = recordedTotals.get(pkg.name);
+    const totalValue = Number.isSafeInteger(recordedTotal) ? compactFormatter.format(recordedTotal) : "—";
+    const totalTitle = Number.isSafeInteger(recordedTotal)
+      ? `${numberFormatter.format(recordedTotal)} recorded lifetime downloads`
+      : "Recorded lifetime total loading";
     const links = [
       `<a href="${safeUrl(pkg.links.npm)}">NPM ↗</a>`,
       pkg.links.repository ? `<a href="${safeUrl(pkg.links.repository)}">Source ↗</a>` : "",
@@ -214,6 +220,7 @@ function renderPackages() {
         <div title="${numberFormatter.format(pkg.downloads.week)} weekly downloads"><dt>Week</dt><dd>${compactFormatter.format(pkg.downloads.week)}</dd></div>
         <div title="${numberFormatter.format(pkg.downloads.month)} monthly downloads"><dt>Month</dt><dd>${compactFormatter.format(pkg.downloads.month)}</dd></div>
         <div title="${numberFormatter.format(pkg.downloads.year)} yearly downloads"><dt>Year</dt><dd>${compactFormatter.format(pkg.downloads.year)}</dd></div>
+        <div title="${escapeHtml(totalTitle)}"><dt>Total</dt><dd>${escapeHtml(totalValue)}</dd></div>
       </dl>
       <div class="card-links">${links}</div>
     </article>`;
@@ -551,6 +558,7 @@ function populateHistoryControls() {
 async function initializeHistory() {
   try {
     state.history = await fetchJson("data/npm-history/index.json");
+    if (state.npm) renderPackages();
     populateHistoryControls();
     const first = state.history.firstRecordedDownload;
     elements.historyFirstDate.textContent = formatLongDate(first.date);
