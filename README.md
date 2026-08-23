@@ -152,7 +152,7 @@ The public package repositories with purpose-built header artwork, maintained th
     <td width="50%" valign="top">
       <a href="https://github.com/RIAEvangelist/vanilla-test"><img src="https://raw.githubusercontent.com/RIAEvangelist/vanilla-test/main/assets/vanilla-test-header.png" width="100%" alt="vanilla-test — native JavaScript testing for Node.js and browsers"></a><br>
       <a href="https://github.com/RIAEvangelist/vanilla-test"><strong>vanilla-test</strong></a><br>
-      <sub>NPM <code>v2.1.1</code></sub><br>
+      <sub>NPM <code>v2.1.3</code></sub><br>
       <sub>Zero-build, Web-standard JavaScript testing for Node and browsers</sub><br>
       <sub><a href="https://github.com/RIAEvangelist/vanilla-test">Source ↗</a> · <a href="https://www.npmjs.com/package/vanilla-test">NPM ↗</a> · <a href="https://riaevangelist.github.io/vanilla-test/">Site ↗</a></sub>
     </td>
