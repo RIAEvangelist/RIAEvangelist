@@ -246,15 +246,28 @@ test("public profile module index shows every displayed package's recorded total
   assert.match(styles, /\.package-metrics\s*\{[^}]*grid-template-columns:\s*repeat\(4,\s*minmax\(0,\s*1fr\)\)/s);
 });
 
-test("profile README and site expose the telemetry experience", async () => {
-  const [readme, html, script, styles, pageStyles, svg] = await Promise.all([
+test("profile README and site expose the telemetry experience", async function profileTelemetryExperience() {
+  const [readme, html, script, styles, pageStyles, svg, snapshotText, historyText, reposText] = await Promise.all([
     read("README.md"),
     read("index.html"),
     read("app.js"),
     read("styles.css"),
     read("pages.css"),
     read("assets/npm-downloads.svg"),
+    read("data/npm-stats.json"),
+    read("data/npm-history/index.json"),
+    read("data/repos.json"),
   ]);
+  const snapshot = JSON.parse(snapshotText);
+  const history = JSON.parse(historyText);
+  const repos = JSON.parse(reposText);
+  const displayedCount = snapshot.packages.filter(function isDisplayedPackage(pkg) {
+    return !HIDDEN_PACKAGE_NAMES.has(pkg.name);
+  }).length;
+  const lifetimeBillions = (Math.floor(history.lifetimeTotal / 10_000_000) / 100).toFixed(2);
+  const firstDownloadDate = new Intl.DateTimeFormat("en-US", {
+    year: "numeric", month: "long", day: "numeric", timeZone: "UTC",
+  }).format(new Date(`${history.firstRecordedDownload.date}T00:00:00Z`));
 
   assert.match(readme, /assets\/npm-downloads\.svg/);
   assert.match(readme, /assets\/profile-header\.png/);
@@ -291,13 +304,25 @@ test("profile README and site expose the telemetry experience", async () => {
   assert.match(pageStyles, /\.release-cover[^}]+object-fit:\s*contain/s);
   assert.match(pageStyles, /\.release-workspace-art img[^}]+height:\s*auto[^}]+object-fit:\s*contain/s);
   assert.match(readme, /thewizardnexus/);
-  assert.match(readme, /1\.56\+ billion recorded NPM package downloads since February 27, 2015/);
+  assert.ok(readme.includes(`${lifetimeBillions}+ billion recorded NPM package downloads since ${firstDownloadDate}`), "README lifetime headline must follow the current history archive");
+  assert.ok(readme.includes(`${displayedCount} displayed NPM modules · ${repos.counts.total} public repositories`), "README counts must follow the current catalog");
+  for (const [id, value] of Object.entries({
+    "module-count": numberFormatter.format(displayedCount),
+    "repo-count": numberFormatter.format(repos.counts.total),
+    "signal-total": new Intl.NumberFormat("en-US", { notation: "compact", maximumFractionDigits: 1 }).format(snapshot.totals.year),
+    "repo-total": numberFormatter.format(repos.counts.total),
+    "repo-original": numberFormatter.format(repos.counts.original),
+    "repo-forks": numberFormatter.format(repos.counts.forks),
+    "repo-stars": numberFormatter.format(repos.counts.stars),
+  })) {
+    assert.ok(html.includes(`id="${id}">${value}</`), `Homepage ${id} fallback must follow the current snapshot`);
+  }
   assert.ok(readme.indexOf("profile-npm-history:start") < readme.indexOf("# Roshi _ _"));
   assert.match(svg, /WEEKLY/);
   assert.match(svg, /MONTHLY/);
   assert.match(svg, /YEARLY/);
   assert.match(svg, /js-message/);
-  assert.match(svg, /43 packages in totals · 40 individually displayed/);
+  assert.ok(svg.includes(`${snapshot.packageCount} packages in totals · ${displayedCount} individually displayed`), "Telemetry card counts must follow the current catalog");
   for (const name of PROFILE_DISPLAY.hiddenPackages) {
     assert.ok(!readme.includes(name), `${name} must not be displayed in the README`);
     assert.ok(!svg.includes(name), `${name} must not be displayed in the telemetry card`);

@@ -401,9 +401,24 @@ const indexWithMetrics = Object.entries({
   if (!pattern.test(html)) throw new Error(`Homepage ${id} fallback is missing.`);
   return html.replace(pattern, `<strong id="${id}" data-count="${total}">${fullNumber(total)}</strong>`);
 }, index);
+const indexWithCounts = Object.entries({
+  "module-count": fullNumber(profilePackages.length),
+  "repo-count": fullNumber(repoSnapshot.counts.total),
+  "signal-total": compactNumber(npmSnapshot.totals.year),
+  "repo-total": fullNumber(repoSnapshot.counts.total),
+  "repo-original": fullNumber(repoSnapshot.counts.original),
+  "repo-forks": fullNumber(repoSnapshot.counts.forks),
+  "repo-stars": fullNumber(repoSnapshot.counts.stars),
+}).reduce(function updateHomepageCount(html, [id, value]) {
+  const pattern = new RegExp(`(<(?:b|span|strong) id="${id}">)[^<]*(</(?:b|span|strong)>)`);
+  if (!pattern.test(html)) throw new Error(`Homepage ${id} fallback is missing.`);
+  return html.replace(pattern, function replaceHomepageCount(match, opening, closing) {
+    return `${opening}${value}${closing}`;
+  });
+}, indexWithMetrics);
 const leaderboardPattern = /(<div class="leaderboard" id="leaderboard"[^>]*>\r?\n)[\s\S]*?(\r?\n        <\/div>)/;
-if (!leaderboardPattern.test(indexWithMetrics)) throw new Error("Homepage leaderboard fallback is missing.");
-const updatedIndex = indexWithMetrics.replace(
+if (!leaderboardPattern.test(indexWithCounts)) throw new Error("Homepage leaderboard fallback is missing.");
+const updatedIndex = indexWithCounts.replace(
   leaderboardPattern,
   (_, opening, closing) => `${opening}${createHomepageLeaderboard(npmSnapshot)}${closing}`,
 );

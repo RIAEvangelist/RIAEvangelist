@@ -46,7 +46,7 @@
 
 <p align="center"><sub>Historical snapshot through August 21, 2026 — open the live dashboard for current totals.</sub></p>
 
-The source archive, headline totals, and All modules charts include every public package maintained by the owned [`riaevangelist`](https://www.npmjs.com/~riaevangelist) and [`thewizardnexus`](https://www.npmjs.com/~thewizardnexus) identities. The individual catalog displays a curated 40-module profile, while per-module views and the repository atlas explain the visible work across both accounts. Counts use the official NPM API and refresh automatically each day. They represent package downloads—not unique people or verified installations.
+The source archive, headline totals, and All modules charts include every public package maintained by the owned [`riaevangelist`](https://www.npmjs.com/~riaevangelist) and [`thewizardnexus`](https://www.npmjs.com/~thewizardnexus) identities. The individual catalog displays the curated profile selection, while per-module views and the repository atlas explain the visible work across both accounts. Counts use the official NPM API and refresh automatically each day. They represent package downloads, rather than unique people or verified installations.
 
 ## Earned milestones
 
