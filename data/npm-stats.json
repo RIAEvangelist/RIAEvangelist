@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T08:10:55.610Z",
+  "generatedAt": "2026-09-29T12:52:35.692Z",
   "source": {
     "registry": [
       "https://registry.npmjs.org/-/v1/search?text=maintainer%3Ariaevangelist&size=250",
@@ -494,7 +494,7 @@
     },
     {
       "name": "arcane-os",
-      "version": "0.39.0",
+      "version": "0.40.1",
       "description": "Arcane OS JavaScript SDK, project-local CLI, browser runtime, and repository-portable application packager.",
       "keywords": [
         "arcane-os",
