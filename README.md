@@ -7,7 +7,7 @@
 <!-- profile-npm-history:start -->
 <p align="center">
   <a href="https://riaevangelist.github.io/RIAEvangelist/"><strong>Explore the live open-source dashboard →</strong></a><br>
-  <strong>1.56+ billion recorded NPM package downloads since February 27, 2015</strong>
+  <strong>1.59+ billion recorded NPM package downloads since February 27, 2015</strong>
 </p>
 <!-- profile-npm-history:end -->
 
@@ -33,7 +33,7 @@
 
 <!-- profile-telemetry-counts:start -->
 <p align="center">
-  <strong>40 displayed NPM modules · 125 public repositories · two owned identities</strong><br>
+  <strong>41 displayed NPM modules · 127 public repositories · two owned identities</strong><br>
   <a href="https://riaevangelist.github.io/RIAEvangelist/"><strong>Explore the live package pulse and complete code atlas →</strong></a>
 </p>
 <!-- profile-telemetry-counts:end -->
@@ -113,15 +113,15 @@ The public package repositories with purpose-built header artwork, maintained th
     <td width="50%" valign="top">
       <a href="https://github.com/RIAEvangelist/event-pubsub"><img src="assets/packages/event-pubsub.png" width="100%" alt="event-pubsub — fast synchronous events for Node.js and browsers"></a><br>
       <a href="https://github.com/RIAEvangelist/event-pubsub"><strong>event-pubsub</strong></a><br>
-      <sub>NPM <code>v6.1.0</code> · <a href="https://github.com/RIAEvangelist/event-pubsub/releases/tag/6.1.0">GitHub source release 6.1.0 ↗</a></sub><br>
-      <sub>Small, synchronous, extensible publish/subscribe events for modern Node.js and browsers.</sub><br>
+      <sub>NPM <code>v6.1.1</code> · <a href="https://github.com/RIAEvangelist/event-pubsub/releases/tag/6.1.0">GitHub source release 6.1.0 ↗</a></sub><br>
+      <sub>Small, synchronous publish/subscribe events for Node.js plus bundled and unbundled browsers.</sub><br>
       <sub><a href="https://github.com/RIAEvangelist/event-pubsub">Source ↗</a> · <a href="https://www.npmjs.com/package/event-pubsub">NPM ↗</a> · <a href="https://riaevangelist.github.io/event-pubsub/">Documentation ↗</a></sub>
     </td>
     <td width="50%" valign="top">
       <a href="https://github.com/RIAEvangelist/node-ipc"><img src="https://raw.githubusercontent.com/RIAEvangelist/node-ipc/main/assets/node-ipc-header.png" width="100%" alt="node-ipc — local and remote inter-process communication for Node.js"></a><br>
       <a href="https://github.com/RIAEvangelist/node-ipc"><strong>node-ipc</strong></a><br>
-      <sub>NPM <code>v12.0.0</code></sub><br>
-      <sub>A nodejs module for local and remote Inter Process Communication (IPC), Neural Networking, and able to facilitate machine learning.</sub><br>
+      <sub>NPM <code>v14.0.0</code></sub><br>
+      <sub>Fast local and network IPC with Node.js-only JavaScript and aligned dependency-free Rust and C# implementations.</sub><br>
       <sub><a href="https://github.com/RIAEvangelist/node-ipc">Source ↗</a> · <a href="https://www.npmjs.com/package/node-ipc">NPM ↗</a> · <a href="https://riaevangelist.github.io/node-ipc/">Documentation ↗</a></sub>
     </td>
   </tr>
@@ -129,15 +129,15 @@ The public package repositories with purpose-built header artwork, maintained th
     <td width="50%" valign="top">
       <a href="https://github.com/RIAEvangelist/node-cmd"><img src="https://raw.githubusercontent.com/RIAEvangelist/node-cmd/main/assets/node-cmd-header.png" width="100%" alt="node-cmd — command-line and process control for JavaScript"></a><br>
       <a href="https://github.com/RIAEvangelist/node-cmd"><strong>node-cmd</strong></a><br>
-      <sub>NPM <code>v6.0.0</code></sub><br>
-      <sub>Command-line power for JavaScript: run shell commands, launch executables, and control child processes with zero runtime dependencies.</sub><br>
+      <sub>NPM <code>v6.0.1</code></sub><br>
+      <sub>Node.js-only command-line power: run shell commands, launch executables, and control child processes with zero runtime dependencies.</sub><br>
       <sub><a href="https://github.com/RIAEvangelist/node-cmd">Source ↗</a> · <a href="https://www.npmjs.com/package/node-cmd">NPM ↗</a> · <a href="https://riaevangelist.github.io/node-cmd/">Site ↗</a></sub>
     </td>
     <td width="50%" valign="top">
       <a href="https://github.com/RIAEvangelist/node-http-server"><img src="https://raw.githubusercontent.com/RIAEvangelist/node-http-server/main/assets/node-http-server-header.webp" width="100%" alt="node-http-server — small server, modern HTTP"></a><br>
       <a href="https://github.com/RIAEvangelist/node-http-server"><strong>node-http-server</strong></a><br>
-      <sub>NPM <code>v9.1.0</code></sub><br>
-      <sub>A lightweight, secure, zero-runtime-dependency HTTP and HTTPS static server for Node.js.</sub><br>
+      <sub>NPM <code>v10.0.0</code></sub><br>
+      <sub>A lightweight, secure, zero-runtime-dependency HTTP and HTTPS static server for Node.js only.</sub><br>
       <sub><a href="https://github.com/RIAEvangelist/node-http-server">Source ↗</a> · <a href="https://www.npmjs.com/package/node-http-server">NPM ↗</a> · <a href="https://riaevangelist.github.io/node-http-server/">Site ↗</a></sub>
     </td>
   </tr>
@@ -145,7 +145,7 @@ The public package repositories with purpose-built header artwork, maintained th
     <td width="50%" valign="top">
       <a href="https://github.com/RIAEvangelist/strong-type"><img src="https://raw.githubusercontent.com/RIAEvangelist/strong-type/main/assets/strong-type-header.png" width="100%" alt="strong-type — native JavaScript type enforcement"></a><br>
       <a href="https://github.com/RIAEvangelist/strong-type"><strong>strong-type</strong></a><br>
-      <sub>NPM <code>v2.0.1</code></sub><br>
+      <sub>NPM <code>v2.0.2</code></sub><br>
       <sub>Dependency-free native ESM type enforcement for JavaScript values, objects, classes, browsers, and Node.</sub><br>
       <sub><a href="https://github.com/RIAEvangelist/strong-type">Source ↗</a> · <a href="https://www.npmjs.com/package/strong-type">NPM ↗</a> · <a href="https://riaevangelist.github.io/strong-type/">Site ↗</a></sub>
     </td>
@@ -161,14 +161,14 @@ The public package repositories with purpose-built header artwork, maintained th
     <td width="50%" valign="top">
       <a href="https://github.com/RIAEvangelist/js-message"><img src="https://raw.githubusercontent.com/RIAEvangelist/js-message/main/assets/js-message-header.png" width="100%" alt="js-message — normalized messages across browser and server runtimes"></a><br>
       <a href="https://github.com/RIAEvangelist/js-message"><strong>js-message</strong></a><br>
-      <sub>NPM <code>v3.1.0</code></sub><br>
+      <sub>NPM <code>v3.1.1</code></sub><br>
       <sub>A tiny, normalized JavaScript and JSON message envelope for every runtime boundary</sub><br>
       <sub><a href="https://github.com/RIAEvangelist/js-message">Source ↗</a> · <a href="https://www.npmjs.com/package/js-message">NPM ↗</a> · <a href="https://riaevangelist.github.io/js-message/">Site ↗</a></sub>
     </td>
     <td width="50%" valign="top">
       <a href="https://github.com/RIAEvangelist/js-queue"><img src="https://raw.githubusercontent.com/RIAEvangelist/js-queue/main/assets/js-queue-header.png" width="100%" alt="js-queue — explicit FIFO flow control for JavaScript"></a><br>
       <a href="https://github.com/RIAEvangelist/js-queue"><strong>js-queue</strong></a><br>
-      <sub>NPM <code>v3.1.0</code></sub><br>
+      <sub>NPM <code>v3.1.1</code></sub><br>
       <sub>A tiny FIFO task queue with explicit flow control for Node and browsers</sub><br>
       <sub><a href="https://github.com/RIAEvangelist/js-queue">Source ↗</a> · <a href="https://www.npmjs.com/package/js-queue">NPM ↗</a> · <a href="https://riaevangelist.github.io/js-queue/">Site ↗</a></sub>
     </td>
@@ -177,7 +177,7 @@ The public package repositories with purpose-built header artwork, maintained th
     <td width="50%" valign="top">
       <a href="https://github.com/RIAEvangelist/easy-stack"><img src="https://raw.githubusercontent.com/RIAEvangelist/easy-stack/main/assets/easy-stack-header.png" width="100%" alt="easy-stack — explicit LIFO flow control for JavaScript"></a><br>
       <a href="https://github.com/RIAEvangelist/easy-stack"><strong>easy-stack</strong></a><br>
-      <sub>NPM <code>v2.1.0</code></sub><br>
+      <sub>NPM <code>v2.1.1</code></sub><br>
       <sub>Zero-dependency cooperative LIFO execution for Node.js and browsers</sub><br>
       <sub><a href="https://github.com/RIAEvangelist/easy-stack">Source ↗</a> · <a href="https://www.npmjs.com/package/easy-stack">NPM ↗</a> · <a href="https://riaevangelist.github.io/easy-stack/">Site ↗</a></sub>
     </td>
