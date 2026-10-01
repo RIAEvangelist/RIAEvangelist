@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T12:34:17.780Z",
+  "generatedAt": "2026-10-01T13:14:24.451Z",
   "source": {
     "registry": [
       "https://registry.npmjs.org/-/v1/search?text=maintainer%3Ariaevangelist&size=250",
@@ -16,24 +16,24 @@
   "periods": {
     "week": {
       "label": "Weekly",
-      "start": "2026-09-22",
-      "end": "2026-09-28"
+      "start": "2026-09-23",
+      "end": "2026-09-29"
     },
     "month": {
       "label": "Monthly",
-      "start": "2026-08-30",
-      "end": "2026-09-28"
+      "start": "2026-08-31",
+      "end": "2026-09-29"
     },
     "year": {
       "label": "Yearly",
-      "start": "2025-09-29",
-      "end": "2026-09-28"
+      "start": "2025-09-30",
+      "end": "2026-09-29"
     }
   },
   "totals": {
-    "week": 5551546,
-    "month": 20755934,
-    "year": 259898367
+    "week": 5577904,
+    "month": 21459761,
+    "year": 260071662
   },
   "packages": [
     {
@@ -65,9 +65,9 @@
         "homepage": "https://riaevangelist.github.io/js-message/"
       },
       "downloads": {
-        "week": 1270956,
-        "month": 4747523,
-        "year": 60963766
+        "week": 1278428,
+        "month": 4908195,
+        "year": 60994224
       },
       "historicalCaution": null
     },
@@ -98,9 +98,9 @@
         "homepage": "https://riaevangelist.github.io/easy-stack/"
       },
       "downloads": {
-        "week": 1267373,
-        "month": 4733053,
-        "year": 57726512
+        "week": 1274958,
+        "month": 4893909,
+        "year": 57765361
       },
       "historicalCaution": null
     },
@@ -135,9 +135,9 @@
         "homepage": "https://riaevangelist.github.io/event-pubsub/"
       },
       "downloads": {
-        "week": 1247108,
-        "month": 4651787,
-        "year": 57608347
+        "week": 1255911,
+        "month": 4811147,
+        "year": 57647032
       },
       "historicalCaution": null
     },
@@ -169,9 +169,9 @@
         "homepage": "https://riaevangelist.github.io/js-queue/"
       },
       "downloads": {
-        "week": 820996,
-        "month": 3069916,
-        "year": 38734865
+        "week": 824394,
+        "month": 3175111,
+        "year": 38767530
       },
       "historicalCaution": null
     },
@@ -206,9 +206,9 @@
         "homepage": "https://riaevangelist.github.io/node-ipc/"
       },
       "downloads": {
-        "week": 820948,
-        "month": 3074974,
-        "year": 38598155
+        "week": 824233,
+        "month": 3180131,
+        "year": 38630483
       },
       "historicalCaution": null
     },
@@ -241,9 +241,9 @@
         "homepage": "https://riaevangelist.github.io/strong-type/"
       },
       "downloads": {
-        "week": 82810,
-        "month": 319263,
-        "year": 3969846
+        "week": 75914,
+        "month": 326321,
+        "year": 3968871
       },
       "historicalCaution": null
     },
@@ -277,9 +277,9 @@
         "homepage": "https://riaevangelist.github.io/node-cmd/"
       },
       "downloads": {
-        "week": 25802,
-        "month": 93308,
-        "year": 1545530
+        "week": 25644,
+        "month": 95861,
+        "year": 1543686
       },
       "historicalCaution": null
     },
@@ -309,9 +309,9 @@
         "homepage": "https://github.com/RIAEvangelist/js-base64-img#readme"
       },
       "downloads": {
-        "week": 6843,
-        "month": 20933,
-        "year": 398108
+        "week": 6861,
+        "month": 21616,
+        "year": 398067
       },
       "historicalCaution": null
     },
@@ -349,9 +349,9 @@
         "homepage": "https://riaevangelist.github.io/node-http-server/"
       },
       "downloads": {
-        "week": 2199,
-        "month": 8281,
-        "year": 166179
+        "week": 2389,
+        "month": 8669,
+        "year": 166128
       },
       "historicalCaution": null
     },
@@ -382,9 +382,9 @@
         "homepage": "https://github.com/RIAEvangelist/peacenotwar"
       },
       "downloads": {
-        "week": 3044,
-        "month": 12049,
-        "year": 107256
+        "week": 3050,
+        "month": 12471,
+        "year": 107595
       },
       "historicalCaution": null
     },
@@ -419,9 +419,9 @@
         "homepage": "https://github.com/RIAEvangelist/ansi-colors"
       },
       "downloads": {
-        "week": 811,
-        "month": 4588,
-        "year": 20049
+        "week": 1111,
+        "month": 4678,
+        "year": 20369
       },
       "historicalCaution": null
     },
@@ -451,9 +451,39 @@
         "homepage": "https://riaevangelist.github.io/vanilla-test/"
       },
       "downloads": {
-        "week": 707,
-        "month": 4582,
-        "year": 18236
+        "week": 1065,
+        "month": 4720,
+        "year": 18630
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "arcane-os",
+      "version": "0.45.0",
+      "description": "Arcane OS JavaScript SDK, project-local CLI, browser runtime, and repository-portable application packager.",
+      "keywords": [
+        "arcane-os",
+        "sdk",
+        "cli",
+        "applications",
+        "ollama"
+      ],
+      "publisher": "GitHub Actions",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "trackedMaintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/arcane-os",
+        "repository": "https://github.com/TheWizardNexus/arcane-os-sdk",
+        "homepage": "https://thewizardnexus.github.io/arcane-os-sdk/"
+      },
+      "downloads": {
+        "week": 2759,
+        "month": 12295,
+        "year": 15149
       },
       "historicalCaution": null
     },
@@ -486,39 +516,9 @@
         "homepage": "https://github.com/RIAEvangelist/node-dominos-pizza-api"
       },
       "downloads": {
-        "week": 644,
-        "month": 3150,
-        "year": 14661
-      },
-      "historicalCaution": null
-    },
-    {
-      "name": "arcane-os",
-      "version": "0.41.0",
-      "description": "Arcane OS JavaScript SDK, project-local CLI, browser runtime, and repository-portable application packager.",
-      "keywords": [
-        "arcane-os",
-        "sdk",
-        "cli",
-        "applications",
-        "ollama"
-      ],
-      "publisher": "GitHub Actions",
-      "maintainers": [
-        "riaevangelist"
-      ],
-      "trackedMaintainers": [
-        "riaevangelist"
-      ],
-      "links": {
-        "npm": "https://www.npmjs.com/package/arcane-os",
-        "repository": "https://github.com/TheWizardNexus/arcane-os-sdk",
-        "homepage": "https://thewizardnexus.github.io/arcane-os-sdk/"
-      },
-      "downloads": {
-        "week": 829,
-        "month": 10968,
-        "year": 13101
+        "week": 697,
+        "month": 3100,
+        "year": 14747
       },
       "historicalCaution": null
     },
@@ -550,8 +550,8 @@
       },
       "downloads": {
         "week": 64,
-        "month": 244,
-        "year": 3167
+        "month": 241,
+        "year": 3170
       },
       "historicalCaution": null
     },
@@ -581,9 +581,9 @@
         "homepage": "https://github.com/RIAEvangelist/serialport-js"
       },
       "downloads": {
-        "week": 74,
+        "week": 79,
         "month": 121,
-        "year": 1697
+        "year": 1702
       },
       "historicalCaution": null
     },
@@ -610,9 +610,9 @@
         "homepage": "https://github.com/RIAEvangelist/awesome-webcomponents#readme"
       },
       "downloads": {
-        "week": 65,
-        "month": 150,
-        "year": 1346
+        "week": 71,
+        "month": 153,
+        "year": 1354
       },
       "historicalCaution": null
     },
@@ -639,9 +639,9 @@
         "homepage": "https://github.com/RIAEvangelist/ria-app-framework"
       },
       "downloads": {
-        "week": 118,
-        "month": 223,
-        "year": 1056
+        "week": 122,
+        "month": 221,
+        "year": 1063
       },
       "historicalCaution": null
     },
@@ -671,9 +671,9 @@
         "homepage": "https://www.diginow.it"
       },
       "downloads": {
-        "week": 6,
-        "month": 132,
-        "year": 1024
+        "week": 7,
+        "month": 134,
+        "year": 1027
       },
       "historicalCaution": null
     },
@@ -709,9 +709,9 @@
         "homepage": "https://github.com/RIAEvangelist/ws-share#readme"
       },
       "downloads": {
-        "week": 28,
-        "month": 70,
-        "year": 697
+        "week": 40,
+        "month": 78,
+        "year": 710
       },
       "historicalCaution": null
     },
@@ -738,9 +738,9 @@
         "homepage": "https://github.com/RIAEvangelist/node-error-classes"
       },
       "downloads": {
-        "week": 17,
+        "week": 19,
         "month": 55,
-        "year": 620
+        "year": 622
       },
       "historicalCaution": null
     },
@@ -772,9 +772,9 @@
         "homepage": "https://github.com/RIAEvangelist/parrot-mini-drone#readme"
       },
       "downloads": {
-        "week": 16,
-        "month": 50,
-        "year": 380
+        "week": 12,
+        "month": 48,
+        "year": 375
       },
       "historicalCaution": null
     },
@@ -804,8 +804,8 @@
         "homepage": "https://github.com/RIAEvangelist/Bluetooth-To-Serial-Programming#readme"
       },
       "downloads": {
-        "week": 4,
-        "month": 30,
+        "week": 2,
+        "month": 28,
         "year": 343
       },
       "historicalCaution": null
@@ -839,9 +839,9 @@
         "homepage": "https://github.com/RIAEvangelist/nozaki-components#readme"
       },
       "downloads": {
-        "week": 4,
-        "month": 30,
-        "year": 305
+        "week": 1,
+        "month": 29,
+        "year": 304
       },
       "historicalCaution": null
     },
@@ -864,7 +864,7 @@
       },
       "downloads": {
         "week": 10,
-        "month": 48,
+        "month": 46,
         "year": 297
       },
       "historicalCaution": null
@@ -888,7 +888,7 @@
       },
       "downloads": {
         "week": 5,
-        "month": 30,
+        "month": 28,
         "year": 244
       },
       "historicalCaution": null
@@ -917,8 +917,8 @@
         "homepage": "https://github.com/RIAEvangelist/nozaki#readme"
       },
       "downloads": {
-        "week": 5,
-        "month": 27,
+        "week": 2,
+        "month": 26,
         "year": 223
       },
       "historicalCaution": null
@@ -951,7 +951,7 @@
         "homepage": "https://github.com/RIAEvangelist/parrot-jumping-drone#readme"
       },
       "downloads": {
-        "week": 16,
+        "week": 15,
         "month": 53,
         "year": 220
       },
@@ -986,7 +986,7 @@
       "downloads": {
         "week": 3,
         "month": 30,
-        "year": 208
+        "year": 209
       },
       "historicalCaution": null
     },
@@ -1013,40 +1013,9 @@
         "homepage": "https://github.com/RIAEvangelist/nozaki-colors#readme"
       },
       "downloads": {
-        "week": 2,
-        "month": 18,
-        "year": 189
-      },
-      "historicalCaution": null
-    },
-    {
-      "name": "node-ai-cli",
-      "version": "0.2.2",
-      "description": "A CLI for communicationg with OpenAI and similar GPTs",
-      "keywords": [
-        "ai",
-        "GPT",
-        "openai",
-        "open-ai",
-        "cli",
-        "terminal"
-      ],
-      "publisher": "riaevangelist",
-      "maintainers": [
-        "riaevangelist"
-      ],
-      "trackedMaintainers": [
-        "riaevangelist"
-      ],
-      "links": {
-        "npm": "https://www.npmjs.com/package/node-ai-cli",
-        "repository": "https://github.com/RIAEvangelist/ai-cli",
-        "homepage": "https://github.com/RIAEvangelist/ai-cli#readme"
-      },
-      "downloads": {
-        "week": 4,
-        "month": 18,
-        "year": 186
+        "week": 1,
+        "month": 17,
+        "year": 187
       },
       "historicalCaution": null
     },
@@ -1076,8 +1045,39 @@
         "homepage": "https://github.com/RIAEvangelist/react-cpc-cli#readme"
       },
       "downloads": {
+        "week": 5,
+        "month": 23,
+        "year": 187
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "node-ai-cli",
+      "version": "0.2.2",
+      "description": "A CLI for communicationg with OpenAI and similar GPTs",
+      "keywords": [
+        "ai",
+        "GPT",
+        "openai",
+        "open-ai",
+        "cli",
+        "terminal"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "trackedMaintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/node-ai-cli",
+        "repository": "https://github.com/RIAEvangelist/ai-cli",
+        "homepage": "https://github.com/RIAEvangelist/ai-cli#readme"
+      },
+      "downloads": {
         "week": 4,
-        "month": 24,
+        "month": 17,
         "year": 186
       },
       "historicalCaution": null
@@ -1109,9 +1109,37 @@
         "homepage": "https://github.com/RIAEvangelist/range-class-js#readme"
       },
       "downloads": {
-        "week": 2,
-        "month": 18,
+        "week": 0,
+        "month": 15,
         "year": 172
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "mcdonalds",
+      "version": "0.0.1",
+      "description": "mcdonalds api",
+      "keywords": [
+        "mcdonalds",
+        "api",
+        "node"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "trackedMaintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/mcdonalds",
+        "repository": "https://github.com/RIAEvangelist/node-mcdonalds-api",
+        "homepage": "https://github.com/RIAEvangelist/node-mcdonalds-api#readme"
+      },
+      "downloads": {
+        "week": 4,
+        "month": 22,
+        "year": 165
       },
       "historicalCaution": null
     },
@@ -1142,34 +1170,6 @@
       "downloads": {
         "week": 6,
         "month": 26,
-        "year": 167
-      },
-      "historicalCaution": null
-    },
-    {
-      "name": "mcdonalds",
-      "version": "0.0.1",
-      "description": "mcdonalds api",
-      "keywords": [
-        "mcdonalds",
-        "api",
-        "node"
-      ],
-      "publisher": "riaevangelist",
-      "maintainers": [
-        "riaevangelist"
-      ],
-      "trackedMaintainers": [
-        "riaevangelist"
-      ],
-      "links": {
-        "npm": "https://www.npmjs.com/package/mcdonalds",
-        "repository": "https://github.com/RIAEvangelist/node-mcdonalds-api",
-        "homepage": "https://github.com/RIAEvangelist/node-mcdonalds-api#readme"
-      },
-      "downloads": {
-        "week": 4,
-        "month": 23,
         "year": 165
       },
       "historicalCaution": null
@@ -1199,7 +1199,7 @@
         "homepage": "https://thewizardnexus.github.io/DBOPFS/"
       },
       "downloads": {
-        "week": 3,
+        "week": 2,
         "month": 14,
         "year": 161
       },
@@ -1229,7 +1229,7 @@
       },
       "downloads": {
         "week": 0,
-        "month": 16,
+        "month": 14,
         "year": 106
       },
       "historicalCaution": "Historical registry entry. Its published metadata describes self-replicating behavior; this dashboard does not recommend installation."
@@ -1258,9 +1258,9 @@
         "homepage": "https://github.com/RIAEvangelist/node-veggiegrill-api#readme"
       },
       "downloads": {
-        "week": 4,
-        "month": 20,
-        "year": 104
+        "week": 5,
+        "month": 19,
+        "year": 105
       },
       "historicalCaution": null
     },
@@ -1317,7 +1317,7 @@
       },
       "downloads": {
         "week": 1,
-        "month": 13,
+        "month": 11,
         "year": 86
       },
       "historicalCaution": null
@@ -1345,7 +1345,7 @@
       },
       "downloads": {
         "week": 0,
-        "month": 12,
+        "month": 10,
         "year": 80
       },
       "historicalCaution": null
@@ -1374,7 +1374,7 @@
       },
       "downloads": {
         "week": 1,
-        "month": 12,
+        "month": 11,
         "year": 76
       },
       "historicalCaution": null
@@ -1397,8 +1397,8 @@
         "homepage": null
       },
       "downloads": {
-        "week": 5,
-        "month": 20,
+        "week": 4,
+        "month": 18,
         "year": 76
       },
       "historicalCaution": null
@@ -1427,7 +1427,7 @@
       },
       "downloads": {
         "week": 1,
-        "month": 15,
+        "month": 12,
         "year": 72
       },
       "historicalCaution": null
