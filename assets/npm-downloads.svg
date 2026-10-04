@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="980" height="650" viewBox="0 0 980 650" role="img" aria-labelledby="title description">
   <title id="title">RIAEvangelist NPM download telemetry</title>
-  <desc id="description">5,598,750 weekly, 21,529,832 monthly, and 261,175,891 yearly downloads across all 44 maintained modules, followed by the top five displayed modules.</desc>
+  <desc id="description">5,542,025 weekly, 21,591,848 monthly, and 260,750,049 yearly downloads across all 44 maintained modules, followed by the top five displayed modules.</desc>
   <defs>
     <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
       <stop stop-color="#151226"/>
@@ -33,20 +33,20 @@
   <g transform="translate(48 145)">
     <rect width="280" height="138" rx="18" fill="#0c0b17" stroke="#352c4c"/>
     <text x="22" y="36" class="metric-label">WEEKLY</text>
-    <text x="22" y="82" class="metric">5.6M</text>
-    <text x="22" y="111" class="foot">5,598,750 downloads</text>
+    <text x="22" y="82" class="metric">5.5M</text>
+    <text x="22" y="111" class="foot">5,542,025 downloads</text>
   </g>
   <g transform="translate(350 145)">
     <rect width="280" height="138" rx="18" fill="#0c0b17" stroke="#352c4c"/>
     <text x="22" y="36" class="metric-label">MONTHLY</text>
-    <text x="22" y="82" class="metric">21.5M</text>
-    <text x="22" y="111" class="foot">21,529,832 downloads</text>
+    <text x="22" y="82" class="metric">21.6M</text>
+    <text x="22" y="111" class="foot">21,591,848 downloads</text>
   </g>
   <g transform="translate(652 145)">
     <rect width="280" height="138" rx="18" fill="#0c0b17" stroke="#352c4c"/>
     <text x="22" y="36" class="metric-label">YEARLY</text>
-    <text x="22" y="82" class="metric">261.2M</text>
-    <text x="22" y="111" class="foot">261,175,891 downloads</text>
+    <text x="22" y="82" class="metric">260.8M</text>
+    <text x="22" y="111" class="foot">260,750,049 downloads</text>
   </g>
   <text x="48" y="335" class="eyebrow">TOP MODULES</text>
   <text x="525" y="335" class="column">WEEK</text>
@@ -55,29 +55,29 @@
   <path d="M48 352H932" stroke="#2e2947"/>
   <text x="56" y="390" class="rank">01</text>
       <text x="104" y="390" class="package">js-message</text>
-      <text x="525" y="390" class="value">1,284,865</text>
-      <text x="710" y="390" class="value">4,925,607</text>
-      <text x="918" y="390" class="value">61,170,123</text>
+      <text x="525" y="390" class="value">1,271,927</text>
+      <text x="710" y="390" class="value">4,945,028</text>
+      <text x="918" y="390" class="value">61,059,817</text>
       <text x="56" y="433" class="rank">02</text>
       <text x="104" y="433" class="package">easy-stack</text>
-      <text x="525" y="433" class="value">1,281,331</text>
-      <text x="710" y="433" class="value">4,911,488</text>
-      <text x="918" y="433" class="value">58,510,788</text>
+      <text x="525" y="433" class="value">1,268,986</text>
+      <text x="710" y="433" class="value">4,930,948</text>
+      <text x="918" y="433" class="value">58,425,938</text>
       <text x="56" y="476" class="rank">03</text>
       <text x="104" y="476" class="package">event-pubsub</text>
-      <text x="525" y="476" class="value">1,263,572</text>
-      <text x="710" y="476" class="value">4,826,923</text>
-      <text x="918" y="476" class="value">57,754,712</text>
+      <text x="525" y="476" class="value">1,249,997</text>
+      <text x="710" y="476" class="value">4,843,554</text>
+      <text x="918" y="476" class="value">57,668,711</text>
       <text x="56" y="519" class="rank">04</text>
       <text x="104" y="519" class="package">js-queue</text>
-      <text x="525" y="519" class="value">824,372</text>
-      <text x="710" y="519" class="value">3,184,551</text>
-      <text x="918" y="519" class="value">38,801,865</text>
+      <text x="525" y="519" class="value">815,169</text>
+      <text x="710" y="519" class="value">3,189,425</text>
+      <text x="918" y="519" class="value">38,734,473</text>
       <text x="56" y="562" class="rank">05</text>
       <text x="104" y="562" class="package">node-ipc</text>
-      <text x="525" y="562" class="value">823,869</text>
-      <text x="710" y="562" class="value">3,190,088</text>
-      <text x="918" y="562" class="value">38,664,734</text>
+      <text x="525" y="562" class="value">816,411</text>
+      <text x="710" y="562" class="value">3,195,791</text>
+      <text x="918" y="562" class="value">38,597,475</text>
   <path d="M48 615H932" stroke="#2e2947"/>
-  <text x="48" y="637" class="foot">44 packages in totals · 41 individually displayed · riaevangelist + thewizardnexus · refreshed Oct 3, 2026 UTC</text>
+  <text x="48" y="637" class="foot">44 packages in totals · 41 individually displayed · riaevangelist + thewizardnexus · refreshed Oct 4, 2026 UTC</text>
 </svg>
