@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T14:38:10.378Z",
+  "generatedAt": "2026-10-06T13:18:10.525Z",
   "owners": [
     {
       "login": "RIAEvangelist",
@@ -19,38 +19,17 @@
       "url": "https://github.com/TheWizardNexus",
       "followers": 3,
       "following": 0,
-      "repositoryCount": 7
+      "repositoryCount": 10
     }
   ],
   "counts": {
-    "total": 127,
-    "original": 89,
+    "total": 130,
+    "original": 92,
     "forks": 38,
     "archived": 0,
     "stars": 1547
   },
   "repositories": [
-    {
-      "name": "ws-share",
-      "fullName": "RIAEvangelist/ws-share",
-      "owner": "RIAEvangelist",
-      "description": "A module allowing sharing of websockets  between different functions, modules, scripts, actions, stores, and/or components with vanilla js (plain javascript), react, webpack or browserify",
-      "explanation": "A module allowing sharing of websockets  between different functions, modules, scripts, actions, stores, and/or components with vanilla js (plain javascript), react, webpack or browserify",
-      "url": "https://github.com/RIAEvangelist/ws-share",
-      "homepage": "http://riaevangelist.github.io/ws-share",
-      "language": "JavaScript",
-      "stars": 8,
-      "forks": 1,
-      "openIssues": 0,
-      "watchers": 8,
-      "archived": false,
-      "disabled": false,
-      "fork": false,
-      "topics": [],
-      "license": "NOASSERTION",
-      "createdAt": "2015-09-26T22:07:29Z",
-      "updatedAt": "2026-10-05T13:17:50Z"
-    },
     {
       "name": "starbeards-library",
       "fullName": "RIAEvangelist/starbeards-library",
@@ -70,7 +49,7 @@
       "topics": [],
       "license": "AGPL-3.0",
       "createdAt": "2026-09-08T00:23:37Z",
-      "updatedAt": "2026-10-05T09:14:15Z"
+      "updatedAt": "2026-10-05T16:42:15Z"
     },
     {
       "name": "RIAEvangelist",
@@ -91,7 +70,28 @@
       "topics": [],
       "license": null,
       "createdAt": "2021-03-08T05:47:52Z",
-      "updatedAt": "2026-10-04T12:21:51Z"
+      "updatedAt": "2026-10-05T14:38:41Z"
+    },
+    {
+      "name": "ws-share",
+      "fullName": "RIAEvangelist/ws-share",
+      "owner": "RIAEvangelist",
+      "description": "A module allowing sharing of websockets  between different functions, modules, scripts, actions, stores, and/or components with vanilla js (plain javascript), react, webpack or browserify",
+      "explanation": "A module allowing sharing of websockets  between different functions, modules, scripts, actions, stores, and/or components with vanilla js (plain javascript), react, webpack or browserify",
+      "url": "https://github.com/RIAEvangelist/ws-share",
+      "homepage": "http://riaevangelist.github.io/ws-share",
+      "language": "JavaScript",
+      "stars": 8,
+      "forks": 1,
+      "openIssues": 0,
+      "watchers": 8,
+      "archived": false,
+      "disabled": false,
+      "fork": false,
+      "topics": [],
+      "license": "NOASSERTION",
+      "createdAt": "2015-09-26T22:07:29Z",
+      "updatedAt": "2026-10-05T13:17:50Z"
     },
     {
       "name": "node-dominos-pizza-api",
@@ -409,7 +409,7 @@
       "homepage": "https://riaevangelist.github.io/node-cmd/",
       "language": "HTML",
       "stars": 284,
-      "forks": 31,
+      "forks": 32,
       "openIssues": 7,
       "watchers": 284,
       "archived": false,
@@ -2625,6 +2625,27 @@
       "updatedAt": "2013-08-25T19:35:38Z"
     },
     {
+      "name": "Arcane-PM",
+      "fullName": "TheWizardNexus/Arcane-PM",
+      "owner": "TheWizardNexus",
+      "description": "A Customizeable Project Manager Agent for Codex Projects to help make engineering with AI more human",
+      "explanation": "A Customizeable Project Manager Agent for Codex Projects to help make engineering with AI more human",
+      "url": "https://github.com/TheWizardNexus/Arcane-PM",
+      "homepage": null,
+      "language": "JavaScript",
+      "stars": 0,
+      "forks": 0,
+      "openIssues": 0,
+      "watchers": 0,
+      "archived": false,
+      "disabled": false,
+      "fork": false,
+      "topics": [],
+      "license": null,
+      "createdAt": "2026-10-06T03:27:15Z",
+      "updatedAt": "2026-10-06T12:47:31Z"
+    },
+    {
       "name": "arcane-os-sdk",
       "fullName": "TheWizardNexus/arcane-os-sdk",
       "owner": "TheWizardNexus",
@@ -2643,7 +2664,49 @@
       "topics": [],
       "license": "AGPL-3.0",
       "createdAt": "2026-08-13T23:55:03Z",
-      "updatedAt": "2026-10-05T14:30:20Z"
+      "updatedAt": "2026-10-06T11:35:35Z"
+    },
+    {
+      "name": "SpellWire-Public-Message-Repo",
+      "fullName": "TheWizardNexus/SpellWire-Public-Message-Repo",
+      "owner": "TheWizardNexus",
+      "description": "TWiN public SpellWire Message Repo",
+      "explanation": "TWiN public SpellWire Message Repo",
+      "url": "https://github.com/TheWizardNexus/SpellWire-Public-Message-Repo",
+      "homepage": null,
+      "language": "Unclassified",
+      "stars": 0,
+      "forks": 0,
+      "openIssues": 0,
+      "watchers": 0,
+      "archived": false,
+      "disabled": false,
+      "fork": false,
+      "topics": [],
+      "license": null,
+      "createdAt": "2026-10-06T05:22:00Z",
+      "updatedAt": "2026-10-06T08:21:13Z"
+    },
+    {
+      "name": "KEMPO-Public-Scores",
+      "fullName": "TheWizardNexus/KEMPO-Public-Scores",
+      "owner": "TheWizardNexus",
+      "description": "Public Scores for Models That Have Completed the KEMPO Morals and Ethics assessment exam ",
+      "explanation": "Public Scores for Models That Have Completed the KEMPO Morals and Ethics assessment exam",
+      "url": "https://github.com/TheWizardNexus/KEMPO-Public-Scores",
+      "homepage": null,
+      "language": "Unclassified",
+      "stars": 0,
+      "forks": 0,
+      "openIssues": 0,
+      "watchers": 0,
+      "archived": false,
+      "disabled": false,
+      "fork": false,
+      "topics": [],
+      "license": null,
+      "createdAt": "2026-10-06T05:45:12Z",
+      "updatedAt": "2026-10-06T07:12:02Z"
     },
     {
       "name": "TheWizardNexus.com",
@@ -2664,7 +2727,7 @@
       "topics": [],
       "license": null,
       "createdAt": "2026-08-24T15:14:01Z",
-      "updatedAt": "2026-10-05T09:11:07Z"
+      "updatedAt": "2026-10-05T16:43:16Z"
     },
     {
       "name": "TheWizardNexus",
@@ -2685,7 +2748,7 @@
       "topics": [],
       "license": null,
       "createdAt": "2026-07-13T18:33:00Z",
-      "updatedAt": "2026-10-04T12:48:19Z"
+      "updatedAt": "2026-10-05T15:12:05Z"
     },
     {
       "name": "DBOPFS",

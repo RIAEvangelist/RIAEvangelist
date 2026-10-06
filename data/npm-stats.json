@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T14:38:08.669Z",
+  "generatedAt": "2026-10-06T13:18:08.012Z",
   "source": {
     "registry": [
       "https://registry.npmjs.org/-/v1/search?text=maintainer%3Ariaevangelist&size=250",
@@ -33,7 +33,7 @@
   "totals": {
     "week": 5513917,
     "month": 21020126,
-    "year": 260883998
+    "year": 261947682
   },
   "packages": [
     {
@@ -67,7 +67,7 @@
       "downloads": {
         "week": 1263771,
         "month": 4815473,
-        "year": 61089959
+        "year": 61439473
       },
       "historicalCaution": null
     },
@@ -137,7 +137,7 @@
       "downloads": {
         "week": 1242918,
         "month": 4716085,
-        "year": 57699095
+        "year": 58021049
       },
       "historicalCaution": null
     },
@@ -171,7 +171,7 @@
       "downloads": {
         "week": 811740,
         "month": 3101042,
-        "year": 38753040
+        "year": 38935408
       },
       "historicalCaution": null
     },
@@ -208,7 +208,7 @@
       "downloads": {
         "week": 812854,
         "month": 3107431,
-        "year": 38616021
+        "year": 38797729
       },
       "historicalCaution": null
     },
@@ -243,7 +243,7 @@
       "downloads": {
         "week": 73602,
         "month": 312589,
-        "year": 3971747
+        "year": 3988294
       },
       "historicalCaution": null
     },
@@ -279,7 +279,7 @@
       "downloads": {
         "week": 24655,
         "month": 95163,
-        "year": 1533991
+        "year": 1541563
       },
       "historicalCaution": null
     },
@@ -311,7 +311,7 @@
       "downloads": {
         "week": 7349,
         "month": 22152,
-        "year": 397232
+        "year": 401097
       },
       "historicalCaution": null
     },
@@ -421,7 +421,7 @@
       "downloads": {
         "week": 1189,
         "month": 4024,
-        "year": 21566
+        "year": 21604
       },
       "historicalCaution": null
     },
@@ -459,7 +459,7 @@
     },
     {
       "name": "arcane-os",
-      "version": "0.54.0",
+      "version": "0.74.0",
       "description": "Arcane OS JavaScript SDK, project-local CLI, browser runtime, and repository-portable application packager.",
       "keywords": [
         "arcane-os",
@@ -583,7 +583,7 @@
       "downloads": {
         "week": 62,
         "month": 155,
-        "year": 1743
+        "year": 1760
       },
       "historicalCaution": null
     },
@@ -612,7 +612,7 @@
       "downloads": {
         "week": 86,
         "month": 204,
-        "year": 1399
+        "year": 1406
       },
       "historicalCaution": null
     },
@@ -644,7 +644,7 @@
       "downloads": {
         "week": 38,
         "month": 142,
-        "year": 1182
+        "year": 1190
       },
       "historicalCaution": null
     },
@@ -673,7 +673,7 @@
       "downloads": {
         "week": 77,
         "month": 256,
-        "year": 1115
+        "year": 1120
       },
       "historicalCaution": null
     },
@@ -711,7 +711,7 @@
       "downloads": {
         "week": 88,
         "month": 140,
-        "year": 732
+        "year": 764
       },
       "historicalCaution": null
     },
@@ -740,7 +740,7 @@
       "downloads": {
         "week": 15,
         "month": 57,
-        "year": 638
+        "year": 645
       },
       "historicalCaution": null
     },
@@ -774,7 +774,7 @@
       "downloads": {
         "week": 9,
         "month": 47,
-        "year": 375
+        "year": 376
       },
       "historicalCaution": null
     },
@@ -830,7 +830,7 @@
       "downloads": {
         "week": 8,
         "month": 48,
-        "year": 303
+        "year": 308
       },
       "historicalCaution": null
     },
@@ -865,7 +865,7 @@
       "downloads": {
         "week": 1,
         "month": 28,
-        "year": 283
+        "year": 292
       },
       "historicalCaution": null
     },
@@ -889,7 +889,7 @@
       "downloads": {
         "week": 3,
         "month": 27,
-        "year": 258
+        "year": 259
       },
       "historicalCaution": null
     },
@@ -919,7 +919,7 @@
       "downloads": {
         "week": 1,
         "month": 25,
-        "year": 242
+        "year": 244
       },
       "historicalCaution": null
     },
@@ -953,7 +953,7 @@
       "downloads": {
         "week": 14,
         "month": 57,
-        "year": 236
+        "year": 237
       },
       "historicalCaution": null
     },
@@ -986,7 +986,7 @@
       "downloads": {
         "week": 6,
         "month": 28,
-        "year": 221
+        "year": 223
       },
       "historicalCaution": null
     },
@@ -1017,7 +1017,7 @@
       "downloads": {
         "week": 3,
         "month": 18,
-        "year": 213
+        "year": 215
       },
       "historicalCaution": null
     },
@@ -1111,7 +1111,7 @@
       "downloads": {
         "week": 1,
         "month": 15,
-        "year": 180
+        "year": 183
       },
       "historicalCaution": null
     },
@@ -1139,7 +1139,7 @@
       "downloads": {
         "week": 5,
         "month": 24,
-        "year": 173
+        "year": 178
       },
       "historicalCaution": null
     },
@@ -1170,7 +1170,7 @@
       "downloads": {
         "week": 4,
         "month": 29,
-        "year": 172
+        "year": 173
       },
       "historicalCaution": null
     },
@@ -1260,7 +1260,7 @@
       "downloads": {
         "week": 2,
         "month": 13,
-        "year": 109
+        "year": 111
       },
       "historicalCaution": "Historical registry entry. Its published metadata describes self-replicating behavior; this dashboard does not recommend installation."
     },
@@ -1290,7 +1290,7 @@
       "downloads": {
         "week": 1,
         "month": 17,
-        "year": 105
+        "year": 106
       },
       "historicalCaution": null
     },
@@ -1318,7 +1318,7 @@
       "downloads": {
         "week": 1,
         "month": 9,
-        "year": 92
+        "year": 93
       },
       "historicalCaution": null
     },
@@ -1346,7 +1346,7 @@
       "downloads": {
         "week": 2,
         "month": 8,
-        "year": 82
+        "year": 86
       },
       "historicalCaution": null
     },
@@ -1404,7 +1404,7 @@
       "downloads": {
         "week": 2,
         "month": 8,
-        "year": 77
+        "year": 78
       },
       "historicalCaution": null
     },
@@ -1428,7 +1428,7 @@
       "downloads": {
         "week": 4,
         "month": 15,
-        "year": 77
+        "year": 78
       },
       "historicalCaution": null
     }
