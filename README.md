@@ -7,7 +7,7 @@
 <!-- profile-npm-history:start -->
 <p align="center">
   <a href="https://riaevangelist.github.io/RIAEvangelist/"><strong>Explore the live open-source dashboard →</strong></a><br>
-  <strong>1.59+ billion recorded NPM package downloads since February 27, 2015</strong>
+  <strong>1.60+ billion recorded NPM package downloads since February 27, 2015</strong>
 </p>
 <!-- profile-npm-history:end -->
 
