@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-08T13:29:03.771Z",
+  "generatedAt": "2026-10-09T13:16:49.498Z",
   "owners": [
     {
       "login": "RIAEvangelist",
@@ -49,7 +49,7 @@
       "topics": [],
       "license": null,
       "createdAt": "2021-03-08T05:47:52Z",
-      "updatedAt": "2026-10-07T13:23:30Z"
+      "updatedAt": "2026-10-08T13:29:24Z"
     },
     {
       "name": "starbeards-library",
@@ -2625,6 +2625,48 @@
       "updatedAt": "2013-08-25T19:35:38Z"
     },
     {
+      "name": "TheWizardNexus",
+      "fullName": "TheWizardNexus/TheWizardNexus",
+      "owner": "TheWizardNexus",
+      "description": "GitHub profile for The Wizard Nexus — behavioral health innovation powered by PreCrisis AI.",
+      "explanation": "GitHub profile for The Wizard Nexus — behavioral health innovation powered by PreCrisis AI.",
+      "url": "https://github.com/TheWizardNexus/TheWizardNexus",
+      "homepage": null,
+      "language": "JavaScript",
+      "stars": 2,
+      "forks": 0,
+      "openIssues": 0,
+      "watchers": 2,
+      "archived": false,
+      "disabled": false,
+      "fork": false,
+      "topics": [],
+      "license": null,
+      "createdAt": "2026-07-13T18:33:00Z",
+      "updatedAt": "2026-10-08T13:55:30Z"
+    },
+    {
+      "name": "TheWizardNexus.com",
+      "fullName": "TheWizardNexus/TheWizardNexus.com",
+      "owner": "TheWizardNexus",
+      "description": "The public facing website",
+      "explanation": "The public facing website",
+      "url": "https://github.com/TheWizardNexus/TheWizardNexus.com",
+      "homepage": "https://thewizardnexus.github.io/TheWizardNexus.com/",
+      "language": "HTML",
+      "stars": 0,
+      "forks": 0,
+      "openIssues": 0,
+      "watchers": 0,
+      "archived": false,
+      "disabled": false,
+      "fork": false,
+      "topics": [],
+      "license": null,
+      "createdAt": "2026-08-24T15:14:01Z",
+      "updatedAt": "2026-10-08T13:51:38Z"
+    },
+    {
       "name": "arcane-os-sdk",
       "fullName": "TheWizardNexus/arcane-os-sdk",
       "owner": "TheWizardNexus",
@@ -2665,48 +2707,6 @@
       "license": null,
       "createdAt": "2026-10-06T03:27:15Z",
       "updatedAt": "2026-10-07T17:08:03Z"
-    },
-    {
-      "name": "TheWizardNexus",
-      "fullName": "TheWizardNexus/TheWizardNexus",
-      "owner": "TheWizardNexus",
-      "description": "GitHub profile for The Wizard Nexus — behavioral health innovation powered by PreCrisis AI.",
-      "explanation": "GitHub profile for The Wizard Nexus — behavioral health innovation powered by PreCrisis AI.",
-      "url": "https://github.com/TheWizardNexus/TheWizardNexus",
-      "homepage": null,
-      "language": "JavaScript",
-      "stars": 2,
-      "forks": 0,
-      "openIssues": 0,
-      "watchers": 2,
-      "archived": false,
-      "disabled": false,
-      "fork": false,
-      "topics": [],
-      "license": null,
-      "createdAt": "2026-07-13T18:33:00Z",
-      "updatedAt": "2026-10-07T13:47:58Z"
-    },
-    {
-      "name": "TheWizardNexus.com",
-      "fullName": "TheWizardNexus/TheWizardNexus.com",
-      "owner": "TheWizardNexus",
-      "description": "The public facing website",
-      "explanation": "The public facing website",
-      "url": "https://github.com/TheWizardNexus/TheWizardNexus.com",
-      "homepage": "https://thewizardnexus.github.io/TheWizardNexus.com/",
-      "language": "HTML",
-      "stars": 0,
-      "forks": 0,
-      "openIssues": 0,
-      "watchers": 0,
-      "archived": false,
-      "disabled": false,
-      "fork": false,
-      "topics": [],
-      "license": null,
-      "createdAt": "2026-08-24T15:14:01Z",
-      "updatedAt": "2026-10-07T13:43:24Z"
     },
     {
       "name": "DBOPFS",
