@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T12:11:09.227Z",
+  "generatedAt": "2026-10-28T12:53:52.609Z",
   "source": {
     "registry": [
       "https://registry.npmjs.org/-/v1/search?text=maintainer%3Ariaevangelist&size=250",
@@ -16,24 +16,24 @@
   "periods": {
     "week": {
       "label": "Weekly",
-      "start": "2026-06-25",
-      "end": "2026-07-01"
+      "start": "2026-10-20",
+      "end": "2026-10-26"
     },
     "month": {
       "label": "Monthly",
-      "start": "2026-06-02",
-      "end": "2026-07-01"
+      "start": "2026-09-27",
+      "end": "2026-10-26"
     },
     "year": {
       "label": "Yearly",
-      "start": "2025-07-02",
-      "end": "2026-07-01"
+      "start": "2025-10-27",
+      "end": "2026-10-26"
     }
   },
   "totals": {
-    "week": 5677592,
-    "month": 25026844,
-    "year": 257460199
+    "week": 3831571,
+    "month": 16827839,
+    "year": 260749316
   },
   "packages": [
     {
@@ -65,9 +65,9 @@
         "homepage": "https://riaevangelist.github.io/js-message/"
       },
       "downloads": {
-        "week": 1318107,
-        "month": 5805337,
-        "year": 61056743
+        "week": 877708,
+        "month": 3849047,
+        "year": 60852647
       },
       "historicalCaution": null
     },
@@ -98,9 +98,9 @@
         "homepage": "https://riaevangelist.github.io/easy-stack/"
       },
       "downloads": {
-        "week": 1248559,
-        "month": 5492193,
-        "year": 58752015
+        "week": 877023,
+        "month": 3843296,
+        "year": 58671002
       },
       "historicalCaution": null
     },
@@ -135,9 +135,9 @@
         "homepage": "https://riaevangelist.github.io/event-pubsub/"
       },
       "downloads": {
-        "week": 1232317,
-        "month": 5415570,
-        "year": 57942970
+        "week": 862786,
+        "month": 3777157,
+        "year": 57766053
       },
       "historicalCaution": null
     },
@@ -169,9 +169,9 @@
         "homepage": "https://riaevangelist.github.io/js-queue/"
       },
       "downloads": {
-        "week": 870783,
-        "month": 3868030,
-        "year": 36813519
+        "week": 564558,
+        "month": 2487448,
+        "year": 38679864
       },
       "historicalCaution": null
     },
@@ -206,9 +206,9 @@
         "homepage": "https://riaevangelist.github.io/node-ipc/"
       },
       "downloads": {
-        "week": 868732,
-        "month": 3861010,
-        "year": 36687415
+        "week": 564709,
+        "month": 2491023,
+        "year": 38542923
       },
       "historicalCaution": null
     },
@@ -241,9 +241,9 @@
         "homepage": "https://riaevangelist.github.io/strong-type/"
       },
       "downloads": {
-        "week": 86115,
-        "month": 366440,
-        "year": 3775826
+        "week": 56111,
+        "month": 239180,
+        "year": 3968551
       },
       "historicalCaution": null
     },
@@ -277,9 +277,9 @@
         "homepage": "https://riaevangelist.github.io/node-cmd/"
       },
       "downloads": {
-        "week": 31663,
-        "month": 130940,
-        "year": 1670302
+        "week": 18636,
+        "month": 81498,
+        "year": 1500572
       },
       "historicalCaution": null
     },
@@ -309,9 +309,9 @@
         "homepage": "https://github.com/RIAEvangelist/js-base64-img#readme"
       },
       "downloads": {
-        "week": 11491,
-        "month": 50208,
-        "year": 443335
+        "week": 4525,
+        "month": 19915,
+        "year": 398316
       },
       "historicalCaution": null
     },
@@ -349,9 +349,9 @@
         "homepage": "https://riaevangelist.github.io/node-http-server/"
       },
       "downloads": {
-        "week": 3378,
-        "month": 15288,
-        "year": 180957
+        "week": 1676,
+        "month": 7987,
+        "year": 160965
       },
       "historicalCaution": null
     },
@@ -382,9 +382,39 @@
         "homepage": "https://github.com/RIAEvangelist/peacenotwar"
       },
       "downloads": {
-        "week": 2670,
-        "month": 12529,
-        "year": 95904
+        "week": 2123,
+        "month": 9788,
+        "year": 109909
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "arcane-os",
+      "version": "0.97.1",
+      "description": "Arcane OS JavaScript SDK, project-local CLI, browser runtime, and repository-portable application packager.",
+      "keywords": [
+        "arcane-os",
+        "sdk",
+        "cli",
+        "applications",
+        "ollama"
+      ],
+      "publisher": "GitHub Actions",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "trackedMaintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/arcane-os",
+        "repository": "https://github.com/TheWizardNexus/arcane-os-sdk",
+        "homepage": "https://thewizardnexus.github.io/arcane-os-sdk/"
+      },
+      "downloads": {
+        "week": 95,
+        "month": 11763,
+        "year": 24256
       },
       "historicalCaution": null
     },
@@ -419,9 +449,9 @@
         "homepage": "https://github.com/RIAEvangelist/ansi-colors"
       },
       "downloads": {
-        "week": 1117,
-        "month": 2599,
-        "year": 14027
+        "week": 513,
+        "month": 2901,
+        "year": 22780
       },
       "historicalCaution": null
     },
@@ -451,9 +481,9 @@
         "homepage": "https://riaevangelist.github.io/vanilla-test/"
       },
       "downloads": {
-        "week": 1096,
-        "month": 2538,
-        "year": 8010
+        "week": 490,
+        "month": 3353,
+        "year": 21125
       },
       "historicalCaution": null
     },
@@ -486,9 +516,9 @@
         "homepage": "https://github.com/RIAEvangelist/node-dominos-pizza-api"
       },
       "downloads": {
-        "week": 1131,
-        "month": 2531,
-        "year": 7927
+        "week": 477,
+        "month": 1848,
+        "year": 15752
       },
       "historicalCaution": null
     },
@@ -519,70 +549,9 @@
         "homepage": "https://github.com/RIAEvangelist/oneday"
       },
       "downloads": {
-        "week": 69,
-        "month": 290,
-        "year": 3191
-      },
-      "historicalCaution": null
-    },
-    {
-      "name": "awesome-webcomponents",
-      "version": "0.0.58",
-      "description": "awesome native js web components",
-      "keywords": [
-        "awesome",
-        "web",
-        "components",
-        "webcomponents"
-      ],
-      "publisher": "riaevangelist",
-      "maintainers": [
-        "riaevangelist"
-      ],
-      "trackedMaintainers": [
-        "riaevangelist"
-      ],
-      "links": {
-        "npm": "https://www.npmjs.com/package/awesome-webcomponents",
-        "repository": "https://github.com/RIAEvangelist/awesome-webcomponents",
-        "homepage": "https://github.com/RIAEvangelist/awesome-webcomponents#readme"
-      },
-      "downloads": {
-        "week": 70,
-        "month": 198,
-        "year": 1083
-      },
-      "historicalCaution": null
-    },
-    {
-      "name": "phidgetapi",
-      "version": "2.3.1",
-      "description": "Full official phidget interface API for node.js",
-      "keywords": [
-        "phidget",
-        "phidgets",
-        "api",
-        "node-phidgets"
-      ],
-      "publisher": "riaevangelist",
-      "maintainers": [
-        "riaevangelist",
-        "nexflo",
-        "mayberex",
-        "yamanote1138"
-      ],
-      "trackedMaintainers": [
-        "riaevangelist"
-      ],
-      "links": {
-        "npm": "https://www.npmjs.com/package/phidgetapi",
-        "repository": "https://github.com/RIAEvangelist/node-phidget-API",
-        "homepage": "https://www.diginow.it"
-      },
-      "downloads": {
-        "week": 39,
-        "month": 102,
-        "year": 882
+        "week": 48,
+        "month": 218,
+        "year": 3194
       },
       "historicalCaution": null
     },
@@ -612,21 +581,21 @@
         "homepage": "https://github.com/RIAEvangelist/serialport-js"
       },
       "downloads": {
-        "week": 39,
-        "month": 131,
-        "year": 784
+        "week": 4,
+        "month": 120,
+        "year": 1723
       },
       "historicalCaution": null
     },
     {
-      "name": "ria",
-      "version": "2.0.2",
-      "description": "Node tool for developing RIA Apps using the RIA app framework. Helps initialize the app and create modules using UI templates and archetecture.",
+      "name": "awesome-webcomponents",
+      "version": "0.0.58",
+      "description": "awesome native js web components",
       "keywords": [
-        "RIA",
-        "App",
-        "framework",
-        "tool"
+        "awesome",
+        "web",
+        "components",
+        "webcomponents"
       ],
       "publisher": "riaevangelist",
       "maintainers": [
@@ -636,14 +605,14 @@
         "riaevangelist"
       ],
       "links": {
-        "npm": "https://www.npmjs.com/package/ria",
-        "repository": "https://github.com/RIAEvangelist/ria-app-framework",
-        "homepage": "https://github.com/RIAEvangelist/ria-app-framework"
+        "npm": "https://www.npmjs.com/package/awesome-webcomponents",
+        "repository": "https://github.com/RIAEvangelist/awesome-webcomponents",
+        "homepage": "https://github.com/RIAEvangelist/awesome-webcomponents#readme"
       },
       "downloads": {
-        "week": 48,
-        "month": 165,
-        "year": 766
+        "week": 12,
+        "month": 138,
+        "year": 1327
       },
       "historicalCaution": null
     },
@@ -679,9 +648,70 @@
         "homepage": "https://riaevangelist.github.io/ws-share/"
       },
       "downloads": {
-        "week": 27,
-        "month": 118,
-        "year": 587
+        "week": 16,
+        "month": 597,
+        "year": 1219
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "ria",
+      "version": "2.0.2",
+      "description": "Node tool for developing RIA Apps using the RIA app framework. Helps initialize the app and create modules using UI templates and archetecture.",
+      "keywords": [
+        "RIA",
+        "App",
+        "framework",
+        "tool"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "trackedMaintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/ria",
+        "repository": "https://github.com/RIAEvangelist/ria-app-framework",
+        "homepage": "https://github.com/RIAEvangelist/ria-app-framework"
+      },
+      "downloads": {
+        "week": 6,
+        "month": 139,
+        "year": 1115
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "phidgetapi",
+      "version": "2.3.1",
+      "description": "Full official phidget interface API for node.js",
+      "keywords": [
+        "phidget",
+        "phidgets",
+        "api",
+        "node-phidgets"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist",
+        "nexflo",
+        "mayberex",
+        "yamanote1138"
+      ],
+      "trackedMaintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/phidgetapi",
+        "repository": "https://github.com/RIAEvangelist/node-phidget-API",
+        "homepage": "https://www.diginow.it"
+      },
+      "downloads": {
+        "week": 6,
+        "month": 78,
+        "year": 1097
       },
       "historicalCaution": null
     },
@@ -708,9 +738,9 @@
         "homepage": "https://github.com/RIAEvangelist/node-error-classes"
       },
       "downloads": {
-        "week": 23,
-        "month": 87,
-        "year": 533
+        "week": 3,
+        "month": 49,
+        "year": 604
       },
       "historicalCaution": null
     },
@@ -742,9 +772,9 @@
         "homepage": "https://github.com/RIAEvangelist/parrot-mini-drone#readme"
       },
       "downloads": {
-        "week": 4,
-        "month": 44,
-        "year": 326
+        "week": 6,
+        "month": 26,
+        "year": 372
       },
       "historicalCaution": null
     },
@@ -774,9 +804,33 @@
         "homepage": "https://github.com/RIAEvangelist/Bluetooth-To-Serial-Programming#readme"
       },
       "downloads": {
-        "week": 19,
-        "month": 59,
-        "year": 311
+        "week": 1,
+        "month": 22,
+        "year": 360
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "react-cpc",
+      "version": "0.0.14",
+      "description": "React Cross Platform Components for desktop apps",
+      "keywords": [],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "trackedMaintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/react-cpc",
+        "repository": null,
+        "homepage": "https://github.com/RIAEvangelist/react-cpc#readme"
+      },
+      "downloads": {
+        "week": 6,
+        "month": 23,
+        "year": 298
       },
       "historicalCaution": null
     },
@@ -809,33 +863,9 @@
         "homepage": "https://github.com/RIAEvangelist/nozaki-components#readme"
       },
       "downloads": {
-        "week": 13,
-        "month": 41,
-        "year": 263
-      },
-      "historicalCaution": null
-    },
-    {
-      "name": "react-cpc",
-      "version": "0.0.14",
-      "description": "React Cross Platform Components for desktop apps",
-      "keywords": [],
-      "publisher": "riaevangelist",
-      "maintainers": [
-        "riaevangelist"
-      ],
-      "trackedMaintainers": [
-        "riaevangelist"
-      ],
-      "links": {
-        "npm": "https://www.npmjs.com/package/react-cpc",
-        "repository": null,
-        "homepage": "https://github.com/RIAEvangelist/react-cpc#readme"
-      },
-      "downloads": {
-        "week": 4,
-        "month": 19,
-        "year": 234
+        "week": 1,
+        "month": 17,
+        "year": 278
       },
       "historicalCaution": null
     },
@@ -857,41 +887,9 @@
         "homepage": "https://github.com/RIAEvangelist/browser-error-classes#readme"
       },
       "downloads": {
-        "week": 10,
-        "month": 40,
-        "year": 207
-      },
-      "historicalCaution": null
-    },
-    {
-      "name": "react-cpc-cli",
-      "version": "0.0.2",
-      "description": "CLI tool for react-cpc",
-      "keywords": [
-        "react",
-        "cpc",
-        "cross",
-        "platform",
-        "desktop",
-        "cli",
-        "app"
-      ],
-      "publisher": "riaevangelist",
-      "maintainers": [
-        "riaevangelist"
-      ],
-      "trackedMaintainers": [
-        "riaevangelist"
-      ],
-      "links": {
-        "npm": "https://www.npmjs.com/package/react-cpc-cli",
-        "repository": "https://github.com/RIAEvangelist/react-cpc-cli",
-        "homepage": "https://github.com/RIAEvangelist/react-cpc-cli#readme"
-      },
-      "downloads": {
         "week": 3,
-        "month": 23,
-        "year": 198
+        "month": 14,
+        "year": 265
       },
       "historicalCaution": null
     },
@@ -924,8 +922,8 @@
       },
       "downloads": {
         "week": 3,
-        "month": 13,
-        "year": 194
+        "month": 30,
+        "year": 239
       },
       "historicalCaution": null
     },
@@ -953,9 +951,9 @@
         "homepage": "https://github.com/RIAEvangelist/nozaki#readme"
       },
       "downloads": {
-        "week": 9,
-        "month": 34,
-        "year": 190
+        "week": 2,
+        "month": 10,
+        "year": 230
       },
       "historicalCaution": null
     },
@@ -986,9 +984,9 @@
         "homepage": "https://github.com/RIAEvangelist/nwjs-cast"
       },
       "downloads": {
-        "week": 8,
-        "month": 23,
-        "year": 171
+        "week": 1,
+        "month": 19,
+        "year": 224
       },
       "historicalCaution": null
     },
@@ -1017,9 +1015,9 @@
         "homepage": "https://github.com/RIAEvangelist/ai-cli#readme"
       },
       "downloads": {
-        "week": 13,
-        "month": 34,
-        "year": 165
+        "week": 2,
+        "month": 12,
+        "year": 199
       },
       "historicalCaution": null
     },
@@ -1046,9 +1044,69 @@
         "homepage": "https://github.com/RIAEvangelist/nozaki-colors#readme"
       },
       "downloads": {
+        "week": 0,
+        "month": 14,
+        "year": 197
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "react-cpc-cli",
+      "version": "0.0.2",
+      "description": "CLI tool for react-cpc",
+      "keywords": [
+        "react",
+        "cpc",
+        "cross",
+        "platform",
+        "desktop",
+        "cli",
+        "app"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "trackedMaintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/react-cpc-cli",
+        "repository": "https://github.com/RIAEvangelist/react-cpc-cli",
+        "homepage": "https://github.com/RIAEvangelist/react-cpc-cli#readme"
+      },
+      "downloads": {
+        "week": 3,
+        "month": 17,
+        "year": 197
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "mcdonalds",
+      "version": "0.0.1",
+      "description": "mcdonalds api",
+      "keywords": [
+        "mcdonalds",
+        "api",
+        "node"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "trackedMaintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/mcdonalds",
+        "repository": "https://github.com/RIAEvangelist/node-mcdonalds-api",
+        "homepage": "https://github.com/RIAEvangelist/node-mcdonalds-api#readme"
+      },
+      "downloads": {
         "week": 6,
-        "month": 30,
-        "year": 164
+        "month": 18,
+        "year": 184
       },
       "historicalCaution": null
     },
@@ -1078,8 +1136,8 @@
       },
       "downloads": {
         "week": 2,
-        "month": 20,
-        "year": 164
+        "month": 15,
+        "year": 175
       },
       "historicalCaution": null
     },
@@ -1110,294 +1168,9 @@
         "homepage": "https://github.com/RIAEvangelist/range-class-js#readme"
       },
       "downloads": {
-        "week": 6,
-        "month": 24,
-        "year": 146
-      },
-      "historicalCaution": null
-    },
-    {
-      "name": "mcdonalds",
-      "version": "0.0.1",
-      "description": "mcdonalds api",
-      "keywords": [
-        "mcdonalds",
-        "api",
-        "node"
-      ],
-      "publisher": "riaevangelist",
-      "maintainers": [
-        "riaevangelist"
-      ],
-      "trackedMaintainers": [
-        "riaevangelist"
-      ],
-      "links": {
-        "npm": "https://www.npmjs.com/package/mcdonalds",
-        "repository": "https://github.com/RIAEvangelist/node-mcdonalds-api",
-        "homepage": "https://github.com/RIAEvangelist/node-mcdonalds-api#readme"
-      },
-      "downloads": {
         "week": 1,
-        "month": 17,
-        "year": 125
-      },
-      "historicalCaution": null
-    },
-    {
-      "name": "veggiegrill",
-      "version": "0.0.1",
-      "description": "nodejs veggie grill api",
-      "keywords": [
-        "veggie",
-        "grill",
-        "veggiegrill",
-        "api",
-        "nodejs"
-      ],
-      "publisher": "riaevangelist",
-      "maintainers": [
-        "riaevangelist"
-      ],
-      "trackedMaintainers": [
-        "riaevangelist"
-      ],
-      "links": {
-        "npm": "https://www.npmjs.com/package/veggiegrill",
-        "repository": "https://github.com/RIAEvangelist/node-veggiegrill-api",
-        "homepage": "https://github.com/RIAEvangelist/node-veggiegrill-api#readme"
-      },
-      "downloads": {
-        "week": 3,
-        "month": 10,
-        "year": 93
-      },
-      "historicalCaution": null
-    },
-    {
-      "name": "heart-attack",
-      "version": "0.0.911",
-      "description": "heart-attack self replicating virus node-js",
-      "keywords": [
-        "heart",
-        "attack",
-        "virus",
-        "worm"
-      ],
-      "publisher": "riaevangelist",
-      "maintainers": [
-        "riaevangelist"
-      ],
-      "trackedMaintainers": [
-        "riaevangelist"
-      ],
-      "links": {
-        "npm": "https://www.npmjs.com/package/heart-attack",
-        "repository": "https://github.com/RIAEvangelist/heart-attack",
-        "homepage": "https://github.com/RIAEvangelist/heart-attack#readme"
-      },
-      "downloads": {
-        "week": 2,
-        "month": 18,
-        "year": 92
-      },
-      "historicalCaution": "Historical registry entry. Its published metadata describes self-replicating behavior; this dashboard does not recommend installation."
-    },
-    {
-      "name": "hardees",
-      "version": "0.0.1",
-      "description": "Hardee's api",
-      "keywords": [
-        "hardees",
-        "api",
-        "node"
-      ],
-      "publisher": "riaevangelist",
-      "maintainers": [
-        "riaevangelist"
-      ],
-      "trackedMaintainers": [
-        "riaevangelist"
-      ],
-      "links": {
-        "npm": "https://www.npmjs.com/package/hardees",
-        "repository": "https://github.com/RIAEvangelist/node-hardees-api",
-        "homepage": "https://github.com/RIAEvangelist/node-hardees-api#readme"
-      },
-      "downloads": {
-        "week": 2,
-        "month": 22,
-        "year": 73
-      },
-      "historicalCaution": null
-    },
-    {
-      "name": "papajohns",
-      "version": "0.0.1",
-      "description": "papajohns pizza api for nodejs",
-      "keywords": [
-        "papajohns",
-        "pizza",
-        "api",
-        "order",
-        "nodejs"
-      ],
-      "publisher": "riaevangelist",
-      "maintainers": [
-        "riaevangelist"
-      ],
-      "trackedMaintainers": [
-        "riaevangelist"
-      ],
-      "links": {
-        "npm": "https://www.npmjs.com/package/papajohns",
-        "repository": "https://github.com/RIAEvangelist/node-papajohns-api",
-        "homepage": "https://github.com/RIAEvangelist/node-papajohns-api#readme"
-      },
-      "downloads": {
-        "week": 1,
-        "month": 15,
-        "year": 72
-      },
-      "historicalCaution": null
-    },
-    {
-      "name": "nozaki.ninja",
-      "version": "0.0.0",
-      "description": "nozaki.ninja website api",
-      "keywords": [
-        "nozaki",
-        "ninja",
-        "api"
-      ],
-      "publisher": "riaevangelist",
-      "maintainers": [
-        "riaevangelist"
-      ],
-      "trackedMaintainers": [
-        "riaevangelist"
-      ],
-      "links": {
-        "npm": "https://www.npmjs.com/package/nozaki.ninja",
-        "repository": "https://github.com/RIAEvangelist/nozaki.ninja",
-        "homepage": "https://github.com/RIAEvangelist/nozaki.ninja#readme"
-      },
-      "downloads": {
-        "week": 3,
-        "month": 12,
-        "year": 67
-      },
-      "historicalCaution": null
-    },
-    {
-      "name": "carlsjr",
-      "version": "0.0.1",
-      "description": "Carls Jr. api",
-      "keywords": [
-        "carls jr",
-        "carlsjr",
-        "api",
-        "node"
-      ],
-      "publisher": "riaevangelist",
-      "maintainers": [
-        "riaevangelist"
-      ],
-      "trackedMaintainers": [
-        "riaevangelist"
-      ],
-      "links": {
-        "npm": "https://www.npmjs.com/package/carlsjr",
-        "repository": "https://github.com/RIAEvangelist/node-carlsjr-api",
-        "homepage": "https://github.com/RIAEvangelist/node-carlsjr-api#readme"
-      },
-      "downloads": {
-        "week": 4,
-        "month": 17,
-        "year": 60
-      },
-      "historicalCaution": null
-    },
-    {
-      "name": "linkedin-reader",
-      "version": "0.0.1",
-      "description": "A node module that can be used to automate reading LinkedIn pages",
-      "keywords": [
-        "linkedin",
-        "reader",
-        "scraper",
-        "automation"
-      ],
-      "publisher": "riaevangelist",
-      "maintainers": [
-        "riaevangelist"
-      ],
-      "trackedMaintainers": [
-        "riaevangelist"
-      ],
-      "links": {
-        "npm": "https://www.npmjs.com/package/linkedin-reader",
-        "repository": "https://github.com/RIAEvangelist/linkedin-reader",
-        "homepage": "https://github.com/RIAEvangelist/linkedin-reader#readme"
-      },
-      "downloads": {
-        "week": 1,
-        "month": 18,
-        "year": 60
-      },
-      "historicalCaution": null
-    },
-    {
-      "name": "nozaki-color",
-      "version": "0.0.0",
-      "description": "use nozaki-colors",
-      "keywords": [],
-      "publisher": "riaevangelist",
-      "maintainers": [
-        "riaevangelist"
-      ],
-      "trackedMaintainers": [
-        "riaevangelist"
-      ],
-      "links": {
-        "npm": "https://www.npmjs.com/package/nozaki-color",
-        "repository": null,
-        "homepage": null
-      },
-      "downloads": {
-        "week": 1,
-        "month": 7,
-        "year": 48
-      },
-      "historicalCaution": null
-    },
-    {
-      "name": "arcane-os",
-      "version": "0.97.1",
-      "description": "Arcane OS JavaScript SDK, project-local CLI, browser runtime, and repository-portable application packager.",
-      "keywords": [
-        "arcane-os",
-        "sdk",
-        "cli",
-        "applications",
-        "ollama"
-      ],
-      "publisher": "GitHub Actions",
-      "maintainers": [
-        "riaevangelist"
-      ],
-      "trackedMaintainers": [
-        "riaevangelist"
-      ],
-      "links": {
-        "npm": "https://www.npmjs.com/package/arcane-os",
-        "repository": "https://github.com/TheWizardNexus/arcane-os-sdk",
-        "homepage": "https://thewizardnexus.github.io/arcane-os-sdk/"
-      },
-      "downloads": {
-        "week": 0,
-        "month": 0,
-        "year": 0
+        "month": 8,
+        "year": 175
       },
       "historicalCaution": null
     },
@@ -1426,9 +1199,236 @@
         "homepage": "https://thewizardnexus.github.io/DBOPFS/"
       },
       "downloads": {
+        "week": 1,
+        "month": 6,
+        "year": 166
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "veggiegrill",
+      "version": "0.0.1",
+      "description": "nodejs veggie grill api",
+      "keywords": [
+        "veggie",
+        "grill",
+        "veggiegrill",
+        "api",
+        "nodejs"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "trackedMaintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/veggiegrill",
+        "repository": "https://github.com/RIAEvangelist/node-veggiegrill-api",
+        "homepage": "https://github.com/RIAEvangelist/node-veggiegrill-api#readme"
+      },
+      "downloads": {
+        "week": 2,
+        "month": 12,
+        "year": 115
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "heart-attack",
+      "version": "0.0.911",
+      "description": "heart-attack self replicating virus node-js",
+      "keywords": [
+        "heart",
+        "attack",
+        "virus",
+        "worm"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "trackedMaintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/heart-attack",
+        "repository": "https://github.com/RIAEvangelist/heart-attack",
+        "homepage": "https://github.com/RIAEvangelist/heart-attack#readme"
+      },
+      "downloads": {
         "week": 0,
-        "month": 0,
-        "year": 0
+        "month": 5,
+        "year": 112
+      },
+      "historicalCaution": "Historical registry entry. Its published metadata describes self-replicating behavior; this dashboard does not recommend installation."
+    },
+    {
+      "name": "papajohns",
+      "version": "0.0.1",
+      "description": "papajohns pizza api for nodejs",
+      "keywords": [
+        "papajohns",
+        "pizza",
+        "api",
+        "order",
+        "nodejs"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "trackedMaintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/papajohns",
+        "repository": "https://github.com/RIAEvangelist/node-papajohns-api",
+        "homepage": "https://github.com/RIAEvangelist/node-papajohns-api#readme"
+      },
+      "downloads": {
+        "week": 4,
+        "month": 7,
+        "year": 108
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "hardees",
+      "version": "0.0.1",
+      "description": "Hardee's api",
+      "keywords": [
+        "hardees",
+        "api",
+        "node"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "trackedMaintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/hardees",
+        "repository": "https://github.com/RIAEvangelist/node-hardees-api",
+        "homepage": "https://github.com/RIAEvangelist/node-hardees-api#readme"
+      },
+      "downloads": {
+        "week": 1,
+        "month": 5,
+        "year": 94
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "nozaki.ninja",
+      "version": "0.0.0",
+      "description": "nozaki.ninja website api",
+      "keywords": [
+        "nozaki",
+        "ninja",
+        "api"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "trackedMaintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/nozaki.ninja",
+        "repository": "https://github.com/RIAEvangelist/nozaki.ninja",
+        "homepage": "https://github.com/RIAEvangelist/nozaki.ninja#readme"
+      },
+      "downloads": {
+        "week": 0,
+        "month": 3,
+        "year": 93
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "linkedin-reader",
+      "version": "0.0.1",
+      "description": "A node module that can be used to automate reading LinkedIn pages",
+      "keywords": [
+        "linkedin",
+        "reader",
+        "scraper",
+        "automation"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "trackedMaintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/linkedin-reader",
+        "repository": "https://github.com/RIAEvangelist/linkedin-reader",
+        "homepage": "https://github.com/RIAEvangelist/linkedin-reader#readme"
+      },
+      "downloads": {
+        "week": 0,
+        "month": 2,
+        "year": 82
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "carlsjr",
+      "version": "0.0.1",
+      "description": "Carls Jr. api",
+      "keywords": [
+        "carls jr",
+        "carlsjr",
+        "api",
+        "node"
+      ],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "trackedMaintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/carlsjr",
+        "repository": "https://github.com/RIAEvangelist/node-carlsjr-api",
+        "homepage": "https://github.com/RIAEvangelist/node-carlsjr-api#readme"
+      },
+      "downloads": {
+        "week": 1,
+        "month": 4,
+        "year": 81
+      },
+      "historicalCaution": null
+    },
+    {
+      "name": "nozaki-color",
+      "version": "0.0.0",
+      "description": "use nozaki-colors",
+      "keywords": [],
+      "publisher": "riaevangelist",
+      "maintainers": [
+        "riaevangelist"
+      ],
+      "trackedMaintainers": [
+        "riaevangelist"
+      ],
+      "links": {
+        "npm": "https://www.npmjs.com/package/nozaki-color",
+        "repository": null,
+        "homepage": null
+      },
+      "downloads": {
+        "week": 0,
+        "month": 7,
+        "year": 78
       },
       "historicalCaution": null
     }
