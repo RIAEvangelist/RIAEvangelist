@@ -437,6 +437,7 @@ test("All modules totals retain the full archive while individual displays stay 
   assert.ok(chart.includes(`${index.monthly.length} months`));
   assert.ok(chart.includes(`through ${through}`));
   assert.ok(readme.includes(`Downloads through ${through}.`));
+  assert.ok(readme.includes(`assets/npm-history-chart.svg?updated=${encodeURIComponent(index.generatedAt)}`));
   assert.doesNotMatch(readme, /npm-history-chart\.png|Historical snapshot through/);
   assert.match(workflow, /git status --porcelain --[^\n]*assets\/npm-history-chart\.svg/);
   assert.match(workflow, /git add --[^\n]*assets\/npm-history-chart\.svg/);

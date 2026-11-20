@@ -447,7 +447,9 @@ async function updateProfilePresentation(index) {
     : readme.replace("<!-- profile-telemetry-counts:end -->", `<!-- profile-telemetry-counts:end -->\n\n${block}`);
   const chartStart = "<!-- profile-npm-history-chart:start -->";
   const chartEnd = "<!-- profile-npm-history-chart:end -->";
-  const chartBlock = `${chartStart}\n<p align="center">\n  <a href="https://riaevangelist.github.io/RIAEvangelist/#history">\n    <img src="assets/npm-history-chart.svg" width="100%" alt="All modules: ${fullNumber(index.lifetimeTotal)} recorded NPM downloads through ${longDate(index.period.through)}">\n  </a>\n</p>\n\n<p align="center"><sub>Automatically refreshed daily. Downloads through ${longDate(index.period.through)}. Open the dashboard to explore each module and year.</sub></p>\n${chartEnd}`;
+  // Keep normal image caching while giving every published archive refresh its own URL.
+  const chartUrl = `assets/npm-history-chart.svg?updated=${encodeURIComponent(index.generatedAt)}`;
+  const chartBlock = `${chartStart}\n<p align="center">\n  <a href="https://riaevangelist.github.io/RIAEvangelist/#history">\n    <img src="${chartUrl}" width="100%" alt="All modules: ${fullNumber(index.lifetimeTotal)} recorded NPM downloads through ${longDate(index.period.through)}">\n  </a>\n</p>\n\n<p align="center"><sub>Automatically refreshed daily. Downloads through ${longDate(index.period.through)}. Open the dashboard to explore each module and year.</sub></p>\n${chartEnd}`;
   await writeFile(CHART_PATH, historyChart(index), "utf8");
   await writeFile(README_PATH, updated.replace(new RegExp(`${chartStart}[\\s\\S]*?${chartEnd}`), chartBlock), "utf8");
 }
