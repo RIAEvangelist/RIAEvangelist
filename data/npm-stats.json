@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-19T15:44:20.699Z",
+  "generatedAt": "2026-11-20T01:19:55.122Z",
   "source": {
     "registry": [
       "https://registry.npmjs.org/-/v1/search?text=maintainer%3Ariaevangelist&size=250",
@@ -33,7 +33,7 @@
   "totals": {
     "week": 5882833,
     "month": 24417110,
-    "year": 269626374
+    "year": 270631197
   },
   "packages": [
     {
@@ -67,7 +67,7 @@
       "downloads": {
         "week": 1342348,
         "month": 5591612,
-        "year": 62760683
+        "year": 62990191
       },
       "historicalCaution": null
     },
@@ -100,7 +100,7 @@
       "downloads": {
         "week": 1341169,
         "month": 5583994,
-        "year": 60736884
+        "year": 60965598
       },
       "historicalCaution": null
     },
@@ -137,7 +137,7 @@
       "downloads": {
         "week": 1320347,
         "month": 5491938,
-        "year": 59787457
+        "year": 60012570
       },
       "historicalCaution": null
     },
@@ -171,7 +171,7 @@
       "downloads": {
         "week": 869192,
         "month": 3608688,
-        "year": 40048165
+        "year": 40196413
       },
       "historicalCaution": null
     },
@@ -208,7 +208,7 @@
       "downloads": {
         "week": 870120,
         "month": 3612922,
-        "year": 39911974
+        "year": 40060727
       },
       "historicalCaution": null
     },
@@ -243,7 +243,7 @@
       "downloads": {
         "week": 91326,
         "month": 348450,
-        "year": 4078621
+        "year": 4093569
       },
       "historicalCaution": null
     },
@@ -279,7 +279,7 @@
       "downloads": {
         "week": 25149,
         "month": 114768,
-        "year": 1513044
+        "year": 1517960
       },
       "historicalCaution": null
     },
@@ -311,7 +311,7 @@
       "downloads": {
         "week": 8803,
         "month": 27372,
-        "year": 395994
+        "year": 396920
       },
       "historicalCaution": null
     },
@@ -351,7 +351,7 @@
       "downloads": {
         "week": 2010,
         "month": 9613,
-        "year": 159729
+        "year": 160347
       },
       "historicalCaution": null
     },
@@ -384,7 +384,7 @@
       "downloads": {
         "week": 2980,
         "month": 11516,
-        "year": 116844
+        "year": 117061
       },
       "historicalCaution": null
     },
@@ -414,7 +414,7 @@
       "downloads": {
         "week": 297,
         "month": 648,
-        "year": 29240
+        "year": 31294
       },
       "historicalCaution": null
     },
@@ -451,7 +451,7 @@
       "downloads": {
         "week": 2976,
         "month": 4898,
-        "year": 26321
+        "year": 26638
       },
       "historicalCaution": null
     },
@@ -483,7 +483,7 @@
       "downloads": {
         "week": 2941,
         "month": 4852,
-        "year": 25712
+        "year": 26027
       },
       "historicalCaution": null
     },
@@ -518,7 +518,7 @@
       "downloads": {
         "week": 2857,
         "month": 4636,
-        "year": 19836
+        "year": 19948
       },
       "historicalCaution": null
     },
@@ -551,7 +551,7 @@
       "downloads": {
         "week": 64,
         "month": 274,
-        "year": 3264
+        "year": 3273
       },
       "historicalCaution": null
     },
@@ -589,7 +589,7 @@
       "downloads": {
         "week": 42,
         "month": 125,
-        "year": 1824
+        "year": 1827
       },
       "historicalCaution": null
     },
@@ -621,7 +621,7 @@
       "downloads": {
         "week": 16,
         "month": 65,
-        "year": 1764
+        "year": 1766
       },
       "historicalCaution": null
     },
@@ -650,7 +650,7 @@
       "downloads": {
         "week": 25,
         "month": 74,
-        "year": 1380
+        "year": 1385
       },
       "historicalCaution": null
     },
@@ -679,7 +679,7 @@
       "downloads": {
         "week": 17,
         "month": 91,
-        "year": 1184
+        "year": 1193
       },
       "historicalCaution": null
     },
@@ -711,7 +711,7 @@
       "downloads": {
         "week": 17,
         "month": 54,
-        "year": 1151
+        "year": 1152
       },
       "historicalCaution": null
     },
@@ -740,7 +740,7 @@
       "downloads": {
         "week": 11,
         "month": 41,
-        "year": 638
+        "year": 639
       },
       "historicalCaution": null
     },
@@ -774,7 +774,7 @@
       "downloads": {
         "week": 7,
         "month": 33,
-        "year": 386
+        "year": 387
       },
       "historicalCaution": null
     },
@@ -806,7 +806,7 @@
       "downloads": {
         "week": 5,
         "month": 31,
-        "year": 369
+        "year": 370
       },
       "historicalCaution": null
     },
@@ -830,7 +830,7 @@
       "downloads": {
         "week": 7,
         "month": 24,
-        "year": 314
+        "year": 320
       },
       "historicalCaution": null
     },
@@ -865,7 +865,7 @@
       "downloads": {
         "week": 4,
         "month": 16,
-        "year": 287
+        "year": 288
       },
       "historicalCaution": null
     },
@@ -923,7 +923,7 @@
       "downloads": {
         "week": 10,
         "month": 25,
-        "year": 253
+        "year": 254
       },
       "historicalCaution": null
     },
@@ -953,7 +953,7 @@
       "downloads": {
         "week": 4,
         "month": 19,
-        "year": 245
+        "year": 246
       },
       "historicalCaution": null
     },
@@ -986,7 +986,7 @@
       "downloads": {
         "week": 6,
         "month": 19,
-        "year": 239
+        "year": 240
       },
       "historicalCaution": null
     },
@@ -1014,7 +1014,7 @@
       "downloads": {
         "week": 10,
         "month": 38,
-        "year": 218
+        "year": 220
       },
       "historicalCaution": null
     },
@@ -1045,7 +1045,7 @@
       "downloads": {
         "week": 6,
         "month": 24,
-        "year": 218
+        "year": 219
       },
       "historicalCaution": null
     },
@@ -1077,7 +1077,7 @@
       "downloads": {
         "week": 7,
         "month": 31,
-        "year": 213
+        "year": 215
       },
       "historicalCaution": null
     },
@@ -1106,7 +1106,7 @@
       "downloads": {
         "week": 5,
         "month": 15,
-        "year": 201
+        "year": 202
       },
       "historicalCaution": null
     },
@@ -1137,7 +1137,7 @@
       "downloads": {
         "week": 3,
         "month": 28,
-        "year": 193
+        "year": 194
       },
       "historicalCaution": null
     },
@@ -1168,7 +1168,7 @@
       "downloads": {
         "week": 2,
         "month": 13,
-        "year": 190
+        "year": 193
       },
       "historicalCaution": null
     },
@@ -1201,7 +1201,7 @@
       "downloads": {
         "week": 9,
         "month": 21,
-        "year": 190
+        "year": 192
       },
       "historicalCaution": null
     },
@@ -1231,7 +1231,7 @@
       "downloads": {
         "week": 6,
         "month": 33,
-        "year": 141
+        "year": 144
       },
       "historicalCaution": null
     },
@@ -1290,7 +1290,7 @@
       "downloads": {
         "week": 4,
         "month": 15,
-        "year": 126
+        "year": 130
       },
       "historicalCaution": null
     },
@@ -1318,7 +1318,7 @@
       "downloads": {
         "week": 3,
         "month": 11,
-        "year": 106
+        "year": 107
       },
       "historicalCaution": null
     },
@@ -1346,7 +1346,7 @@
       "downloads": {
         "week": 2,
         "month": 7,
-        "year": 101
+        "year": 102
       },
       "historicalCaution": null
     },
@@ -1428,7 +1428,7 @@
       "downloads": {
         "week": 2,
         "month": 5,
-        "year": 85
+        "year": 86
       },
       "historicalCaution": null
     }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-19T15:44:25.388Z",
+  "generatedAt": "2026-11-20T01:19:56.753Z",
   "owners": [
     {
       "login": "RIAEvangelist",
@@ -27,9 +27,30 @@
     "original": 92,
     "forks": 38,
     "archived": 0,
-    "stars": 1552
+    "stars": 1553
   },
   "repositories": [
+    {
+      "name": "node-cmd",
+      "fullName": "RIAEvangelist/node-cmd",
+      "owner": "RIAEvangelist",
+      "description": "Command-line power for JavaScript: shell commands, direct executable calls, and child-process control with zero runtime dependencies.",
+      "explanation": "Command-line power for JavaScript: shell commands, direct executable calls, and child-process control with zero runtime dependencies.",
+      "url": "https://github.com/RIAEvangelist/node-cmd",
+      "homepage": "https://riaevangelist.github.io/node-cmd/",
+      "language": "HTML",
+      "stars": 285,
+      "forks": 32,
+      "openIssues": 7,
+      "watchers": 285,
+      "archived": false,
+      "disabled": false,
+      "fork": false,
+      "topics": [],
+      "license": "MIT",
+      "createdAt": "2014-02-21T07:38:49Z",
+      "updatedAt": "2026-11-20T00:49:04Z"
+    },
     {
       "name": "RIAEvangelist",
       "fullName": "RIAEvangelist/RIAEvangelist",
@@ -398,27 +419,6 @@
       "license": "MIT",
       "createdAt": "2015-12-04T01:41:18Z",
       "updatedAt": "2026-08-24T03:47:45Z"
-    },
-    {
-      "name": "node-cmd",
-      "fullName": "RIAEvangelist/node-cmd",
-      "owner": "RIAEvangelist",
-      "description": "Command-line power for JavaScript: shell commands, direct executable calls, and child-process control with zero runtime dependencies.",
-      "explanation": "Command-line power for JavaScript: shell commands, direct executable calls, and child-process control with zero runtime dependencies.",
-      "url": "https://github.com/RIAEvangelist/node-cmd",
-      "homepage": "https://riaevangelist.github.io/node-cmd/",
-      "language": "HTML",
-      "stars": 284,
-      "forks": 32,
-      "openIssues": 7,
-      "watchers": 284,
-      "archived": false,
-      "disabled": false,
-      "fork": false,
-      "topics": [],
-      "license": "MIT",
-      "createdAt": "2014-02-21T07:38:49Z",
-      "updatedAt": "2026-08-24T03:46:09Z"
     },
     {
       "name": "insane-alarm",
