@@ -41,7 +41,7 @@
 <!-- profile-npm-history-chart:start -->
 <p align="center">
   <a href="https://riaevangelist.github.io/RIAEvangelist/#history">
-    <img src="assets/npm-history-chart/2026-11-20T01-19-56.823Z.svg" width="100%" alt="All modules: 1,637,961,759 recorded NPM downloads through November 19, 2026">
+    <img src="assets/npm-history-chart/2026-11-20T15-27-02.813Z.svg" width="100%" alt="All modules: 1,639,003,472 recorded NPM downloads through November 19, 2026">
   </a>
 </p>
 
