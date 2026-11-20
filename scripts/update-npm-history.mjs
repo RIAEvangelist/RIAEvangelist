@@ -7,6 +7,7 @@ const HISTORY_DIR = path.join(ROOT, "data", "npm-history");
 const INDEX_PATH = path.join(HISTORY_DIR, "index.json");
 const CURRENT_SNAPSHOT_PATH = path.join(ROOT, "data", "npm-stats.json");
 const README_PATH = path.join(ROOT, "README.md");
+const CHART_PATH = path.join(ROOT, "assets", "npm-history-chart.svg");
 const AUTHORS = ["riaevangelist", "thewizardnexus"];
 const FIRST_REQUEST_YEAR = 2014;
 const NPM_HISTORY_FLOOR = "2015-01-10";
@@ -372,7 +373,70 @@ function longDate(value) {
     .format(new Date(`${value}T00:00:00Z`));
 }
 
-async function updateReadme(index) {
+function historyChart(index) {
+  const compact = new Intl.NumberFormat("en-US", { notation: "compact", maximumFractionDigits: 1 });
+  const month = new Intl.DateTimeFormat("en-US", { month: "short", year: "numeric", timeZone: "UTC" });
+  const monthLabel = (value) => month.format(new Date(`${value}-01T00:00:00Z`));
+  const xml = (value) => String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
+  const first = index.firstRecordedDownload;
+  const firstPackages = first.packages.map((pkg) => `${pkg.name} ${fullNumber(pkg.downloads)}`).join(" · ");
+  const maximum = Math.max(...index.monthly.map(([, value]) => value), 0);
+  const ceiling = maximum > 0 ? maximum * 1.08 : 1;
+  const plot = { left: 108, right: 1260, top: 346, bottom: 686 };
+  const points = index.monthly.map(([period, value], position) => ({
+    period,
+    value,
+    x: plot.left + (index.monthly.length === 1 ? 0.5 : position / (index.monthly.length - 1)) * (plot.right - plot.left),
+    y: plot.bottom - value / ceiling * (plot.bottom - plot.top),
+  }));
+  const peak = points.reduce((best, point) => !best || point.value > best.value ? point : best, null);
+  const line = points.map((point, position) => `${position ? "L" : "M"}${point.x.toFixed(2)},${point.y.toFixed(2)}`).join(" ");
+  const area = `${line} L${points.at(-1).x.toFixed(2)},${plot.bottom} L${points[0].x.toFixed(2)},${plot.bottom} Z`;
+  const grid = Array.from({ length: 5 }, (_, tick) => {
+    const y = plot.top + (plot.bottom - plot.top) * tick / 4;
+    return `<path d="M${plot.left},${y} H${plot.right}" stroke="#ffffff" stroke-opacity=".075"/>
+    <text x="94" y="${y + 5}" text-anchor="end" fill="#a39db7" font-size="15">${compact.format(Math.round(ceiling * (1 - tick / 4)))}</text>`;
+  }).join("\n");
+  const labelPositions = new Set(Array.from({ length: 6 }, (_, position) => Math.round(position / 5 * (points.length - 1))));
+  const labels = [...labelPositions].map((position) => `<text x="${points[position].x.toFixed(2)}" y="719" text-anchor="middle" fill="#a39db7" font-size="15">${monthLabel(points[position].period)}</text>`).join("\n");
+  const through = longDate(index.period.through);
+  const nextDay = new Date(`${index.period.through}T00:00:00Z`);
+  nextDay.setUTCDate(nextDay.getUTCDate() + 1);
+  const partialMonth = isoDate(nextDay).slice(0, 7) === index.period.through.slice(0, 7);
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="824" viewBox="0 0 1320 824" role="img" aria-labelledby="title description" data-through="${index.period.through}">
+  <title id="title">All modules: ${fullNumber(index.lifetimeTotal)} recorded NPM downloads through ${through}</title>
+  <desc id="description">Monthly download trend from ${longDate(index.period.availableFrom)} through ${through}, including all ${index.packageCount} contributing modules. First recorded downloads: ${longDate(first.date)}, ${fullNumber(first.downloads)} downloads. Peak month: ${monthLabel(peak.period)}, ${fullNumber(peak.value)} downloads. ${partialMonth ? "Latest month is partial." : "Latest month is complete."}</desc>
+  <defs>
+    <linearGradient id="line" x1="0" x2="1"><stop stop-color="#ff4fa7"/><stop offset=".52" stop-color="#8c6cff"/><stop offset="1" stop-color="#39e6e6"/></linearGradient>
+    <linearGradient id="area" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#8c6cff" stop-opacity=".38"/><stop offset=".58" stop-color="#ff4fa7" stop-opacity=".12"/><stop offset="1" stop-color="#39e6e6" stop-opacity=".01"/></linearGradient>
+    <linearGradient id="banner"><stop stop-color="#211529"/><stop offset="1" stop-color="#101726"/></linearGradient>
+  </defs>
+  <rect width="1320" height="824" rx="24" fill="#080812"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="24" y="24" width="1272" height="142" rx="18" fill="url(#banner)" stroke="#493354"/>
+    <text x="52" y="57" fill="#ff70b7" font-size="15" font-weight="700" letter-spacing="3">FIRST RECORDED DOWNLOAD</text>
+    <text x="52" y="101" fill="#f5f1ff" font-size="36" font-weight="700">${longDate(first.date)}</text>
+    <text x="52" y="136" fill="#b9b2ce" font-size="17">${fullNumber(first.downloads)} downloads across ${first.packages.length} modules: ${xml(firstPackages)}</text>
+    <rect x="24" y="190" width="1272" height="610" rx="18" fill="#0d0d1b" stroke="#292438"/>
+    <text x="52" y="229" fill="#ff70b7" font-size="15" font-weight="700" letter-spacing="3">RECORDED LIFETIME</text>
+    <text x="52" y="276" fill="#f5f1ff" font-size="36" font-weight="700">All modules</text>
+    <text x="1260" y="278" text-anchor="end" fill="#c6ff4a" font-size="48" font-weight="700">${fullNumber(index.lifetimeTotal)}</text>
+    <text x="52" y="309" fill="#b9b2ce" font-size="17">${longDate(index.period.availableFrom)} to ${through} · monthly trend</text>
+    <text x="1260" y="309" text-anchor="end" fill="#b9b2ce" font-size="16">RECORDED DOWNLOADS</text>
+    <g font-family="Consolas, monospace">${grid}${labels}</g>
+    <path d="${area}" fill="url(#area)"/>
+    <path d="${line}" fill="none" stroke="url(#line)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M${peak.x.toFixed(2)},${plot.top} V${plot.bottom}" stroke="#c6ff4a" stroke-opacity=".36"/>
+    <circle cx="${peak.x.toFixed(2)}" cy="${peak.y.toFixed(2)}" r="6" fill="#c6ff4a" stroke="#080812" stroke-width="2"><title>${monthLabel(peak.period)}: ${fullNumber(peak.value)} downloads</title></circle>
+    <path d="M52,744 H1268" stroke="#292438"/>
+    <text x="52" y="777" fill="#b9b2ce" font-size="16">${points.length} months · ${index.packageCount} contributing modules · Official NPM API</text>
+    <text x="1260" y="777" text-anchor="end" fill="#39e6e6" font-size="16">${partialMonth ? "Latest month is partial · " : ""}Refreshed daily</text>
+  </g>
+</svg>\n`;
+}
+
+async function updateProfilePresentation(index) {
   const start = "<!-- profile-npm-history:start -->";
   const end = "<!-- profile-npm-history:end -->";
   const block = `${start}\n<p align="center">\n  <a href="https://riaevangelist.github.io/RIAEvangelist/"><strong>Explore the live open-source dashboard →</strong></a><br>\n  <strong>${billionFloor(index.lifetimeTotal)}+ billion recorded NPM package downloads since ${longDate(index.firstRecordedDownload.date)}</strong>\n</p>\n${end}`;
@@ -381,7 +445,11 @@ async function updateReadme(index) {
   const updated = pattern.test(readme)
     ? readme.replace(pattern, block)
     : readme.replace("<!-- profile-telemetry-counts:end -->", `<!-- profile-telemetry-counts:end -->\n\n${block}`);
-  await writeFile(README_PATH, updated, "utf8");
+  const chartStart = "<!-- profile-npm-history-chart:start -->";
+  const chartEnd = "<!-- profile-npm-history-chart:end -->";
+  const chartBlock = `${chartStart}\n<p align="center">\n  <a href="https://riaevangelist.github.io/RIAEvangelist/#history">\n    <img src="assets/npm-history-chart.svg" width="100%" alt="All modules: ${fullNumber(index.lifetimeTotal)} recorded NPM downloads through ${longDate(index.period.through)}">\n  </a>\n</p>\n\n<p align="center"><sub>Automatically refreshed daily. Downloads through ${longDate(index.period.through)}. Open the dashboard to explore each module and year.</sub></p>\n${chartEnd}`;
+  await writeFile(CHART_PATH, historyChart(index), "utf8");
+  await writeFile(README_PATH, updated.replace(new RegExp(`${chartStart}[\\s\\S]*?${chartEnd}`), chartBlock), "utf8");
 }
 
 await mkdir(HISTORY_DIR, { recursive: true });
@@ -402,7 +470,8 @@ const existingIndex = await readIndex();
 if (!force && !allYears && !requestedYear && maxAgeHours > 0 && existingIndex) {
   const age = Date.now() - Date.parse(existingIndex.generatedAt);
   if (Number.isFinite(age) && age < maxAgeHours * 60 * 60 * 1000 && existingIndex.period?.through >= until) {
-    console.log(`NPM history is fresh (${Math.round(age / 60000)} minutes old); no update needed.`);
+    await updateProfilePresentation(existingIndex);
+    console.log(`NPM history is fresh (${Math.round(age / 60000)} minutes old); chart and README refreshed from the archive.`);
     process.exit(0);
   }
 }
@@ -443,7 +512,7 @@ years = await readYearFiles();
 const index = buildIndex(years, generatedAt);
 if (!index.firstRecordedDownload) throw new Error("No non-zero NPM download day was found in the available history.");
 await writeFile(INDEX_PATH, `${JSON.stringify(index)}\n`, "utf8");
-await updateReadme(index);
+await updateProfilePresentation(index);
 
 console.log(`Recorded ${fullNumber(index.lifetimeTotal)} downloads across ${index.packageCount} packages through ${index.period.through}.`);
 console.log(`First recorded day: ${index.firstRecordedDownload.date} (${fullNumber(index.firstRecordedDownload.downloads)} downloads).`);

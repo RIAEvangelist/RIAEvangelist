@@ -271,7 +271,7 @@ test("profile README and site expose the telemetry experience", async function p
 
   assert.match(readme, /assets\/npm-downloads\.svg/);
   assert.match(readme, /assets\/profile-header\.png/);
-  assert.match(readme, /assets\/npm-history-chart\.png/);
+  assert.match(readme, /assets\/npm-history-chart\.svg/);
   assert.match(readme, /riaevangelist\.github\.io\/RIAEvangelist/);
   assert.match(html, /id="package-grid"/);
   assert.match(html, /id="repo-grid"/);
@@ -404,11 +404,14 @@ test("profile presents event-pubsub NPM and GitHub release 6.1.0", async () => {
 });
 
 test("All modules totals retain the full archive while individual displays stay curated", async () => {
-  const [indexText, currentYearText, script, screenshot] = await Promise.all([
+  const [indexText, currentYearText, script, chart, readme, workflow, generator] = await Promise.all([
     read("data/npm-history/index.json"),
     read(`data/npm-history/${new Date().getUTCFullYear()}.json`),
     read("app.js"),
-    readFile(path.join(ROOT, "assets/npm-history-chart.png")),
+    read("assets/npm-history-chart.svg"),
+    read("README.md"),
+    read(".github/workflows/profile-site.yml"),
+    read("scripts/update-npm-history.mjs"),
   ]);
   const index = JSON.parse(indexText);
   const currentYear = JSON.parse(currentYearText);
@@ -424,9 +427,20 @@ test("All modules totals retain the full archive while individual displays stay 
   assert.match(script, /const total = pkg \? pkg\.total : state\.history\.lifetimeTotal/);
   assert.match(script, /: year\.overall/);
   assert.match(script, /year\.activePackageCount/);
-  assert.equal(screenshot.subarray(1, 4).toString("ascii"), "PNG");
-  assert.ok(screenshot.readUInt32BE(16) >= 1200);
-  assert.ok(screenshot.readUInt32BE(20) >= 800);
+  const through = new Intl.DateTimeFormat("en-US", {
+    year: "numeric", month: "long", day: "numeric", timeZone: "UTC",
+  }).format(new Date(`${index.period.through}T00:00:00Z`));
+  assert.match(chart, /<svg[^>]*role="img"/);
+  assert.ok(chart.includes(`data-through="${index.period.through}"`));
+  assert.ok(chart.includes(new Intl.NumberFormat("en-US").format(index.lifetimeTotal)));
+  assert.ok(chart.includes(`${index.packageCount} contributing modules`));
+  assert.ok(chart.includes(`${index.monthly.length} months`));
+  assert.ok(chart.includes(`through ${through}`));
+  assert.ok(readme.includes(`Downloads through ${through}.`));
+  assert.doesNotMatch(readme, /npm-history-chart\.png|Historical snapshot through/);
+  assert.match(workflow, /git status --porcelain --[^\n]*assets\/npm-history-chart\.svg/);
+  assert.match(workflow, /git add --[^\n]*assets\/npm-history-chart\.svg/);
+  assert.match(generator, /await updateProfilePresentation\(existingIndex\);/);
 });
 
 test("music catalog is complete, unique, secure, and coherently collected", async () => {
