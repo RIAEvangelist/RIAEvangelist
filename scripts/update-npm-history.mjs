@@ -1,4 +1,4 @@
-import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
+import { mkdir, readFile, readdir, unlink, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -7,7 +7,7 @@ const HISTORY_DIR = path.join(ROOT, "data", "npm-history");
 const INDEX_PATH = path.join(HISTORY_DIR, "index.json");
 const CURRENT_SNAPSHOT_PATH = path.join(ROOT, "data", "npm-stats.json");
 const README_PATH = path.join(ROOT, "README.md");
-const CHART_PATH = path.join(ROOT, "assets", "npm-history-chart.svg");
+const CHART_DIR = path.join(ROOT, "assets", "npm-history-chart");
 const AUTHORS = ["riaevangelist", "thewizardnexus"];
 const FIRST_REQUEST_YEAR = 2014;
 const NPM_HISTORY_FLOOR = "2015-01-10";
@@ -447,11 +447,17 @@ async function updateProfilePresentation(index) {
     : readme.replace("<!-- profile-telemetry-counts:end -->", `<!-- profile-telemetry-counts:end -->\n\n${block}`);
   const chartStart = "<!-- profile-npm-history-chart:start -->";
   const chartEnd = "<!-- profile-npm-history-chart:end -->";
-  // Keep normal image caching while giving every published archive refresh its own URL.
-  const chartUrl = `assets/npm-history-chart.svg?updated=${encodeURIComponent(index.generatedAt)}`;
+  // A versioned filename survives GitHub's raw-image redirects and normal image caching.
+  const chartFilename = `${index.generatedAt.replaceAll(":", "-")}.svg`;
+  const chartUrl = `assets/npm-history-chart/${chartFilename}`;
   const chartBlock = `${chartStart}\n<p align="center">\n  <a href="https://riaevangelist.github.io/RIAEvangelist/#history">\n    <img src="${chartUrl}" width="100%" alt="All modules: ${fullNumber(index.lifetimeTotal)} recorded NPM downloads through ${longDate(index.period.through)}">\n  </a>\n</p>\n\n<p align="center"><sub>Automatically refreshed daily. Downloads through ${longDate(index.period.through)}. Open the dashboard to explore each module and year.</sub></p>\n${chartEnd}`;
-  await writeFile(CHART_PATH, historyChart(index), "utf8");
+  await mkdir(CHART_DIR, { recursive: true });
+  await writeFile(path.join(CHART_DIR, chartFilename), historyChart(index), "utf8");
   await writeFile(README_PATH, updated.replace(new RegExp(`${chartStart}[\\s\\S]*?${chartEnd}`), chartBlock), "utf8");
+  // Keep the previous chart for cached README views; Git retains older revisions.
+  const previousCharts = (await readdir(CHART_DIR)).filter((name) => name !== chartFilename && /^\d{4}-\d{2}-\d{2}T\d{2}-\d{2}-\d{2}\.\d{3}Z\.svg$/.test(name)).sort();
+  const keepPrevious = previousCharts.at(-1);
+  await Promise.all(previousCharts.filter((name) => name !== keepPrevious).map((name) => unlink(path.join(CHART_DIR, name))));
 }
 
 await mkdir(HISTORY_DIR, { recursive: true });

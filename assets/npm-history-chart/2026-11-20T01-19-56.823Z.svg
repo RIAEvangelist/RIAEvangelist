@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="824" viewBox="0 0 1320 824" role="img" aria-labelledby="title description" data-through="2026-11-19">
+  <title id="title">All modules: 1,637,961,759 recorded NPM downloads through November 19, 2026</title>
+  <desc id="description">Monthly download trend from January 10, 2015 through November 19, 2026, including all 44 contributing modules. First recorded downloads: February 27, 2015, 35 downloads. Peak month: Jul 2026, 25,324,474 downloads. Latest month is partial.</desc>
+  <defs>
+    <linearGradient id="line" x1="0" x2="1"><stop stop-color="#ff4fa7"/><stop offset=".52" stop-color="#8c6cff"/><stop offset="1" stop-color="#39e6e6"/></linearGradient>
+    <linearGradient id="area" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#8c6cff" stop-opacity=".38"/><stop offset=".58" stop-color="#ff4fa7" stop-opacity=".12"/><stop offset="1" stop-color="#39e6e6" stop-opacity=".01"/></linearGradient>
+    <linearGradient id="banner"><stop stop-color="#211529"/><stop offset="1" stop-color="#101726"/></linearGradient>
+  </defs>
+  <rect width="1320" height="824" rx="24" fill="#080812"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="24" y="24" width="1272" height="142" rx="18" fill="url(#banner)" stroke="#493354"/>
+    <text x="52" y="57" fill="#ff70b7" font-size="15" font-weight="700" letter-spacing="3">FIRST RECORDED DOWNLOAD</text>
+    <text x="52" y="101" fill="#f5f1ff" font-size="36" font-weight="700">February 27, 2015</text>
+    <text x="52" y="136" fill="#b9b2ce" font-size="17">35 downloads across 4 modules: node-cmd 12 · node-ipc 10 · event-pubsub 8 · node-http-server 5</text>
+    <rect x="24" y="190" width="1272" height="610" rx="18" fill="#0d0d1b" stroke="#292438"/>
+    <text x="52" y="229" fill="#ff70b7" font-size="15" font-weight="700" letter-spacing="3">RECORDED LIFETIME</text>
+    <text x="52" y="276" fill="#f5f1ff" font-size="36" font-weight="700">All modules</text>
+    <text x="1260" y="278" text-anchor="end" fill="#c6ff4a" font-size="48" font-weight="700">1,637,961,759</text>
+    <text x="52" y="309" fill="#b9b2ce" font-size="17">January 10, 2015 to November 19, 2026 · monthly trend</text>
+    <text x="1260" y="309" text-anchor="end" fill="#b9b2ce" font-size="16">RECORDED DOWNLOADS</text>
+    <g font-family="Consolas, monospace"><path d="M108,346 H1260" stroke="#ffffff" stroke-opacity=".075"/>
+    <text x="94" y="351" text-anchor="end" fill="#a39db7" font-size="15">27.4M</text>
+<path d="M108,431 H1260" stroke="#ffffff" stroke-opacity=".075"/>
+    <text x="94" y="436" text-anchor="end" fill="#a39db7" font-size="15">20.5M</text>
+<path d="M108,516 H1260" stroke="#ffffff" stroke-opacity=".075"/>
+    <text x="94" y="521" text-anchor="end" fill="#a39db7" font-size="15">13.7M</text>
+<path d="M108,601 H1260" stroke="#ffffff" stroke-opacity=".075"/>
+    <text x="94" y="606" text-anchor="end" fill="#a39db7" font-size="15">6.8M</text>
+<path d="M108,686 H1260" stroke="#ffffff" stroke-opacity=".075"/>
+    <text x="94" y="691" text-anchor="end" fill="#a39db7" font-size="15">0</text><text x="108.00" y="719" text-anchor="middle" fill="#a39db7" font-size="15">Jan 2015</text>
+<text x="335.15" y="719" text-anchor="middle" fill="#a39db7" font-size="15">May 2017</text>
+<text x="570.42" y="719" text-anchor="middle" fill="#a39db7" font-size="15">Oct 2019</text>
+<text x="797.58" y="719" text-anchor="middle" fill="#a39db7" font-size="15">Feb 2022</text>
+<text x="1032.85" y="719" text-anchor="middle" fill="#a39db7" font-size="15">Jul 2024</text>
+<text x="1260.00" y="719" text-anchor="middle" fill="#a39db7" font-size="15">Nov 2026</text></g>
+    <path d="M108.00,686.00 L116.11,686.00 L124.23,685.97 L132.34,685.98 L140.45,685.94 L148.56,685.91 L156.68,685.93 L164.79,685.92 L172.90,685.93 L181.01,685.91 L189.13,685.91 L197.24,685.90 L205.35,685.44 L213.46,685.21 L221.58,685.26 L229.69,685.39 L237.80,685.16 L245.92,685.22 L254.03,685.31 L262.14,685.18 L270.25,685.30 L278.37,685.40 L286.48,685.18 L294.59,685.12 L302.70,685.19 L310.82,685.12 L318.93,684.82 L327.04,684.78 L335.15,684.61 L343.27,684.38 L351.38,684.25 L359.49,684.01 L367.61,684.29 L375.72,683.37 L383.83,683.16 L391.94,683.29 L400.06,681.84 L408.17,681.93 L416.28,680.96 L424.39,680.12 L432.51,678.76 L440.62,672.49 L448.73,668.64 L456.85,663.77 L464.96,660.62 L473.07,650.35 L481.18,647.11 L489.30,650.52 L497.41,640.48 L505.52,638.91 L513.63,627.73 L521.75,620.21 L529.86,609.99 L537.97,611.38 L546.08,597.90 L554.20,592.50 L562.31,590.31 L570.42,575.43 L578.54,578.18 L586.65,581.01 L594.76,566.31 L602.87,557.83 L610.99,528.80 L619.10,524.76 L627.21,519.08 L635.32,511.04 L643.44,498.39 L651.55,503.70 L659.66,490.01 L667.77,479.58 L675.89,474.74 L684.00,484.40 L692.11,474.86 L700.23,465.55 L708.34,407.76 L716.45,432.14 L724.56,437.63 L732.68,429.38 L740.79,440.94 L748.90,438.56 L757.01,425.86 L765.13,426.41 L773.24,419.28 L781.35,437.33 L789.46,432.34 L797.58,427.55 L805.69,389.44 L813.80,449.79 L821.92,443.74 L830.03,441.83 L838.14,465.11 L846.25,435.43 L854.37,451.65 L862.48,456.55 L870.59,447.68 L878.70,480.61 L886.82,465.21 L894.93,464.07 L903.04,429.91 L911.15,469.77 L919.27,446.71 L927.38,444.78 L935.49,455.19 L943.61,451.53 L951.72,477.04 L959.83,463.72 L967.94,484.05 L976.06,511.58 L984.17,482.50 L992.28,490.24 L1000.39,478.55 L1008.51,475.55 L1016.62,474.75 L1024.73,483.78 L1032.85,455.13 L1040.96,470.17 L1049.07,464.89 L1057.18,458.76 L1065.30,468.40 L1073.41,497.93 L1081.52,472.58 L1089.63,472.61 L1097.75,458.13 L1105.86,452.53 L1113.97,448.11 L1122.08,410.69 L1130.20,432.34 L1138.31,426.17 L1146.42,417.55 L1154.54,429.68 L1162.65,443.40 L1170.76,458.98 L1178.87,434.34 L1186.99,440.00 L1195.10,385.59 L1203.21,407.67 L1211.32,388.38 L1219.44,373.67 L1227.55,371.19 L1235.66,388.32 L1243.77,381.06 L1251.89,436.75 L1260.00,499.24 L1260.00,686 L108.00,686 Z" fill="url(#area)"/>
+    <path d="M108.00,686.00 L116.11,686.00 L124.23,685.97 L132.34,685.98 L140.45,685.94 L148.56,685.91 L156.68,685.93 L164.79,685.92 L172.90,685.93 L181.01,685.91 L189.13,685.91 L197.24,685.90 L205.35,685.44 L213.46,685.21 L221.58,685.26 L229.69,685.39 L237.80,685.16 L245.92,685.22 L254.03,685.31 L262.14,685.18 L270.25,685.30 L278.37,685.40 L286.48,685.18 L294.59,685.12 L302.70,685.19 L310.82,685.12 L318.93,684.82 L327.04,684.78 L335.15,684.61 L343.27,684.38 L351.38,684.25 L359.49,684.01 L367.61,684.29 L375.72,683.37 L383.83,683.16 L391.94,683.29 L400.06,681.84 L408.17,681.93 L416.28,680.96 L424.39,680.12 L432.51,678.76 L440.62,672.49 L448.73,668.64 L456.85,663.77 L464.96,660.62 L473.07,650.35 L481.18,647.11 L489.30,650.52 L497.41,640.48 L505.52,638.91 L513.63,627.73 L521.75,620.21 L529.86,609.99 L537.97,611.38 L546.08,597.90 L554.20,592.50 L562.31,590.31 L570.42,575.43 L578.54,578.18 L586.65,581.01 L594.76,566.31 L602.87,557.83 L610.99,528.80 L619.10,524.76 L627.21,519.08 L635.32,511.04 L643.44,498.39 L651.55,503.70 L659.66,490.01 L667.77,479.58 L675.89,474.74 L684.00,484.40 L692.11,474.86 L700.23,465.55 L708.34,407.76 L716.45,432.14 L724.56,437.63 L732.68,429.38 L740.79,440.94 L748.90,438.56 L757.01,425.86 L765.13,426.41 L773.24,419.28 L781.35,437.33 L789.46,432.34 L797.58,427.55 L805.69,389.44 L813.80,449.79 L821.92,443.74 L830.03,441.83 L838.14,465.11 L846.25,435.43 L854.37,451.65 L862.48,456.55 L870.59,447.68 L878.70,480.61 L886.82,465.21 L894.93,464.07 L903.04,429.91 L911.15,469.77 L919.27,446.71 L927.38,444.78 L935.49,455.19 L943.61,451.53 L951.72,477.04 L959.83,463.72 L967.94,484.05 L976.06,511.58 L984.17,482.50 L992.28,490.24 L1000.39,478.55 L1008.51,475.55 L1016.62,474.75 L1024.73,483.78 L1032.85,455.13 L1040.96,470.17 L1049.07,464.89 L1057.18,458.76 L1065.30,468.40 L1073.41,497.93 L1081.52,472.58 L1089.63,472.61 L1097.75,458.13 L1105.86,452.53 L1113.97,448.11 L1122.08,410.69 L1130.20,432.34 L1138.31,426.17 L1146.42,417.55 L1154.54,429.68 L1162.65,443.40 L1170.76,458.98 L1178.87,434.34 L1186.99,440.00 L1195.10,385.59 L1203.21,407.67 L1211.32,388.38 L1219.44,373.67 L1227.55,371.19 L1235.66,388.32 L1243.77,381.06 L1251.89,436.75 L1260.00,499.24" fill="none" stroke="url(#line)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M1227.55,346 V686" stroke="#c6ff4a" stroke-opacity=".36"/>
+    <circle cx="1227.55" cy="371.19" r="6" fill="#c6ff4a" stroke="#080812" stroke-width="2"><title>Jul 2026: 25,324,474 downloads</title></circle>
+    <path d="M52,744 H1268" stroke="#292438"/>
+    <text x="52" y="777" fill="#b9b2ce" font-size="16">143 months · 44 contributing modules · Official NPM API</text>
+    <text x="1260" y="777" text-anchor="end" fill="#39e6e6" font-size="16">Latest month is partial · Refreshed daily</text>
+  </g>
+</svg>

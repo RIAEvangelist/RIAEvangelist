@@ -271,7 +271,7 @@ test("profile README and site expose the telemetry experience", async function p
 
   assert.match(readme, /assets\/npm-downloads\.svg/);
   assert.match(readme, /assets\/profile-header\.png/);
-  assert.match(readme, /assets\/npm-history-chart\.svg/);
+  assert.match(readme, /assets\/npm-history-chart\/[^" ]+\.svg/);
   assert.match(readme, /riaevangelist\.github\.io\/RIAEvangelist/);
   assert.match(html, /id="package-grid"/);
   assert.match(html, /id="repo-grid"/);
@@ -404,16 +404,17 @@ test("profile presents event-pubsub NPM and GitHub release 6.1.0", async () => {
 });
 
 test("All modules totals retain the full archive while individual displays stay curated", async () => {
-  const [indexText, currentYearText, script, chart, readme, workflow, generator] = await Promise.all([
+  const [indexText, currentYearText, script, readme, workflow, generator] = await Promise.all([
     read("data/npm-history/index.json"),
     read(`data/npm-history/${new Date().getUTCFullYear()}.json`),
     read("app.js"),
-    read("assets/npm-history-chart.svg"),
     read("README.md"),
     read(".github/workflows/profile-site.yml"),
     read("scripts/update-npm-history.mjs"),
   ]);
   const index = JSON.parse(indexText);
+  const chartFilename = `${index.generatedAt.replaceAll(":", "-")}.svg`;
+  const chart = await read(`assets/npm-history-chart/${chartFilename}`);
   const currentYear = JSON.parse(currentYearText);
   const packages = index.packages.filter((pkg) => !HIDDEN_PACKAGE_NAMES.has(pkg.name));
   const visibleTotal = packages.reduce((sum, pkg) => sum + pkg.total, 0);
@@ -437,10 +438,10 @@ test("All modules totals retain the full archive while individual displays stay 
   assert.ok(chart.includes(`${index.monthly.length} months`));
   assert.ok(chart.includes(`through ${through}`));
   assert.ok(readme.includes(`Downloads through ${through}.`));
-  assert.ok(readme.includes(`assets/npm-history-chart.svg?updated=${encodeURIComponent(index.generatedAt)}`));
+  assert.ok(readme.includes(`assets/npm-history-chart/${chartFilename}`));
   assert.doesNotMatch(readme, /npm-history-chart\.png|Historical snapshot through/);
-  assert.match(workflow, /git status --porcelain --[^\n]*assets\/npm-history-chart\.svg/);
-  assert.match(workflow, /git add --[^\n]*assets\/npm-history-chart\.svg/);
+  assert.match(workflow, /git status --porcelain --[^\n]*assets\/npm-history-chart/);
+  assert.match(workflow, /git add --[^\n]*assets\/npm-history-chart/);
   assert.match(generator, /await updateProfilePresentation\(existingIndex\);/);
 });
 
