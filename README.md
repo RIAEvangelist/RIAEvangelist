@@ -7,7 +7,7 @@
 <!-- profile-npm-history:start -->
 <p align="center">
   <a href="https://riaevangelist.github.io/RIAEvangelist/"><strong>Explore the live open-source dashboard →</strong></a><br>
-  <strong>1.63+ billion recorded NPM package downloads since February 27, 2015</strong>
+  <strong>1.64+ billion recorded NPM package downloads since February 27, 2015</strong>
 </p>
 <!-- profile-npm-history:end -->
 
@@ -41,11 +41,11 @@
 <!-- profile-npm-history-chart:start -->
 <p align="center">
   <a href="https://riaevangelist.github.io/RIAEvangelist/#history">
-    <img src="assets/npm-history-chart/2026-11-21T14-38-57.918Z.svg" width="100%" alt="All modules: 1,639,873,974 recorded NPM downloads through November 20, 2026">
+    <img src="assets/npm-history-chart/2026-11-22T14-34-11.849Z.svg" width="100%" alt="All modules: 1,640,196,987 recorded NPM downloads through November 21, 2026">
   </a>
 </p>
 
-<p align="center"><sub>Automatically refreshed daily. Downloads through November 20, 2026. Open the dashboard to explore each module and year.</sub></p>
+<p align="center"><sub>Automatically refreshed daily. Downloads through November 21, 2026. Open the dashboard to explore each module and year.</sub></p>
 <!-- profile-npm-history-chart:end -->
 
 The source archive, headline totals, and All modules charts include every public package maintained by the owned [`riaevangelist`](https://www.npmjs.com/~riaevangelist) and [`thewizardnexus`](https://www.npmjs.com/~thewizardnexus) identities. The individual catalog displays the curated profile selection, while per-module views and the repository atlas explain the visible work across both accounts. Counts use the official NPM API and refresh automatically each day. They represent package downloads, rather than unique people or verified installations.
